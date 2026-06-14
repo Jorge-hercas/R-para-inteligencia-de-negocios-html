@@ -1,0 +1,44 @@
+{
+  "index.qmd": {
+    "index.html": "68ce3b14"
+  },
+  "intro.qmd": {
+    "intro.html": "573d33ca"
+  },
+  "summary.qmd": {
+    "summary.html": "8238a86a"
+  },
+  "references.qmd": {
+    "references.html": "592f321d"
+  },
+  "conocimientos_previos.qmd": {
+    "conocimientos_previos.html": "178c3fe8"
+  },
+  "funcs.qmd": {
+    "funcs.html": "2f44292f"
+  },
+  "limpieza.qmd": {
+    "limpieza.html": "f9d7b34f"
+  },
+  "referencias.qmd": {
+    "referencias.html": "c722eb09"
+  },
+  "limpieza2.qmd": {
+    "limpieza2.html": "a0025556"
+  },
+  "analisis_exploratorio.qmd": {
+    "analisis_exploratorio.html": "d28f5003"
+  },
+  "forecasts.qmd": {
+    "forecasts.html": "508218dd"
+  },
+  "dashboards.qmd": {
+    "dashboards.html": "b3978951"
+  },
+  "apendice.qmd": {
+    "apendice.html": "31ae85d2"
+  },
+  "agradecimientos.qmd": {
+    "agradecimientos.html": "a043ed22"
+  }
+}

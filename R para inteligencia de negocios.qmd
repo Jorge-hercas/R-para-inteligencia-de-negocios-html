@@ -1,0 +1,135 @@
+---
+title: "R para inteligencia de negocios"
+subtitle: "Y un poco de SQL para un enfoque práctico."
+author:
+  - name: Jorge Valente Hernández Castelán
+    affiliations:
+      - name: Universidad Nacional Autónoma de México.
+        department: Facultad de Economía
+    email: valentehcastelan@hotmail.com
+date: "`r Sys.Date()`"
+abstract: "La inteligencia de negocios se ha consolidado como una disciplina clave dentro de las organizaciones modernas, no solo por su crecimiento en los últimos años, sino por su impacto directo en la toma de decisiones. Más allá de su atractivo profesional, su verdadero valor radica en su capacidad para transformar datos en información útil y accionable, integrando áreas como finanzas, operaciones, marketing y tecnología. En este contexto, el objetivo de este libro es mostrar cómo herramientas como R y SQL pueden utilizarse de manera práctica para extraer, procesar, analizar y presentar datos a lo largo de todo su ciclo de vida. A lo largo del contenido, no solo se abordarán aspectos técnicos del lenguaje, sino también la lógica detrás de cada proceso: desde la obtención de datos y su limpieza, hasta el análisis estadístico, la modelación y la construcción de soluciones aplicadas como dashboards y aplicaciones interactivas. Más que enfocarse únicamente en la sintaxis, este libro busca desarrollar una forma de pensar orientada a la resolución de problemas. Al finalizar, el lector comprenderá que el verdadero valor no está en el código en sí, sino en la capacidad de estructurar, analizar y comunicar soluciones basadas en datos dentro de un entorno real."
+logo1: images/rconomics.png 
+#logo2: images/min_logo.png  
+bibliography: [bib/references.bib, bib/packages.bib] 
+csl: bib/sage-harvard.csl                            
+format: 
+  pdf:
+    documentclass: scrbook  
+    classoption: ["onepage", "openany"]
+    geometry:   
+      - top=25mm     # margin settings
+      
+      - bottom=35mm
+      - left=25mm
+      - right=25mm
+      - heightrounded
+    template-partials:
+      - "styles/before-body.tex"
+      - "styles/_titlepage.tex" 
+      - "styles/_coverpage.tex" 
+    include-in-header:
+    - "styles/in-header.tex"
+    # Options for front cover
+    cover-bg-image: "images/doggi.jpg"
+    cover-page-color: "c2d1cf"  # provide hex color code
+    cover-text-color: "3A515C"  # provide hex color code
+    cover-fade-effect: false
+    # Options for table of content
+    toc: true
+    toc-depth: 4
+    toc-title: Contenido
+    number-sections: true
+    number-depth: 3
+    lof: false  # list of figures
+    lot: false  # list of tables
+    colorlinks: true
+    crossref: 
+      chapters: false     # set to 'true' if figure numbering should follow subsections
+      fig-prefix: Fig.    # (default is 'Figure'; adjust if language is German)
+    # Code options:
+    highlight-style: arrow # default 
+execute:
+  echo: true
+  warning: false
+  message: false
+fig-align: center
+editor: source
+---
+
+```{r}
+#| label: load-packages
+#| include: false
+# Load all your packages that you need later
+library(knitr)
+```
+
+```{r}
+#| label: generate-package-refs
+#| include: false
+knitr::write_bib(
+  x = c(.packages(), 'rmarkdown', 'UHHformats',
+    'knitr'), 
+  file = 'bib/packages.bib')
+```
+
+{{< include intro.qmd >}}
+
+{{< include conocimientos_previos.qmd >}}
+
+{{< include basics.qmd >}}
+
+{{< include funcs.qmd >}}
+
+{{< include limpieza.qmd >}}
+
+{{< include limpieza2.qmd >}}
+
+{{< include analisis_exploratorio.qmd >}}
+
+{{< include forecasts.qmd >}}
+
+{{< include dashboards.qmd >}}
+
+{{< include apendice.qmd >}}
+
+# Referencias {.unnumbered }
+
+::: {#refs}
+:::
+
+# Agradecimientos {.unnumbered .unlisted}
+
+A mis padres, quienes, a pesar de las dificultades, los sacrificios y la incertidumbre que muchas veces acompañó este camino, me apoyaron para continuar con este proyecto. Su confianza, su esfuerzo y su respaldo fueron fundamentales para que pudiera seguir adelante incluso en los momentos en los que avanzar parecía complicado.
+
+De manera muy especial, quiero agradecer a mi madre, María de los Ángeles, quien siempre estuvo conmigo: en las buenas, en las malas y, sobre todo, en las peores. Su presencia, su paciencia, su amor y su fortaleza me acompañaron en cada etapa de este proceso. Gracias por creer en mí incluso cuando yo dudaba, por sostenerme cuando las cosas se volvían difíciles y por recordarme, con tu ejemplo, que la perseverancia también es una forma de amor.
+
+También agradezco a mis perritas Hollie y Nena, quienes con su amor incondicional, su compañía silenciosa y su alegría cotidiana hicieron más llevadero este camino. En los días largos, en las noches de cansancio y en los momentos de frustración, su presencia fue un recordatorio simple pero profundo de que no estaba solo. A su manera, me dieron calma, motivación y fuerza para seguir, y con ello me ayudaron a llegar más lejos de lo que imaginaba. Si bien Nena ya no se encuentra con nosotros, quiero honrar su memoria en estas páginas finales del libro, porque aunque pasamos momentos complicados, ella siempre me mostró su cariño, incluso hacia el final.
+
+
+Gracias a quien fue...
+
+Ancla en el desorden,
+
+Respiro entre borrador,
+
+Idea justa en el momento justo.
+
+Motor cuando el motor se apagaba,
+
+Aliento para seguir tecleando,
+
+Risa que le quitaba drama a la página en blanco,
+
+Terquedad de las buenas,
+
+Incondicional sin hacer ruido,
+
+Nitidez cuando todo era niebla,
+
+Empujón de esos que no se olvidan,
+
+Zarpe compartido. Gracias por inspirarme, siempre.
+
+
+

@@ -1,0 +1,666 @@
+---
+bibliography: [bib/references.bib, bib/packages.bib] 
+---
+
+# Primeros pasos en R
+
+Este capítulo estará destinado a darte una guía introductoría en el lenguaje de programación, comenzando por la sintaxis general del mismo, los comandos básicos que más comúnmente vas a utilizar y, por supuesto, algunos atajos de teclado que te harán más veloz al programar una vez que los domines.
+
+Este capítulo es crucial para entender el resto del libro (al menos la parte práctica), por lo que te recomiendo leerlo las veces que sean necesarias hasta comprenderlo (no memorizarlo) y realizar los ejercicios que pondré al final del capítulo como una forma de retroalimentación.
+
+## Descarga e instalación
+
+### R
+
+Antes de comenzar, debemos tener instalado en nuestro equipo el lenguaje R, así como el IDE[^2] RStudio, el cual nos brindará muchas ayudas, autocompletado en el código y un entorno mucho más amigable para trabajar. Claro que puedes tener utilizar otro IDE, como Visual Studio Code o aquel que más te agrade, pero yo te recomiendo comenzar utilizando RStudio, ya que es el más sencillo de instalar y configurar.
+
+[^2]: *Integrated development environment* o *Entorno de desarrollo integrado.* Programa diseñado para trabajar con lenguajes de programación de manera más agradable.
+
+Empezaremos descargando R de su [sitio oficial](https://www.r-project.org), para ello tendremos que dirigirnos al hyperlink de [*Download R*](https://cran.r-project.org/mirrors.html) y escoger el país del cuál provengamos. En este caso escogeré el link de México, el cuál es el siguiente:
+
+[![](images/link%20download.png){fig-align="center"}](https://cran.itam.mx)
+
+Una vez aquí, podremos descargar la versión más nueva de R para nuestro sistema operativo.
+
+### RStudio
+
+Instalar RStudio es igual de sencillo que el paso anterior. Básicamente solo debemos entrar al [sitio web oficial de RStudio](https://posit.co) (ahora llamado POSIT) y dar click en [*Download RStudio*](https://posit.co/downloads/)*,* lo que nos llevará a otra ventana que nos dará la opción de descargar la versión de escritorio de RStudio, o bien, utilizar la versión en línea (RStudio Cloud). En este caso seleccionaremos la versión de escritorio, la cual nos abrirá [otra ventana](https://posit.co/download/rstudio-desktop/) con los pasos a seguir para usar RStudio y, posterior a esto, nos proporcionará un link directo para nuestro sistema operativo, aunque tenemos la opción de escoger otra versión de RStudio, pero te recomiendo que descargues la versión que te asigna por default.
+
+Una vez instalado, el IDE reconocerá automáticamente si nosotros ya tenemos instalado el lenguaje R en nuestro ordenador, en caso contrario nos saltará un mensaje de alerta diciendonos que no se encontró R en nuestro equipo [@R-base].
+
+### Otros IDE's para R
+
+Como mencioné anteriormente, este libro va a estar enfocado en RStudio, ya que es el IDE más sencillo de instalar y configurar, sin embargo, tenemos a nuestra disposición muchos otros IDE's que cuentan con una gran cantidad de complementos, por lo que a continuación te enlistaré los que más recomiendo (sobre todo por su fácil integración con otros lenguajes de programación):
+
+-   [Visual Studio Code](https://code.visualstudio.com): El entorno de desarrollo más popular y dinámico.
+
+-   [Anaconda](https://www.anaconda.com/products/distribution): Un software que combina diferentes entornos de desarrollo enfocados principalmente en Python, el cual también soporta lenguaje R.
+
+-   [PyCharm](https://www.jetbrains.com/pycharm/download/): Otro IDE enfocado principalmente a Python, pero compatible con código de R y, además, es muy agradable visualmente, por lo que nos será muy útil para compilar códigos muy largos.
+
+## Entendiendo el lenguaje R
+
+Ahora si, a partir de aquí formalmente comenzaré a explicar el lenguaje de programación, como se compone, su sintaxis básica, etc. Comencemos haciéndonos la siguiente pregunta: ¿Qué tipo de lenguaje es R? A nivel general lo podemos definir como un **lenguaje orientado a objetos**, ¿qué es lo que esto implica? Un lenguaje de este tipo es aquel que nos permite reutilizar código declarando variables, ya que se basa en la utilización de, valga la redundancia, datos y variables [@barnes2007programacion]. Un objeto dentro de este tipos de lenguajes debe cumplir con ciertas características:
+
+-   **Polimorfismo**: El objeto creado puede cambiar de forma, dependiendo de lo que se necesite para el programa/código compilado.
+
+-   **Abstracción**: Los objetos creados solo mostrarán sus atributos más relevantes para su uso, ocultando información innecesaria de ellos, lo que permite crear códigos más limpios.
+
+-   **Herencia**: Asignación de relaciones y subclases en los objetos creados, lo que permite mantener la jerarquía del código/objeto en todo momento.
+
+-   **Encapsulación**: Los atributos y estados de los objetos creados siempre se encontrarán con una delimitación fija dentro del código, lo que evita que otros objetos realicen cambios no deseados.
+
+Además de las características anteriores, es importante mencionar que una variable siempre se va a identificar con un nombre único, por lo que es muy importante no repetir nombres al momento de crear objetos, ya que de ser el caso éstos se van a reemplazar por el último objeto con el mismo nombre [@barnes2007programacion].
+
+La información anterior puede parecer un poco complicada de entender, por lo que vayamos con el siguiente ejemplo: Imaginemos que quisieramos crear un objeto en R, el cual tenga un valor igual a 5. Para crear objetos en r debemos hacer uso del siguiente operador: `<-`, el cuál nos permite asignarle el valor a una variable. Creando el objeto del ejemplo, tendremos que hacer lo siguiente:
+
+```{r}
+objeto <- 5
+```
+
+Por lo tanto, si nosotros en algún otro momento decidimos escribir en la consola el nombre de la variable `objeto` se nos devolverá el valor actual de ese objeto, el que en este caso es 5. Visualmente:
+
+```{r}
+objeto
+```
+
+Volviendo a lo que mencioné anteriormente sobre mantener un nombre único a los objetos, veamos lo que pasaría si no cumplimos esta regla. Supongamos que creamos un objeto `x` con un valor de 10, pero después creamos otro objeto igualmente llamado `x` con un valor de 3, ¿qué nos devolverá la consola al llamar al objeto `x`?
+
+```{r}
+x <- 10
+x <- 3
+x
+```
+
+Como podemos ver, nos devolvió un valor de 3, ya que el valor guardado en el primer objeto fue reemplazado por el último valor guardado, al tener estos el mismo nombre, por lo que es muy importante tener en cuenta esta regla.
+
+### Sintaxis general
+
+R es un lenguaje con una sintaxis sumamente sencilla, la cuál podríamos dividirla en las siguientes características:
+
+-   No toma en cuenta los espacios en blanco.
+
+-   Reconoce mayúsculas y minúsculas al momento de crear objetos, por lo que no será lo mismo referirnos al objeto `x` y al objeto `X`.
+
+-   Se nos permite incluir comentarios en el código utilizando el signo `#` y, posterior a esto, el comentario que vayamos a incluir.
+
+-   No se requiere el uso del signo `;` para terminar una sentencia de código, lo que lo vuelve mucho más simple. [@butler2009asreml]
+
+Supongamos el siguiente par de objetos y operaciones creadas:
+
+```{r}
+# Ejemplo de una suma
+suma <- 1+2
+Suma <- 2+3
+
+suma
+```
+
+Como podemos observar, tenemos 2 objetos con el mismo nombre, pero con una pequeña diferencia: la primer letra es una minúscula en un caso y mayúscula en el otro, razón por la que al llamar al primer objeto creado, este nos devuelve el resultado original al no ser reemplazado por el de el segundo objeto creado, ya que al tener un carácter diferente es reconocido como un objeto completamente aparte del primero. El ejemplo anterior nos sirve para entender la sintaxis del lenguaje, ya que al principio del código incluí un comentario con la nota `Ejemplo de una suma`, además de que cada sentencia de código no termina con un `;`, simplemente se realiza la operación y después se puede llamar al objeto. Esta es una característica de R que me encanta, su simplicidad, la facilidad con la que puedes crear código sin la necesidad de utilizar caracteres inecesarios.
+
+### Algunos atajos de teclado
+
+En la medida en que avances con cada capítulo y practiques los ejercicios sugeridos será normal que trates de optimizar tiempo, sobre todo al aumentar el tamaño y complejidad de las prácticas que realicemos, por lo que te mostraré algunos de los atajes de teclado que te permitirán ahorrar tiempo y simplificarte la vida:
+
+-   **Command + Alt + N**: Nos abrirá una nueva ventana.
+
+-   **Command + O**: Abrirá el buscador de archivos (para abrir un script o proyecto guardado).
+
+-   **Command + S**: Guardar el archivo actual.
+
+-   **Command + D**: Eliminar la línea anterior de nuestro script.
+
+-   **Command + Alt + M**: Para llamar un concatenador de funciones. Si tenemos activo el paquete `magrittr` se utilizará `%>%`, o si tenemos el *pipe* nativo[^3] (el cuál analizaremos en próximos capítulos) activado en las opciones globales, automáticamente nos escribirá en la consola el operador `|>`.
+
+### Opciones globales
+
+Antes de establecer los códigos que vayamos a utilizar, normalmente vamos a establecer ciertas reglas con las que vamos a configurar la forma en la que se interpretan algunas funciones y/o resultados en la consola, lo que haremos mediante el comando `options()`, por ejemplo, al escribir un número grande e imprimirlo en la consola, normalmente se nos devolverá con notación científica, por lo que si queremos ver el número completo tendremos que establecer la opción `scipen=n`, con el número de dígitos que queramos mostrar:
+
+```{r}
+# Número en notación científica
+print(1000000)
+
+# Cambiando opciones globales
+options(scipen = 999)
+
+print(1000000)
+```
+
+Las opciones globales que utilizaremos más comunmente son:
+
+- `scipen`: Para cambiar el número de dígitos a imprimir en la consola.
+- `encoding`: Para cambiar la codificación de caracteres (y caracteres especiales) en nuestra sesión (`native.enc` por default).
+- `digits`: Número de dígitos a imprimir después del punto decimal (más el número después del punto).
+- `max.print`: Número de elementos a imprimir.
+- `na.action`: Acción a realizar por defecto cuando se evaluen valores `NA`.
+- `nwarnings`: Número de alertas máximo a imprimir.
+- `stringsAsFactors`: Conversión automática de cadenas de caracteres a factores.
+- `timeout`: Tiempo de espera máximo para la lectura de código en la sesión.
+
+Además de las opciones a configurar, usualmente también guardaremos valores globales en la sesión en la que trabajemos. A este tipo de valores que se guardan en el sistema se les conoce como *variables de entorno*, las cuales tienen como objetivo el guardar preferencias de usuario, contraseñas o llaves de acceso. Para guardar y acceder a variables de entorno podemos hacer uso de los comandos `Sys.setenv()` y `Sys.getenv()`, por ejemplo:
+
+```{r}
+# Crear variable de entorno
+Sys.setenv(password = "ejemplo_password")
+
+# Acceder a la variable
+Sys.getenv("password")
+```
+
+Este tipo de variables son útiles cuando trabajamos con códigos que compartiremos con otros usuarios, ya que nos ayudan a mantener seguros datos personales que no queremos escribir directamente como línea de código.
+
+[^3]: Operador para concatenar funciones.
+
+## Vectores, matrices y arreglos
+
+En esta sección vamos a analizar los pilares básicos con los que trabajaremos siempre en R. A mi parecer, podemos ver a estos 3 tipos de estructuras de datos como una secuencia lógica: Un vector es la forma más simple de estructura, siendo de una sola dimensión, mientras que una matriz es el siguiente nivel, el cuál es de dos dimensiones, teniendo finalmente a un arreglo, el cuál puede ser de tres dimensiones. ¿A qué me refiero con las dimensiones de cada estructura de datos? Vamos con cada una:
+
+### Vectores
+
+Un vector es, simplemente, una colección de datos del mismo tipo, los cuales tienen unicamente una dimensión: la longitud del vector, o bien, la cantidad de elementos que contienen. Los vectores deben contener elementos del mismo tipo únicamente. Dentro del lenguaje R, para crear un vector tenemos que usar la función `c()`, la cual nos pasará todos los elementos que escribamos adentro en la forma de un vector, valga la redundancia, por ejemplo:
+
+```{r}
+# Vector con elementos definidos
+c(1,3,5)
+
+# Vector con una secuencia de números
+c(1:10)
+```
+
+Notese que para el segundo ejemplo utilicé un signo de `:`, el cuál nos va a generar una secuencia numérica entre un número inicial y un número final (si el número inicial es menor, la secuencia irá en reversa), algo bastante útil cuando queremos crear un vector con bastantes elementos.
+
+¿Qué pasaría si intentáramos crear un vector con elementos de diferentes tipos? Por ejemplo:
+
+```{r}
+vector <- c(1, "ejemplo")
+```
+
+Al incluir una cadena de caracteres como elemento dentro del vector, automáticamente todos sus elementos se van a considerar de este tipo, ya que es el tipo de dato más flexible respecto a otros [@ahumada2003r], lo que podemos observar a continuación:
+
+```{r}
+# Clase del vector creado
+class(vector)
+
+# Otra forma de ver el tipo de vector
+typeof(vector)
+```
+
+Ambas funciones nos dicen que tipo de que clase es nuestro vector (la función `typeof()` profundiza más en cuanto a los tipos de valores numéricos, como los enteros).
+
+Existe la posibilidad de transformar un vector de tipo `character` a tipo numérico. Recordemos que uno de los elementos que se incluyeron en el vector era un número, por lo que a pesar de que ahora mismo lo catalogue como una cadena de caracteres, la función `as.numeric()` reconocerá que elementos que solo incluyan caracteres de números y los transformará, mientras que para cualquier otro elemento lo transformará en `NA`[^4]. Veamos un ejemplo de ello:
+
+[^4]: Missing Value o valor perdido.
+
+```{r}
+as.numeric(vector)
+```
+
+Notese que nos saltó una alerta, ya que al transformar el vector a numérico se perdió una observación.
+
+Podemos hacer el proceso inverso, es decir, convertir un vector numérico a cadena de caracteres con la función `as.character()`, siendo que en este caso no se perderán observaciones, pero tampoco se recuperarán las observaciones perdidas o `NA`.
+
+Ahora, veamos los tipos de datos que puede incluir un vector:
+
+-   **Numérico**: Estos se pueden dividir en `integer` para números enteros y `double` para números con decimales
+
+-   **Lógico**: Puede asumir únicamente dos valores: `TRUE` y `FALSE`.
+
+-   **Caracter**: Cadenas de caracteres como textos, nombres, etc. Estos siempre deben ir escritos entre comillas para que no se consideren un objeto.
+
+-   **Factor**: Son muy parecidos a las cadenas de caracteres, aunque estos se utilizan para categorizar la información, por ejemplo, con sexos, especies, etc. Se pueden crear con la función `factor()`.
+
+-   **Fecha**: Este otro tipo de vectores son parecidos a las cadenas de texto ya que se escriben entre comillas, sin embargo, se pueden realizar algunas operaciones con ellos que veremos más adelante.
+
+-   **NA**: Las observaciones perdidas o valores nulos no son propiamente un tipo de dato, si no más bien la falta de estos en una estructura de datos. Se pueden identificar con la función `is.na()`.
+
+### Matrices
+
+Cuando aumentamos una dimensión en nuestros conjuntos de datos surgen las llamadas matrices, las cuales tienen renglones y columnas. Formalmente, las podemos definir como un arreglo de $m*n$ números, donde $m$ son las filas y $n$ las columnas [@del2011algebra]. Imaginemos una matriz que contenga 5 columnas y 2 filas, gráficamente se vería de la siguiente manera:
+
+$$
+\overset{\downarrow \;Columna \; \downarrow \qquad \qquad \quad \; \;}{\begin{pmatrix}\alpha_1 & \alpha_3  & \alpha_5 & \alpha_7 & \alpha_9\\ \alpha_2 & \alpha_4 & \alpha_6 & \alpha_8 & \alpha_{10}\end{pmatrix}\left.\begin{matrix}\leftarrow \\\leftarrow \end{matrix}\right\} \text{Renglon}}
+$$
+
+¿Cómo podríamos traducirla a lenguaje R? Vamos paso a paso. Para poder generar un objeto de tipo matriz utilizaremos la función `matrix()`, en la cual vamos a introducir un vector. Notemos que nuestro ejemplo cuenta con un total de 10 elementos, por lo que usaremos un vector de números del 1 al 10, es decir:
+
+```{r}
+matrix(1:10)
+```
+
+Ahora, para que nuestra matriz tenga 5 columnas debemos asignarlas con el argumento `ncol`, es decir:
+
+```{r}
+matrix(1:10, ncol = 5)
+```
+
+Igualemente podemos asignar el número de filas en la matriz a, por ejemplo, 3, pero debemos considerar que un vector de números del 1 al 10 no tiene la cantidad de elementos suficientes para llenar una matriz de 5 columnas por 3 filas (la cuál necesitaría 15 elementos), por lo que para que la matriz pueda cumplir con el número de elementos suficientes va a reutilizar los elementos del vector original hasta llenar la matriz por completo, es decir:
+
+```{r, warning=FALSE}
+matrix(1:10, ncol = 5, nrow = 3)
+```
+
+#### Matrices a partir de vectores
+
+Es posible que nos encontremos con situaciones en las que ya tengamos preestablecidos vectores dentro de un objeto en R, por lo que si quisieramos construir una matriz a partir de ello, podemos hacerlo utilizando las funciones `rbind()` para agregar los vectores como filas o `cbind()` para agregarlos como columnas. Imaginemos los siguientes 3 objetos con la misma longitud:
+
+```{r}
+vector_1 <- c(1:5)
+vector_2 <- c(24:29)
+vector_3 <- c(39:43)
+```
+
+Vamos a unirlos en una matriz:
+
+```{r, warning=FALSE}
+
+# Uniendo los vectores como filas
+rbind(vector_1, vector_2, vector_3)
+
+# Uniendo los vectores como columnas
+rbind(vector_1, vector_2, vector_3)
+```
+
+### Arreglos (arrays)
+
+Llevando las cosas al siguiente nivel, ahora nos encontramos con los arreglos, los cuales agregan una dimensión extra al conjunto de datos que hemos armado hasta ahora. Veamoslo de la siguiente manera: Un vector es de una sola dimensión, por lo que si lo dibujáramos en una hoja de papel, este simplemente sería una línea, mientras que una matriz agregaría una dimensión extra, por lo que ahora podríamos dibujar un cuadrado. Un arreglo (array) sería el equivalente a dibujar un cubo, lo que gráficamente se podría traducir en lo siguiente:
+
+![Objetos en R y sus dimensiones](images/arreglos-02.pdf){width="1249" height="90"}
+
+Teniendo lo anterior en cuenta, podemos regresar a R para compilar un arreglo. Imaginemos que queremos crear 2 matrices de $3*3$, las cuales van de los números 1 al 9 y 10 al 19, en este caso partiríamos de 2 vectores `c(1:10)` y `c(11:20)`, los cuales vamos a introducir en otro vector contenedor en nuestra función array(), es decir:
+
+```{r, eval=FALSE}
+array(
+  c(
+    c(1:10),
+    c(11:20)
+  )
+)
+```
+
+En este caso solo hemos asignado los valores que estarán dentro de nuestro arreglo, ahora debemos utilizar el argumento `dim`, el cuál constará de 3 valores: Las filas, las columnas y el número de matrices en nuestro arreglo, o bien, la profundidad del mismo. Por lo tanto, tendríamos lo siguiente:
+
+```{r}
+array(
+  c(
+    c(1:10),
+    c(11:20)
+  ),
+  dim = c(3,3,2)
+)
+```
+
+Quisiera que notes lo siguiente: cuando creamos el arreglo cada matriz dentro de el tiene como encabezado dos comas y un número, lo cuál nos estaría diciendo el número de elemento al que pertenece esa matriz. Si quisieramos acceder únicamente a una matriz en particular, podríamos hacer uso de los corchetes `[]`, los cuales funcionan como una forma de trabajar con el índice de un conjunto de datos, por ejemplo, si quisieramos acceder a la segunda matriz creada en nuestro arreglo, podríamos hacerlo de la siguiente manera:
+
+```{r}
+arreglo <-
+  array(
+  c(
+    c(1:10),
+    c(11:20)
+  ),
+  dim = c(3,3,2)
+)
+
+arreglo[,,2]
+```
+
+Los corchetes igualmente nos permiten acceder a ciertos elementos de las matrices y vectores, pero eso lo veremos más adelante con mucho más detalle, ya que haremos uso de ello para la manipulación de bases de datos en capítulos siguientes.
+
+## Data frames
+
+Hasta ahora hemos visto las estructuras de datos más primitivas dentro de los lenguajes de programación, como funcionan, como combinarlas y como interpretarlas, pero hay un inconveniente cuando trabajamos con ellas, y es que solo admiten un solo tipo de datos a la vez, es decir, un vector, una matriz o un arreglo solo pueden tener números, valores lógicos o cadenas de caracteres uno a la vez, no puede existir una matriz con números y un caracter o al revés. Cuando hacemos análisis de datos muchas veces necesitamos saber el contexto de la información, un indicador que nos diga a qué se refieren ciertos valores, si estos pertenecen al mismo conjunto de datos, si están validados, etc, por lo que para ayudarnos con esto, surgieron los **data frames**, una estructura que nos permite unir diferentes tipos de datos en columnas separadas y poder trabajar con ellos de manera más eficiente que con un arreglo o una matriz [@chan2018data]. Básicamente, un data frame trabaja con columnas delimitadas por nombres, como lo pueden ser las tablas en Excel. Imaginemos que tenemos un vector que nos indica valores sobre edades de alumnos de una primaria y otro con los nombres de estos alumnos, por ejemplo:
+
+```{r}
+edad <- c(8,9,7)
+nombre <- c("Roberto", "Luis", "Susana")
+```
+
+Para poder nosotros ligar a cada alumno con su respectiva edad, lo que debemos hacer es crear un data frame con ambas variables, de la siguiente manera:
+
+```{r}
+data.frame(
+  edad,
+  nombre
+)
+```
+
+Ahora, si quisieramos ahorrarnos un paso y no tener que crear un objeto para cada variable de nuestro data frame, podemos simplificar el proceso introduciendo los vectores directamente dentro de la función de `data.frame()`, es decir:
+
+```{r}
+tabla <- 
+  data.frame(
+  edad = c(8,9,7),
+  nombre = c("Roberto", "Luis", "Susana")
+)
+
+tabla
+```
+
+Individualmente, al analizar un data frame previo a trabajar con su información, podemos ver el tipo de columnas con las que contamos de la siguiente manera:
+
+```{r}
+typeof(tabla$edad)
+typeof(tabla$nombre)
+```
+
+Directamente haciendo referencia a sus columnas con el signo \$, el cuál analizaremo con detalle después, pero que básicamente nos permite acceder a vectores de manera unidimensional.
+
+De igual manera, si queremos ver el tipo de columna para todo nuestro data frame, podemos utilizar la función `str()`, tal que:
+
+```{r}
+str(tabla)
+```
+
+Es importante procupar siempre comenzar nuestro proceso de trabajo analizando el tipo de columnas con las que contamos, ya que podemos encontrarnos con situaciones en las que, por ejemplo, tenemos una columna de números, pero éstos se leyeron como cadenas de caracteres, por lo que será necesario transformar esa información a numérica de tal forma que podamos generar cálculos con esos valores sin que la consola nos devuelva un error.
+
+### Uso de corchetes con un data frame: Indexación.
+
+Anteriormente ya habíamos trabajado con corchetes para obtener un elemento de un arreglo, lo que hicimos en ese caso es obtener un subconjunto del objeto a partir de su índice. Formalmente tenemos 3 operadores de selección: \[\], \[\[\]\] y \$, los cuales iremos viendo poco con cada tipo de elemento, pero por ahora comenzaremos desde lo más básico: El uso con vectores. Imaginemos que tenemos el siguiente vector de números:
+
+```{r}
+vector <- 10:20
+```
+
+En este caso podríamos obtener elementos indexando un segundo vector que sea subconjunto del primero de manera directa o a la inversa, es decir, supongamos que queremos obtener los primeros 3 elementos del vector anterior, en ese caso lo haríamos de la siguiente manera:
+
+```{r}
+vector[1:3]
+```
+
+O bien,
+
+```{r}
+vector[c(1,2,3)]
+```
+
+Que es básicamente lo mismo. Ahora, si queremos obtener una selección inversa, es decir, los elementos contrarios a lo que indexemos, basta con escribir un signo negativo de la siguiente manera:
+
+```{r}
+vector[-c(1:3) ]
+```
+
+En ese caso será necesario que escribamos la secuencia dentro de un vector `c()`, para que pueda considerar el signo negativo para todos los elementos.
+
+Utilicemos ahora la indexación con un data frame. Vayamos a nuestro ejemplo anterior: Las edades de un grupo de alumnos. Al tener un objeto con 2 dimensiones, al nosotros escribir un vector de selección como en el caso de los vectores simplemente nos devolverá columnas seleccionadas, por ejemplo:
+
+```{r}
+# Selección de la primer columna
+tabla[1]
+
+# Selección de ambas columnas
+tabla[1:2]
+```
+
+Pero, ¿y si quisieramos seleccionar la primera observación de ambas columnas? Para ello debemos escribir una coma posterior al número índice, es decir:
+
+```{r}
+# Selección de la primer fila de observaciones
+tabla[1,]
+
+# Selección de las filas 1 y 3
+tabla[c(1,3),]
+```
+
+Podemos utilizar el signo de coma antes del número índice, lo que igualmente nos devolverá toda la información de la primer columna, pero en formato de vector unidimensional, es decir;
+
+```{r}
+tabla[,1]
+```
+
+Vayamos a algo un poco más específico, ¿qué pasaría si quisieramos extraer la segunda observación de la primer columna? Recordemos que un data frame es, básicamente, un arreglo de dos dimensiones, por lo que mediante indexación podemos especificar que nos devuelva este elemento al especificar esta información de la siguiente manera:
+
+```{r}
+# Indexación de un valor específico para una columna específica
+tabla[1,2]
+```
+
+Como puedes observar, el primer valor es el número de fila de nuestro data frame, mientras que el segundo valor nos indica la columna seleccionada.
+
+### Reasignación de columnas
+
+Veamos una situación elemental pero igualmente crucial en el análisis de datos: Los tipos de columnas y como cambiarlos. Como recordarás, te mencioné que que podías cambiar el tipo de vector con el que estuvieras trabajando con funciones como `as.numeric()`, `as.character()`, etc. Supongamos una situación en la que tenemos un data frame que contiene una columna de números, pero estos están catalogados como cadenas de caracteres, tal que:
+
+```{r}
+df_caracteres <- 
+  data.frame(
+    col_1 = c("1", "2", "3")
+  )
+
+# Tipo de columna
+typeof(df_caracteres$col_1)
+```
+
+Como puedes observar, dicha columna se encuentra catalogada como una cadena de caracteres y, por lo tanto, al querer sumar sus valores, obtener una media o querer hacer alguna otra operación nos devolverá un error. Para poder nosotros trabajar de manera correcta debemos hacer una reasignación de nuestro vector y transformarlo a una columna numérica. Para convertir el vector en cuestión simplemente debemos enmascararlo utilizando un objeto ya transformado que tenga los valores en formato numérico con la función `as.numeric()`, tal que:
+
+```{r}
+# Reasignación del vector
+df_caracteres$col_1 <- as.numeric(df_caracteres$col_1)
+
+# Tipo de columna
+typeof(df_caracteres$col_1)
+```
+
+### Filtrado de datos mediante indexación
+
+Hasta ahora hemos visto como seleccionar posiciones específicas de un data frame, pero en el mundo real, cuando trabajamos con tablas y bases de datos extremadamente grandes, es muy raro que sepamos la posición de lo que queremos localizar. Imaginemos que tenemos un data frame con 50 elementos (para el cuál utilzaremos la función sample(), con la que generaremos información aleatoria), por ejemplo:
+
+```{r}
+tabla_larga <-
+  data.frame(
+    letras = sample(
+      c("a", "b", "c"),
+      size = 50,
+      replace = TRUE
+    ),
+    valores = sample(
+      1:20,
+      size = 50,
+      replace = TRUE
+    )
+  )
+
+head(tabla_larga)
+```
+
+En este sencillo ejemplo tenemos una columna `letras` con tres elementos y otra columna `valores` con números aleatorios del 1 al 20, ¿cómo podríamos obtener del anterior objeto unicamente los números pertenecientes a la letra *"a"*? Para ello, mediante el uso de índices, podemos seleccionar un subconjunto del data frame donde solamente se cumpla esa condición. Para obtener un subconjunto a partir de una condición debemos utilizar los índices como normalmente lo hacemos, solo que en esta ocasión vamos a acceder directamente a una columna en forma unidimensional con el signo `$` de la siguiente manera:
+
+```{r}
+tabla_filt <- tabla_larga[tabla_larga$letras == "a",]
+
+head(tabla_filt,5)
+```
+
+Quiero que notes que después de seleccionar la columna mediante el signo de dolar[^5] utilizamos otro signo con un doble igual y escribimos la condición, esto se hace así ya que un único signo de `=` funciona de la misma manera que el signo `<-`, para asignar variables. Las condiciones lógicas que podemos utilizar son las siguientes:
+
+[^5]: El signo `$` nos permite acceder a una variable u objeto en su forma unidimensional, o bien, en forma de vector.
+
+-   `==` Para una igualdad.
+
+-   `<=` Para un valor menor o igual a uno especificado.
+
+-   `>=` Para un valor mayor o igual a uno especificado.
+
+-   `<` Para un valor menor únicamente a uno especificado.
+
+-   `>` Para un valor mayor únicamente a uno especificado.
+
+-   `!=` Para valores diferentes a uno especificado.
+
+-   `%in%` Para valores iguales a un conjunto dentro de un vector.
+
+De igual forma podemos utilizar estas condiciones lógicas en conjunto con operadores lógicos, los cuales son los siguientes:
+
+-   `|` Para situaciones en las que se busca cumplir una condición u otra.
+
+-   `&` Para situaciones en las que se busca cumplir más de una condición a la vez.
+
+-   `&&` Para situaciones en las que se busca cumplir más de una condición a la vez, pero evaluando únicamente el primer elemento de cada vector a comparar.
+
+-   `isTRUE()` o `isFALSE()` para evaluar un vector lógico.
+
+En nuestro ejemplo anterior filtramos el data frame mediante una igualdad, siendo esta la única forma válida de filtrar cadenas de caracteres (o con el operador `%in%`, si escogemos más de un valor para filtrar). Supongamos ahora que queremos seleccionar (o filtrar) únicamente observaciones de nuestro data frame mayores o iguales, por ejemplo, a 15, esto lo podemos hacer de la siguiente manera:
+
+```{r}
+tabla_filt <- tabla_larga[tabla_larga$valores >= 15,]
+
+head(tabla_filt,5)
+```
+
+Ahora, si combinamos el uso de los operadores lógicos con las condiciones lógicas, podemos obtener información de manera más específica, por ejemplo, en un caso en el que necesitemos extraer únicamente los valores pertenecientes a "b" mayores a 15 podemos hacerlo de la siguiente manera:
+
+```{r}
+tabla_filt <- tabla_larga[tabla_larga$valores >= 15 & tabla_larga$letras == "a",]
+
+tabla_filt
+```
+
+### Indexación múltiple
+
+Hasta ahora hemos visto el uso de corchetes para poder seleccionar columnas y filtrar información de manera simple, pero ¿sabías que puedes usar más de un corchete a la vez? Esto nos sirve esencialmente cuando necesitamos realizar una operación o tratamiento a datos que ya se encuentran seleccionados o filtrados mediante un primer corchete. No quiero que confundas a la indexación múltiple con el uso de dobles corchetes entre si, es decir `[[]]`, ya que ese tipo de indexación se utiliza para obtener elementos en formato unidimensional de objetos más complejos, como lo son las listas (las cuales analizaremos en el siguiente punto), pero eso lo veremos en su respectiva sección. Partamos de una situación simple en la que queremos buscar valores en una columna. Supongamos lo siguiente: Consideremos el dataset de muestra `mtcars`, el cuál nos proporciona la siguiente información:
+
+```{r}
+head(mtcars,3)
+```
+
+¿Qué ocurriría si nos encontraramos en una situación en la que únicamente necesitamos las primeras dos columnas de información, pero con valores mayores o iguales a, por ejemplo, 5 en ambos casos? Como puedes observar, para seleccionar las primeras dos columnas basta con utilizar \[1:2\] dentro de los corchetes, pero ahora nos surge un problema, y es que esto nos imposibilita el filtrar los datos para valores mayores a 5, ya que utilizar un operador lógico en este caso solo es válido para operaciones del mismo tipo y utilizar una coma sería indicativo del uso de la siguiente dimensión en nuestro data frame, es decir, estaríamos haciendo alución a la columna y no a las observaciones que queremos, lo cual en este caso sería incorrecto. Para poder obtener valores mayores a 5 únicamente en las columnas que seleccionemos, tendremos que usar un segundo corchete de la siguiente manera:
+
+```{r}
+filtro <- mtcars[1:2][mtcars$mpg > 5 & mtcars$cyl > 5,]
+
+head(filtro,5)
+```
+
+Más adelante veremos que existen formas mucho más sencillas e intuitivas de hacer lo anterior, pero por ahora quiero introducir otro caso más complejo de indexación múltiple: El reemplazo de valores. Cuando trabajamos con data frames sumamente largos es muy normal encontrarnos con que están llenos de valores nulos o NA, lo cuál podría sesgar nuestros análisis o darnos resultados incorrectos, por lo que en algunas ocasiones se suele optar por reemplazar esos valores nulos con 0's, esto no siempre es lo correcto pero por el momento vamos a poner en práctica un caso así. Pensemos en la siguiente situación: Tenemos un data frame que cuenta con 3 columnas las cuales tienen múltiples valores nulos que queremos reemplazar con 0's. Vamos a construir el data frame que necesitamos para este ejemplo:
+
+```{r}
+df_na <-
+  data.frame(
+    col_1 = sample(c(1:5,NA),size = 20,replace = TRUE),
+    col_2 = sample(c(15:18,NA),size = 20,replace = TRUE),
+    col_3 = sample(c(50:55,NA),size = 20,replace = TRUE)
+  )
+
+head(df_na,5)
+```
+
+Ahora, para reasignar valores en un data frame haremos uso del operador `<-`, el cual como recordaremos nos permite asignarle un valor a un objeto, lo que a su vez implica que podemos reasignar valores a un objeto basándonos en condiciones. Empecemos por la primer columna: Para hacer referencia únicamente a los valores nulos que tengamos allí utilizaremos la función `is.na()`, la cual nos ayudará a evaluar esa columna y devolvernos todos los `NA`, es decir:
+
+```{r}
+df_na$col_1[is.na(df_na$col_1)]
+```
+
+Ahora, para reasignar los valores nulos a 0, necesitaremos introducirlos en forma de un objeto bajo condición, es decir:
+
+```{r}
+df_na$col_1[is.na(df_na$col_1)] <- 0
+```
+
+O dicho de forma más sencilla, al hacer referencia a los NA en nuestro data frame, podemos reasignar su valor con `<-`. Si volvemos a evaluar nuestra tabla con la misma indexación para encontrar valores nulos, notaremos que ya no tenemos ninguno, tal que:
+
+```{r}
+df_na$col_1[is.na(df_na$col_1)]
+```
+
+Aplicando este mismo método podemos reasignar valores de toda clase por otros, tal como lo haríamos en SQL con la función `WHERE`, pero ahora toca preguntarnos lo siguiente: ¿y si quisieramos reasignar todos los NA del data frame a 0's sin considerar una columna? Aquí es donde el ejercicio comienza a tornarse interesante. Supongamos el siguiente data frame con diferentes tipos de columnas:
+
+```{r}
+mult_df <- 
+  data.frame(
+    val1 = sample(letters, size = 100, replace = T),
+    val2 = sample(c(1:100,NA), size = 100, replace = T),
+    val3 = NA
+  )
+
+head(mult_df,5)
+```
+
+Como puedes observar, tenemos 1 columna con caracteres (el vector `letters` incluido por default en R es el abedecedario en minúsculas), una columna numérica y otra columna que únicamente contiene `NA` (por default lógica). ¿Cómo podemos transformar la información faltante de las 2 columnas en, por ejemplo, 0's? Al igual que en el caso anterior, debemos utilizar primero un corchete para definir las columnas que vamos a utilizar, para después utilizar otro en el que vamos a seleccionar los valores nulos con `is.na()`, pero aquí debemos considerar un asunto extra: El número de columnas en las que vamos a trabajar es mayor a 1, por lo que no es posible utilizar el operador `$` para hacer referencia a una cierta columna directamente, en este caso es necesario utilizar el corchete para referenciar las columnas a las que vamos a reemplazar, es decir:
+
+```{r}
+mult_df[2:3][is.na(mult_df[2:3])] <- 0
+
+head(mult_df,5)
+```
+
+Como puedes ver, dentro del segundo corchete se hizo referencia a las 2 columnas a partir de otro más, ya que nos era imposible seleccionar a todas las columnas a la vez de forma directa. Ahora, este ejemplo es relativamente sencillo de resolver, pero es posible que te encuentres en una situación en la que tengas una tabla más dinámica, la cuál aumente el número de columnas todos los días o al menos constantemente, por lo que en lugar de escribir directamente la secuencia del vector `1:3` en ese caso lo más conveniente sería obtener automáticamente el número de columnas que contiene con la función `length()`, la cuál nos devolverá simplemente este número, tal que:
+
+```{r}
+mult_df[2:length(mult_df)][is.na(mult_df[2:length(mult_df)])] <- 0
+```
+
+Como puedes observar, ya no tenemos que preocuparnos por la cantidad de valores nulos ni que estos se encuentren en múltiples columnas, ya que acabamos de generar una operación mediante indexación que nos reemplaza toda esta información de manera eficiente y semi automática.
+
+## Listas
+
+En esta sección discutiremos la utilidad y función de las listas, así como su estructura general y formas para trabajar con ellas.
+
+A pesar de que los data frames suelen ser los objetos más utilizados y mejor entendidos por los usuarios de R, las listas son una clase de objetos más densos y bastante útiles, los cuales nos servirán bastante durante la creación de funciones, librerías o aplicaciones web, ya que tienen como objetivo el **contener diferentes estructuras en un mismo objeto**.
+
+Si bien puede parecer algo más sencillo el simplemente guardar información en un data frame, lo cierto es que estos tienen sus limitantes, como el nivel de dimensiones que pueden contener y su estructura es más estricta.
+
+Pensemos en una situación en la que contamos con un data frame que tiene, por ejemplo, la edad de un grupo de alumnos, al cuál queremos obtenerle ciertos estadísticos y, posterior a esto conservar toda esa información para utilizarla después, nuestra primera idea podría ser guardar todos los datos en un data frame, quizá en una nueva columna con un nombre indicativo de "**resultados**", sin embargo, hacer esto no es la mejor práctica, ya que tendremos una columna extra en nuestro data frame, lo que resulta poco práctico si queremos, por ejemplo, remover valores nulos como lo hicimos en la sección anterior. Una solución a este problema es, simplemente, construir una lista en la que tengamos nuestra tabla original con las edades de los alumnos y nuestros resultados en otro objeto que no interfiera con el primero. Vamos paso por paso para construir dicha lista comenzando por los datos a usar:
+
+```{r}
+# Creación del data frame
+edades <- data.frame(
+  valor = sample(10:15, size = 19, replace = TRUE)
+)
+
+# Creación de estadísticos
+promedio_edad <- mean(edades$valor)
+edad_max <- max(edades$valor)
+edad_min <- min(edades$valor)
+mediana_edad <- median(edades$valor)
+```
+
+Ahora que tenemos todos los valores que necesitamos, podemos construir una lista con todos ellos usando la función `list()`, sin que estos se afecten unos a otros, tal que:
+
+```{r}
+lista <- list(
+  edades,
+  promedio_edad,
+  edad_max,
+  edad_min,
+  mediana_edad
+)
+```
+
+### Indexación en una lista
+
+Para acceder a los elementos de nuestra lista, simplemente podemos hacer referencia a ellos mediante indexación con `[[]]`, incluyendo el número índice del elemento que queremos obtener, por ejemplo:
+
+```{r}
+# Data frame
+head(lista[[1]],5)
+
+# Promedio
+lista[[2]]
+```
+
+Siendo que el primer objeto que introducimos al crear la lista fue el data frame y el segundo el promedio. Una vez que accedemos a objetos como un data frame dentro de una lista, podemos hacer referencia a sus datos con el signo `$` como normalmente lo haríamos.
+
+Podemos simplificar la creación de listas asignando los objetos dentro de la misma función, tal que:
+
+```{r}
+# Data frame
+edades <- data.frame(
+  valor = sample(10:15, size = 19, replace = TRUE)
+)
+
+# Lista
+lista <- list(
+  edades = edades,
+  promedio_edad = mean(edades$valor),
+  edad_max = max(edades$valor),
+  edad_min = min(edades$valor),
+  mediana_edad = median(edades$valor)
+)
+```
+
+Nota como se asignó el data frame previamente a crear la lista, esto ya que el resto de los objetos creados son una consecuencia del primero, al ser cálculos de los datos de nuestra tabla, por lo que necesariamente necesitan que esa información ya exista antes de poder asignarla dentro de una lista.
+
+Cuando nosotros asignamos variables dentro de una lista con el signo `=` igualmente nos es posible hacer referencia a ellas mediante el signo `$` y el nombre que hayamos asignado, por ejemplo:
+
+```{r}
+lista$promedio_edad
+```

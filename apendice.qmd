@@ -1,0 +1,987 @@
+---
+bibliography: [bib/references.bib, bib/packages.bib] 
+---
+
+# Apéndice: Simbología y temas complementarios{.unnumbered}
+
+Este apéndice tiene como objetivo ser un recurso de referencia integral para el lector en cuanto a complementos básicos de las matemáticas utilizadas a lo largo de este libro, únicamente de forma descriptiva. Por supuesto que el alcance de este libro no permite explicar de forma detallada todas las nociones de álgebra necesarias, por lo que se introducirá esa información de forma breve a lo largo de las siguientes secciones.
+
+## Teoría de conjuntos {.unnumbered }
+
+<center>
+
+|    Simbolo    |         Significado         |      Simbolo      |          Significado         |
+|:-------------:|:---------------------------:|:-----------------:|:----------------------------:|
+|     $\{\}$    |           Conjunto          |       $\geq$      |       Mayor o igual que      |
+|     $\in$     |    Pertenece al conjunto    |       $\leq$      |       Menor o igual que      |
+|    $\notin$   |   No pertenece al conjunto  |       $\cap$      |   Interseccion de conjuntos  |
+|       \|      |           Tal que           |       $\cup$      |      Union de conjuntos      |
+|     $n(X)$    | Cardinalidad del conjunto X |        $X'$       |  Complemento del conjunto X  |
+|      $U$      |      Conjunto universo      |         =         |           Igualdad           |
+| $\varnothing$ |        Conjunto vacío       |       $\neq$      | Diferente de (no es igual a) |
+|  $\subseteq$  |        Subconjunto de       |       $...$       |     El conjunto continua     |
+|   $\subset$   |    Subconjunto propio de    |   $\Rightarrow$   |           Entonces           |
+|  $\nsubseteq$ |     No es subconjunto de    | $\Leftrightarrow$ |         Si y solo si         |
+|       >       |          Mayor que          |         ~         |         Es falso que         |
+|       <       |          Menor que          |  $\wedge$, $\vee$ |             y, o             |
+
+: Simbología utilizada en teoría de conjuntos.
+</center>
+
+<center>
+
+| Propiedades de inclusión                                            | 
+|---------------------------------------------------------------------|
+| $X \subset X$                                                       |
+| $\varnothing \subset X$                                             |
+| $X \subset Y \Rightarrow Y \nsubseteq X$; $\Leftrightarrow$ $X=Y$   |
+| $X \subset Y$ y $B \subset \Delta$ $\Rightarrow$ $A \subset \Delta$ |
+
+: Propiedades de los conjuntos.
+
+</center>
+
+<center>
+
+Otras propiedades | Union                                                            | Intersección                                                     |
+---------------------------------|------------------------------------------------------------------|------------------------------------------------------------------|
+Identidad | $A \cup \varnothing = A$                                         | $A \cap X = A$                                                   |
+Idempotencia | $A \cup A = A$                                                   | $A \cap A = A$                                                   |
+Conmutatividad | $A \cup B = B \cup A$                                            | $A \cap B = B \cap A$                                            |
+Asociatividad | $(A \cup B) \cup \Delta = A \cup  (B \cup \Delta)$               | $(A \cap B) \cap \Delta = A \cap (B \cap \Delta)$                |
+Distributividad | $(A \cup B) \cap \Delta = (A \cap \Delta ) \cup (B \cap \Delta)$ | $(A \cap B) \cup \Delta = (A \cup \Delta ) \cap (B \cup \Delta)$ |
+Absorción | $A \cup (A \cap B) = A$                                          | $A \cap (A \cup B) = A$                                          |
+Complementaridad | $A \cup A^{\chi}=X$                                              | $A \cap A^{\chi}=\varnothing$                                    |
+
+
+: Otras propiedades de los conjuntos.
+</center>
+
+
+## Estadística descriptiva {.unnumbered }
+
+<center>
+
+|       Tabla resumen       |                  Serie simple                  |                  Serie de frecuencias                  |                                              serie de datos agrupados                                              |
+|:-------------------------:|:----------------------------------------------:|:------------------------------------------------------:|:------------------------------------------------------------------------------------------------------------------:|
+|      Media aritmetica     |          $\bar{x}= \frac{\sum x_i}{n}$         |          $\bar{x}= \frac{\sum x_i y}{\sum y}$          |                        $\bar{x}= \frac{\sum x_i my}{\sum y}$  ;  $x_{im}=\frac{L_i + L_s}{2}$                      |
+|            Moda           |                   Sin formula                  |                       Sin formula                      |                               $M_{o} = L_{i} + [(\frac{d_1}{d_1 + d_2})(\alpha_i)]$                                |
+| $d_1$                     | Sin formula                                    | Sin formula                                            | $d_1 =y_{mo}-y_{ant}$                                                                                              |
+| $d_2$                     | Sin formula                                    | Sin formula                                            | $d_2 =y_{mo}-y_{past}$                                                                                             |
+| Mediana                   | $M_d =\frac{ n+1}{2}$ o $M_d = \frac{ x\frac{n}{2} + x \frac{n}{2}+1 }{2}$ | $M_d =\frac{\sum y+1}{2}$ o $\frac{\sum y}{2}$         | $M_d = L_i + [\frac{\frac{\sum y}{2}-y_{ac \; ant}}{y_{md}}(\alpha_{i})]$       |
+|          Varianza         |     $S^2 =\frac{\sum (x_i - \bar{x})^2}{n}$    |    $S^2 =\frac{\sum (x_{im} - \bar{x})^2 y}{\sum y}$   |                                  $S^2 =\frac{\sum (x_{im} - \bar{x})^2 y}{\sum y}$                                 |
+|    Desviacion  estandar   |  $S =\sqrt{\frac{\sum (x_i - \bar{x})^2}{n}}$  | $S =\sqrt{\frac{\sum (x_{im} - \bar{x})^2 y}{\sum y}}$ |                               $S =\sqrt{\frac{\sum (x_{im} - \bar{x})^2 y}{\sum y}}$                               |
+| Coeficiente de  variacion |          $C_v = \frac{S}{\bar{x}}*100$         |              $C_v = \frac{S}{\bar{x}}*100$             |                                            $C_v = \frac{S}{\bar{x}}*100$                                           |
+|         Asimetria         |    $M_3 = \frac{\sum (x_i - \bar{x})^3}{n}$    |    $M^2 =\frac{\sum (x_{im} - \bar{x})^3 y}{\sum y}$   |                                  $M^2 =\frac{\sum (x_{im} - \bar{x})^3 y}{\sum y}$                                 |
+|        Coeficiente        |               $A=\frac{M_3}{S^3}$              |                   $A=\frac{M_3}{S^3}$                  |                                                 $A=\frac{M_3}{S^3}$                                                |
+|          Kurtosis         |    $M_4 = \frac{\sum (x_i - \bar{x})^4}{n}$    |        $M_4 = \frac{\sum (x_i - \bar{x})^4}{n}$        |                                      $M_4 = \frac{\sum (x_i - \bar{x})^4}{n}$                                      |
+|        Coeficiente        |               $A=\frac{M_4}{S^4}$              |                   $A=\frac{M_4}{S^4}$                  |                                                 $A=\frac{M_4}{S^4}$                                                |
+: Tabla resumen. Principales estadísticos por tipo de serie.
+</center>
+
+## Conceptos clave de álgebra lineal {.unnumbered }
+Esta sección estará enfocada en desarrollar brevemente algunos conceptos clave de álgebra lineal, para poder entender de mejor manera los temas abordados en el capítulo @sec-forecast.
+
+### Espacios vectoriales {.unnumbered }
+
+Un espacio vectorial es la estructura central del Álgebra Lineal que permite trabajar de forma unificada con objetos tan diversos como vectores geométricos, funciones, matrices o señales. Su esencia es que en él se pueden formar combinaciones lineales de manera consistente.
+
+Sea $V$ un conjunto no vacío y $\mathbb{K}$ un cuerpo (típicamente $\mathbb{R}$ o $\mathbb{C}$).  
+
+Decimos que $V$ es un **espacio vectorial sobre $\mathbb{K}$** si existen dos operaciones:
+
+- **Suma**: $V \times V \to V$, definida por $(\mathbf{u}, \mathbf{v}) \mapsto \mathbf{u} + \mathbf{v}$
+- **Producto por escalar**: $\mathbb{K} \times V \to V$, definida por $(\alpha, \mathbf{v}) \mapsto \alpha \mathbf{v}$
+
+las cuales satisfacen los siguientes axiomas:
+
+Para todo $\mathbf{u}, \mathbf{v}, \mathbf{w} \in V$ y $\alpha, \beta \in \mathbb{K}$:
+
+#### Estructura aditiva {.unnumbered }
+
+- **Conmutatividad**:  
+  $$
+  \mathbf{u} + \mathbf{v} = \mathbf{v} + \mathbf{u}
+  $$
+
+- **Asociatividad**:  
+  $$
+  (\mathbf{u} + \mathbf{v}) + \mathbf{w} = \mathbf{u} + (\mathbf{v} + \mathbf{w})
+  $$
+
+- **Elemento neutro**:  
+  $$
+  \exists \mathbf{0} \in V \ \text{tal que} \ \mathbf{v} + \mathbf{0} = \mathbf{v}, \quad \forall \mathbf{v} \in V
+  $$
+
+- **Inverso aditivo**:  
+  $$
+  \forall \mathbf{v} \in V, \ \exists (-\mathbf{v}) \in V \ \text{tal que} \ \mathbf{v} + (-\mathbf{v}) = \mathbf{0}
+  $$
+
+
+
+#### Compatibilidad escalar {.unnumbered }
+
+- **Distributividad respecto a vectores**:
+  $$
+  \alpha(\mathbf{u} + \mathbf{v}) = \alpha\mathbf{u} + \alpha\mathbf{v}
+  $$
+
+- **Distributividad respecto a escalares**:
+  $$
+  (\alpha + \beta)\mathbf{v} = \alpha\mathbf{v} + \beta\mathbf{v}
+  $$
+
+- **Asociatividad del producto escalar**:
+  $$
+  (\alpha \beta)\mathbf{v} = \alpha(\beta \mathbf{v})
+  $$
+
+- **Elemento identidad del cuerpo**:
+  $$
+  1 \cdot \mathbf{v} = \mathbf{v}
+  $$
+
+
+
+#### Propiedades derivadas {.unnumbered }
+
+A partir de los axiomas anteriores, se pueden demostrar propiedades adicionales importantes:
+
+$$
+0 \cdot \mathbf{v} = \mathbf{0}, \quad \alpha \cdot \mathbf{0} = \mathbf{0}, \quad (-1)\mathbf{v} = -\mathbf{v}
+$$
+
+
+
+#### Independencia lineal {.unnumbered }
+
+Sea $V$ un espacio vectorial sobre $\mathbb{K}$ y sea un conjunto de vectores:
+
+$$
+\{\mathbf{v}_1, \mathbf{v}_2, \dots, \mathbf{v}_n\} \subseteq V
+$$
+
+Decimos que estos vectores son **linealmente independientes** si:
+
+$$
+\alpha_1 \mathbf{v}_1 + \alpha_2 \mathbf{v}_2 + \cdots + \alpha_n \mathbf{v}_n = \mathbf{0}
+\ \Rightarrow \
+\alpha_1 = \alpha_2 = \cdots = \alpha_n = 0
+$$
+
+Es decir, la única combinación lineal que produce el vector cero es la trivial.
+
+
+
+#### Dependencia lineal {.unnumbered }
+
+Los vectores son **linealmente dependientes** si existe una combinación lineal no trivial tal que:
+
+$$
+\alpha_1 \mathbf{v}_1 + \cdots + \alpha_n \mathbf{v}_n = \mathbf{0}, 
+\quad \text{con algún } \alpha_i \neq 0
+$$
+
+Esto implica que existe algún índice $k$ tal que $\alpha_k \neq 0$ y:
+
+$$
+\mathbf{v}_k = -\sum_{i \neq k} \frac{\alpha_i}{\alpha_k} \mathbf{v}_i
+$$
+
+Es decir, **al menos uno de los vectores puede expresarse como combinación lineal de los demás**.
+
+
+### Rango de una matriz {.unnumbered }
+
+El **rango** de una matriz es una medida de la cantidad de información linealmente independiente que contiene.
+
+Sea $\mathbf{A} \in \mathbb{K}^{m \times n}$ una matriz. El **rango de $\mathbf{A}$**, denotado por $\operatorname{rg}(\mathbf{A})$ o $\operatorname{rank}(\mathbf{A})$, se define como:
+
+- El número máximo de columnas linealmente independientes de $\mathbf{A}$.
+- Equivalentemente, el número máximo de filas linealmente independientes.
+
+Estas dos definiciones coinciden, por lo que se habla simplemente del rango de la matriz.
+
+
+
+#### Interpretaciones equivalentes {.unnumbered }
+
+El rango también puede caracterizarse como:
+
+- La dimensión del **espacio columna**:
+  $$
+  \operatorname{rank}(\mathbf{A}) = \dim(\operatorname{Col}(\mathbf{A}))
+  $$
+
+- La dimensión del **espacio fila**:
+  $$
+  \operatorname{rank}(\mathbf{A}) = \dim(\operatorname{Row}(\mathbf{A}))
+  $$
+
+- El número de pivotes en la forma escalonada (o escalonada reducida) de $\mathbf{A}$.
+
+
+
+#### Propiedades básicas {.unnumbered }
+
+- $$
+  0 \leq \operatorname{rank}(\mathbf{A}) \leq \min(m,n)
+  $$
+
+- $\operatorname{rank}(\mathbf{A}) = 0$ si y solo si $\mathbf{A}$ es la matriz nula.
+
+- $\operatorname{rank}(\mathbf{A}) = n$ (con $n \leq m$) implica que las columnas son linealmente independientes.
+
+- $\operatorname{rank}(\mathbf{A}) = m$ (con $m \leq n$) implica que las filas son linealmente independientes.
+
+
+
+#### Interpretación en sistemas lineales {.unnumbered }
+
+Para el sistema $\mathbf{A}\mathbf{x} = \mathbf{b}$:
+
+- Existe solución si y solo si:
+  $$
+  \operatorname{rank}(\mathbf{A}) = \operatorname{rank}([\mathbf{A} \mid \mathbf{b}])
+  $$
+
+- La solución es única si además:
+  $$
+  \operatorname{rank}(\mathbf{A}) = n
+  $$
+
+
+
+El rango describe, en esencia, la **dimensión del subespacio generado por las columnas (o filas)** de la matriz, y cuantifica cuántas direcciones linealmente independientes contiene.
+
+
+### Sistemas de ecuaciones lineales {.unnumbered }
+
+Un **sistema de ecuaciones lineales** es un conjunto de ecuaciones de la forma:
+
+$$
+\begin{cases}
+a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n = b_1 \\
+a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n = b_2 \\
+\vdots \\
+a_{m1}x_1 + a_{m2}x_2 + \cdots + a_{mn}x_n = b_m
+\end{cases}
+$$
+
+donde $a_{ij} \in \mathbb{K}$ son los coeficientes, $x_j$ las variables y $b_i$ los términos independientes.
+
+
+
+#### Forma matricial {.unnumbered }
+
+El sistema puede escribirse de forma compacta como:
+
+$$
+\mathbf{A}\mathbf{x} = \mathbf{b}
+$$
+
+donde:
+
+- $\mathbf{A} \in \mathbb{K}^{m \times n}$ es la **matriz de coeficientes**
+- $\mathbf{x} \in \mathbb{K}^n$ es el vector de incógnitas
+- $\mathbf{b} \in \mathbb{K}^m$ es el vector de términos independientes
+
+
+
+#### Clasificación de soluciones {.unnumbered }
+
+El sistema puede clasificarse como:
+
+- **Compatible** (tiene solución):
+  - **Determinado**: existe una única solución
+  - **Indeterminado**: existen infinitas soluciones
+
+- **Incompatible**: no tiene solución
+
+
+
+#### Criterio de existencia (Rouché–Frobenius) {.unnumbered }
+
+Sea $[\mathbf{A} \mid \mathbf{b}]$ la matriz aumentada. Entonces:
+
+- El sistema es compatible si y solo si:
+  $$
+  \operatorname{rank}(\mathbf{A}) = \operatorname{rank}([\mathbf{A} \mid \mathbf{b}])
+  $$
+
+- Si además:
+  $$
+  \operatorname{rank}(\mathbf{A}) = n
+  $$
+  la solución es única.
+
+- Si:
+  $$
+  \operatorname{rank}(\mathbf{A}) < n
+  $$
+  existen infinitas soluciones.
+  
+
+#### Estructura de las soluciones {.unnumbered }
+
+Si el sistema es compatible, el conjunto de soluciones puede expresarse como:
+
+$$
+\mathbf{x} = \mathbf{x}_p + \mathbf{x}_h
+$$
+
+donde:
+
+- $\mathbf{x}_p$ es una solución particular de $\mathbf{A}\mathbf{x} = \mathbf{b}$
+- $\mathbf{x}_h$ pertenece al espacio solución del sistema homogéneo:
+  $$
+  \mathbf{A}\mathbf{x} = \mathbf{0}
+  $$
+
+Es decir, las soluciones forman un **subespacio afín**.
+
+
+### Determinantes {.unnumbered }
+
+El **determinante** es una función que asocia a cada matriz cuadrada $\mathbf{A} \in \mathbb{K}^{n \times n}$ un escalar, denotado por $\det(\mathbf{A})$, que mide propiedades algebraicas y geométricas de la matriz.
+
+Para $\mathbf{A} = (a_{ij})$, el determinante se define como:
+
+$$
+\det(\mathbf{A}) = \sum_{\sigma \in S_n} \operatorname{sgn}(\sigma)\, a_{1\sigma(1)} a_{2\sigma(2)} \cdots a_{n\sigma(n)}
+$$
+
+donde $S_n$ es el conjunto de permutaciones de $\{1, \dots, n\}$ y $\operatorname{sgn}(\sigma)$ es el signo de la permutación.
+
+
+#### Propiedades básicas {.unnumbered }
+
+- **Multiplicatividad**:
+  $$
+  \det(\mathbf{A}\mathbf{B}) = \det(\mathbf{A}) \det(\mathbf{B})
+  $$
+
+- **Matriz identidad**:
+  $$
+  \det(\mathbf{I}) = 1
+  $$
+
+- **Transposición**:
+  $$
+  \det(\mathbf{A}^\top) = \det(\mathbf{A})
+  $$
+
+- **Intercambio de filas**:
+  Cambiar dos filas cambia el signo del determinante.
+
+- **Linealidad por filas**:
+  El determinante es lineal en cada fila (manteniendo las demás fijas).
+
+- **Filas dependientes**:
+  Si las filas (o columnas) son linealmente dependientes:
+  $$
+  \det(\mathbf{A}) = 0
+  $$
+
+
+
+#### Cálculo {.unnumbered }
+
+- Para matrices pequeñas:
+  - $2 \times 2$:
+    $$
+    \det\begin{pmatrix}
+    a & b \\
+    c & d
+    \end{pmatrix}
+    = ad - bc
+    $$
+
+- En general:
+  - Expansión por cofactores
+  - Reducción por eliminación (forma triangular):
+    $$
+    \det(\mathbf{A}) = \prod_{i=1}^n u_{ii}
+    $$
+    (ajustando por intercambios de filas)
+
+
+
+#### Relación con invertibilidad {.unnumbered }
+
+Una matriz $\mathbf{A}$ es invertible si y solo si:
+
+$$
+\det(\mathbf{A}) \neq 0
+$$
+
+En este caso:
+
+$$
+\mathbf{A}^{-1} = \frac{1}{\det(\mathbf{A})} \operatorname{adj}(\mathbf{A})
+$$
+
+
+
+El determinante permite caracterizar si una matriz es **singular o no**, así como cuantificar el efecto de una transformación lineal sobre el espacio.
+
+
+## Diagramas {.unnumbered }
+
+Esta sección estará dedicada a recopilar códigos utilizados para la creación de ciertos diagramas a lo largo del presente libro.
+
+### Diagramas de Venn para JOINS {.unnumbered }
+
+```{r, eval=FALSE}
+library(ggVennDiagram)
+
+# LEFT JOIN y RIGHT JOIN 
+ggVennDiagram(list(A = 1:5, B = 1:10), 
+              label = NULL, show_intersect = F, category.names = c("",""),
+              label_color = "transparent",
+              label_alpha = 0)+ 
+  scale_fill_gradient(low = "#e8e6e6", high = "#c25e55")+
+  theme(legend.position = "none")
+
+
+# INNER JOIN
+ggVennDiagram(list(A = 1:5, B = 12:16), 
+              label = NULL, show_intersect = F, category.names = c("",""),
+              label_color = "transparent",
+              label_alpha = 0)+ 
+  scale_fill_gradient(low = "#e8e6e6", high = "#c25e55")+
+  theme(legend.position = "none")
+
+
+# ANTI JOIN
+ggVennDiagram(list(A = 1:5, B = 2:6), 
+              label = NULL, show_intersect = F, category.names = c("",""),
+              label_color = "transparent",
+              label_alpha = 0)+ 
+  scale_fill_gradient(low = "#e8e6e6", high = "#c25e55")+
+  theme(legend.position = "none")
+
+
+# FULL JOIN
+ggVennDiagram(list(A = 1, B = 1), 
+              label = NULL, show_intersect = F, category.names = c("",""),
+              label_color = "transparent",
+              label_alpha = 0)+ 
+  scale_fill_gradient(low = "#c25e55", high = "#c25e55")+
+  theme(legend.position = "none")
+```
+
+### Diagrama de rendimientos decrecientes para validación cruzada {.unnumbered }
+
+```{r, eval=FALSE}
+# Valores de k
+k_values <- 2:30
+
+# Simulación de error esperado (disminuye y luego se estabiliza)
+error_sim <- 6.5 - 0.5 * (1 - exp(-0.15 * k_values))
+
+df <- data.frame(
+  k = k_values,
+  error = error_sim
+)
+
+ggplot(df, aes(x = k, y = error)) +
+  geom_line(size = 1, color = "#C44E52") +
+  geom_point(color = "#C44E52") +
+  labs(
+    x = "Número de folds (k)",
+    y = "Error estimado (RMSE)"
+  ) +
+  theme_minimal()
+
+```
+
+### Gráficos combinados de residuios {.unnumbered #sec-comb-res}
+
+El siguiente código, referente a la validación del modelo *ARIMA* replica los gráficos generados por la función `checkresiduals(arima_model)`, pero con un mejor aspecto:
+
+```{r, eval=FALSE}
+library(gridExtra)
+
+# Residuos
+residuos <- residuals(arima_model)
+df_res <- tibble(
+  Fecha = time(residuos), 
+  Residuos = as.numeric(residuos)
+)
+
+# Serie de tiempo de residuos
+p1 <- df_res |> 
+  ggplot(aes(x = Fecha, y = Residuos)) +
+  geom_line() +
+  geom_point(size = 0.8) +
+  labs(title = NULL, x = NULL, y = NULL) +
+  theme_minimal()
+
+# Correlograma
+acf_values <- acf(residuos, plot = FALSE, lag.max = 500)
+df_acf <- tibble(Lag = acf_values$lag[-1], ACF = acf_values$acf[-1])
+
+# Intervalo de confianza
+ci <- 0.05
+
+p2 <- df_acf |> 
+  ggplot(aes(x = Lag, y = ACF)) +
+  geom_segment(aes(xend = Lag, yend = 0)) +
+  geom_hline(yintercept = 0) +
+  geom_hline(yintercept = c(-ci, ci), color = "#d62728", 
+             linetype = "dashed") +
+  labs(x = "Lag", y = "ACF") +
+  theme_minimal()
+
+# Histograma de residuos
+res_mean <- mean(df_res$Residuos, na.rm = TRUE)
+res_sd <- sd(df_res$Residuos, na.rm = TRUE)
+bin_width <- 0.05
+
+p3 <- df_res |> 
+  ggplot(aes(x = Residuos)) +
+  geom_histogram(binwidth = bin_width, 
+                 fill = "grey30", 
+                 color = "white", alpha = 0.8) +
+  stat_function(fun = function(x) dnorm(x, mean = res_mean, 
+                                        sd = res_sd) * 
+                  nrow(df_res) * 
+                  bin_width,
+                color = "#d62728", 
+                size = 1) +  
+  geom_rug(sides = "b", alpha = 0.7) +  
+  labs(x = "residuals", y = "df$y") +
+  theme_minimal()
+
+# Gráfico final
+grid.arrange(
+  p1, 
+  arrangeGrob(p2, p3, ncol = 2), 
+  nrow = 2
+)
+```
+
+### Gráfico de componentes de Prophet {.unnumbered #sec-prophet-components}
+
+El siguiente código, referente a los componentes del modelo *Prophet* replica los gráficos generados por la función `prophet_plot_components(prophet_model, prophet_forecast)`, pero con un mejor aspecto:
+
+```{r, eval=FALSE}
+# Componentes
+prophet_components <- prophet_plot_components(
+  prophet_model,
+  prophet_forecast
+)
+
+# Tema
+p1 <- prophet_components[[1]] + 
+  theme_minimal()
+
+p2 <- prophet_components[[2]] + 
+  theme_minimal()
+
+grid.arrange(
+  p1,
+  p2,
+  ncol = 1
+)
+```
+
+
+
+## Pronósticos {.unnumbered }
+
+Esta sección estará dedicada a desarrollar modelos estadísticos que únicamente fueron explicados brevemente en el capítulo  @sec-forecast.
+
+### Resumen general de métricas de validación y desempeño {.unnumbered }
+
+A lo largo del capítulo correspondiente a pronósticos estuvimos trabajando con diferentes métricas de ajuste de modelos, pero solamente las explicamos de forma breve en cada sección referente a *x* modelo, por lo que en esta sección del apéndice me di a la tarea de recopilar absolutamente todas las métricas de validación, separadas por tipo y por los modelos a los que pueden ser aplicadas, para que tengas una idea más clara de cuándo usar cada una (únicamente referentes a los modelos que discutimos en este libro, ya que existen muchas otras más referentes a modelos bayesianos o métodos de ML que no abarcamos).
+
+#### Ajuste estadístico {.unnumbered }
+
+| Métrica                 | Fórmula                                               | Interpretación                                        | Modelos donde aplica                |
+| ----------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------- |
+| $R^2$                   | $1 - \frac{SS_{res}}{SS_{tot}}$                       | Proporción de varianza explicada                      | Regresión lineal, AR con regresores |
+| $R^2_{adj}$             | $1 - (1-R^2)\frac{n-1}{n-p-1}$                        | Ajuste penalizado por variables                       | Regresión múltiple                  |
+| Correlación de Pearson  | $\frac{Cov(X,Y)}{\sigma_X\sigma_Y}$                   | Relación lineal                                       | Correlación, regresión              |
+| Correlación de Spearman | Pearson sobre rangos                                  | Relación monótona                                     | Series no normales                  |
+| RMSEA                   | $\sqrt{\frac{\chi^2-df}{df(n-1)}}$                    | Error aproximado de ajuste                            | SEM                                 |
+| SRMR                    | $\sqrt{\frac{\sum(r_{ij}-\hat r_{ij})^2}{k(k+1)/2}}$  | Diferencia entre correlaciones observadas y estimadas | SEM                                 |
+| CFI                     | $1-\frac{\chi^2_m-df_m}{\chi^2_b-df_b}$               | Mejora respecto a modelo nulo                         | SEM                                 |
+| TLI                     | $\frac{\chi^2_b/df_b-\chi^2_m/df_m}{\chi^2_b/df_b-1}$ | Ajuste penalizando complejidad                        | SEM                                 |
+| NFI                     | $\frac{\chi^2_b-\chi^2_m}{\chi^2_b}$                  | Índice normado de ajuste                              | SEM                                 |
+| GFI                     | $1-\frac{\sum(s-\hat s)^2}{\sum s^2}$                 | Bondad de ajuste global                               | SEM                                 |
+| AGFI                    | Ajuste corregido de GFI                               | Ajuste penalizado                                     | SEM                                 |
+| Log-Likelihood          | $\log L(\theta)$                                      | Probabilidad del modelo dado los datos                | ARIMA, VAR, SEM                     |
+| Deviance                | $-2\log L$                                            | Falta de ajuste                                       | GLM, modelos probabilísticos        |
+
+
+#### Predicción y forecasting {.unnumbered }
+
+| Métrica | Fórmula | Interpretación | Modelos donde aplica |
+|---|---|---|---|
+| MAE | $\frac{1}{n}\sum \|y_t-\hat y_t\|$ | Error absoluto promedio | ARIMA, ETS, Prophet, VAR |
+| MSE | $\frac{1}{n}\sum (y_t-\hat y_t)^2$ | Penaliza errores grandes | Todos los predictivos |
+| RMSE | $\sqrt{MSE}$ | Error cuadrático medio raíz | Forecasting general |
+| MAPE | $\frac{100}{n}\sum\left|\frac{y_t-\hat y_t}{y_t}\right|$ | Error porcentual | Forecasting |
+| sMAPE | $\frac{100}{n}\sum \frac{|y_t-\hat y_t|}{(|y_t|+|\hat y_t|)/2}$ | Versión estable de MAPE | Forecasting |
+| WAPE | $\frac{\sum |y_t-\hat y_t|}{\sum y_t}$ | Error ponderado | Retail, demanda |
+| MASE | $\frac{MAE}{MAE_{naive}}$ | Escala contra modelo ingenuo | Forecasting comparativo |
+| RMSLE | $\sqrt{\frac{1}{n}\sum\log^2\!\left(\frac{y_t+1}{\hat y_t+1}\right)}$ | Penaliza errores relativos | Ventas, crecimiento |
+| MdAE | $median(|y_t-\hat y_t|)$ | Robusta a outliers | Forecasting |
+| Theil’s U | $\sqrt{\frac{\sum(\hat y_t-y_t)^2}{\sum(y_t-y_{t-1})^2}}$ | Comparación vs naive | Series temporales |
+| Bias | $\frac{1}{n}\sum(y_t-\hat y_t)$ | Sobre/subestimación | Forecasting |
+| Tracking Signal | $\frac{\sum error}{MAD}$ | Sesgo acumulado | Inventarios |
+| Forecast Value Added | $Error_{baseline}-Error_{modelo}$ | Valor agregado del modelo | Planeación |
+| Coverage Probability | $\frac{\sum(y_t\in IC)}{n}$ | Cobertura de intervalos | Forecast probabilístico |
+| CRPS | Integral de diferencias acumuladas | Calidad probabilística | Bayesian TS |
+| Quantile Loss | $\sum(y_t-\hat y_t)(q-I(y_t<\hat y_t))$ | Forecast cuantílico | Deep learning temporal |
+
+Nótese que la expresión referente a RMSLE es una versión compacta de su versión original $\sqrt{\frac{1}{n}\sum(\log(y_t+1)-\log(\hat y_t+1))^2}$, simplemente por cuestiones estéticas de la tabla (quedaba fea al no poder hacer un salto de línea).
+
+
+#### Información y complejidad {.unnumbered }
+
+| Métrica       | Fórmula                         | Interpretación                 | Modelos donde aplica |
+| ------------- | ------------------------------- | ------------------------------ | -------------------- |
+| AIC           | $-2\log L + 2k$                 | Balance ajuste-complejidad     | ARIMA, VAR, SEM      |
+| AICc          | $AIC+\frac{2k(k+1)}{n-k-1}$     | Corrección por muestra pequeña | ARIMA                |
+| BIC           | $-2\log L + k\log n$            | Penaliza complejidad fuerte    | ARIMA, VAR           |
+| HQIC          | $-2\log L + 2k\log(\log n)$     | Intermedio entre AIC y BIC     | Series temporales    |
+| Mallows $C_p$ | $\frac{RSS}{\hat\sigma^2}-n+2p$ | Selección de variables         | Regresión            |
+| PRESS         | $\sum(y_i-\hat y_{-i})^2$       | Error leave-one-out            | Validación           |
+| Adjusted AIC  | Variantes penalizadas           | Comparación robusta            | Forecasting          |
+
+
+#### Diagnóstico residual {.unnumbered }
+
+| Métrica/Test    | Fórmula                                         | Interpretación              | Modelos donde aplica     |
+| --------------- | ----------------------------------------------- | --------------------------- | ------------------------ |
+| Durbin-Watson   | $\frac{\sum(e_t-e_{t-1})^2}{\sum e_t^2}$        | Autocorrelación residual    | Regresión                |
+| Ljung-Box       | $n(n+2)\sum\frac{\rho_k^2}{n-k}$                | Ruido blanco residual       | ARIMA, SARIMA            |
+| Box-Pierce      | $n\sum \rho_k^2$                                | Autocorrelación global      | Series temporales        |
+| Breusch-Godfrey | Basado en $R^2$ auxiliar                        | Autocorrelación serial      | Regresión                |
+| Jarque-Bera     | $\frac{n}{6}(S^2+\frac{(K-3)^2}{4})$            | Normalidad                  | Regresión, ARIMA         |
+| Shapiro-Wilk    | Estadístico $W$                                 | Normalidad residual         | General                  |
+| Breusch-Pagan   | $nR^2$                                          | Heteroscedasticidad         | Regresión                |
+| White Test      | Regresión auxiliar                              | Heteroscedasticidad general | Regresión                |
+| ARCH Test       | $nR^2$ sobre residuos cuadrados                 | Efectos ARCH                | GARCH y series de tiempo |
+| VIF             | $\frac{1}{1-R_j^2}$                             | Multicolinealidad           | Regresión múltiple       |
+| Cook’s Distance | $\frac{e_i^2}{pMSE}\frac{h_{ii}}{(1-h_{ii})^2}$ | Influencia de observaciones | Regresión                |
+
+
+#### Dependencia temporal {.unnumbered }
+
+| Métrica/Test               | Fórmula                    | Interpretación            | Modelos donde aplica |
+| -------------------------- | -------------------------- | ------------------------- | -------------------- |
+| ACF                        | $Corr(y_t,y_{t-k})$        | Dependencia serial        | Series temporales    |
+| PACF                       | Correlación parcial        | Dependencia neta          | AR, ARIMA            |
+| Cross-Correlation Function | $Corr(x_t,y_{t-k})$        | Relación temporal cruzada | VAR                  |
+| Hurst Exponent             | Basado en rango reescalado | Persistencia temporal     | Series financieras   |
+| Entropía temporal          | Shannon entropy            | Complejidad temporal      | Deep TS              |
+| Spectral Density           | Transformada de Fourier    | Frecuencias dominantes    | Series periódicas    |
+
+
+#### Volatilidad {.unnumbered }
+
+| Métrica/Test       | Fórmula                                | Interpretación           | Modelos donde aplica |
+| ------------------ | -------------------------------------- | ------------------------ | -------------------- |
+| Half-life          | $\frac{\log(0.5)}{\log(\alpha+\beta)}$ | Tiempo de disipación     | GARCH                |
+| VaR                | Percentil de pérdidas                  | Riesgo extremo           | Finanzas             |
+| Expected Shortfall | $E(loss \mid loss>VaR)$                | Pérdida esperada extrema | Riesgo financiero    |
+
+
+#### Cointegración y causalidad {.unnumbered }
+
+| Métrica/Test       | Fórmula                    | Interpretación          | Modelos donde aplica |
+| ------------------ | -------------------------- | ----------------------- | -------------------- |
+| Granger Causality  | F-test sobre rezagos       | Causalidad predictiva   | VAR                  |
+| Engle-Granger Test | Residuales + ADF           | Cointegración bivariada | Series temporales    |
+| IRF                | Simulación dinámica        | Impacto entre variables | VAR                  |
+| FEVD               | Descomposición de varianza | Origen de shocks        | VAR                  |
+
+
+#### Modelos bayesianos {.unnumbered }
+
+| Métrica                    | Fórmula                             | Interpretación         | Modelos donde aplica |
+| -------------------------- | ----------------------------------- | ---------------------- | -------------------- |
+| DIC                        | $D(\bar\theta)+2p_D$                | Complejidad bayesiana  | Bayesian SEM         |
+| WAIC                       | Basado en densidad predictiva       | Ajuste predictivo      | Bayesian TS          |
+| LOO-CV                     | Leave-one-out likelihood            | Generalización         | Bayesian models      |
+| Bayes Factor               | $\frac{P(D\mid M_1)}{P(D\mid M_2)}$ | Comparación de modelos | Bayesian inference   |
+| Posterior Predictive Check | Simulación posterior                | Calidad de ajuste      | Bayesian models      |
+
+
+#### Machine learning temporal {.unnumbered }
+
+| Métrica                | Fórmula        | Interpretación | Modelos donde aplica      |
+| ---------------------- | -------------- | -------------- | ------------------------- |
+| Cross-validation score | Promedio folds | Generalización | Ridge, Lasso, Elastic Net |
+
+
+### Variables instrumentales {.unnumbered }
+
+Se parte del modelo lineal original:
+
+$$
+y = \mathbf{X}\boldsymbol{\beta} + \boldsymbol{\varepsilon}
+$$
+
+Donde existe un problema de endogeneidad, cuando:
+
+$$
+E(\mathbf{X}^\top \boldsymbol{\varepsilon}) \neq 0
+$$
+
+Donde:
+
+- $\mathbf{X}$ es la matriz de variables explicativas (cada columna es una variable).
+- $\boldsymbol{\varepsilon}$ es el vector de errores.
+- $\mathbf{X}^\top \boldsymbol{\varepsilon}$: es el vector de productos cruzados entre cada regresor y el error.
+
+A partir de ello, generamos una matriz de instrumentos $\mathbf{Z}$, en la que la condición de exogeneidad esté definida como:
+
+$$
+E(\mathbf{Z}^\top \boldsymbol{\varepsilon}) = 0
+$$
+
+Y la condición de relevancia:
+
+$$
+\text{rank}(\mathbf{Z}^\top \mathbf{X}) = k
+$$
+
+Ahora, para calcular las condiciones de momento, multiplicamos el modelo por $\mathbf{Z}^\top$ y tomamos esperanza:
+
+$$
+E(\mathbf{Z}^\top y) = E(\mathbf{Z}^\top \mathbf{X}\boldsymbol{\beta})
+$$
+
+Por tanto:
+
+$$
+E(\mathbf{Z}^\top y) = E(\mathbf{Z}^\top \mathbf{X}) \boldsymbol{\beta}
+$$
+
+Para calcular la variable instrumental (*estimador IV*), reemplazamos las esperanzas por muestras:
+
+$$
+\mathbf{Z}^\top y = \mathbf{Z}^\top \mathbf{X} \boldsymbol{\beta}
+$$
+
+Y, despejando $\beta$:
+
+$$
+\hat{\boldsymbol{\beta}}_{IV} = (\mathbf{Z}^\top \mathbf{X})^{-1} \mathbf{Z}^\top y
+$$
+
+Ahora, cuando hay más instrumentos que variables endógenas, entonces tenemos que definir la matriz de proyección:
+
+$$
+\mathbf{P}_Z = \mathbf{Z}(\mathbf{Z}^\top \mathbf{Z})^{-1}\mathbf{Z}^\top
+$$
+
+Por lo tanto, el estimador será:
+
+$$
+\hat{\boldsymbol{\beta}}_{2SLS}=(\mathbf{X}^\top \mathbf{P}_Z \mathbf{X})^{-1}
+\mathbf{X}^\top \mathbf{P}_Z y
+$$
+
+Donde $2SLS$ es el método estándar para estimar modelos con variables instrumentales cuando hay endogeneidad.
+
+Básicamente, el *estimador IV* se puede interpretar como:
+
+$$
+\hat{\boldsymbol{\beta}}_{IV} = (\text{variación exógena de } \mathbf{X})^{-1}
+(\text{covarianza con } y)
+$$
+
+### Criterio de información de AIC {.unnumbered #sec-aic-criteria}
+
+El criterio AIC (Criterio de Información de Akaike) busca encontrar un equilibrio entre la calidad del ajuste y la complejidad del modelo. Básicamente, intenta responder la siguiente pregunta: ¿qué modelo logra explicar adecuadamente los datos utilizando la menor cantidad de parámetros posible?
+
+Matemáticamente, podemos definir al criterio AIC como:
+
+$$
+AIC = -2\log(L) + 2k
+$$
+
+Donde:
+
+- $L$: Representa la función de verosimilitud del modelo.
+- $k$: Representa el número de parámetros estimados.
+- $-2\log(L)$: Mide la falta de ajuste del modelo.
+- $2k$: Corresponde a la penalización por complejidad.
+
+Vamos ahora a desarrollar cada uno de sus componentes.
+
+La función de verosimilitud surge de la teoría de probabilidad y representa qué tan probable es observar los datos disponibles bajo un conjunto específico de parámetros. Supongamos una serie temporal observada:
+
+$$
+Y_1, Y_2, Y_3, \dots, Y_n
+$$
+
+Y un modelo parametrizado mediante un vector de parámetros:
+
+$$
+\theta = (\theta_1, \theta_2, \dots, \theta_k)
+$$
+
+La función de verosimilitud se construye como la probabilidad conjunta de observar toda la serie dada la parametrización elegida:
+
+$$
+L(\theta)=P(Y_1,Y_2,\dots,Y_n\mid\theta)
+$$
+
+En modelos estadísticos, especialmente bajo supuestos gaussianos, resulta más conveniente trabajar con el logaritmo de la verosimilitud debido a que transforma productos en sumas y simplifica enormemente los cálculos analíticos, razón por la que el *AIC* utiliza el término:
+
+$$
+Log(L)
+$$
+
+En modelos ARIMA con errores normalmente distribuidos, la *log-verosimilitud* suele derivarse a partir de la densidad normal. Si asumimos residuos gaussianos con varianza constante $\sigma^2$, la función de densidad para cada observación puede escribirse como:
+
+$$
+f(y_t)=\frac{1}{\sqrt{2\pi\sigma^2}}\exp\left(-\frac{(y_t-\hat{y}_t)^2}{2\sigma^2}\right)
+$$
+
+Debido a que las observaciones se consideran conjuntamente, la verosimilitud total se expresa como el producto de todas las densidades:
+
+$$
+L=\prod_{t=1}^{n} f(y_t)
+$$
+
+Aplicando logaritmos obtenemos la *log-verosimilitud*:
+
+$$
+\log(L)=\sum_{t=1}^{n}\log(f(y_t))
+$$
+
+Después de desarrollar algebraicamente esta expresión bajo normalidad, se llega a una forma simplificada proporcional al error cuadrático residual:
+
+$$
+\log(L) \propto -\frac{n}{2}\log(\sigma^2)-\frac{1}{2\sigma^2}\sum_{t=1}^{n}(y_t-\hat{y}_t)^2
+$$
+
+Con esta expresión podemos darnos cuenta de que, mientras menor sea el error residual del modelo, mayor será la *log-verosimilitud* y, por tanto, mejor será el ajuste, sin embargo, si únicamente maximizáramos la verosimilitud, siempre terminaríamos favoreciendo modelos cada vez más complejos, por ejemplo, un $AR(20)$ probablemente ajuste mejor los datos observados que un $AR(2)$, simplemente porque posee muchos más parámetros y mayor flexibilidad. Aquí es donde aparece el segundo término del *AIC*:
+
+$$
+2k
+$$
+
+Este término funciona como una penalización directa sobre la complejidad del modelo, siendo que cada parámetro adicional incrementa el valor final del *AIC* y, de esta manera, el criterio obliga al modelo a *justificar* matemáticamente la inclusión de nuevos parámetros mediante una mejora suficientemente grande en la verosimilitud. 
+
+La interpretación del *AIC* es entonces un balance entre dos fuerzas opuestas, donde el término de *log-verosimilitud* favorece modelos complejos porque suelen ajustar mejor los datos, mientras que el término de penalización favorece modelos simples porque utilizan menos parámetros. El modelo óptimo será aquel donde ambas fuerzas alcancen el mejor compromiso posible.
+
+
+### Datos sintéticos {.unnumbered }
+
+Esta sección estará enfocada en mostrar los códigos referentes a datos que se hayan generado de manera sintética para ejemplificar algunos temas del capítulo de pronósticos (aunque solo fue el caso en el desarrollo de *modelos de ecuaciones estructurales*).
+
+#### Datos sintéticos de márketing {.unnumbered }
+
+```{r, eval=FALSE}
+set.seed(42)
+
+n <- 500  
+gamma1 <- 0.60   # efecto de marketing sobre reconocimiento
+beta1 <- 0.55   # efecto de reconocimiento sobre tráfico
+beta2 <- 0.70   # efecto de tráfico sobre conversión
+beta3 <- 0.65   # efecto de conversión sobre ventas
+
+# Efecto total (indirecto) del marketing sobre ventas: β3·β2·β1·γ1
+efecto_total <- beta3 * beta2 * beta1 * gamma1
+
+# Variable exógena: inversión en marketing (estandarizada, media 0 ds 1)
+marketing <- rnorm(n, mean = 0, sd = 1)
+
+# Ecuación 1: reconocimiento de marca
+e1 <- rnorm(n, mean = 0, sd = 0.80)
+reconocimiento <- gamma1 * marketing + e1
+
+# Ecuación 2: tráfico web
+e2 <- rnorm(n, mean = 0, sd = 0.80)
+trafico <- beta1 * reconocimiento + e2
+
+# Ecuación 3: tasa de conversión
+e3 <- rnorm(n, mean = 0, sd = 0.70)
+conversion <- beta2 * trafico + e3
+
+# Ecuación 4: ventas finales
+e4     <- rnorm(n, mean = 0, sd = 0.75)
+ventas <- beta3 * conversion + e4
+
+
+datos_sem <- tibble(
+  marketing = marketing,
+  reconocimiento = reconocimiento,
+  trafico = trafico,
+  conversion = conversion,
+  ventas = ventas
+)
+```
+
+#### Datos de calidad de aire para modelos STAR/STARIMA {.unnumbered }
+
+```{r, eval=FALSE}
+url <- "https://aqs.epa.gov/aqsweb/airdata/daily_88101_2024.zip"
+
+tmp <- tempfile(fileext = ".zip")
+download.file(url, tmp, mode = "wb")
+
+pm25 <- read_csv(
+  unz(tmp, "daily_88101_2024.csv"),
+  show_col_types = FALSE
+) |>
+  clean_names()
+
+base_la <- pm25 |>
+  filter(
+    state_code == "06",
+    county_code == "037"
+  ) |>
+  mutate(
+    fecha = as.Date(date_local),
+    estacion = paste(state_code, county_code, site_num, sep = "_")
+  ) |>
+  group_by(fecha, estacion) |>
+  summarise(
+    pm25 = mean(arithmetic_mean, na.rm = TRUE),
+    lat = first(latitude),
+    lon = first(longitude),
+    .groups = "drop"
+  )
+
+
+top_estaciones <- base_la |>
+  count(estacion, sort = TRUE) |>
+  slice_head(n = 8) |>
+  pull(estacion)
+
+base_star <- base_la |>
+  filter(estacion %in% top_estaciones)
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

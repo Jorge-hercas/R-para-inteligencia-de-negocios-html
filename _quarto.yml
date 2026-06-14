@@ -1,0 +1,33 @@
+project:
+  type: book
+
+book:
+  title: "R para inteligencia de negocios"
+  subtitle: "Y un poco de SQL para un enfoque práctico."
+  author: "Jorge Valente Hernandez Castelan"
+  date: "6/14/2026"
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - conocimientos_previos.qmd
+    - funcs.qmd
+    - limpieza.qmd
+    - limpieza2.qmd
+    - analisis_exploratorio.qmd
+    - forecasts.qmd
+    - dashboards.qmd
+    - apendice.qmd
+    - referencias.qmd
+    - agradecimientos.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+  pdf:
+    documentclass: scrreprt
+
+editor: visual
+

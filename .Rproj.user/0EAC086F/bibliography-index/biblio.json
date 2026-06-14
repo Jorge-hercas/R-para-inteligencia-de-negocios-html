@@ -1,0 +1,5096 @@
+{
+    "sources": [
+        {
+            "DOI": "10.1093/comjnl/27.2.97",
+            "ISSN": "0010-4620",
+            "URL": "https://doi.org/10.1093/comjnl/27.2.97",
+            "author": [
+                {
+                    "family": "Knuth",
+                    "given": "Donald E."
+                }
+            ],
+            "container-title": "Comput. J.",
+            "id": "knuth84",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        1984,
+                        5
+                    ]
+                ]
+            },
+            "page": "97-111",
+            "publisher": "Oxford University Press, Inc.",
+            "publisher-place": "USA",
+            "title": "Literate programming",
+            "type": "article-journal",
+            "volume": "27"
+        },
+        {
+            "author": [
+                {
+                    "family": "Barnes",
+                    "given": "David J"
+                },
+                {
+                    "family": "Kölling",
+                    "given": "Michael"
+                },
+                {
+                    "family": "Brenta",
+                    "given": "Blanca Irene"
+                }
+            ],
+            "id": "barnes2007programacion",
+            "issued": {
+                "date-parts": [
+                    [
+                        2007
+                    ]
+                ]
+            },
+            "publisher": "Pearson Educación",
+            "title": "Programación orientada a objetos con java",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Butler",
+                    "given": "DG"
+                },
+                {
+                    "family": "Cullis",
+                    "given": "Brian R"
+                },
+                {
+                    "family": "Gilmour",
+                    "given": "AR"
+                },
+                {
+                    "family": "Gogel",
+                    "given": "BJ"
+                }
+            ],
+            "container-title": "The State of Queensland, Department of Primary Industries and Fisheries, Brisbane",
+            "id": "butler2009asreml",
+            "issued": {
+                "date-parts": [
+                    [
+                        2009
+                    ]
+                ]
+            },
+            "publisher": "Citeseer",
+            "title": "ASReml-r reference manual",
+            "type": "article-journal"
+        },
+        {
+            "author": [
+                {
+                    "family": "Ahumada",
+                    "given": "Jorge A"
+                }
+            ],
+            "container-title": "University of Hawaii",
+            "id": "ahumada2003r",
+            "issued": {
+                "date-parts": [
+                    [
+                        2003
+                    ]
+                ]
+            },
+            "title": "R para principiantes",
+            "type": "article-journal"
+        },
+        {
+            "author": [
+                {
+                    "dropping-particle": "del",
+                    "family": "Valle Sotelo",
+                    "given": "Juan Carlos"
+                }
+            ],
+            "id": "del2011algebra",
+            "issued": {
+                "date-parts": [
+                    [
+                        2011
+                    ]
+                ]
+            },
+            "publisher": "McGraw-Hill/Interamericana",
+            "title": "Álgebra lineal para estudiantes de ingenierı́a y ciencias",
+            "type": "book"
+        },
+        {
+            "URL": "https://cran.r-project.org/web/packages/reactable/index.html",
+            "author": [
+                {
+                    "family": "Lin",
+                    "given": "Greg"
+                },
+                {
+                    "family": "Sievert",
+                    "given": "Carson"
+                }
+            ],
+            "id": "reactable",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021
+                    ]
+                ]
+            },
+            "note": "R package version 0.2.4",
+            "title": "Reactable: Interactive data tables based on ’react table’",
+            "title-short": "Reactable",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Hofmann",
+                    "given": "Heike"
+                },
+                {
+                    "family": "H\"ormann",
+                    "given": "Siegfried"
+                },
+                {
+                    "family": "Krivobokova",
+                    "given": "Tatyana"
+                }
+            ],
+            "container-title": "Springer",
+            "id": "hofmann2017functional",
+            "issued": {
+                "date-parts": [
+                    [
+                        2017
+                    ]
+                ]
+            },
+            "title": "Functional data analysis with r and MATLAB",
+            "type": "article-journal",
+            "volume": "101"
+        },
+        {
+            "author": [
+                {
+                    "family": "Gardener",
+                    "given": "Mark"
+                }
+            ],
+            "id": "gardener2012beginning",
+            "issued": {
+                "date-parts": [
+                    [
+                        2012
+                    ]
+                ]
+            },
+            "publisher": "John Wiley & Sons",
+            "title": "Beginning r: The statistical programming language",
+            "title-short": "Beginning r",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Ferraro",
+                    "given": "Maria Brigida"
+                },
+                {
+                    "family": "Giordani",
+                    "given": "Paolo"
+                }
+            ],
+            "container-title": "Fuzzy Sets and Systems",
+            "id": "ferraro2015toolbox",
+            "issued": {
+                "date-parts": [
+                    [
+                        2015
+                    ]
+                ]
+            },
+            "page": "1-16",
+            "publisher": "Elsevier",
+            "title": "A toolbox for fuzzy clustering using the r programming language",
+            "type": "article-journal",
+            "volume": "279"
+        },
+        {
+            "author": [
+                {
+                    "family": "Kaya",
+                    "given": "Efdal"
+                },
+                {
+                    "family": "Agca",
+                    "given": "Muge"
+                },
+                {
+                    "family": "Adiguzel",
+                    "given": "Fatih"
+                },
+                {
+                    "family": "Cetin",
+                    "given": "Mehmet"
+                }
+            ],
+            "container-title": "Human and ecological risk assessment: An International Journal",
+            "id": "kaya2018spatial",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "publisher": "Taylor & Francis",
+            "title": "Spatial data analysis with r programming for environment",
+            "type": "article-journal"
+        },
+        {
+            "author": [
+                {
+                    "family": "Chan",
+                    "given": "Bertram KC"
+                },
+                {
+                    "family": "Chan",
+                    "given": "Bertram KC"
+                }
+            ],
+            "container-title": "Biostatistics for Human Genetic Epidemiology",
+            "id": "chan2018data",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "page": "47-122",
+            "publisher": "Springer",
+            "title": "Data analysis using r programming",
+            "type": "article-journal"
+        },
+        {
+            "author": [
+                {
+                    "family": "Melton",
+                    "given": "Jim"
+                },
+                {
+                    "family": "Simon",
+                    "given": "Alan R"
+                }
+            ],
+            "id": "melton1993understanding",
+            "issued": {
+                "date-parts": [
+                    [
+                        1993
+                    ]
+                ]
+            },
+            "publisher": "Morgan Kaufmann",
+            "title": "Understanding the new SQL: A complete guide",
+            "title-short": "Understanding the new SQL",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Groff",
+                    "given": "James R"
+                },
+                {
+                    "family": "Weinberg",
+                    "given": "Paul N"
+                },
+                {
+                    "family": "Oppel",
+                    "given": "Andrew J"
+                }
+            ],
+            "id": "groff2002sql",
+            "issued": {
+                "date-parts": [
+                    [
+                        2002
+                    ]
+                ]
+            },
+            "publisher": "McGraw-Hill/Osborne",
+            "title": "SQL: The complete reference",
+            "title-short": "SQL",
+            "type": "book",
+            "volume": "2"
+        },
+        {
+            "author": [
+                {
+                    "family": "Converse",
+                    "given": "Tim"
+                },
+                {
+                    "family": "Park",
+                    "given": "Joyce"
+                },
+                {
+                    "family": "Morgan",
+                    "given": "Clark"
+                }
+            ],
+            "id": "converse2004php5",
+            "issued": {
+                "date-parts": [
+                    [
+                        2004
+                    ]
+                ]
+            },
+            "publisher": "John Wiley & Sons",
+            "title": "PHP5 and MySQL bible",
+            "type": "book",
+            "volume": "147"
+        },
+        {
+            "author": [
+                {
+                    "family": "Hernandez",
+                    "given": "Jorge"
+                }
+            ],
+            "id": "jorge-hercas_OweatherR",
+            "issued": {
+                "date-parts": [
+                    [
+                        2023
+                    ]
+                ]
+            },
+            "publisher": "https://github.com/Jorge-hercas/OweatherR",
+            "title": "OweatherR",
+            "type": ""
+        },
+        {
+            "URL": "https://gabrielcp.medium.com/introduction-to-working-with-firestore-in-r-99443489b01b",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        3,
+                        23
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Cabrera",
+                    "given": "Gabriel"
+                }
+            ],
+            "id": "cabrera_introduction_2022",
+            "issued": {
+                "date-parts": [
+                    [
+                        2022
+                    ]
+                ]
+            },
+            "title": "Introduction to working with firestore in r",
+            "type": "webpage"
+        },
+        {
+            "URL": "http://www.iusmexico.com.mx/Region_CENTRO6/#:~:text=REGION%20NORTE%3A%20con%20los%20Estados,Estados%20de%20PUEBLA%20y%20VERACRUZ.",
+            "author": [
+                {
+                    "family": "IusMexico"
+                }
+            ],
+            "id": "iusmexico_regiones",
+            "issued": {
+                "date-parts": [
+                    [
+                        2024
+                    ]
+                ]
+            },
+            "note": "Accedido: 19 de mayo de 2024",
+            "title": "Regiones de méxico",
+            "type": ""
+        },
+        {
+            "author": [
+                {
+                    "family": "Kyanyoga"
+                }
+            ],
+            "id": "kyanyoga_sales_data",
+            "issued": {
+                "date-parts": []
+            },
+            "note": "Dataset publicado en Kaggle. Licencia: CC0 - Public Domain",
+            "publisher": "https://www.kaggle.com/datasets/kyanyoga/sample-sales-data",
+            "title": "Sample - superstore sales dataset",
+            "type": ""
+        },
+        {
+            "author": [
+                {
+                    "family": "Hernández",
+                    "given": "Jorge"
+                }
+            ],
+            "id": "hdz2023levenshtein",
+            "issued": {
+                "date-parts": [
+                    [
+                        2025
+                    ]
+                ]
+            },
+            "note": "Accedido el 3 de agosto de 2025",
+            "publisher": "https://bookdown.org/eljorgehdz/algoritmo_de_levenshtein_en_sql/LEVENSHTEIN.html",
+            "title": "Algoritmo de levenshtein en SQL",
+            "type": ""
+        },
+        {
+            "author": [
+                {
+                    "family": "Pearson",
+                    "given": "Karl"
+                }
+            ],
+            "container-title": "Proceedings of the Royal Society of London",
+            "id": "pearson1895regression",
+            "issued": {
+                "date-parts": [
+                    [
+                        1895
+                    ]
+                ]
+            },
+            "note": "Tema: correlación, regresión y fundamentos de asociación lineal",
+            "page": "240-242",
+            "title": "Notes on regression and inheritance in the case of two parents",
+            "type": "article-journal",
+            "volume": "58"
+        },
+        {
+            "author": [
+                {
+                    "family": "Spearman",
+                    "given": "Charles"
+                }
+            ],
+            "container-title": "The American Journal of Psychology",
+            "id": "spearman1904proof",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        1904
+                    ]
+                ]
+            },
+            "note": "Tema: correlación de Spearman y métodos basados en rangos",
+            "page": "72-101",
+            "title": "The proof and measurement of association between two things",
+            "type": "article-journal",
+            "volume": "15"
+        },
+        {
+            "author": [
+                {
+                    "family": "Anscombe",
+                    "given": "Francis J."
+                }
+            ],
+            "container-title": "The American Statistician",
+            "id": "anscombe1973graphs",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        1973
+                    ]
+                ]
+            },
+            "note": "Tema: visualización de datos, Anscombe’s Quartet, limitaciones de estadísticos resumen",
+            "page": "17-21",
+            "title": "Graphs in statistical analysis",
+            "type": "article-journal",
+            "volume": "27"
+        },
+        {
+            "author": [
+                {
+                    "family": "Johnson",
+                    "given": "Richard A."
+                },
+                {
+                    "family": "Wichern",
+                    "given": "Dean W."
+                }
+            ],
+            "edition": "6",
+            "id": "johnson2007applied",
+            "issued": {
+                "date-parts": [
+                    [
+                        2007
+                    ]
+                ]
+            },
+            "note": "Tema: matrices de correlación, análisis multivariado, PCA y técnicas multivariadas",
+            "publisher": "Pearson",
+            "title": "Applied multivariate statistical analysis",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Wasserman",
+                    "given": "Larry"
+                }
+            ],
+            "id": "wasserman2004all",
+            "issued": {
+                "date-parts": [
+                    [
+                        2004
+                    ]
+                ]
+            },
+            "note": "Tema: fundamentos estadísticos, inferencia, regresión y probabilidad aplicada",
+            "publisher": "Springer",
+            "title": "All of statistics: A concise course in statistical inference",
+            "title-short": "All of statistics",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Pearl",
+                    "given": "Judea"
+                }
+            ],
+            "edition": "2",
+            "id": "pearl2009causality",
+            "issued": {
+                "date-parts": [
+                    [
+                        2009
+                    ]
+                ]
+            },
+            "note": "Tema: causalidad, correlación no implica causalidad, modelos causales",
+            "publisher": "Cambridge University Press",
+            "title": "Causality: Models, reasoning, and inference",
+            "title-short": "Causality",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Pearl",
+                    "given": "Judea"
+                },
+                {
+                    "family": "Glymour",
+                    "given": "Madelyn"
+                },
+                {
+                    "family": "Jewell",
+                    "given": "Nicholas P."
+                }
+            ],
+            "id": "pearl2016causal",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016
+                    ]
+                ]
+            },
+            "note": "Tema: inferencia causal, grafos causales, correlación versus causalidad",
+            "publisher": "Wiley",
+            "title": "Causal inference in statistics: A primer",
+            "title-short": "Causal inference in statistics",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Angrist",
+                    "given": "Joshua D."
+                },
+                {
+                    "family": "Pischke",
+                    "given": "Jörn-Steffen"
+                }
+            ],
+            "id": "angrist2009mostly",
+            "issued": {
+                "date-parts": [
+                    [
+                        2009
+                    ]
+                ]
+            },
+            "note": "Tema: econometría aplicada, causalidad, variables instrumentales, endogeneidad",
+            "publisher": "Princeton University Press",
+            "title": "Mostly harmless econometrics: An empiricist’s companion",
+            "title-short": "Mostly harmless econometrics",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Wooldridge",
+                    "given": "Jeffrey M."
+                }
+            ],
+            "edition": "7",
+            "id": "wooldridge2020introductory",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "note": "Tema: regresión lineal, MCO, supuestos, endogeneidad, variables instrumentales",
+            "publisher": "Cengage Learning",
+            "title": "Introductory econometrics: A modern approach",
+            "title-short": "Introductory econometrics",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Greene",
+                    "given": "William H."
+                }
+            ],
+            "edition": "8",
+            "id": "greene2018econometric",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "note": "Tema: regresión, econometría, inferencia, heterocedasticidad, modelos avanzados",
+            "publisher": "Pearson",
+            "title": "Econometric analysis",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Montgomery",
+                    "given": "Douglas C."
+                },
+                {
+                    "family": "Peck",
+                    "given": "Elizabeth A."
+                },
+                {
+                    "family": "Vining",
+                    "given": "G. Geoffrey"
+                }
+            ],
+            "edition": "6",
+            "id": "montgomery2021linear",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021
+                    ]
+                ]
+            },
+            "note": "Tema: regresión lineal simple y múltiple, diagnóstico de modelos, validación",
+            "publisher": "Wiley",
+            "title": "Introduction to linear regression analysis",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Kutner",
+                    "given": "Michael H."
+                },
+                {
+                    "family": "Nachtsheim",
+                    "given": "Christopher J."
+                },
+                {
+                    "family": "Neter",
+                    "given": "John"
+                },
+                {
+                    "family": "Li",
+                    "given": "William"
+                }
+            ],
+            "edition": "5",
+            "id": "kutner2005applied",
+            "issued": {
+                "date-parts": [
+                    [
+                        2005
+                    ]
+                ]
+            },
+            "note": "Tema: modelos lineales, ANOVA, regresión múltiple, diagnóstico",
+            "publisher": "McGraw-Hill/Irwin",
+            "title": "Applied linear statistical models",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Hausman",
+                    "given": "Jerry A."
+                }
+            ],
+            "container-title": "Econometrica",
+            "id": "hausman1978specification",
+            "issue": "6",
+            "issued": {
+                "date-parts": [
+                    [
+                        1978
+                    ]
+                ]
+            },
+            "note": "Tema: test de Hausman, endogeneidad y comparación de estimadores",
+            "page": "1251-1271",
+            "title": "Specification tests in econometrics",
+            "type": "article-journal",
+            "volume": "46"
+        },
+        {
+            "author": [
+                {
+                    "family": "Hayashi",
+                    "given": "Fumio"
+                }
+            ],
+            "id": "hayashi2000econometrics",
+            "issued": {
+                "date-parts": [
+                    [
+                        2000
+                    ]
+                ]
+            },
+            "note": "Tema: econometría matemática, MCO, GMM, variables instrumentales",
+            "publisher": "Princeton University Press",
+            "title": "Econometrics",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Breusch",
+                    "given": "Trevor S."
+                },
+                {
+                    "family": "Pagan",
+                    "given": "Adrian R."
+                }
+            ],
+            "container-title": "Econometrica",
+            "id": "breusch1979simple",
+            "issue": "5",
+            "issued": {
+                "date-parts": [
+                    [
+                        1979
+                    ]
+                ]
+            },
+            "note": "Tema: prueba Breusch-Pagan, heterocedasticidad",
+            "page": "1287-1294",
+            "title": "A simple test for heteroscedasticity and random coefficient variation",
+            "type": "article-journal",
+            "volume": "47"
+        },
+        {
+            "author": [
+                {
+                    "family": "White",
+                    "given": "Halbert"
+                }
+            ],
+            "container-title": "Econometrica",
+            "id": "white1980heteroskedasticity",
+            "issue": "4",
+            "issued": {
+                "date-parts": [
+                    [
+                        1980
+                    ]
+                ]
+            },
+            "note": "Tema: errores estándar robustos y prueba de White",
+            "page": "817-838",
+            "title": "A heteroskedasticity-consistent covariance matrix estimator and a direct test for heteroskedasticity",
+            "type": "article-journal",
+            "volume": "48"
+        },
+        {
+            "author": [
+                {
+                    "family": "Durbin",
+                    "given": "James"
+                },
+                {
+                    "family": "Watson",
+                    "given": "Geoffrey S."
+                }
+            ],
+            "container-title": "Biometrika",
+            "id": "durbin1950testing",
+            "issue": "3/4",
+            "issued": {
+                "date-parts": [
+                    [
+                        1950
+                    ]
+                ]
+            },
+            "note": "Tema: prueba Durbin-Watson, autocorrelación de residuos",
+            "page": "409-428",
+            "title": "Testing for serial correlation in least squares regression. i",
+            "type": "article-journal",
+            "volume": "37"
+        },
+        {
+            "author": [
+                {
+                    "family": "Durbin",
+                    "given": "James"
+                },
+                {
+                    "family": "Watson",
+                    "given": "Geoffrey S."
+                }
+            ],
+            "container-title": "Biometrika",
+            "id": "durbin1951testing",
+            "issue": "1/2",
+            "issued": {
+                "date-parts": [
+                    [
+                        1951
+                    ]
+                ]
+            },
+            "note": "Tema: prueba Durbin-Watson, autocorrelación de residuos",
+            "page": "159-178",
+            "title": "Testing for serial correlation in least squares regression. II",
+            "type": "article-journal",
+            "volume": "38"
+        },
+        {
+            "author": [
+                {
+                    "family": "Breusch",
+                    "given": "Trevor S."
+                }
+            ],
+            "container-title": "Australian Economic Papers",
+            "id": "breusch1978testing",
+            "issue": "31",
+            "issued": {
+                "date-parts": [
+                    [
+                        1978
+                    ]
+                ]
+            },
+            "note": "Tema: prueba Breusch-Godfrey, autocorrelación",
+            "page": "334-355",
+            "title": "Testing for autocorrelation in dynamic linear models",
+            "type": "article-journal",
+            "volume": "17"
+        },
+        {
+            "author": [
+                {
+                    "family": "Godfrey",
+                    "given": "Leslie G."
+                }
+            ],
+            "container-title": "Econometrica",
+            "id": "godfrey1978testing",
+            "issue": "6",
+            "issued": {
+                "date-parts": [
+                    [
+                        1978
+                    ]
+                ]
+            },
+            "note": "Tema: prueba Breusch-Godfrey, autocorrelación en modelos dinámicos",
+            "page": "1293-1301",
+            "title": "Testing against general autoregressive and moving average error models when the regressors include lagged dependent variables",
+            "type": "article-journal",
+            "volume": "46"
+        },
+        {
+            "author": [
+                {
+                    "family": "Belsley",
+                    "given": "David A."
+                },
+                {
+                    "family": "Kuh",
+                    "given": "Edwin"
+                },
+                {
+                    "family": "Welsch",
+                    "given": "Roy E."
+                }
+            ],
+            "id": "belsley1980regression",
+            "issued": {
+                "date-parts": [
+                    [
+                        1980
+                    ]
+                ]
+            },
+            "note": "Tema: diagnóstico de regresión, multicolinealidad, observaciones influyentes",
+            "publisher": "Wiley",
+            "title": "Regression diagnostics: Identifying influential data and sources of collinearity",
+            "title-short": "Regression diagnostics",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Hastie",
+                    "given": "Trevor"
+                },
+                {
+                    "family": "Tibshirani",
+                    "given": "Robert"
+                },
+                {
+                    "family": "Friedman",
+                    "given": "Jerome"
+                }
+            ],
+            "edition": "2",
+            "id": "hastie2009elements",
+            "issued": {
+                "date-parts": [
+                    [
+                        2009
+                    ]
+                ]
+            },
+            "note": "Tema: machine learning, validación, regularización, PCA, clustering, modelos predictivos",
+            "publisher": "Springer",
+            "title": "The elements of statistical learning: Data mining, inference, and prediction",
+            "title-short": "The elements of statistical learning",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "James",
+                    "given": "Gareth"
+                },
+                {
+                    "family": "Witten",
+                    "given": "Daniela"
+                },
+                {
+                    "family": "Hastie",
+                    "given": "Trevor"
+                },
+                {
+                    "family": "Tibshirani",
+                    "given": "Robert"
+                }
+            ],
+            "edition": "2",
+            "id": "james2021introduction",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021
+                    ]
+                ]
+            },
+            "note": "Tema: regresión, validación, regularización, clasificación, PCA, clustering",
+            "publisher": "Springer",
+            "title": "An introduction to statistical learning: With applications in r",
+            "title-short": "An introduction to statistical learning",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Kuhn",
+                    "given": "Max"
+                },
+                {
+                    "family": "Johnson",
+                    "given": "Kjell"
+                }
+            ],
+            "id": "kuhn2013applied",
+            "issued": {
+                "date-parts": [
+                    [
+                        2013
+                    ]
+                ]
+            },
+            "note": "Tema: modelado predictivo, validación, preprocesamiento, métricas de desempeño",
+            "publisher": "Springer",
+            "title": "Applied predictive modeling",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Kohavi",
+                    "given": "Ron"
+                }
+            ],
+            "container-title": "Proceedings of the fourteenth international joint conference on artificial intelligence",
+            "id": "kohavi1995study",
+            "issued": {
+                "date-parts": [
+                    [
+                        1995
+                    ]
+                ]
+            },
+            "note": "Tema: cross-validation, bootstrap y selección de modelos",
+            "page": "1137-1143",
+            "title": "A study of cross-validation and bootstrap for accuracy estimation and model selection",
+            "type": "paper-conference"
+        },
+        {
+            "author": [
+                {
+                    "family": "Hyndman",
+                    "given": "Rob J."
+                },
+                {
+                    "family": "Koehler",
+                    "given": "Anne B."
+                }
+            ],
+            "container-title": "International Journal of Forecasting",
+            "id": "hyndman2006another",
+            "issue": "4",
+            "issued": {
+                "date-parts": [
+                    [
+                        2006
+                    ]
+                ]
+            },
+            "note": "Tema: métricas de pronóstico, RMSE, MAE, MAPE y limitaciones",
+            "page": "679-688",
+            "title": "Another look at measures of forecast accuracy",
+            "type": "article-journal",
+            "volume": "22"
+        },
+        {
+            "author": [
+                {
+                    "family": "Hoerl",
+                    "given": "Arthur E."
+                },
+                {
+                    "family": "Kennard",
+                    "given": "Robert W."
+                }
+            ],
+            "container-title": "Technometrics",
+            "id": "hoerl1970ridge",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        1970
+                    ]
+                ]
+            },
+            "note": "Tema: regresión Ridge y multicolinealidad",
+            "page": "55-67",
+            "title": "Ridge regression: Biased estimation for nonorthogonal problems",
+            "title-short": "Ridge regression",
+            "type": "article-journal",
+            "volume": "12"
+        },
+        {
+            "author": [
+                {
+                    "family": "Tibshirani",
+                    "given": "Robert"
+                }
+            ],
+            "container-title": "Journal of the Royal Statistical Society: Series B",
+            "id": "tibshirani1996regression",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        1996
+                    ]
+                ]
+            },
+            "note": "Tema: regresión Lasso, regularización y selección de variables",
+            "page": "267-288",
+            "title": "Regression shrinkage and selection via the lasso",
+            "type": "article-journal",
+            "volume": "58"
+        },
+        {
+            "author": [
+                {
+                    "family": "Zou",
+                    "given": "Hui"
+                },
+                {
+                    "family": "Hastie",
+                    "given": "Trevor"
+                }
+            ],
+            "container-title": "Journal of the Royal Statistical Society: Series B",
+            "id": "zou2005regularization",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2005
+                    ]
+                ]
+            },
+            "note": "Tema: Elastic Net, regularización combinada Ridge-Lasso",
+            "page": "301-320",
+            "title": "Regularization and variable selection via the elastic net",
+            "type": "article-journal",
+            "volume": "67"
+        },
+        {
+            "author": [
+                {
+                    "family": "Friedman",
+                    "given": "Jerome"
+                },
+                {
+                    "family": "Hastie",
+                    "given": "Trevor"
+                },
+                {
+                    "family": "Tibshirani",
+                    "given": "Robert"
+                }
+            ],
+            "container-title": "Journal of Statistical Software",
+            "id": "friedman2010regularization",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2010
+                    ]
+                ]
+            },
+            "note": "Tema: implementación de Ridge, Lasso y Elastic Net en glmnet",
+            "page": "1-22",
+            "title": "Regularization paths for generalized linear models via coordinate descent",
+            "type": "article-journal",
+            "volume": "33"
+        },
+        {
+            "author": [
+                {
+                    "family": "Pearson",
+                    "given": "Karl"
+                }
+            ],
+            "container-title": "Philosophical Magazine",
+            "id": "pearson1901lines",
+            "issue": "11",
+            "issued": {
+                "date-parts": [
+                    [
+                        1901
+                    ]
+                ]
+            },
+            "note": "Tema: PCA, ajuste por mínimos cuadrados en espacios multidimensionales",
+            "page": "559-572",
+            "title": "On lines and planes of closest fit to systems of points in space",
+            "type": "article-journal",
+            "volume": "2"
+        },
+        {
+            "author": [
+                {
+                    "family": "Hotelling",
+                    "given": "Harold"
+                }
+            ],
+            "container-title": "Journal of Educational Psychology",
+            "id": "hotelling1933analysis",
+            "issue": "6",
+            "issued": {
+                "date-parts": [
+                    [
+                        1933
+                    ]
+                ]
+            },
+            "note": "Tema: análisis de componentes principales",
+            "page": "417-441",
+            "title": "Analysis of a complex of statistical variables into principal components",
+            "type": "article-journal",
+            "volume": "24"
+        },
+        {
+            "author": [
+                {
+                    "family": "Jolliffe",
+                    "given": "Ian T."
+                }
+            ],
+            "edition": "2",
+            "id": "jolliffe2002principal",
+            "issued": {
+                "date-parts": [
+                    [
+                        2002
+                    ]
+                ]
+            },
+            "note": "Tema: PCA, reducción de dimensionalidad",
+            "publisher": "Springer",
+            "title": "Principal component analysis",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Jolliffe",
+                    "given": "Ian T."
+                },
+                {
+                    "family": "Cadima",
+                    "given": "Jorge"
+                }
+            ],
+            "container-title": "Philosophical Transactions of the Royal Society A",
+            "id": "jolliffe2016principal",
+            "issue": "2065",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016
+                    ]
+                ]
+            },
+            "note": "Tema: revisión moderna de PCA",
+            "page": "20150202",
+            "title": "Principal component analysis: A review and recent developments",
+            "title-short": "Principal component analysis",
+            "type": "article-journal",
+            "volume": "374"
+        },
+        {
+            "author": [
+                {
+                    "family": "Harman",
+                    "given": "Harry H."
+                }
+            ],
+            "edition": "3",
+            "id": "harman1976modern",
+            "issued": {
+                "date-parts": [
+                    [
+                        1976
+                    ]
+                ]
+            },
+            "note": "Tema: análisis factorial exploratorio",
+            "publisher": "University of Chicago Press",
+            "title": "Modern factor analysis",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Fabrigar",
+                    "given": "Leandre R."
+                },
+                {
+                    "family": "Wegener",
+                    "given": "Duane T."
+                }
+            ],
+            "id": "fabrigar2012exploratory",
+            "issued": {
+                "date-parts": [
+                    [
+                        2012
+                    ]
+                ]
+            },
+            "note": "Tema: análisis factorial exploratorio",
+            "publisher": "Oxford University Press",
+            "title": "Exploratory factor analysis",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Brown",
+                    "given": "Timothy A."
+                }
+            ],
+            "edition": "2",
+            "id": "brown2015confirmatory",
+            "issued": {
+                "date-parts": [
+                    [
+                        2015
+                    ]
+                ]
+            },
+            "note": "Tema: análisis factorial confirmatorio",
+            "publisher": "Guilford Press",
+            "title": "Confirmatory factor analysis for applied research",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Kline",
+                    "given": "Rex B."
+                }
+            ],
+            "edition": "5",
+            "id": "kline2023sem",
+            "issued": {
+                "date-parts": [
+                    [
+                        2023
+                    ]
+                ]
+            },
+            "note": "Tema: SEM, CFA, path analysis e identificación de modelos",
+            "publisher": "Guilford Press",
+            "title": "Principles and practice of structural equation modeling",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "dropping-particle": "van der",
+                    "family": "Maaten",
+                    "given": "Laurens"
+                },
+                {
+                    "family": "Hinton",
+                    "given": "Geoffrey"
+                }
+            ],
+            "container-title": "Journal of Machine Learning Research",
+            "id": "vandermaaten2008tsne",
+            "issued": {
+                "date-parts": [
+                    [
+                        2008
+                    ]
+                ]
+            },
+            "note": "Tema: t-SNE y visualización no lineal de alta dimensionalidad",
+            "page": "2579-2605",
+            "title": "Visualizing data using t-SNE",
+            "type": "article-journal",
+            "volume": "9"
+        },
+        {
+            "author": [
+                {
+                    "dropping-particle": "van der",
+                    "family": "Maaten",
+                    "given": "Laurens"
+                }
+            ],
+            "container-title": "Journal of Machine Learning Research",
+            "id": "vandermaaten2014accelerating",
+            "issued": {
+                "date-parts": [
+                    [
+                        2014
+                    ]
+                ]
+            },
+            "note": "Tema: t-SNE acelerado y aproximaciones computacionales",
+            "page": "3221-3245",
+            "title": "Accelerating t-SNE using tree-based algorithms",
+            "type": "article-journal",
+            "volume": "15"
+        },
+        {
+            "author": [
+                {
+                    "family": "MacQueen",
+                    "given": "James"
+                }
+            ],
+            "container-title": "Proceedings of the fifth berkeley symposium on mathematical statistics and probability",
+            "id": "macqueen1967methods",
+            "issued": {
+                "date-parts": [
+                    [
+                        1967
+                    ]
+                ]
+            },
+            "note": "Tema: K-means clustering",
+            "page": "281-297",
+            "title": "Some methods for classification and analysis of multivariate observations",
+            "type": "paper-conference",
+            "volume": "1"
+        },
+        {
+            "author": [
+                {
+                    "family": "Lloyd",
+                    "given": "Stuart P."
+                }
+            ],
+            "container-title": "IEEE Transactions on Information Theory",
+            "id": "lloyd1982least",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        1982
+                    ]
+                ]
+            },
+            "note": "Tema: algoritmo de Lloyd, K-means",
+            "page": "129-137",
+            "title": "Least squares quantization in PCM",
+            "type": "article-journal",
+            "volume": "28"
+        },
+        {
+            "author": [
+                {
+                    "family": "Kaufman",
+                    "given": "Leonard"
+                },
+                {
+                    "family": "Rousseeuw",
+                    "given": "Peter J."
+                }
+            ],
+            "id": "kaufman1990finding",
+            "issued": {
+                "date-parts": [
+                    [
+                        1990
+                    ]
+                ]
+            },
+            "note": "Tema: clustering, silhouette, particiones y métodos jerárquicos",
+            "publisher": "Wiley",
+            "title": "Finding groups in data: An introduction to cluster analysis",
+            "title-short": "Finding groups in data",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Murtagh",
+                    "given": "Fionn"
+                },
+                {
+                    "family": "Contreras",
+                    "given": "Pedro"
+                }
+            ],
+            "container-title": "WIREs Data Mining and Knowledge Discovery",
+            "id": "murtagh2012algorithms",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2012
+                    ]
+                ]
+            },
+            "note": "Tema: clustering jerárquico",
+            "page": "86-97",
+            "title": "Algorithms for hierarchical clustering: An overview",
+            "title-short": "Algorithms for hierarchical clustering",
+            "type": "article-journal",
+            "volume": "2"
+        },
+        {
+            "author": [
+                {
+                    "family": "Ester",
+                    "given": "Martin"
+                },
+                {
+                    "family": "Kriegel",
+                    "given": "Hans-Peter"
+                },
+                {
+                    "family": "Sander",
+                    "given": "Jörg"
+                },
+                {
+                    "family": "Xu",
+                    "given": "Xiaowei"
+                }
+            ],
+            "container-title": "Proceedings of the second international conference on knowledge discovery and data mining",
+            "id": "ester1996density",
+            "issued": {
+                "date-parts": [
+                    [
+                        1996
+                    ]
+                ]
+            },
+            "note": "Tema: DBSCAN, clustering espacial y detección de ruido",
+            "page": "226-231",
+            "title": "A density-based algorithm for discovering clusters in large spatial databases with noise",
+            "type": "paper-conference"
+        },
+        {
+            "author": [
+                {
+                    "family": "Rousseeuw",
+                    "given": "Peter J."
+                }
+            ],
+            "container-title": "Journal of Computational and Applied Mathematics",
+            "id": "rousseeuw1987silhouettes",
+            "issued": {
+                "date-parts": [
+                    [
+                        1987
+                    ]
+                ]
+            },
+            "note": "Tema: silhouette score, evaluación de clusters",
+            "page": "53-65",
+            "title": "Silhouettes: A graphical aid to the interpretation and validation of cluster analysis",
+            "title-short": "Silhouettes",
+            "type": "article-journal",
+            "volume": "20"
+        },
+        {
+            "author": [
+                {
+                    "family": "Box",
+                    "given": "George E. P."
+                },
+                {
+                    "family": "Jenkins",
+                    "given": "Gwilym M."
+                },
+                {
+                    "family": "Reinsel",
+                    "given": "Gregory C."
+                },
+                {
+                    "family": "Ljung",
+                    "given": "Greta M."
+                }
+            ],
+            "edition": "5",
+            "id": "box2015time",
+            "issued": {
+                "date-parts": [
+                    [
+                        2015
+                    ]
+                ]
+            },
+            "note": "Tema: AR, ARIMA, SARIMA, diagnóstico y pronóstico de series de tiempo",
+            "publisher": "Wiley",
+            "title": "Time series analysis: Forecasting and control",
+            "title-short": "Time series analysis",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Hamilton",
+                    "given": "James D."
+                }
+            ],
+            "id": "hamilton1994time",
+            "issued": {
+                "date-parts": [
+                    [
+                        1994
+                    ]
+                ]
+            },
+            "note": "Tema: series de tiempo, estacionariedad, VAR y econometría temporal",
+            "publisher": "Princeton University Press",
+            "title": "Time series analysis",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Brockwell",
+                    "given": "Peter J."
+                },
+                {
+                    "family": "Davis",
+                    "given": "Richard A."
+                }
+            ],
+            "edition": "3",
+            "id": "brockwell2016introduction",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016
+                    ]
+                ]
+            },
+            "note": "Tema: introducción a series de tiempo, ARMA, ARIMA y pronóstico",
+            "publisher": "Springer",
+            "title": "Introduction to time series and forecasting",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Shumway",
+                    "given": "Robert H."
+                },
+                {
+                    "family": "Stoffer",
+                    "given": "David S."
+                }
+            ],
+            "edition": "4",
+            "id": "shumway2017time",
+            "issued": {
+                "date-parts": [
+                    [
+                        2017
+                    ]
+                ]
+            },
+            "note": "Tema: series de tiempo con R, modelos ARIMA, espectro y aplicaciones",
+            "publisher": "Springer",
+            "title": "Time series analysis and its applications: With r examples",
+            "title-short": "Time series analysis and its applications",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Dickey",
+                    "given": "David A."
+                },
+                {
+                    "family": "Fuller",
+                    "given": "Wayne A."
+                }
+            ],
+            "container-title": "Journal of the American Statistical Association",
+            "id": "dickey1979distribution",
+            "issue": "366",
+            "issued": {
+                "date-parts": [
+                    [
+                        1979
+                    ]
+                ]
+            },
+            "note": "Tema: prueba ADF, raíces unitarias y estacionariedad",
+            "page": "427-431",
+            "title": "Distribution of the estimators for autoregressive time series with a unit root",
+            "type": "article-journal",
+            "volume": "74"
+        },
+        {
+            "URL": "https://otexts.com/fpp3/",
+            "author": [
+                {
+                    "family": "Hyndman",
+                    "given": "Rob J."
+                },
+                {
+                    "family": "Athanasopoulos",
+                    "given": "George"
+                }
+            ],
+            "edition": "3",
+            "id": "hyndman2021forecasting",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021
+                    ]
+                ]
+            },
+            "note": "Tema: series de tiempo, ETS, ARIMA, validación, métricas y pronóstico aplicado",
+            "publisher": "OTexts",
+            "title": "Forecasting: Principles and practice",
+            "title-short": "Forecasting",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Hyndman",
+                    "given": "Rob J."
+                },
+                {
+                    "family": "Koehler",
+                    "given": "Anne B."
+                },
+                {
+                    "family": "Ord",
+                    "given": "J. Keith"
+                },
+                {
+                    "family": "Snyder",
+                    "given": "Ralph D."
+                }
+            ],
+            "id": "hyndman2008forecasting",
+            "issued": {
+                "date-parts": [
+                    [
+                        2008
+                    ]
+                ]
+            },
+            "note": "Tema: suavizamiento exponencial, ETS, Holt y Holt-Winters",
+            "publisher": "Springer",
+            "title": "Forecasting with exponential smoothing: The state space approach",
+            "title-short": "Forecasting with exponential smoothing",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Holt",
+                    "given": "Charles C."
+                }
+            ],
+            "id": "holt1957forecasting",
+            "issued": {
+                "date-parts": [
+                    [
+                        1957
+                    ]
+                ]
+            },
+            "note": "Tema: método de Holt y suavizamiento exponencial",
+            "publisher": "Carnegie Institute of Technology",
+            "title": "Forecasting seasonals and trends by exponentially weighted moving averages",
+            "type": "report"
+        },
+        {
+            "author": [
+                {
+                    "family": "Winters",
+                    "given": "Peter R."
+                }
+            ],
+            "container-title": "Management Science",
+            "id": "winters1960forecasting",
+            "issue": "3",
+            "issued": {
+                "date-parts": [
+                    [
+                        1960
+                    ]
+                ]
+            },
+            "note": "Tema: Holt-Winters y series con tendencia y estacionalidad",
+            "page": "324-342",
+            "title": "Forecasting sales by exponentially weighted moving averages",
+            "type": "article-journal",
+            "volume": "6"
+        },
+        {
+            "author": [
+                {
+                    "family": "Taylor",
+                    "given": "Sean J."
+                },
+                {
+                    "family": "Letham",
+                    "given": "Benjamin"
+                }
+            ],
+            "container-title": "The American Statistician",
+            "id": "taylor2018forecasting",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "note": "Tema: Prophet, pronóstico automatizado y escalable",
+            "page": "37-45",
+            "title": "Forecasting at scale",
+            "type": "article-journal",
+            "volume": "72"
+        },
+        {
+            "URL": "https://facebook.github.io/prophet/",
+            "author": [
+                {
+                    "literal": "Meta Open Source"
+                }
+            ],
+            "id": "prophetDocs",
+            "issued": {
+                "date-parts": [
+                    [
+                        2026
+                    ]
+                ]
+            },
+            "note": "Tema: documentación oficial de Prophet para R y Python",
+            "publisher": "Meta",
+            "title": "Prophet documentation",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Lütkepohl",
+                    "given": "Helmut"
+                }
+            ],
+            "id": "lutkepohl2005new",
+            "issued": {
+                "date-parts": [
+                    [
+                        2005
+                    ]
+                ]
+            },
+            "note": "Tema: VAR, VECM y series de tiempo multivariadas",
+            "publisher": "Springer",
+            "title": "New introduction to multiple time series analysis",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Sims",
+                    "given": "Christopher A."
+                }
+            ],
+            "container-title": "Econometrica",
+            "id": "sims1980macroeconomics",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        1980
+                    ]
+                ]
+            },
+            "note": "Tema: modelos VAR y econometría macroeconómica",
+            "page": "1-48",
+            "title": "Macroeconomics and reality",
+            "type": "article-journal",
+            "volume": "48"
+        },
+        {
+            "author": [
+                {
+                    "family": "Hyndman",
+                    "given": "Rob J."
+                },
+                {
+                    "family": "Khandakar",
+                    "given": "Yeasmin"
+                }
+            ],
+            "container-title": "Journal of Statistical Software",
+            "id": "hyndman2008automatic",
+            "issue": "3",
+            "issued": {
+                "date-parts": [
+                    [
+                        2008
+                    ]
+                ]
+            },
+            "note": "Tema: selección automática de modelos ARIMA y paquete forecast en R",
+            "page": "1-22",
+            "title": "Automatic time series forecasting: The forecast package for r",
+            "title-short": "Automatic time series forecasting",
+            "type": "article-journal",
+            "volume": "27"
+        },
+        {
+            "author": [
+                {
+                    "family": "Fader",
+                    "given": "Peter S."
+                },
+                {
+                    "family": "Hardie",
+                    "given": "Bruce G. S."
+                }
+            ],
+            "container-title": "Journal of Interactive Marketing",
+            "id": "fader2009probability",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2009
+                    ]
+                ]
+            },
+            "note": "Tema: análisis de clientes, cohortes, retención y CLV",
+            "page": "61-69",
+            "title": "Probability models for customer-base analysis",
+            "type": "article-journal",
+            "volume": "23"
+        },
+        {
+            "author": [
+                {
+                    "family": "Gupta",
+                    "given": "Sunil"
+                },
+                {
+                    "family": "Lehmann",
+                    "given": "Donald R."
+                },
+                {
+                    "family": "Stuart",
+                    "given": "Jennifer Ames"
+                }
+            ],
+            "container-title": "Journal of Marketing Research",
+            "id": "gupta2004valuing",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2004
+                    ]
+                ]
+            },
+            "note": "Tema: customer lifetime value y valuación de clientes",
+            "page": "7-18",
+            "title": "Valuing customers",
+            "type": "article-journal",
+            "volume": "41"
+        },
+        {
+            "author": [
+                {
+                    "family": "Kumar",
+                    "given": "V."
+                }
+            ],
+            "id": "kumar2008managing",
+            "issued": {
+                "date-parts": [
+                    [
+                        2008
+                    ]
+                ]
+            },
+            "note": "Tema: CLV, rentabilidad de clientes y retención",
+            "publisher": "Wharton School Publishing",
+            "title": "Managing customers for profit: Strategies to increase profits and build loyalty",
+            "title-short": "Managing customers for profit",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Blattberg",
+                    "given": "Robert C."
+                },
+                {
+                    "family": "Kim",
+                    "given": "Byung-Do"
+                },
+                {
+                    "family": "Neslin",
+                    "given": "Scott A."
+                }
+            ],
+            "id": "blattberg2008database",
+            "issued": {
+                "date-parts": [
+                    [
+                        2008
+                    ]
+                ]
+            },
+            "note": "Tema: marketing analytics, CLV, segmentación, retención y cohortes",
+            "publisher": "Springer",
+            "title": "Database marketing: Analyzing and managing customers",
+            "title-short": "Database marketing",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Kaplan",
+                    "given": "Edward L."
+                },
+                {
+                    "family": "Meier",
+                    "given": "Paul"
+                }
+            ],
+            "container-title": "Journal of the American Statistical Association",
+            "id": "kaplan1958nonparametric",
+            "issue": "282",
+            "issued": {
+                "date-parts": [
+                    [
+                        1958
+                    ]
+                ]
+            },
+            "note": "Tema: Kaplan-Meier y análisis de supervivencia",
+            "page": "457-481",
+            "title": "Nonparametric estimation from incomplete observations",
+            "type": "article-journal",
+            "volume": "53"
+        },
+        {
+            "author": [
+                {
+                    "family": "Cox",
+                    "given": "David R."
+                }
+            ],
+            "container-title": "Journal of the Royal Statistical Society: Series B",
+            "id": "cox1972regression",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        1972
+                    ]
+                ]
+            },
+            "note": "Tema: modelo de riesgos proporcionales de Cox",
+            "page": "187-220",
+            "title": "Regression models and life-tables",
+            "type": "article-journal",
+            "volume": "34"
+        },
+        {
+            "author": [
+                {
+                    "family": "Kleinbaum",
+                    "given": "David G."
+                },
+                {
+                    "family": "Klein",
+                    "given": "Mitchel"
+                }
+            ],
+            "edition": "3",
+            "id": "kleinbaum2012survival",
+            "issued": {
+                "date-parts": [
+                    [
+                        2012
+                    ]
+                ]
+            },
+            "note": "Tema: análisis de supervivencia aplicado",
+            "publisher": "Springer",
+            "title": "Survival analysis: A self-learning text",
+            "title-short": "Survival analysis",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Collett",
+                    "given": "David"
+                }
+            ],
+            "edition": "3",
+            "id": "collett2015modelling",
+            "issued": {
+                "date-parts": [
+                    [
+                        2015
+                    ]
+                ]
+            },
+            "note": "Tema: modelos de supervivencia, censura y análisis de eventos",
+            "publisher": "CRC Press",
+            "title": "Modelling survival data in medical research",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Dantzig",
+                    "given": "George B."
+                }
+            ],
+            "id": "dantzig1963linear",
+            "issued": {
+                "date-parts": [
+                    [
+                        1963
+                    ]
+                ]
+            },
+            "note": "Tema: programación lineal, método simplex y optimización",
+            "publisher": "Princeton University Press",
+            "title": "Linear programming and extensions",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Hillier",
+                    "given": "Frederick S."
+                },
+                {
+                    "family": "Lieberman",
+                    "given": "Gerald J."
+                }
+            ],
+            "edition": "12",
+            "id": "hillier2024introduction",
+            "issued": {
+                "date-parts": [
+                    [
+                        2024
+                    ]
+                ]
+            },
+            "note": "Tema: investigación de operaciones, optimización lineal, asignación, transporte",
+            "publisher": "McGraw Hill",
+            "title": "Introduction to operations research",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Bertsimas",
+                    "given": "Dimitris"
+                },
+                {
+                    "family": "Tsitsiklis",
+                    "given": "John N."
+                }
+            ],
+            "id": "bertsimas1997introduction",
+            "issued": {
+                "date-parts": [
+                    [
+                        1997
+                    ]
+                ]
+            },
+            "note": "Tema: optimización lineal y fundamentos matemáticos de programación lineal",
+            "publisher": "Athena Scientific",
+            "title": "Introduction to linear optimization",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Winston",
+                    "given": "Wayne L."
+                }
+            ],
+            "edition": "4",
+            "id": "winston2004operations",
+            "issued": {
+                "date-parts": [
+                    [
+                        2004
+                    ]
+                ]
+            },
+            "note": "Tema: optimización aplicada, asignación, transporte y simulación",
+            "publisher": "Duxbury Press",
+            "title": "Operations research: Applications and algorithms",
+            "title-short": "Operations research",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Metropolis",
+                    "given": "Nicholas"
+                },
+                {
+                    "family": "Ulam",
+                    "given": "Stanislaw"
+                }
+            ],
+            "container-title": "Journal of the American Statistical Association",
+            "id": "metropolis1949monte",
+            "issue": "247",
+            "issued": {
+                "date-parts": [
+                    [
+                        1949
+                    ]
+                ]
+            },
+            "note": "Tema: simulación Monte Carlo",
+            "page": "335-341",
+            "title": "The monte carlo method",
+            "type": "article-journal",
+            "volume": "44"
+        },
+        {
+            "author": [
+                {
+                    "family": "Rubinstein",
+                    "given": "Reuven Y."
+                },
+                {
+                    "family": "Kroese",
+                    "given": "Dirk P."
+                }
+            ],
+            "edition": "3",
+            "id": "rubinstein2016simulation",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016
+                    ]
+                ]
+            },
+            "note": "Tema: simulación, Monte Carlo y evaluación de escenarios",
+            "publisher": "Wiley",
+            "title": "Simulation and the monte carlo method",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Law",
+                    "given": "Averill M."
+                }
+            ],
+            "edition": "5",
+            "id": "law2015simulation",
+            "issued": {
+                "date-parts": [
+                    [
+                        2015
+                    ]
+                ]
+            },
+            "note": "Tema: simulación discreta, modelado y análisis de escenarios",
+            "publisher": "McGraw-Hill Education",
+            "title": "Simulation modeling and analysis",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Bollen",
+                    "given": "Kenneth A."
+                }
+            ],
+            "id": "bollen1989structural",
+            "issued": {
+                "date-parts": [
+                    [
+                        1989
+                    ]
+                ]
+            },
+            "note": "Tema: SEM, variables latentes, identificación y estimación",
+            "publisher": "Wiley",
+            "title": "Structural equations with latent variables",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Rosseel",
+                    "given": "Yves"
+                }
+            ],
+            "container-title": "Journal of Statistical Software",
+            "id": "rosseel2012lavaan",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2012
+                    ]
+                ]
+            },
+            "note": "Tema: implementación de SEM, CFA y path analysis en R",
+            "page": "1-36",
+            "title": "Lavaan: An r package for structural equation modeling",
+            "title-short": "Lavaan",
+            "type": "article-journal",
+            "volume": "48"
+        },
+        {
+            "author": [
+                {
+                    "family": "Bivand",
+                    "given": "Roger S."
+                },
+                {
+                    "family": "Pebesma",
+                    "given": "Edzer"
+                },
+                {
+                    "family": "Gómez-Rubio",
+                    "given": "Virgilio"
+                }
+            ],
+            "edition": "2",
+            "id": "bivand2013applied",
+            "issued": {
+                "date-parts": [
+                    [
+                        2013
+                    ]
+                ]
+            },
+            "note": "Tema: análisis espacial en R, datos geográficos, autocorrelación espacial",
+            "publisher": "Springer",
+            "title": "Applied spatial data analysis with r",
+            "type": "book"
+        },
+        {
+            "URL": "https://r.geocompx.org/",
+            "author": [
+                {
+                    "family": "Lovelace",
+                    "given": "Robin"
+                },
+                {
+                    "family": "Nowosad",
+                    "given": "Jakub"
+                },
+                {
+                    "family": "Muenchow",
+                    "given": "Jannes"
+                }
+            ],
+            "edition": "2",
+            "id": "lovelace2025geocomputation",
+            "issued": {
+                "date-parts": [
+                    [
+                        2025
+                    ]
+                ]
+            },
+            "note": "Tema: geocomputación con R, sf, rutas, mapas y análisis espacial",
+            "publisher": "CRC Press",
+            "title": "Geocomputation with r",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "O’Sullivan",
+                    "given": "David"
+                },
+                {
+                    "family": "Unwin",
+                    "given": "David J."
+                }
+            ],
+            "edition": "2",
+            "id": "osullivan2010geographic",
+            "issued": {
+                "date-parts": [
+                    [
+                        2010
+                    ]
+                ]
+            },
+            "note": "Tema: análisis geográfico, distancias, patrones espaciales",
+            "publisher": "Wiley",
+            "title": "Geographic information analysis",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Cressie",
+                    "given": "Noel"
+                }
+            ],
+            "id": "cressie1993statistics",
+            "issued": {
+                "date-parts": [
+                    [
+                        1993
+                    ]
+                ]
+            },
+            "note": "Tema: estadística espacial, dependencia espacial y modelos espaciales",
+            "publisher": "Wiley",
+            "title": "Statistics for spatial data",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Church",
+                    "given": "Richard L."
+                },
+                {
+                    "family": "Murray",
+                    "given": "Alan T."
+                }
+            ],
+            "id": "church2009business",
+            "issued": {
+                "date-parts": [
+                    [
+                        2009
+                    ]
+                ]
+            },
+            "note": "Tema: selección de sitios, territorios, cobertura y localización",
+            "publisher": "Wiley",
+            "title": "Business site selection, location analysis, and GIS",
+            "type": "book"
+        },
+        {
+            "editor": [
+                {
+                    "family": "Drezner",
+                    "given": "Zvi"
+                },
+                {
+                    "family": "Hamacher",
+                    "given": "Horst W."
+                }
+            ],
+            "id": "drezner2004facility",
+            "issued": {
+                "date-parts": [
+                    [
+                        2004
+                    ]
+                ]
+            },
+            "note": "Tema: localización de instalaciones, asignación y cobertura",
+            "publisher": "Springer",
+            "title": "Facility location: Applications and theory",
+            "title-short": "Facility location",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Cliff",
+                    "given": "Andrew D."
+                },
+                {
+                    "family": "Ord",
+                    "given": "John K."
+                }
+            ],
+            "container-title": "Transactions of the Institute of British Geographers",
+            "id": "cliff1975space",
+            "issued": {
+                "date-parts": [
+                    [
+                        1975
+                    ]
+                ]
+            },
+            "note": "Tema: modelos espacio-temporales y pronóstico regional",
+            "page": "119-128",
+            "title": "Space-time modelling with an application to regional forecasting",
+            "type": "article-journal",
+            "volume": "64"
+        },
+        {
+            "author": [
+                {
+                    "family": "Pfeifer",
+                    "given": "Phillip E."
+                },
+                {
+                    "family": "Deutsch",
+                    "given": "Stuart J."
+                }
+            ],
+            "container-title": "Technometrics",
+            "id": "pfeifer1980three",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        1980
+                    ]
+                ]
+            },
+            "note": "Tema: metodología STARIMA y modelado espacio-temporal",
+            "page": "35-47",
+            "title": "A three-stage iterative procedure for space-time modeling",
+            "type": "article-journal",
+            "volume": "22"
+        },
+        {
+            "author": [
+                {
+                    "family": "Pfeifer",
+                    "given": "Phillip E."
+                },
+                {
+                    "family": "Deutsch",
+                    "given": "Stuart J."
+                }
+            ],
+            "container-title": "Technometrics",
+            "id": "pfeifer1980identification",
+            "issue": "3",
+            "issued": {
+                "date-parts": [
+                    [
+                        1980
+                    ]
+                ]
+            },
+            "note": "Tema: modelos STARMA/STARIMA de primer orden",
+            "page": "397-408",
+            "title": "Identification and interpretation of first order space-time ARMA models",
+            "type": "article-journal",
+            "volume": "22"
+        },
+        {
+            "author": [
+                {
+                    "family": "Anselin",
+                    "given": "Luc"
+                }
+            ],
+            "id": "anselin1988spatial",
+            "issued": {
+                "date-parts": [
+                    [
+                        1988
+                    ]
+                ]
+            },
+            "note": "Tema: econometría espacial, dependencia espacial y autocorrelación espacial",
+            "publisher": "Kluwer Academic Publishers",
+            "title": "Spatial econometrics: Methods and models",
+            "title-short": "Spatial econometrics",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Cressie",
+                    "given": "Noel"
+                },
+                {
+                    "family": "Wikle",
+                    "given": "Christopher K."
+                }
+            ],
+            "id": "cressie2011statistics",
+            "issued": {
+                "date-parts": [
+                    [
+                        2011
+                    ]
+                ]
+            },
+            "note": "Tema: datos espacio-temporales, modelos espaciales dinámicos y pronóstico",
+            "publisher": "Wiley",
+            "title": "Statistics for spatio-temporal data",
+            "type": "book"
+        },
+        {
+            "URL": "https://www.rplumber.io/",
+            "author": [
+                {
+                    "literal": "Schloerke, Barret and Allen, Jeff and Posit Software, PBC"
+                }
+            ],
+            "id": "plumberDocs",
+            "issued": {
+                "date-parts": [
+                    [
+                        2026
+                    ]
+                ]
+            },
+            "note": "Tema: APIs con R, despliegue de modelos y servicios HTTP",
+            "publisher": "Posit Software, PBC",
+            "title": "Plumber: An API generator for r",
+            "title-short": "Plumber",
+            "type": "book"
+        },
+        {
+            "URL": "https://docs.docker.com/",
+            "author": [
+                {
+                    "literal": "Docker Inc."
+                }
+            ],
+            "id": "dockerDocs",
+            "issued": {
+                "date-parts": [
+                    [
+                        2026
+                    ]
+                ]
+            },
+            "note": "Tema: Docker, contenedores, imágenes y despliegue reproducible",
+            "publisher": "Docker Inc.",
+            "title": "Docker documentation",
+            "type": "book"
+        },
+        {
+            "URL": "https://docs.posit.co/connect/",
+            "author": [
+                {
+                    "literal": "Posit Software, PBC"
+                }
+            ],
+            "id": "positConnectDocs",
+            "issued": {
+                "date-parts": [
+                    [
+                        2026
+                    ]
+                ]
+            },
+            "note": "Tema: publicación de APIs Plumber, Shiny, Quarto y contenido analítico",
+            "publisher": "Posit Software, PBC",
+            "title": "Posit connect documentation",
+            "type": "book"
+        },
+        {
+            "URL": "https://r-pkgs.org/",
+            "author": [
+                {
+                    "family": "Wickham",
+                    "given": "Hadley"
+                },
+                {
+                    "family": "Bryan",
+                    "given": "Jennifer"
+                }
+            ],
+            "edition": "2",
+            "id": "wickham2023rpackages",
+            "issued": {
+                "date-parts": [
+                    [
+                        2023
+                    ]
+                ]
+            },
+            "note": "Tema: desarrollo de paquetes en R, estructura de proyectos y reproducibilidad",
+            "publisher": "O’Reilly Media",
+            "title": "R packages",
+            "type": "book"
+        },
+        {
+            "URL": "https://r4ds.had.co.nz/",
+            "author": [
+                {
+                    "family": "Wickham",
+                    "given": "Hadley"
+                },
+                {
+                    "family": "Grolemund",
+                    "given": "Garrett"
+                }
+            ],
+            "id": "wickham2017r",
+            "issued": {
+                "date-parts": [
+                    [
+                        2017
+                    ]
+                ]
+            },
+            "note": "Tema: R, tidyverse, limpieza, visualización y análisis de datos",
+            "publisher": "O’Reilly Media",
+            "title": "R for data science",
+            "type": "book"
+        },
+        {
+            "URL": "https://r4ds.hadley.nz/",
+            "author": [
+                {
+                    "family": "Wickham",
+                    "given": "Hadley"
+                },
+                {
+                    "family": "Çetinkaya-Rundel",
+                    "given": "Mine"
+                },
+                {
+                    "family": "Grolemund",
+                    "given": "Garrett"
+                }
+            ],
+            "edition": "2",
+            "id": "wickham2023r4ds",
+            "issued": {
+                "date-parts": [
+                    [
+                        2023
+                    ]
+                ]
+            },
+            "note": "Tema: R moderno, tidyverse, datos, visualización y modelado básico",
+            "publisher": "O’Reilly Media",
+            "title": "R for data science",
+            "type": "book"
+        },
+        {
+            "URL": "https://ggplot2-book.org/",
+            "author": [
+                {
+                    "family": "Wickham",
+                    "given": "Hadley"
+                },
+                {
+                    "family": "Navarro",
+                    "given": "Danielle"
+                },
+                {
+                    "family": "Pedersen",
+                    "given": "Thomas Lin"
+                }
+            ],
+            "edition": "3",
+            "id": "wickham2024ggplot2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2024
+                    ]
+                ]
+            },
+            "note": "Tema: visualización de datos con ggplot2",
+            "publisher": "Springer",
+            "title": "ggplot2: Elegant graphics for data analysis",
+            "title-short": "ggplot2",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Wickham",
+                    "given": "Hadley"
+                }
+            ],
+            "container-title": "Journal of Statistical Software",
+            "id": "wickham2014tidy",
+            "issue": "10",
+            "issued": {
+                "date-parts": [
+                    [
+                        2014
+                    ]
+                ]
+            },
+            "note": "Tema: datos ordenados, limpieza y transformación de datos",
+            "page": "1-23",
+            "title": "Tidy data",
+            "type": "article-journal",
+            "volume": "59"
+        },
+        {
+            "URL": "https://dplyr.tidyverse.org/",
+            "author": [
+                {
+                    "literal": "Posit Software, PBC"
+                }
+            ],
+            "id": "dplyrDocs",
+            "issued": {
+                "date-parts": [
+                    [
+                        2026
+                    ]
+                ]
+            },
+            "note": "Tema: manipulación de datos en R con dplyr",
+            "publisher": "Posit Software, PBC",
+            "title": "Dplyr documentation",
+            "type": "book"
+        },
+        {
+            "URL": "https://tidyr.tidyverse.org/",
+            "author": [
+                {
+                    "literal": "Posit Software, PBC"
+                }
+            ],
+            "id": "tidyrDocs",
+            "issued": {
+                "date-parts": [
+                    [
+                        2026
+                    ]
+                ]
+            },
+            "note": "Tema: transformación de datos, pivoteo y datos tidy",
+            "publisher": "Posit Software, PBC",
+            "title": "Tidyr documentation",
+            "type": "book"
+        },
+        {
+            "URL": "https://ggplot2.tidyverse.org/",
+            "author": [
+                {
+                    "literal": "Posit Software, PBC"
+                }
+            ],
+            "id": "ggplot2Docs",
+            "issued": {
+                "date-parts": [
+                    [
+                        2026
+                    ]
+                ]
+            },
+            "note": "Tema: visualización de datos con ggplot2",
+            "publisher": "Posit Software, PBC",
+            "title": "ggplot2 documentation",
+            "type": "book"
+        },
+        {
+            "URL": "https://quarto.org/docs/",
+            "author": [
+                {
+                    "literal": "Posit Software, PBC"
+                }
+            ],
+            "id": "quartoDocs",
+            "issued": {
+                "date-parts": [
+                    [
+                        2026
+                    ]
+                ]
+            },
+            "note": "Tema: publicación reproducible, libros técnicos, citas y bibliografía",
+            "publisher": "Posit Software, PBC",
+            "title": "Quarto documentation",
+            "type": "book"
+        },
+        {
+            "URL": "https://cran.r-project.org/package=glmnet",
+            "author": [
+                {
+                    "family": "Friedman",
+                    "given": "Jerome"
+                },
+                {
+                    "family": "Hastie",
+                    "given": "Trevor"
+                },
+                {
+                    "family": "Tibshirani",
+                    "given": "Robert"
+                },
+                {
+                    "family": "Narasimhan",
+                    "given": "Balasubramanian"
+                },
+                {
+                    "family": "Tay",
+                    "given": "Kenneth"
+                },
+                {
+                    "family": "Simon",
+                    "given": "Noah"
+                }
+            ],
+            "id": "glmnetPackage",
+            "issued": {
+                "date-parts": [
+                    [
+                        2026
+                    ]
+                ]
+            },
+            "note": "Tema: implementación en R de Ridge, Lasso y Elastic Net",
+            "publisher": "CRAN",
+            "title": "Glmnet: Lasso and elastic-net regularized generalized linear models",
+            "title-short": "Glmnet",
+            "type": "book"
+        },
+        {
+            "URL": "https://cran.r-project.org/package=AER",
+            "author": [
+                {
+                    "family": "Kleiber",
+                    "given": "Christian"
+                },
+                {
+                    "family": "Zeileis",
+                    "given": "Achim"
+                }
+            ],
+            "id": "aerPackage",
+            "issued": {
+                "date-parts": [
+                    [
+                        2026
+                    ]
+                ]
+            },
+            "note": "Tema: econometría aplicada en R, variables instrumentales e ivreg",
+            "publisher": "CRAN",
+            "title": "AER: Applied econometrics with r",
+            "title-short": "AER",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Kleiber",
+                    "given": "Christian"
+                },
+                {
+                    "family": "Zeileis",
+                    "given": "Achim"
+                }
+            ],
+            "id": "kleiber2008applied",
+            "issued": {
+                "date-parts": [
+                    [
+                        2008
+                    ]
+                ]
+            },
+            "note": "Tema: econometría aplicada en R, regresión, diagnóstico y variables instrumentales",
+            "publisher": "Springer",
+            "title": "Applied econometrics with r",
+            "type": "book"
+        },
+        {
+            "URL": "https://cran.r-project.org/package=sandwich",
+            "author": [
+                {
+                    "family": "Zeileis",
+                    "given": "Achim"
+                },
+                {
+                    "family": "Köll",
+                    "given": "Susanne"
+                },
+                {
+                    "family": "Graham",
+                    "given": "Nathaniel"
+                }
+            ],
+            "id": "sandwichPackage",
+            "issued": {
+                "date-parts": [
+                    [
+                        2026
+                    ]
+                ]
+            },
+            "note": "Tema: errores estándar robustos, heterocedasticidad y matrices de covarianza robustas",
+            "publisher": "CRAN",
+            "title": "Sandwich: Robust covariance matrix estimators",
+            "title-short": "Sandwich",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Zeileis",
+                    "given": "Achim"
+                }
+            ],
+            "container-title": "Journal of Statistical Software",
+            "id": "zeileis2004econometric",
+            "issue": "10",
+            "issued": {
+                "date-parts": [
+                    [
+                        2004
+                    ]
+                ]
+            },
+            "note": "Tema: errores estándar robustos HC y HAC en R",
+            "page": "1-17",
+            "title": "Econometric computing with HC and HAC covariance matrix estimators",
+            "type": "article-journal",
+            "volume": "11"
+        },
+        {
+            "URL": "https://cran.r-project.org/package=sf",
+            "author": [
+                {
+                    "family": "Pebesma",
+                    "given": "Edzer"
+                }
+            ],
+            "id": "sfPackage",
+            "issued": {
+                "date-parts": [
+                    [
+                        2026
+                    ]
+                ]
+            },
+            "note": "Tema: datos espaciales vectoriales, CRS, geometrías y operaciones geográficas",
+            "publisher": "CRAN",
+            "title": "Sf: Simple features for r",
+            "title-short": "Sf",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Pebesma",
+                    "given": "Edzer"
+                }
+            ],
+            "container-title": "The R Journal",
+            "id": "pebesma2018simple",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "note": "Tema: paquete sf, datos espaciales y análisis geográfico en R",
+            "page": "439-446",
+            "title": "Simple features for r: Standardized support for spatial vector data",
+            "title-short": "Simple features for r",
+            "type": "article-journal",
+            "volume": "10"
+        },
+        {
+            "URL": "https://project-osrm.org/docs/",
+            "author": [
+                {
+                    "literal": "Project OSRM"
+                }
+            ],
+            "id": "osrmDocs",
+            "issued": {
+                "date-parts": [
+                    [
+                        2026
+                    ]
+                ]
+            },
+            "note": "Tema: rutas, matrices de distancia y duración, optimización geoespacial",
+            "publisher": "Project OSRM",
+            "title": "OSRM: Open source routing machine documentation",
+            "title-short": "OSRM",
+            "type": "book"
+        },
+        {
+            "URL": "https://docs.mapbox.com/api/navigation/directions/",
+            "author": [
+                {
+                    "literal": "Mapbox"
+                }
+            ],
+            "id": "mapboxDirectionsDocs",
+            "issued": {
+                "date-parts": [
+                    [
+                        2026
+                    ]
+                ]
+            },
+            "note": "Tema: rutas, tráfico, navegación y distancias en red vial",
+            "publisher": "Mapbox",
+            "title": "Mapbox directions API documentation",
+            "type": "book"
+        },
+        {
+            "URL": "https://simpy.readthedocs.io/",
+            "author": [
+                {
+                    "literal": "SimPy Developers"
+                }
+            ],
+            "id": "simpyDocs",
+            "issued": {
+                "date-parts": [
+                    [
+                        2026
+                    ]
+                ]
+            },
+            "note": "Tema: simulación discreta en Python",
+            "publisher": "SimPy",
+            "title": "SimPy documentation",
+            "type": "book"
+        },
+        {
+            "URL": "https://scikit-learn.org/stable/",
+            "author": [
+                {
+                    "literal": "scikit-learn Developers"
+                }
+            ],
+            "id": "sklearnDocs",
+            "issued": {
+                "date-parts": [
+                    [
+                        2026
+                    ]
+                ]
+            },
+            "note": "Tema: machine learning aplicado, PCA, clustering, validación, métricas y t-SNE",
+            "publisher": "scikit-learn",
+            "title": "Scikit-learn documentation",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Tukey",
+                    "given": "John W."
+                }
+            ],
+            "id": "tukey1977eda",
+            "issued": {
+                "date-parts": [
+                    [
+                        1977
+                    ]
+                ]
+            },
+            "note": "Tema: análisis exploratorio de datos, estadística descriptiva, boxplots y valores atípicos",
+            "publisher": "Addison-Wesley",
+            "title": "Exploratory data analysis",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Hoaglin",
+                    "given": "David C."
+                },
+                {
+                    "family": "Mosteller",
+                    "given": "Frederick"
+                },
+                {
+                    "family": "Tukey",
+                    "given": "John W."
+                }
+            ],
+            "id": "hoaglin1983understanding",
+            "issued": {
+                "date-parts": [
+                    [
+                        1983
+                    ]
+                ]
+            },
+            "note": "Tema: análisis exploratorio de datos, métodos robustos, resúmenes estadísticos y valores atípicos",
+            "publisher": "Wiley",
+            "title": "Understanding robust and exploratory data analysis",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "McGill",
+                    "given": "Robert"
+                },
+                {
+                    "family": "Tukey",
+                    "given": "John W."
+                },
+                {
+                    "family": "Larsen",
+                    "given": "Wayne A."
+                }
+            ],
+            "container-title": "The American Statistician",
+            "id": "mcgill1978variations",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        1978
+                    ]
+                ]
+            },
+            "note": "Tema: boxplots, cuartiles, bigotes y visualización de valores atípicos",
+            "page": "12-16",
+            "title": "Variations of box plots",
+            "type": "article-journal",
+            "volume": "32"
+        },
+        {
+            "author": [
+                {
+                    "family": "Hyndman",
+                    "given": "Rob J."
+                },
+                {
+                    "family": "Fan",
+                    "given": "Yanan"
+                }
+            ],
+            "container-title": "The American Statistician",
+            "id": "hyndman1996sample",
+            "issue": "4",
+            "issued": {
+                "date-parts": [
+                    [
+                        1996
+                    ]
+                ]
+            },
+            "note": "Tema: cuantiles, percentiles, cuartiles y diferencias de cálculo entre paquetes estadísticos",
+            "page": "361-365",
+            "title": "Sample quantiles in statistical packages",
+            "type": "article-journal",
+            "volume": "50"
+        },
+        {
+            "author": [
+                {
+                    "family": "Joanes",
+                    "given": "Derrick N."
+                },
+                {
+                    "family": "Gill",
+                    "given": "Christine A."
+                }
+            ],
+            "container-title": "Journal of the Royal Statistical Society: Series D (The Statistician)",
+            "id": "joanes1998comparing",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        1998
+                    ]
+                ]
+            },
+            "note": "Tema: asimetría, curtosis y momentos muestrales",
+            "page": "183-189",
+            "title": "Comparing measures of sample skewness and kurtosis",
+            "type": "article-journal",
+            "volume": "47"
+        },
+        {
+            "author": [
+                {
+                    "family": "Iglewicz",
+                    "given": "Boris"
+                },
+                {
+                    "family": "Hoaglin",
+                    "given": "David C."
+                }
+            ],
+            "id": "iglewicz1993outliers",
+            "issued": {
+                "date-parts": [
+                    [
+                        1993
+                    ]
+                ]
+            },
+            "note": "Tema: detección y tratamiento de valores atípicos",
+            "publisher": "ASQC Quality Press",
+            "title": "How to detect and handle outliers",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Cleveland",
+                    "given": "William S."
+                }
+            ],
+            "id": "cleveland1993visualizing",
+            "issued": {
+                "date-parts": [
+                    [
+                        1993
+                    ]
+                ]
+            },
+            "note": "Tema: visualización estadística, análisis exploratorio y gráficos de datos",
+            "publisher": "Hobart Press",
+            "title": "Visualizing data",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Wilkinson",
+                    "given": "Leland"
+                }
+            ],
+            "edition": "2",
+            "id": "wilkinson2005grammar",
+            "issued": {
+                "date-parts": [
+                    [
+                        2005
+                    ]
+                ]
+            },
+            "note": "Tema: fundamentos teóricos de la visualización de datos",
+            "publisher": "Springer",
+            "title": "The grammar of graphics",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Devore",
+                    "given": "Jay L."
+                }
+            ],
+            "edition": "9",
+            "id": "devore2016probability",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016
+                    ]
+                ]
+            },
+            "note": "Tema: estadística descriptiva, probabilidad, varianza, desviación estándar y distribuciones",
+            "publisher": "Cengage Learning",
+            "title": "Probability and statistics for engineering and the sciences",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "DeGroot",
+                    "given": "Morris H."
+                },
+                {
+                    "family": "Schervish",
+                    "given": "Mark J."
+                }
+            ],
+            "edition": "4",
+            "id": "degroot2012probability",
+            "issued": {
+                "date-parts": [
+                    [
+                        2012
+                    ]
+                ]
+            },
+            "note": "Tema: fundamentos de probabilidad, estadística descriptiva e inferencia",
+            "publisher": "Pearson",
+            "title": "Probability and statistics",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Freedman",
+                    "given": "David"
+                },
+                {
+                    "family": "Pisani",
+                    "given": "Robert"
+                },
+                {
+                    "family": "Purves",
+                    "given": "Roger"
+                }
+            ],
+            "edition": "4",
+            "id": "freedman2007statistics",
+            "issued": {
+                "date-parts": [
+                    [
+                        2007
+                    ]
+                ]
+            },
+            "note": "Tema: estadística descriptiva, interpretación de datos, variabilidad y gráficos",
+            "publisher": "W. W. Norton",
+            "title": "Statistics",
+            "type": "book"
+        },
+        {
+            "URL": "https://www.itl.nist.gov/div898/handbook/",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2026,
+                        6,
+                        5
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "literal": "NIST/SEMATECH"
+                }
+            ],
+            "id": "nistsematech_handbook",
+            "issued": {
+                "date-parts": []
+            },
+            "note": "Tema: métodos estadísticos oficiales, estadística descriptiva, gráficos, distribuciones y control estadístico",
+            "title": "E-handbook of statistical methods",
+            "type": "webpage"
+        },
+        {
+            "author": [
+                {
+                    "family": "Tukey",
+                    "given": "John W."
+                }
+            ],
+            "id": "tukey1977eda",
+            "issued": {
+                "date-parts": [
+                    [
+                        1977
+                    ]
+                ]
+            },
+            "note": "Tema: análisis exploratorio de datos, estadística descriptiva, boxplots y valores atípicos",
+            "publisher": "Addison-Wesley",
+            "title": "Exploratory data analysis",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Devore",
+                    "given": "Jay L."
+                }
+            ],
+            "edition": "9",
+            "id": "devore2016probability",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016
+                    ]
+                ]
+            },
+            "note": "Tema: estadística descriptiva, probabilidad, varianza, desviación estándar y distribuciones",
+            "publisher": "Cengage Learning",
+            "title": "Probability and statistics for engineering and the sciences",
+            "type": "book"
+        },
+        {
+            "DOI": "10.1111/1467-9884.00122",
+            "author": [
+                {
+                    "family": "Joanes",
+                    "given": "Derrick N."
+                },
+                {
+                    "family": "Gill",
+                    "given": "Christine A."
+                }
+            ],
+            "container-title": "Journal of the Royal Statistical Society: Series D (The Statistician)",
+            "id": "joanes1998comparing",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        1998
+                    ]
+                ]
+            },
+            "note": "Tema: asimetría, curtosis y momentos muestrales",
+            "page": "183-189",
+            "title": "Comparing measures of sample skewness and kurtosis",
+            "type": "article-journal",
+            "volume": "47"
+        },
+        {
+            "author": [
+                {
+                    "family": "DeGroot",
+                    "given": "Morris H."
+                },
+                {
+                    "family": "Schervish",
+                    "given": "Mark J."
+                }
+            ],
+            "edition": "4",
+            "id": "degroot2012probability",
+            "issued": {
+                "date-parts": [
+                    [
+                        2012
+                    ]
+                ]
+            },
+            "note": "Tema: probabilidad, estadística descriptiva, distribuciones e inferencia",
+            "publisher": "Pearson",
+            "title": "Probability and statistics",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Feller",
+                    "given": "William"
+                }
+            ],
+            "edition": "3",
+            "id": "feller1968introduction",
+            "issued": {
+                "date-parts": [
+                    [
+                        1968
+                    ]
+                ]
+            },
+            "note": "Tema: fundamentos de probabilidad, teorema del límite central, desigualdades y distribuciones",
+            "publisher": "Wiley",
+            "title": "An introduction to probability theory and its applications",
+            "type": "book",
+            "volume": "1"
+        },
+        {
+            "author": [
+                {
+                    "family": "Poisson",
+                    "given": "Siméon Denis"
+                }
+            ],
+            "id": "poisson1837recherches",
+            "issued": {
+                "date-parts": [
+                    [
+                        1837
+                    ]
+                ]
+            },
+            "note": "Tema: distribución de Poisson y fundamentos históricos de probabilidad",
+            "publisher": "Bachelier",
+            "publisher-place": "Paris",
+            "title": "Recherches sur la probabilité des jugements en matière criminelle et en matière civile",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Johnson",
+                    "given": "Norman L."
+                },
+                {
+                    "family": "Kotz",
+                    "given": "Samuel"
+                },
+                {
+                    "family": "Balakrishnan",
+                    "given": "N."
+                }
+            ],
+            "edition": "2",
+            "id": "johnson1994continuous",
+            "issued": {
+                "date-parts": [
+                    [
+                        1994
+                    ]
+                ]
+            },
+            "note": "Tema: distribuciones continuas, gamma, log-normal y distribuciones relacionadas",
+            "publisher": "Wiley",
+            "title": "Continuous univariate distributions",
+            "type": "book",
+            "volume": "1"
+        },
+        {
+            "author": [
+                {
+                    "family": "Johnson",
+                    "given": "Norman L."
+                },
+                {
+                    "family": "Kotz",
+                    "given": "Samuel"
+                },
+                {
+                    "family": "Balakrishnan",
+                    "given": "N."
+                }
+            ],
+            "edition": "2",
+            "id": "johnson1995continuous",
+            "issued": {
+                "date-parts": [
+                    [
+                        1995
+                    ]
+                ]
+            },
+            "note": "Tema: distribuciones continuas, beta, Pareto y familias relacionadas",
+            "publisher": "Wiley",
+            "title": "Continuous univariate distributions",
+            "type": "book",
+            "volume": "2"
+        },
+        {
+            "author": [
+                {
+                    "family": "Pareto",
+                    "given": "Vilfredo"
+                }
+            ],
+            "id": "pareto1896cours",
+            "issued": {
+                "date-parts": [
+                    [
+                        1896
+                    ]
+                ]
+            },
+            "note": "Tema: distribución de Pareto, desigualdad económica y leyes de potencia",
+            "publisher": "F. Rouge",
+            "publisher-place": "Lausanne",
+            "title": "Cours d’économie politique",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Aitchison",
+                    "given": "John"
+                },
+                {
+                    "family": "Brown",
+                    "given": "James A. C."
+                }
+            ],
+            "id": "aitchison1957lognormal",
+            "issued": {
+                "date-parts": [
+                    [
+                        1957
+                    ]
+                ]
+            },
+            "note": "Tema: distribución log-normal y variables positivas sesgadas",
+            "publisher": "Cambridge University Press",
+            "title": "The lognormal distribution",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Casella",
+                    "given": "George"
+                },
+                {
+                    "family": "Berger",
+                    "given": "Roger L."
+                }
+            ],
+            "edition": "2",
+            "id": "casella2002statistical",
+            "issued": {
+                "date-parts": [
+                    [
+                        2002
+                    ]
+                ]
+            },
+            "note": "Tema: inferencia estadística, intervalos de confianza, pruebas de hipótesis y estimación",
+            "publisher": "Duxbury",
+            "title": "Statistical inference",
+            "type": "book"
+        },
+        {
+            "DOI": "10.1080/00031305.2016.1154108",
+            "author": [
+                {
+                    "family": "Wasserstein",
+                    "given": "Ronald L."
+                },
+                {
+                    "family": "Lazar",
+                    "given": "Nicole A."
+                }
+            ],
+            "container-title": "The American Statistician",
+            "id": "wasserstein2016asa",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016
+                    ]
+                ]
+            },
+            "note": "Tema: interpretación de p-values y pruebas de hipótesis",
+            "page": "129-133",
+            "title": "The ASA statement on p-values: Context, process, and purpose",
+            "title-short": "The ASA statement on p-values",
+            "type": "article-journal",
+            "volume": "70"
+        },
+        {
+            "DOI": "10.1080/00031305.2019.1583913",
+            "author": [
+                {
+                    "family": "Wasserstein",
+                    "given": "Ronald L."
+                },
+                {
+                    "family": "Schirm",
+                    "given": "Allen L."
+                },
+                {
+                    "family": "Lazar",
+                    "given": "Nicole A."
+                }
+            ],
+            "container-title": "The American Statistician",
+            "id": "wasserstein2019moving",
+            "issue": "sup1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2019
+                    ]
+                ]
+            },
+            "note": "Tema: interpretación moderna de significancia estadística y limitaciones del p-value",
+            "page": "1-19",
+            "title": "Moving to a world beyond “p < 0.05”",
+            "type": "article-journal",
+            "volume": "73"
+        },
+        {
+            "DOI": "10.2307/2331554",
+            "author": [
+                {
+                    "literal": "Student"
+                }
+            ],
+            "container-title": "Biometrika",
+            "id": "student1908probable",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        1908
+                    ]
+                ]
+            },
+            "note": "Tema: distribución t de Student y pruebas t",
+            "page": "1-25",
+            "title": "The probable error of a mean",
+            "type": "article-journal",
+            "volume": "6"
+        },
+        {
+            "author": [
+                {
+                    "family": "Thode",
+                    "given": "Henry C."
+                }
+            ],
+            "id": "thode2002testing",
+            "issued": {
+                "date-parts": [
+                    [
+                        2002
+                    ]
+                ]
+            },
+            "note": "Tema: pruebas de normalidad y evaluación de supuestos",
+            "publisher": "Marcel Dekker",
+            "title": "Testing for normality",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Razali",
+                    "given": "Nornadiah Mohd"
+                },
+                {
+                    "family": "Yap",
+                    "given": "Bee Wah"
+                }
+            ],
+            "container-title": "Journal of Statistical Modeling and Analytics",
+            "id": "razali2011power",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2011
+                    ]
+                ]
+            },
+            "note": "Tema: comparación de pruebas de normalidad",
+            "page": "21-33",
+            "title": "Power comparisons of shapiro-wilk, kolmogorov-smirnov, lilliefors and anderson-darling tests",
+            "type": "article-journal",
+            "volume": "2"
+        },
+        {
+            "DOI": "10.2307/2333709",
+            "author": [
+                {
+                    "family": "Shapiro",
+                    "given": "Samuel S."
+                },
+                {
+                    "family": "Wilk",
+                    "given": "Martin B."
+                }
+            ],
+            "container-title": "Biometrika",
+            "id": "shapiro1965analysis",
+            "issue": "3/4",
+            "issued": {
+                "date-parts": [
+                    [
+                        1965
+                    ]
+                ]
+            },
+            "note": "Tema: prueba de Shapiro-Wilk para normalidad",
+            "page": "591-611",
+            "title": "An analysis of variance test for normality (complete samples)",
+            "type": "article-journal",
+            "volume": "52"
+        },
+        {
+            "author": [
+                {
+                    "family": "Kolmogorov",
+                    "given": "Andrey N."
+                }
+            ],
+            "container-title": "Giornale dell’Istituto Italiano degli Attuari",
+            "id": "kolmogorov1933sulla",
+            "issued": {
+                "date-parts": [
+                    [
+                        1933
+                    ]
+                ]
+            },
+            "note": "Tema: prueba de Kolmogorov-Smirnov y comparación de distribuciones",
+            "page": "83-91",
+            "title": "Sulla determinazione empirica di una legge di distribuzione",
+            "type": "article-journal",
+            "volume": "4"
+        },
+        {
+            "DOI": "10.1214/aoms/1177730256",
+            "author": [
+                {
+                    "family": "Smirnov",
+                    "given": "Nikolai V."
+                }
+            ],
+            "container-title": "The Annals of Mathematical Statistics",
+            "id": "smirnov1948table",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        1948
+                    ]
+                ]
+            },
+            "note": "Tema: prueba de Kolmogorov-Smirnov y bondad de ajuste",
+            "page": "279-281",
+            "title": "Table for estimating the goodness of fit of empirical distributions",
+            "type": "article-journal",
+            "volume": "19"
+        },
+        {
+            "DOI": "10.1016/0165-1765(80)90024-5",
+            "author": [
+                {
+                    "family": "Jarque",
+                    "given": "Carlos M."
+                },
+                {
+                    "family": "Bera",
+                    "given": "Anil K."
+                }
+            ],
+            "container-title": "Economics Letters",
+            "id": "jarque1980efficient",
+            "issue": "3",
+            "issued": {
+                "date-parts": [
+                    [
+                        1980
+                    ]
+                ]
+            },
+            "note": "Tema: prueba de Jarque-Bera, normalidad, asimetría y curtosis",
+            "page": "255-259",
+            "title": "Efficient tests for normality, homoscedasticity and serial independence of regression residuals",
+            "type": "article-journal",
+            "volume": "6"
+        },
+        {
+            "DOI": "10.1093/biomet/58.2.341",
+            "author": [
+                {
+                    "family": "D’Agostino",
+                    "given": "Ralph B."
+                }
+            ],
+            "container-title": "Biometrika",
+            "id": "dagostino1971omnibus",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        1971
+                    ]
+                ]
+            },
+            "note": "Tema: prueba ómnibus de normalidad",
+            "page": "341-348",
+            "title": "An omnibus test of normality for moderate and large size samples",
+            "type": "article-journal",
+            "volume": "58"
+        },
+        {
+            "DOI": "10.1080/00031305.1990.10475751",
+            "author": [
+                {
+                    "family": "D’Agostino",
+                    "given": "Ralph B."
+                },
+                {
+                    "family": "Belanger",
+                    "given": "Albert"
+                },
+                {
+                    "family": "D’Agostino",
+                    "given": "Ralph B. Jr."
+                }
+            ],
+            "container-title": "The American Statistician",
+            "id": "dagostino1990suggestion",
+            "issue": "4",
+            "issued": {
+                "date-parts": [
+                    [
+                        1990
+                    ]
+                ]
+            },
+            "note": "Tema: prueba D’Agostino-Pearson y pruebas de normalidad",
+            "page": "316-321",
+            "title": "A suggestion for using powerful and informative tests of normality",
+            "type": "article-journal",
+            "volume": "44"
+        },
+        {
+            "author": [
+                {
+                    "family": "Cleveland",
+                    "given": "William S."
+                }
+            ],
+            "id": "cleveland1993visualizing",
+            "issued": {
+                "date-parts": [
+                    [
+                        1993
+                    ]
+                ]
+            },
+            "note": "Tema: visualización estadística, análisis exploratorio, gráficos de dispersión y diagnóstico visual",
+            "publisher": "Hobart Press",
+            "title": "Visualizing data",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Levene",
+                    "given": "Howard"
+                }
+            ],
+            "container-title": "Contributions to probability and statistics: Essays in honor of harold hotelling",
+            "editor": [
+                {
+                    "family": "Olkin",
+                    "given": "Ingram"
+                },
+                {
+                    "family": "Ghurye",
+                    "given": "Sudhist G."
+                },
+                {
+                    "family": "Hoeffding",
+                    "given": "Wassily"
+                },
+                {
+                    "family": "Madow",
+                    "given": "William G."
+                },
+                {
+                    "family": "Mann",
+                    "given": "Henry B."
+                }
+            ],
+            "id": "levene1960robust",
+            "issued": {
+                "date-parts": [
+                    [
+                        1960
+                    ]
+                ]
+            },
+            "note": "Tema: prueba de Levene y homogeneidad de varianzas",
+            "page": "278-292",
+            "publisher": "Stanford University Press",
+            "publisher-place": "Stanford",
+            "title": "Robust tests for equality of variances",
+            "type": "chapter"
+        },
+        {
+            "DOI": "10.1080/00031305.1978.10479236",
+            "author": [
+                {
+                    "family": "McGill",
+                    "given": "Robert"
+                },
+                {
+                    "family": "Tukey",
+                    "given": "John W."
+                },
+                {
+                    "family": "Larsen",
+                    "given": "Wayne A."
+                }
+            ],
+            "container-title": "The American Statistician",
+            "id": "mcgill1978variations",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        1978
+                    ]
+                ]
+            },
+            "note": "Tema: boxplots, cuartiles, bigotes y valores atípicos",
+            "page": "12-16",
+            "title": "Variations of box plots",
+            "type": "article-journal",
+            "volume": "32"
+        },
+        {
+            "author": [
+                {
+                    "family": "Fisher",
+                    "given": "Ronald A."
+                }
+            ],
+            "id": "fisher1925statistical",
+            "issued": {
+                "date-parts": [
+                    [
+                        1925
+                    ]
+                ]
+            },
+            "note": "Tema: ANOVA, pruebas estadísticas clásicas e inferencia",
+            "publisher": "Oliver; Boyd",
+            "publisher-place": "Edinburgh",
+            "title": "Statistical methods for research workers",
+            "type": "book"
+        },
+        {
+            "DOI": "10.2307/3001913",
+            "author": [
+                {
+                    "family": "Tukey",
+                    "given": "John W."
+                }
+            ],
+            "container-title": "Biometrics",
+            "id": "tukey1949comparing",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        1949
+                    ]
+                ]
+            },
+            "note": "Tema: prueba de Tukey y comparaciones múltiples después de ANOVA",
+            "page": "99-114",
+            "title": "Comparing individual means in the analysis of variance",
+            "type": "article-journal",
+            "volume": "5"
+        },
+        {
+            "author": [
+                {
+                    "family": "Hoaglin",
+                    "given": "David C."
+                },
+                {
+                    "family": "Mosteller",
+                    "given": "Frederick"
+                },
+                {
+                    "family": "Tukey",
+                    "given": "John W."
+                }
+            ],
+            "id": "hoaglin1983understanding",
+            "issued": {
+                "date-parts": [
+                    [
+                        1983
+                    ]
+                ]
+            },
+            "note": "Tema: análisis exploratorio, métodos robustos, outliers y resúmenes estadísticos",
+            "publisher": "Wiley",
+            "title": "Understanding robust and exploratory data analysis",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Huber",
+                    "given": "Peter J."
+                }
+            ],
+            "id": "huber1981robust",
+            "issued": {
+                "date-parts": [
+                    [
+                        1981
+                    ]
+                ]
+            },
+            "note": "Tema: estadística robusta y estimadores robustos",
+            "publisher": "Wiley",
+            "title": "Robust statistics",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Efron",
+                    "given": "Bradley"
+                },
+                {
+                    "family": "Tibshirani",
+                    "given": "Robert J."
+                }
+            ],
+            "id": "efron1994introduction",
+            "issued": {
+                "date-parts": [
+                    [
+                        1994
+                    ]
+                ]
+            },
+            "note": "Tema: bootstrap, remuestreo e inferencia no paramétrica",
+            "publisher": "Chapman; Hall/CRC",
+            "title": "An introduction to the bootstrap",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Hollander",
+                    "given": "Myles"
+                },
+                {
+                    "family": "Wolfe",
+                    "given": "Douglas A."
+                },
+                {
+                    "family": "Chicken",
+                    "given": "Eric"
+                }
+            ],
+            "edition": "3",
+            "id": "hollander2013nonparametric",
+            "issued": {
+                "date-parts": [
+                    [
+                        2013
+                    ]
+                ]
+            },
+            "note": "Tema: pruebas no paramétricas, Wilcoxon, Mann-Whitney y Kruskal-Wallis",
+            "publisher": "Wiley",
+            "title": "Nonparametric statistical methods",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Conover",
+                    "given": "William J."
+                }
+            ],
+            "edition": "3",
+            "id": "conover1999practical",
+            "issued": {
+                "date-parts": [
+                    [
+                        1999
+                    ]
+                ]
+            },
+            "note": "Tema: estadística no paramétrica aplicada",
+            "publisher": "Wiley",
+            "title": "Practical nonparametric statistics",
+            "type": "book"
+        },
+        {
+            "DOI": "10.1214/aoms/1177730491",
+            "author": [
+                {
+                    "family": "Mann",
+                    "given": "Henry B."
+                },
+                {
+                    "family": "Whitney",
+                    "given": "Donald R."
+                }
+            ],
+            "container-title": "The Annals of Mathematical Statistics",
+            "id": "mann1947test",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        1947
+                    ]
+                ]
+            },
+            "note": "Tema: prueba de Mann-Whitney U",
+            "page": "50-60",
+            "title": "On a test of whether one of two random variables is stochastically larger than the other",
+            "type": "article-journal",
+            "volume": "18"
+        },
+        {
+            "DOI": "10.2307/3001968",
+            "author": [
+                {
+                    "family": "Wilcoxon",
+                    "given": "Frank"
+                }
+            ],
+            "container-title": "Biometrics Bulletin",
+            "id": "wilcoxon1945individual",
+            "issue": "6",
+            "issued": {
+                "date-parts": [
+                    [
+                        1945
+                    ]
+                ]
+            },
+            "note": "Tema: prueba de Wilcoxon y métodos basados en rangos",
+            "page": "80-83",
+            "title": "Individual comparisons by ranking methods",
+            "type": "article-journal",
+            "volume": "1"
+        },
+        {
+            "DOI": "10.1080/01621459.1952.10483441",
+            "author": [
+                {
+                    "family": "Kruskal",
+                    "given": "William H."
+                },
+                {
+                    "family": "Wallis",
+                    "given": "W. Allen"
+                }
+            ],
+            "container-title": "Journal of the American Statistical Association",
+            "id": "kruskal1952use",
+            "issue": "260",
+            "issued": {
+                "date-parts": [
+                    [
+                        1952
+                    ]
+                ]
+            },
+            "note": "Tema: prueba de Kruskal-Wallis",
+            "page": "583-621",
+            "title": "Use of ranks in one-criterion variance analysis",
+            "type": "article-journal",
+            "volume": "47"
+        },
+        {
+            "DOI": "10.1111/j.2517-6161.1964.tb00553.x",
+            "author": [
+                {
+                    "family": "Box",
+                    "given": "George E. P."
+                },
+                {
+                    "family": "Cox",
+                    "given": "David R."
+                }
+            ],
+            "container-title": "Journal of the Royal Statistical Society: Series B (Methodological)",
+            "id": "box1964analysis",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        1964
+                    ]
+                ]
+            },
+            "note": "Tema: transformaciones de datos y transformación Box-Cox",
+            "page": "211-252",
+            "title": "An analysis of transformations",
+            "type": "article-journal",
+            "volume": "26"
+        },
+        {
+            "author": [
+                {
+                    "family": "Rousseeuw",
+                    "given": "Peter J."
+                },
+                {
+                    "family": "Leroy",
+                    "given": "Annick M."
+                }
+            ],
+            "id": "rousseeuw1987robust",
+            "issued": {
+                "date-parts": [
+                    [
+                        1987
+                    ]
+                ]
+            },
+            "note": "Tema: métodos robustos y detección de valores atípicos",
+            "publisher": "Wiley",
+            "title": "Robust regression and outlier detection",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Wilcox",
+                    "given": "Rand R."
+                }
+            ],
+            "edition": "3",
+            "id": "wilcox2012introduction",
+            "issued": {
+                "date-parts": [
+                    [
+                        2012
+                    ]
+                ]
+            },
+            "note": "Tema: estimación robusta, media recortada, winsorización y pruebas robustas",
+            "publisher": "Academic Press",
+            "title": "Introduction to robust estimation and hypothesis testing",
+            "type": "book"
+        },
+        {
+            "DOI": "10.1214/aoms/1177705900",
+            "author": [
+                {
+                    "family": "Dixon",
+                    "given": "Wilfrid J."
+                }
+            ],
+            "container-title": "The Annals of Mathematical Statistics",
+            "id": "dixon1960simplified",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        1960
+                    ]
+                ]
+            },
+            "note": "Tema: winsorización, censura y estimación robusta",
+            "page": "385-391",
+            "title": "Simplified estimation from censored normal samples",
+            "type": "article-journal",
+            "volume": "31"
+        },
+        {
+            "DOI": "10.1214/aos/1176344552",
+            "author": [
+                {
+                    "family": "Efron",
+                    "given": "Bradley"
+                }
+            ],
+            "container-title": "The Annals of Statistics",
+            "id": "efron1979bootstrap",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        1979
+                    ]
+                ]
+            },
+            "note": "Tema: bootstrap y métodos de remuestreo",
+            "page": "1-26",
+            "title": "Bootstrap methods: Another look at the jackknife",
+            "title-short": "Bootstrap methods",
+            "type": "article-journal",
+            "volume": "7"
+        },
+        {
+            "author": [
+                {
+                    "family": "Fisher",
+                    "given": "Ronald A."
+                }
+            ],
+            "id": "fisher1935design",
+            "issued": {
+                "date-parts": [
+                    [
+                        1935
+                    ]
+                ]
+            },
+            "note": "Tema: diseño experimental, aleatorización y pruebas por permutación",
+            "publisher": "Oliver; Boyd",
+            "publisher-place": "Edinburgh",
+            "title": "The design of experiments",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Good",
+                    "given": "Phillip I."
+                }
+            ],
+            "edition": "3",
+            "id": "good2005permutation",
+            "issued": {
+                "date-parts": [
+                    [
+                        2005
+                    ]
+                ]
+            },
+            "note": "Tema: pruebas por permutación, bootstrap y pruebas de hipótesis",
+            "publisher": "Springer",
+            "title": "Permutation, parametric and bootstrap tests of hypotheses",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Kohavi",
+                    "given": "Ron"
+                },
+                {
+                    "family": "Tang",
+                    "given": "Diane"
+                },
+                {
+                    "family": "Xu",
+                    "given": "Ya"
+                }
+            ],
+            "id": "kohavi2020trustworthy",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "note": "Tema: A/B testing, experimentos controlados, métricas de negocio y evaluación experimental",
+            "publisher": "Cambridge University Press",
+            "title": "Trustworthy online controlled experiments: A practical guide to a/b testing",
+            "title-short": "Trustworthy online controlled experiments",
+            "type": "book"
+        },
+        {
+            "DOI": "10.1145/2740908.2742563",
+            "author": [
+                {
+                    "family": "Deng",
+                    "given": "Alex"
+                }
+            ],
+            "container-title": "Proceedings of the 24th international conference on world wide web companion",
+            "id": "deng2017objective",
+            "issued": {
+                "date-parts": [
+                    [
+                        2015
+                    ]
+                ]
+            },
+            "note": "Tema: A/B testing, comparación de muestras y experimentos controlados en línea",
+            "page": "923-928",
+            "publisher": "ACM",
+            "title": "Objective bayesian two sample hypothesis testing for online controlled experiments",
+            "type": "paper-conference"
+        },
+        {
+            "author": [
+                {
+                    "family": "Gerber",
+                    "given": "Alan S."
+                },
+                {
+                    "family": "Green",
+                    "given": "Donald P."
+                }
+            ],
+            "id": "gerber2012field",
+            "issued": {
+                "date-parts": [
+                    [
+                        2012
+                    ]
+                ]
+            },
+            "note": "Tema: diseño experimental, grupos control y tratamiento, inferencia causal",
+            "publisher": "W. W. Norton",
+            "title": "Field experiments: Design, analysis, and interpretation",
+            "title-short": "Field experiments",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Agresti",
+                    "given": "Alan"
+                }
+            ],
+            "edition": "3",
+            "id": "agresti2013categorical",
+            "issued": {
+                "date-parts": [
+                    [
+                        2013
+                    ]
+                ]
+            },
+            "note": "Tema: comparación de proporciones, datos categóricos y modelos para variables discretas",
+            "publisher": "Wiley",
+            "title": "Categorical data analysis",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Cohen",
+                    "given": "Jacob"
+                }
+            ],
+            "edition": "2",
+            "id": "cohen1988statistical",
+            "issued": {
+                "date-parts": [
+                    [
+                        1988
+                    ]
+                ]
+            },
+            "note": "Tema: tamaño del efecto, poder estadístico y tamaño de muestra",
+            "publisher": "Lawrence Erlbaum Associates",
+            "title": "Statistical power analysis for the behavioral sciences",
+            "type": "book"
+        },
+        {
+            "DOI": "10.3389/fpsyg.2013.00863",
+            "author": [
+                {
+                    "family": "Lakens",
+                    "given": "Daniël"
+                }
+            ],
+            "container-title": "Frontiers in Psychology",
+            "id": "lakens2013calculating",
+            "issued": {
+                "date-parts": [
+                    [
+                        2013
+                    ]
+                ]
+            },
+            "note": "Tema: tamaño del efecto, t-tests, ANOVA y relevancia práctica",
+            "page": "863",
+            "title": "Calculating and reporting effect sizes to facilitate cumulative science: A practical primer for t-tests and ANOVAs",
+            "title-short": "Calculating and reporting effect sizes to facilitate cumulative science",
+            "type": "article-journal",
+            "volume": "4"
+        },
+        {
+            "author": [
+                {
+                    "family": "Chow",
+                    "given": "Shein-Chung"
+                },
+                {
+                    "family": "Shao",
+                    "given": "Jun"
+                },
+                {
+                    "family": "Wang",
+                    "given": "Hansheng"
+                }
+            ],
+            "edition": "2",
+            "id": "chow2008sample",
+            "issued": {
+                "date-parts": [
+                    [
+                        2008
+                    ]
+                ]
+            },
+            "note": "Tema: tamaño de muestra, poder estadístico y diseño de estudios",
+            "publisher": "Chapman; Hall/CRC",
+            "title": "Sample size calculations in clinical research",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=shiny",
+            "id": "R-shiny",
+            "note": "R package",
+            "title": "Shiny: Web application framework for r",
+            "title-short": "Shiny",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=dplyr",
+            "id": "R-dplyr",
+            "note": "R package",
+            "title": "Dplyr: A grammar of data manipulation",
+            "title-short": "Dplyr",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=ggplot2",
+            "id": "R-ggplot2",
+            "note": "R package",
+            "title": "ggplot2: Create elegant data visualisations using the grammar of graphics",
+            "title-short": "ggplot2",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=forcats",
+            "id": "R-forcats",
+            "note": "R package",
+            "title": "Forcats: Tools for working with categorical variables",
+            "title-short": "Forcats",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=tibble",
+            "id": "R-tibble",
+            "note": "R package",
+            "title": "Tibble: Simple data frames",
+            "title-short": "Tibble",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=tidyr",
+            "id": "R-tidyr",
+            "note": "R package",
+            "title": "Tidyr: Tidy messy data",
+            "title-short": "Tidyr",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=purrr",
+            "id": "R-purrr",
+            "note": "R package",
+            "title": "Purrr: Functional programming tools",
+            "title-short": "Purrr",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=stringr",
+            "id": "R-stringr",
+            "note": "R package",
+            "title": "Stringr: Simple, consistent wrappers for common string operations",
+            "title-short": "Stringr",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=lubridate",
+            "id": "R-lubridate",
+            "note": "R package",
+            "title": "Lubridate: Make dealing with dates a little easier",
+            "title-short": "Lubridate",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=dtplyr",
+            "id": "R-dtplyr",
+            "note": "R package",
+            "title": "Dtplyr: Data table back-end for dplyr",
+            "title-short": "Dtplyr",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=vroom",
+            "id": "R-vroom",
+            "note": "R package",
+            "title": "Vroom: Read and write rectangular text data quickly",
+            "title-short": "Vroom",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=readxl",
+            "id": "R-readxl",
+            "note": "R package",
+            "title": "Readxl: Read excel files",
+            "title-short": "Readxl",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=writexl",
+            "id": "R-writexl",
+            "note": "R package",
+            "title": "Writexl: Export data frames to excel xlsx format",
+            "title-short": "Writexl",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=openxlsx",
+            "id": "R-openxlsx",
+            "note": "R package",
+            "title": "Openxlsx: Read, write and edit xlsx files",
+            "title-short": "Openxlsx",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=openxlsx2",
+            "id": "R-openxlsx2",
+            "note": "R package",
+            "title": "openxlsx2: Read, write and edit xlsx files",
+            "title-short": "openxlsx2",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=mschart",
+            "id": "R-mschart",
+            "note": "R package",
+            "title": "Mschart: Native microsoft chart support for microsoft office documents",
+            "title-short": "Mschart",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=reactable",
+            "id": "R-reactable",
+            "note": "R package",
+            "title": "Reactable: Interactive data tables for r",
+            "title-short": "Reactable",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=reactablefmtr",
+            "id": "R-reactablefmtr",
+            "note": "R package",
+            "title": "Reactablefmtr: Conditional formatting for reactable tables",
+            "title-short": "Reactablefmtr",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=shinyWidgets",
+            "id": "R-shinyWidgets",
+            "note": "R package",
+            "title": "shinyWidgets: Custom inputs widgets for shiny",
+            "title-short": "shinyWidgets",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=shinydashboard",
+            "id": "R-shinydashboard",
+            "note": "R package",
+            "title": "Shinydashboard: Create dashboards with shiny",
+            "title-short": "Shinydashboard",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=shinydashboardPlus",
+            "id": "R-shinydashboardPlus",
+            "note": "R package",
+            "title": "shinydashboardPlus: Add more AdminLTE2 components to shinydashboard",
+            "title-short": "shinydashboardPlus",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=shinymanager",
+            "id": "R-shinymanager",
+            "note": "R package",
+            "title": "Shinymanager: Authentication management for shiny applications",
+            "title-short": "Shinymanager",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=shinyjs",
+            "id": "R-shinyjs",
+            "note": "R package",
+            "title": "Shinyjs: Easily improve the user experience of your shiny apps",
+            "title-short": "Shinyjs",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=shinybusy",
+            "id": "R-shinybusy",
+            "note": "R package",
+            "title": "Shinybusy: Busy indicators and notifications for shiny applications",
+            "title-short": "Shinybusy",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=shinythemes",
+            "id": "R-shinythemes",
+            "note": "R package",
+            "title": "Shinythemes: Themes for shiny",
+            "title-short": "Shinythemes",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=bslib",
+            "id": "R-bslib",
+            "note": "R package",
+            "title": "Bslib: Custom bootstrap sass themes for shiny and r markdown",
+            "title-short": "Bslib",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=bs4Dash",
+            "id": "R-bs4Dash",
+            "note": "R package",
+            "title": "bs4Dash: A bootstrap 4 version of shinydashboard",
+            "title-short": "bs4Dash",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=argonDash",
+            "id": "R-argonDash",
+            "note": "R package",
+            "title": "argonDash: Argon shiny dashboard template",
+            "title-short": "argonDash",
+            "type": "book"
+        },
+        {
+            "URL": "https://github.com/dreamRs/shinypop",
+            "id": "R-shinypop",
+            "note": "R package",
+            "title": "Shinypop: Collection of notifications for shiny applications",
+            "title-short": "Shinypop",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=ggpattern",
+            "id": "R-ggpattern",
+            "note": "R package",
+            "title": "Ggpattern: ggplot2 pattern geoms",
+            "title-short": "Ggpattern",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=treemapify",
+            "id": "R-treemapify",
+            "note": "R package",
+            "title": "Treemapify: Draw treemaps in ggplot2",
+            "title-short": "Treemapify",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=scales",
+            "id": "R-scales",
+            "note": "R package",
+            "title": "Scales: Scale functions for visualization",
+            "title-short": "Scales",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=RColorBrewer",
+            "id": "R-RColorBrewer",
+            "note": "R package",
+            "title": "RColorBrewer: ColorBrewer palettes",
+            "title-short": "RColorBrewer",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=echarts4r",
+            "id": "R-echarts4r",
+            "note": "R package",
+            "title": "echarts4r: Create interactive graphs with ECharts",
+            "title-short": "echarts4r",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=htmlwidgets",
+            "id": "R-htmlwidgets",
+            "note": "R package",
+            "title": "Htmlwidgets: HTML widgets for r",
+            "title-short": "Htmlwidgets",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=mapboxer",
+            "id": "R-mapboxer",
+            "note": "R package",
+            "title": "Mapboxer: An r interface to mapbox GL JS",
+            "title-short": "Mapboxer",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=ggmap",
+            "id": "R-ggmap",
+            "note": "R package",
+            "title": "Ggmap: Spatial visualization with ggplot2",
+            "title-short": "Ggmap",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=sf",
+            "id": "R-sf",
+            "note": "R package",
+            "title": "Sf: Simple features for r",
+            "title-short": "Sf",
+            "type": "book"
+        },
+        {
+            "URL": "https://github.com/JohnCoene/globe4r",
+            "id": "R-globe4r",
+            "note": "R package",
+            "title": "globe4r: Interactive globes for r",
+            "title-short": "globe4r",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=DBI",
+            "id": "R-DBI",
+            "note": "R package",
+            "title": "DBI: R database interface",
+            "title-short": "DBI",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=RMySQL",
+            "id": "R-RMySQL",
+            "note": "R package",
+            "title": "RMySQL: Database interface and MySQL driver for r",
+            "title-short": "RMySQL",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=odbc",
+            "id": "R-odbc",
+            "note": "R package",
+            "title": "Odbc: Connect to ODBC compatible databases using the DBI interface",
+            "title-short": "Odbc",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=googlesheets4",
+            "id": "R-googlesheets4",
+            "note": "R package",
+            "title": "googlesheets4: Access google sheets using the sheets API V4",
+            "title-short": "googlesheets4",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=prophet",
+            "id": "R-prophet",
+            "note": "R package",
+            "title": "Prophet: Automatic forecasting procedure",
+            "title-short": "Prophet",
+            "type": "book"
+        }
+    ],
+    "project_biblios": [
+        "references.bib"
+    ]
+}
