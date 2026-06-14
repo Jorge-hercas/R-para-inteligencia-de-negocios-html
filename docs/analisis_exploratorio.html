@@ -224,7 +224,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./apendice.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Apéndice: Simbología y temas complementarios{.unnumbered}</span></a>
+  <a href="./apendice.html" class="sidebar-item-text sidebar-link">Apéndice: Simbología y temas complementarios</a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -651,8 +651,8 @@ attr(,"method")
 <caption>Tipos de curtosis</caption>
 <colgroup>
 <col style="width: 26%">
-<col style="width: 41%">
-<col style="width: 32%">
+<col style="width: 40%">
+<col style="width: 33%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -2253,8 +2253,8 @@ mean of x
 <p>Antes de adentrarnos en las pruebas de normalidad y en la evaluación de otros supuestos estadísticos, considerando que ya sabemos cómo funcionan los intervalos de confianza, es fundamental comprender el concepto de pruebas de hipótesis, ya que estas constituyen la base teórica sobre la cual se construyen todas estas evaluaciones, además de que serán muy recurrentes a partir de ahora y para el siguiente capítulo.</p>
 <p>Una prueba de hipótesis es un procedimiento estadístico que nos permite tomar decisiones sobre una población a partir de información obtenida de una muestra, estableciendo si existe evidencia suficiente para aceptar o rechazar una afirmación específica <span class="citation" data-cites="casella2002statistical">(<a href="referencias.html#ref-casella2002statistical" role="doc-biblioref">Casella and Berger 2002</a>)</span>. Básicamente, las pruebas de hipótesis parten de dos proposiciones:</p>
 <ul>
-<li><p><strong>Hipótesis nula <span class="math inline">\(H_0\)</span></strong>: Representa el estado de referencia o ausencia de efecto (lo que asumimos verdadero al inicio).</p></li>
-<li><p><strong>Hipótesis alternativa <span class="math inline">\(H_1\)</span></strong>: Representa la existencia de un efecto o diferencia (lo que queremos probar que podría ser verdadero).</p></li>
+<li><p><strong>Hipótesis nula</strong> <span class="math inline">\(H_0\)</span>: Representa el estado de referencia o ausencia de efecto (lo que asumimos verdadero al inicio).</p></li>
+<li><p><strong>Hipótesis alternativa</strong> <span class="math inline">\(H_1\)</span>: Representa la existencia de un efecto o diferencia (lo que queremos probar que podría ser verdadero).</p></li>
 </ul>
 <p>Generalmente, las pruebas de hipótesis se basan en un nivel de significancia, representado como <span class="math inline">\(\alpha\)</span>, que nos dice la probabilidad de cometer un error <strong>tipo I</strong>, es decir, rechazar la hipótesis nula cuando en realidad es verdadera. En la mayoría de los casos verás que se utiliza el nivel de significancia <span class="math inline">\(\alpha = 0.05\)</span> (5%), sin embargo, este valor no es obligatorio y puede ajustarse según la importancia del análisis o el riesgo que estemos dispuestos a asumir. Por ejemplo, en estudios donde cometer un error tipo I sería muy costoso o peligroso, se suelen usar niveles más estrictos, como <span class="math inline">\(\alpha = 0.01\)</span> (10%).</p>
 <p>Ahora, para calcular la diferencia entre el valor observado y el valor esperado con la variabilidad natural de los datos (error esperado), podemos hacer uso de la siguiente fórmula:</p>
@@ -2398,7 +2398,7 @@ p-value = P (\text{resultado tan extremo como el observado } | \; H_0 \text{ ver
 <p>A continuación revisaremos los tres casos más comunes: el <em>t-test de una muestra</em>, el de d<em>os muestras independientes</em> y el <em>t-test pareado</em>.</p>
 <section id="t-test-de-una-muestra" class="level5" data-number="6.2.5.3.1">
 <h5 data-number="6.2.5.3.1" class="anchored" data-anchor-id="t-test-de-una-muestra"><span class="header-section-number">6.2.5.3.1</span> t-test de una muestra</h5>
-<p>El caso más sencillo ocurre cuando tenemos una única muestra y queremos comparar su media contra un valor teórico o histórico. La pregunta que nos haremos es: <em>¿La media poblacional es igual a un valor específico <span class="math inline">\(\mu_0\)</span>?</em>. En este caso, la hipótesi será equivalente a:</p>
+<p>El caso más sencillo ocurre cuando tenemos una única muestra y queremos comparar su media contra un valor teórico o histórico. La pregunta que nos haremos es: <em>¿La media poblacional es igual a un valor específico</em> <span class="math inline">\(\mu_0\)</span>?. En este caso, la hipótesi será equivalente a:</p>
 <p><span class="math display">\[
 \begin{aligned}
 H_0 &amp;: \mu = \mu_0 \\
@@ -2569,8 +2569,8 @@ W = \frac{ \left( \sum_{i = 1}^{n} \alpha_i x_{(i)} \right)^2 }{\sum_{i = 1}^{n}
 <p>Dado lo anterior, el estadístico <span class="math inline">\(W\)</span> siempre va a tomar valores dentro del rango de <span class="math inline">\((0,1]\)</span>. Estos valores se pueden interpretar de la siguiente manera: Entre más cercano se encuentre el resultado de la prueba a 1, los datos estarán bien ajustados a la distribución evaluada (distribución normal), mientras que valores más alejados de 1 implican desviaciones significativas (debido a asimetría, colas pesadas, multimodalidad o la presencia de valores atípicos, etc).</p>
 <p>Lógicamente, la prueba de hipótesis es la siguiente:</p>
 <ul>
-<li><strong>Hipótesis nula <span class="math inline">\(H_0\)</span>:</strong> Los datos provienen de una distribución normal.</li>
-<li><strong>Hipótesis alternativa <span class="math inline">\(H_1\)</span>:</strong> Los datos no provienen de una distribución normal.</li>
+<li><strong>Hipótesis nula</strong> <span class="math inline">\(H_0\)</span>: Los datos provienen de una distribución normal.</li>
+<li><strong>Hipótesis alternativa</strong> <span class="math inline">\(H_1\)</span>: Los datos no provienen de una distribución normal.</li>
 </ul>
 <p>Siendo que para la regla de decisión, como es de esperarse, calcularemos el <span class="math inline">\(p-valor\)</span> asociado al estadístico <span class="math inline">\(W\)</span>, donde:</p>
 <ul>
@@ -2637,8 +2637,8 @@ D = \sup_x \left| F_n(x) - F(x) \right|
 <p>Al igual que en la prueba de Shapiro-Wilk, la interpretación se realiza a través del <span class="math inline">\(p-value\)</span>. Si este resulta menor que un nivel de significancia de <span class="math inline">\(\alpha\)</span>, se rechaza la hipótesis nula.</p>
 <p>Respectivamente, la prueba de hipótesis en este caso es:</p>
 <ul>
-<li><strong>Hipótesis nula <span class="math inline">\(H_0\)</span></strong>: Los datos provienen de la distribución especificada (normal).</li>
-<li><strong>Hipótesis alternativa <span class="math inline">\(H_1\)</span></strong>: Los datos no provienen de la distribución especificada.</li>
+<li><strong>Hipótesis nula</strong> <span class="math inline">\(H_0\)</span>: Los datos provienen de la distribución especificada (normal).</li>
+<li><strong>Hipótesis alternativa</strong> <span class="math inline">\(H_1\)</span>: Los datos no provienen de la distribución especificada.</li>
 </ul>
 <p>Es importante mencionar que, para esta prueba, aunque puede aplicarse a distintos tipos de distribuciones, su sensibilidad depende en gran medida del tamaño de la muestra y de los parámetros de la distribución. En particular, cuando se usa para probar normalidad, se suele emplear una variante conocida como <strong>prueba de Lilliefors</strong>, que ajusta los parámetros de la distribución normal (media y varianza) a partir de la propia muestra.</p>
 <p>Vamos a ver un ejemplo sencillo en R de esta prueba. Para este caso, vamos a usar la función <code>ks.test()</code> ajustada para una distribución normal, utilizando los parámetros de media y desviación estándar estimados a partir de la propia muestra. Para este ejercicio vamos a utilizar mil observaciones:</p>
@@ -2750,8 +2750,8 @@ JB = \frac{n}{6} \left(  S^2 + \frac{(K-3)^2}{ 4 } \right)
 </ul>
 <p>Lógicamente, la prueba de hipótesis en este caso será (al igual que en las pruebas anteriores) será:</p>
 <ul>
-<li><strong>Hipótesis nula <span class="math inline">\(H_0\)</span>:</strong> Los datos provienen de una distribución normal.</li>
-<li><strong>Hipótesis alternativa <span class="math inline">\(H_1\)</span>:</strong> Los datos no provienen de una distribución normal.</li>
+<li><strong>Hipótesis nula</strong> <span class="math inline">\(H_0\)</span>: Los datos provienen de una distribución normal.</li>
+<li><strong>Hipótesis alternativa</strong> <span class="math inline">\(H_1\)</span>: Los datos no provienen de una distribución normal.</li>
 </ul>
 <p>Al igual que en otras pruebas de normalidad, la decisión se realiza a través del <span class="math inline">\(p-value\)</span> comparado con un nivel de significancia <span class="math inline">\(\alpha\)</span> (normalmente al 5%), sin embargo, en la prueba de Jarque-Bera este se obtiene a partir de la distribución <span class="math inline">\(\chi^2\)</span> con 2 grados de libertad, ya que el estadístico <span class="math inline">\(JB\)</span> combina la información de la asimetría y la curtosis de la muestra. De este modo, valores grandes del estadístico generan <span class="math inline">\(p-value\)</span>’s pequeños, lo que indica evidencia en contra de la normalidad, mientras que valores pequeños de <span class="math inline">\(JB\)</span> producen <span class="math inline">\(p-value\)</span>’s altos, indicando que no existe evidencia suficiente para rechazar la hipótesis nula de normalidad.</p>
 <p>Como no puede ser de otra manera, vamos ahora a ver un ejemplo sencillo en R de esta prueba. Para este caso, podemos usar la función <code>jarque.bera.test()</code> del paquete <code>tseries</code>, la cual evalúa si los coeficientes de asimetría y curtosis de los datos se alejan de lo esperado en una distribución normal. Para este ejercicio vamos a utilizar mil observaciones:</p>
@@ -2812,8 +2812,8 @@ K^2 = Z_1^2 + Z_2^2
 <p>De esta forma, <span class="math inline">\(K^2\)</span> sigue, bajo la hipótesis nula de normalidad, una distribución <span class="math inline">\(\chi^2\)</span> con 2 grados de libertad.</p>
 <p>Respectivamente, la prueba de hipótesis se formula como:</p>
 <ul>
-<li><strong>Hipótesis nula <span class="math inline">\(H_0\)</span></strong>: Los datos provienen de una distribución normal.</li>
-<li><strong>Hipótesis alternativa <span class="math inline">\(H_1\)</span></strong>: Los datos no provienen de una distribución normal.</li>
+<li><strong>Hipótesis nula</strong> <span class="math inline">\(H_0\)</span>: Los datos provienen de una distribución normal.</li>
+<li><strong>Hipótesis alternativa</strong> <span class="math inline">\(H_1\)</span>: Los datos no provienen de una distribución normal.</li>
 </ul>
 <p>Lógicamente, podemos esperar que para valores pequeños de <span class="math inline">\(K^2\)</span>, se espera que la muestra sea consistente con la normalidad, mientras que valores grandes de <span class="math inline">\(K^2\)</span> indican desviaciones significativas en simetría y/o curtosis, lo que implica evidencia en contra de la normalidad.</p>
 <p>Al igual que en otras pruebas, la decisión se toma comparando el <span class="math inline">\(p\)</span>-value con un nivel de significancia <span class="math inline">\(\alpha\)</span> (usualmente 0.05). Como en el resto de casos, un <span class="math inline">\(p-value\)</span> bajo (menor al nivel de significancia) lleva a rechazar la hipótesis de normalidad.</p>
@@ -3315,7 +3315,7 @@ IQR = Q_3 - Q_1
 <h5 data-number="6.2.5.6.3" class="anchored" data-anchor-id="gráfico-de-dispersión-con-bandas-de-variabilidad"><span class="header-section-number">6.2.5.6.3</span> Gráfico de dispersión con bandas de variabilidad</h5>
 <p>Como siguiente apoyo gráfico para identificar la heteroscedasticidad, haremos uso de un gráfico de dispersión con bandas de variabilidad. Este tipo de visualización parte del gráfico de dispersión tradicional, pero añade una banda suavizada (generalmente construida a partir de un ajuste LOESS<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a> o de intervalos basados en cuantiles) que permite observar no solo la relación central entre las variables, sino también cómo se comporta la variabilidad de la variable dependiente (<span class="math inline">\(Y\)</span>) a lo largo de la variable independiente (<span class="math inline">\(X\)</span>).</p>
 <p>A diferencia del gráfico de dispersión simple, que muestra únicamente la distribución de puntos, las bandas de variabilidad aportan información adicional sobre la dispersión local de los datos. Esto resulta especialmente útil cuando la relación entre <span class="math inline">\(X\)</span> y <span class="math inline">\(Y\)</span> no es estrictamente lineal, o cuando queremos evaluar si la varianza condicional <span class="math inline">\(Var(Y|X)\)</span> es aproximadamente constante.</p>
-<p>Conceptualmente, si el ancho de estas bandas se mantiene relativamente constante a lo largo del eje <span class="math inline">\(X\)</span>, podemos suponer homoscedasticidad, ya que la variabilidad alrededor de la tendencia es estable. En cambio, si las bandas se ensanchan o estrechan sistemáticamente, esto sugiere heteroscedasticidad. Dicho de otro modo, un patrón en el que la banda “se abre” o“se cierra” (similar a un embudo) estaría indicando que la varianza de <span class="math inline">\(Y\)</span> cambia en función de la variable <span class="math inline">\(X\)</span>.</p>
+<p>Conceptualmente, si el ancho de estas bandas se mantiene relativamente constante a lo largo del eje <span class="math inline">\(X\)</span>, podemos suponer homoscedasticidad, ya que la variabilidad alrededor de la tendencia es estable. En cambio, si las bandas se ensanchan o estrechan sistemáticamente, esto sugiere heteroscedasticidad. Dicho de otro modo, un patrón en el que la banda “se abre” o”se cierra” (similar a un embudo) estaría indicando que la varianza de <span class="math inline">\(Y\)</span> cambia en función de la variable <span class="math inline">\(X\)</span>.</p>
 <p>Algunos patrones visuales típicos que suelen evidenciar heteroscedasticidad en un gráfico con bandas de variabilidad son:</p>
 <ul>
 <li>Bandas que aumentan de ancho conforme crece <span class="math inline">\(X\)</span>, lo que refleja una varianza creciente.</li>
@@ -3738,7 +3738,7 @@ OJO
 <p><span class="math display">\[
 \text{Cov}(Y_t, Y_{t-k} \neq 0 \text{ Para algún } k\geq 1)
 \]</span></p>
-<p>Lo que dicho en español significa que el <strong>valor que toma la variable en un periodo <span class="math inline">\(t\)</span> no es independiente de los valores que tomó en periodos anteriores</strong>, por lo que la información contenida en <span class="math inline">\(Y_{t-k}\)</span> puede ayudar a explicar en cierta medida el comportamiento de <span class="math inline">\(Y_t\)</span>.</p>
+<p>Lo que dicho en español significa que el <strong>valor que toma la variable en un periodo</strong> <span class="math inline">\(t\)</span> no es independiente de los valores que tomó en periodos anteriores, por lo que la información contenida en <span class="math inline">\(Y_{t-k}\)</span> puede ayudar a explicar en cierta medida el comportamiento de <span class="math inline">\(Y_t\)</span>.</p>
 <p>Regresando al gráfico de series de tiempo, los patrones visuales que nos pueden ayudar a identificar posibles casos de autocorrleación suelen ser:</p>
 <ul>
 <li>Secuencias prolongadas de observaciones con el mismo signo relativo respecto a la media <span class="math inline">\(E(Y_t)\)</span>.</li>
@@ -4208,9 +4208,9 @@ alternative hypothesis: true location shift is not equal to 0</code></pre>
 <table class="table">
 <colgroup>
 <col style="width: 24%">
-<col style="width: 23%">
+<col style="width: 24%">
 <col style="width: 26%">
-<col style="width: 25%">
+<col style="width: 24%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -4659,7 +4659,7 @@ Y^* = \frac{1}{Y}
 <table class="table">
 <colgroup>
 <col style="width: 30%">
-<col style="width: 40%">
+<col style="width: 39%">
 <col style="width: 30%">
 </colgroup>
 <thead>
@@ -5439,7 +5439,7 @@ H_1 &amp;: \theta_T &lt; \theta_C
 <table class="table">
 <colgroup>
 <col style="width: 30%">
-<col style="width: 40%">
+<col style="width: 39%">
 <col style="width: 30%">
 </colgroup>
 <thead>
@@ -5481,7 +5481,7 @@ H_1 &amp;: \theta_T &lt; \theta_C
 <table class="table">
 <colgroup>
 <col style="width: 30%">
-<col style="width: 40%">
+<col style="width: 39%">
 <col style="width: 30%">
 </colgroup>
 <thead>

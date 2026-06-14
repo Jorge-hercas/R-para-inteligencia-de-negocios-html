@@ -224,7 +224,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./apendice.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Apéndice: Simbología y temas complementarios{.unnumbered}</span></a>
+  <a href="./apendice.html" class="sidebar-item-text sidebar-link">Apéndice: Simbología y temas complementarios</a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -925,7 +925,7 @@ Attaching package: 'dplyr'</code></pre>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb66"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a><span class="fu">as.numeric</span>(<span class="fu">Sys.Date</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 20617</code></pre>
+<pre><code>[1] 20618</code></pre>
 </div>
 </div>
 <p>Ese número representa los días transcurridos entre la fecha <em>“1970-01-01”</em> y hoy. Las fechas en R son interpretadas de una forma numérica, por lo que fácilmente podemos hacer operaciones a ellas, tal que:</p>
@@ -933,7 +933,7 @@ Attaching package: 'dplyr'</code></pre>
 <div class="sourceCode cell-code" id="cb68"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Fecha actual más un día</span></span>
 <span id="cb68-2"><a href="#cb68-2" aria-hidden="true" tabindex="-1"></a><span class="fu">Sys.Date</span>()<span class="sc">+</span><span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "2026-06-14"</code></pre>
+<pre><code>[1] "2026-06-15"</code></pre>
 </div>
 </div>
 <p>Si queremos controlar de una manera más específica las marcas de tiempo con las que hagamos una operación, podemos hacer uso de la librería <code>lubridate</code> (paquete dedicado enteramente al manejo de fechas). Supongamos que queremos sumar años en lugar de días a la fecha actual, en tal caso haremos lo siguiente:</p>
@@ -950,7 +950,7 @@ Attaching package: 'lubridate'</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb73"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb73-1"><a href="#cb73-1" aria-hidden="true" tabindex="-1"></a><span class="fu">Sys.Date</span>() <span class="sc">%m+%</span> <span class="fu">years</span>(<span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "2027-06-13"</code></pre>
+<pre><code>[1] "2027-06-14"</code></pre>
 </div>
 </div>
 <p>Siendo <code>%m+%</code> un operador de suma creado específicamente para fechas. Podemos hacer uso de las funciones <code>seconds()</code>,<code>minutes()</code>,<code>hours()</code>,<code>days()</code>,<code>months()</code> y <code>years()</code> para las diferentes marcas de tiempo con las que vayamos a hacer el cálculo. Por supuesto, también podemos restar marcas de tiempo intercambiando el signo con <code>%m-%</code>.</p>
@@ -2948,12 +2948,12 @@ Caused by error in `if (gasto &gt; 7500) ...`:
 </ul>
 <p>Estos mismos tipos de uniones pueden ser aplicados en R de forma nativa, utilizando las funciones <code>merge()</code> y <code>merge.data.frame()</code>. A pesar de que <code>merge.data.frame()</code> funciona de manera adecuada cuando trabajamos directamente con data frames, la función <code>merge()</code> es más comunmente utilizada, ya que puede ser aplicada diferentes tipos de datos, como matrices o vectores, lo que la hace más versatil para situaciones más específicas.</p>
 <p>Supongamos las siguientes tablas pequeñas:</p>
-<div id="tbl-anonymous-956841" class="cell tbl-parent quarto-layout-panel anchored">
+<div id="tbl-anonymous-683973" class="cell tbl-parent quarto-layout-panel anchored">
 <div class="panel-caption table-caption">
 <p>Tablas ejemplo para unión con JOIN’s</p>
 </div>
 <div class="quarto-layout-row quarto-layout-valign-top">
-<div id="tbl-anonymous-956841-1" class="quarto-layout-cell quarto-layout-cell-subref anchored" data-ref-parent="tbl-anonymous-956841" style="flex-basis: 50.0%;justify-content: center;">
+<div id="tbl-anonymous-683973-1" class="quarto-layout-cell quarto-layout-cell-subref anchored" data-ref-parent="tbl-anonymous-683973" style="flex-basis: 50.0%;justify-content: center;">
 <table class="table table-sm table-striped">
 <caption>Tabla 1</caption>
 <thead>
@@ -2986,7 +2986,7 @@ Caused by error in `if (gasto &gt; 7500) ...`:
 </tbody>
 </table>
 </div>
-<div id="tbl-anonymous-956841-2" class="quarto-layout-cell quarto-layout-cell-subref anchored" data-ref-parent="tbl-anonymous-956841" style="flex-basis: 50.0%;justify-content: center;">
+<div id="tbl-anonymous-683973-2" class="quarto-layout-cell quarto-layout-cell-subref anchored" data-ref-parent="tbl-anonymous-683973" style="flex-basis: 50.0%;justify-content: center;">
 <table class="table table-sm table-striped">
 <caption>Tabla 2</caption>
 <thead>
@@ -3318,12 +3318,12 @@ Caused by error in `if (gasto &gt; 7500) ...`:
 <p>Los JOIN’s no son la única manera en la que podemos unir datos de tablas diferentes. En la mayoría de los casos, las tablas con las que trabajemos ya estarán completas, pero habrá ocasiones en las que estas tablas solo sean un fragmento de una tabla más grande, por lo que tendremos que unir dichos datos en una forma vertical, es decir, basándonos en los nombres de las columnas y no en las filas coincidentes.</p>
 <p>Déjame contarte una pequeña anécdota personal que tuve hace años, en uno de mis primeros trabajos como analista de datos: En una empresa mexicana tenía que realizar un proceso mensual de recolección y homologación de datos utilizando excel, la cual se basaba en 1. Solicitar los datos de ventas a mes vencido, y 2. Unir esos datos a una tabla histórica con los meses anteriores. Como era de esperarse, el proceso antes de que yo entrara a ese puesto era bastante manual, por lo que tomaba cerca de dos días el poder terminar de homologar estos datos. Cuando descubrí que podía sumplificar este proceso mediante funciones como <code>rbind()</code> o <code>bind_rows()</code> de <code>dplyr</code>, reduje el tiempo de dicho proceso a menos de 20 minutos.</p>
 <p>Ahora, ¿cómo funcionan exactamente las uniones verticales? Supongamos que tenemos una tabla con las ventas de una empresa para el mes de mayo, y otra tabla separada con las ventas de junio:</p>
-<div id="tbl-anonymous-3604559" class="cell tbl-parent quarto-layout-panel anchored">
+<div id="tbl-anonymous-6650611" class="cell tbl-parent quarto-layout-panel anchored">
 <div class="panel-caption table-caption">
 <p>Tablas ejemplo para unión vertical</p>
 </div>
 <div class="quarto-layout-row quarto-layout-valign-top">
-<div id="tbl-anonymous-3604559-1" class="quarto-layout-cell quarto-layout-cell-subref anchored" data-ref-parent="tbl-anonymous-3604559" style="flex-basis: 50.0%;justify-content: center;">
+<div id="tbl-anonymous-6650611-1" class="quarto-layout-cell quarto-layout-cell-subref anchored" data-ref-parent="tbl-anonymous-6650611" style="flex-basis: 50.0%;justify-content: center;">
 <table class="table table-sm table-striped">
 <caption>Tabla 1</caption>
 <thead>
@@ -3352,7 +3352,7 @@ Caused by error in `if (gasto &gt; 7500) ...`:
 </tbody>
 </table>
 </div>
-<div id="tbl-anonymous-3604559-2" class="quarto-layout-cell quarto-layout-cell-subref anchored" data-ref-parent="tbl-anonymous-3604559" style="flex-basis: 50.0%;justify-content: center;">
+<div id="tbl-anonymous-6650611-2" class="quarto-layout-cell quarto-layout-cell-subref anchored" data-ref-parent="tbl-anonymous-6650611" style="flex-basis: 50.0%;justify-content: center;">
 <table class="table table-sm table-striped">
 <caption>Tabla 2</caption>
 <thead>

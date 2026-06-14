@@ -224,7 +224,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./apendice.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Apéndice: Simbología y temas complementarios{.unnumbered}</span></a>
+  <a href="./apendice.html" class="sidebar-item-text sidebar-link">Apéndice: Simbología y temas complementarios</a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -354,9 +354,9 @@ div.csl-indent {
 <table class="table">
 <caption>Formatos de fechas en excel, para exportar a R.</caption>
 <colgroup>
-<col style="width: 26%">
-<col style="width: 25%">
-<col style="width: 48%">
+<col style="width: 27%">
+<col style="width: 20%">
+<col style="width: 52%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -812,7 +812,7 @@ Datsun 710    22.8   4  108  93 3.85 2.320 18.61  1  1    4    1</code></pre>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>stringr<span class="sc">::</span><span class="fu">str_extract</span>(vector_cadenas, <span class="st">"[:digit:]"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] "4" "1" "1" "1" "1" "7" "6" "1" "1" "1" NA  NA  NA  NA  NA  NA  NA  NA  NA 
+<pre><code> [1] "1" "1" "1" "1" "1" "8" "1" "3" "9" "1" NA  NA  NA  NA  NA  NA  NA  NA  NA 
 [20] NA  NA  NA  NA  NA  NA  NA  NA  NA  NA  NA </code></pre>
 </div>
 </div>
@@ -835,16 +835,16 @@ cadena + @ + cadena + .com
 <div class="cell">
 <div class="sourceCode cell-code" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a>stringr<span class="sc">::</span><span class="fu">str_extract</span>(vector_cadenas, <span class="st">"^.+@.+</span><span class="sc">\\</span><span class="st">.com$"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] NA                    NA                    NA                   
- [4] NA                    NA                    NA                   
- [7] NA                    NA                    NA                   
-[10] NA                    NA                    NA                   
-[13] NA                    NA                    NA                   
-[16] NA                    NA                    NA                   
-[19] NA                    NA                    "janelle@mail.com"   
-[22] "ivy@test.com"        "devaughn@test.com"   "haley@mail.com"     
-[25] "dallas@ejemplo.com"  "jalen@test.com"      "kristofer@mail.com" 
-[28] "fawwaaz@mail.com"    "tristin@ejemplo.com" "de'jaughn@test.com" </code></pre>
+<pre><code> [1] NA                     NA                     NA                    
+ [4] NA                     NA                     NA                    
+ [7] NA                     NA                     NA                    
+[10] NA                     NA                     NA                    
+[13] NA                     NA                     NA                    
+[16] NA                     NA                     NA                    
+[19] NA                     NA                     "clifton@mail.com"    
+[22] "najma@ejemplo.com"    "michelle@ejemplo.com" "chase@mail.com"      
+[25] "jubair@test.com"      "davis@ejemplo.com"    "jordan@ejemplo.com"  
+[28] "davis@test.com"       "taamira@ejemplo.com"  "isaiah@mail.com"     </code></pre>
 </div>
 </div>
 <p>Es importante dejar en claro que el ejemplo anterior no va a ayudarnos en todos los casos, ya que existen direcciones de correo electrónico con otros patrones, terminaciones diferentes (<code>.net</code>, <code>.gov</code>, <code>.mx</code>, etc) y demás variaciones, sin embargo nos es útil para comenzar a adentrarnos en la generación de estos buscadores de patrones.</p>
@@ -1662,17 +1662,17 @@ Pais \ \ -&gt; \ \ Estado  \ \ -&gt; \ \ Ciudad
 </div>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 1 × 30
-  coord.lon coord.lat weather.id weather.main weather.description weather.icon
-      &lt;dbl&gt;     &lt;dbl&gt;      &lt;int&gt; &lt;chr&gt;        &lt;chr&gt;               &lt;chr&gt;       
-1      140.      35.7        804 Clouds       overcast clouds     04d         
-# ℹ 24 more variables: base &lt;chr&gt;, main.temp &lt;dbl&gt;, main.feels_like &lt;dbl&gt;,
+<pre><code># A tibble: 1 × 31
+  coord.lon coord.lat weather.id weather.main weather.description  weather.icon
+      &lt;dbl&gt;     &lt;dbl&gt;      &lt;int&gt; &lt;chr&gt;        &lt;chr&gt;                &lt;chr&gt;       
+1      140.      35.7        502 Rain         heavy intensity rain 10d         
+# ℹ 25 more variables: base &lt;chr&gt;, main.temp &lt;dbl&gt;, main.feels_like &lt;dbl&gt;,
 #   main.temp_min &lt;dbl&gt;, main.temp_max &lt;dbl&gt;, main.pressure &lt;int&gt;,
 #   main.humidity &lt;int&gt;, main.sea_level &lt;int&gt;, main.grnd_level &lt;int&gt;,
 #   visibility &lt;int&gt;, wind.speed &lt;dbl&gt;, wind.deg &lt;int&gt;, wind.gust &lt;dbl&gt;,
-#   all &lt;int&gt;, dt &lt;int&gt;, sys.type &lt;int&gt;, sys.id &lt;int&gt;, sys.country &lt;chr&gt;,
-#   sys.sunrise &lt;int&gt;, sys.sunset &lt;int&gt;, timezone &lt;int&gt;, id &lt;int&gt;, name &lt;chr&gt;,
-#   cod &lt;int&gt;</code></pre>
+#   X1h &lt;dbl&gt;, all &lt;int&gt;, dt &lt;int&gt;, sys.type &lt;int&gt;, sys.id &lt;int&gt;,
+#   sys.country &lt;chr&gt;, sys.sunrise &lt;int&gt;, sys.sunset &lt;int&gt;, timezone &lt;int&gt;,
+#   id &lt;int&gt;, name &lt;chr&gt;, cod &lt;int&gt;</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: `cols` is now required when using `unnest()`.
@@ -1716,9 +1716,9 @@ $coord$lat
 
 $list
   aqi components.co components.no components.no2 components.o3 components.so2
-1   1        123.51           0.1           2.76         58.98           0.53
+1   2        134.82          0.17           3.85          67.8           0.87
   components.pm2_5 components.pm10 components.nh3         dt
-1             4.04            4.92           0.36 2026-06-12</code></pre>
+1             4.75            5.53            0.4 2026-06-13</code></pre>
 </div>
 </div>
 <p>En este caso nos centraremos en las columnas <code>co</code>, <code>no</code>, <code>no2</code>, <code>o3</code> y <code>so2</code>.</p>
@@ -1755,17 +1755,17 @@ $list
 </div>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 1 × 30
-  coord.lon coord.lat weather.id weather.main weather.description weather.icon
-      &lt;dbl&gt;     &lt;dbl&gt;      &lt;int&gt; &lt;chr&gt;        &lt;chr&gt;               &lt;chr&gt;       
-1      140.      35.7        804 Clouds       overcast clouds     04d         
-# ℹ 24 more variables: base &lt;chr&gt;, main.temp &lt;dbl&gt;, main.feels_like &lt;dbl&gt;,
+<pre><code># A tibble: 1 × 31
+  coord.lon coord.lat weather.id weather.main weather.description  weather.icon
+      &lt;dbl&gt;     &lt;dbl&gt;      &lt;int&gt; &lt;chr&gt;        &lt;chr&gt;                &lt;chr&gt;       
+1      140.      35.7        502 Rain         heavy intensity rain 10d         
+# ℹ 25 more variables: base &lt;chr&gt;, main.temp &lt;dbl&gt;, main.feels_like &lt;dbl&gt;,
 #   main.temp_min &lt;dbl&gt;, main.temp_max &lt;dbl&gt;, main.pressure &lt;int&gt;,
 #   main.humidity &lt;int&gt;, main.sea_level &lt;int&gt;, main.grnd_level &lt;int&gt;,
 #   visibility &lt;int&gt;, wind.speed &lt;dbl&gt;, wind.deg &lt;int&gt;, wind.gust &lt;dbl&gt;,
-#   all &lt;int&gt;, dt &lt;int&gt;, sys.type &lt;int&gt;, sys.id &lt;int&gt;, sys.country &lt;chr&gt;,
-#   sys.sunrise &lt;int&gt;, sys.sunset &lt;int&gt;, timezone &lt;int&gt;, id &lt;int&gt;, name &lt;chr&gt;,
-#   cod &lt;int&gt;</code></pre>
+#   X1h &lt;dbl&gt;, all &lt;int&gt;, dt &lt;int&gt;, sys.type &lt;int&gt;, sys.id &lt;int&gt;,
+#   sys.country &lt;chr&gt;, sys.sunrise &lt;int&gt;, sys.sunset &lt;int&gt;, timezone &lt;int&gt;,
+#   id &lt;int&gt;, name &lt;chr&gt;, cod &lt;int&gt;</code></pre>
 </div>
 </div>
 <div class="cell">
