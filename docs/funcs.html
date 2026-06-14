@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>R para inteligencia de negocios - 3&nbsp; Creando mis propias funciones</title>
+<title>R para inteligencia de negocios - 4&nbsp; Creando mis propias funciones</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -113,7 +113,7 @@ div.csl-indent {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./limpieza.html" rel="next">
-<link href="./conocimientos_previos.html" rel="prev">
+<link href="./basics.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -154,7 +154,7 @@ div.csl-indent {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Creando mis propias funciones</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Creando mis propias funciones</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -194,32 +194,37 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./funcs.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Creando mis propias funciones</span></a>
+  <a href="./basics.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Primeros pasos en R</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./limpieza.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Extracción, entendimiento y exportación de nuestros datos</span></a>
+  <a href="./funcs.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Creando mis propias funciones</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./limpieza2.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Limpieza y manejo de datos: Principales problemas y soluciones</span></a>
+  <a href="./limpieza.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Extracción, entendimiento y exportación de nuestros datos</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./analisis_exploratorio.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Análisis exploratorio de datos</span></a>
+  <a href="./limpieza2.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Limpieza y manejo de datos: Principales problemas y soluciones</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./forecasts.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Pronósticos y estimaciones</span></a>
+  <a href="./analisis_exploratorio.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Análisis exploratorio de datos</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./dashboards.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Presentando mis datos: Dashboards (Shiny) y apps web</span></a>
+  <a href="./forecasts.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Pronósticos y estimaciones</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./dashboards.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Presentando mis datos: Dashboards (Shiny) y apps web</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -246,43 +251,43 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#la-sintaxis-de-una-función" id="toc-la-sintaxis-de-una-función" class="nav-link active" data-scroll-target="#la-sintaxis-de-una-función"><span class="toc-section-number">3.1</span>  La sintaxis de una función</a></li>
-  <li><a href="#la-función-return" id="toc-la-función-return" class="nav-link" data-scroll-target="#la-función-return"><span class="toc-section-number">3.2</span>  La función <code>return()</code></a></li>
-  <li><a href="#el-operador--" id="toc-el-operador--" class="nav-link" data-scroll-target="#el-operador--"><span class="toc-section-number">3.3</span>  El operador <code>&lt;&lt;-</code></a></li>
-  <li><a href="#estructuras-de-control" id="toc-estructuras-de-control" class="nav-link" data-scroll-target="#estructuras-de-control"><span class="toc-section-number">3.4</span>  Estructuras de control</a>
+  <li><a href="#la-sintaxis-de-una-función" id="toc-la-sintaxis-de-una-función" class="nav-link active" data-scroll-target="#la-sintaxis-de-una-función"><span class="toc-section-number">4.1</span>  La sintaxis de una función</a></li>
+  <li><a href="#la-función-return" id="toc-la-función-return" class="nav-link" data-scroll-target="#la-función-return"><span class="toc-section-number">4.2</span>  La función <code>return()</code></a></li>
+  <li><a href="#el-operador--" id="toc-el-operador--" class="nav-link" data-scroll-target="#el-operador--"><span class="toc-section-number">4.3</span>  El operador <code>&lt;&lt;-</code></a></li>
+  <li><a href="#estructuras-de-control" id="toc-estructuras-de-control" class="nav-link" data-scroll-target="#estructuras-de-control"><span class="toc-section-number">4.4</span>  Estructuras de control</a>
   <ul class="collapse">
-  <li><a href="#dos-o-más-posibles-resultados-condicional-if." id="toc-dos-o-más-posibles-resultados-condicional-if." class="nav-link" data-scroll-target="#dos-o-más-posibles-resultados-condicional-if."><span class="toc-section-number">3.4.1</span>  Dos (o más) posibles resultados: Condicional <code>if</code>.</a></li>
-  <li><a href="#múltiples-condiciones-switch." id="toc-múltiples-condiciones-switch." class="nav-link" data-scroll-target="#múltiples-condiciones-switch."><span class="toc-section-number">3.4.2</span>  Múltiples condiciones: <code>Switch</code>.</a></li>
-  <li><a href="#secuencias-for-i" id="toc-secuencias-for-i" class="nav-link" data-scroll-target="#secuencias-for-i"><span class="toc-section-number">3.4.3</span>  Secuencias: <code>for i</code></a></li>
-  <li><a href="#cuando-el-final-es-incierto-while-y-repeat." id="toc-cuando-el-final-es-incierto-while-y-repeat." class="nav-link" data-scroll-target="#cuando-el-final-es-incierto-while-y-repeat."><span class="toc-section-number">3.4.4</span>  Cuando el final es incierto: <code>While</code> y <code>repeat</code>.</a></li>
-  <li><a href="#añadiendo-next-y-break" id="toc-añadiendo-next-y-break" class="nav-link" data-scroll-target="#añadiendo-next-y-break"><span class="toc-section-number">3.4.5</span>  Añadiendo <code>next</code> y <code>break</code></a></li>
-  <li><a href="#dinamizando-estructuras-dentro-de-funciones." id="toc-dinamizando-estructuras-dentro-de-funciones." class="nav-link" data-scroll-target="#dinamizando-estructuras-dentro-de-funciones."><span class="toc-section-number">3.4.6</span>  Dinamizando estructuras dentro de funciones.</a></li>
-  <li><a href="#funciones-dentro-de-ellas-mismas-recursividad." id="toc-funciones-dentro-de-ellas-mismas-recursividad." class="nav-link" data-scroll-target="#funciones-dentro-de-ellas-mismas-recursividad."><span class="toc-section-number">3.4.7</span>  Funciones dentro de ellas mismas: <em>recursividad.</em></a></li>
+  <li><a href="#dos-o-más-posibles-resultados-condicional-if." id="toc-dos-o-más-posibles-resultados-condicional-if." class="nav-link" data-scroll-target="#dos-o-más-posibles-resultados-condicional-if."><span class="toc-section-number">4.4.1</span>  Dos (o más) posibles resultados: Condicional <code>if</code>.</a></li>
+  <li><a href="#múltiples-condiciones-switch." id="toc-múltiples-condiciones-switch." class="nav-link" data-scroll-target="#múltiples-condiciones-switch."><span class="toc-section-number">4.4.2</span>  Múltiples condiciones: <code>Switch</code>.</a></li>
+  <li><a href="#secuencias-for-i" id="toc-secuencias-for-i" class="nav-link" data-scroll-target="#secuencias-for-i"><span class="toc-section-number">4.4.3</span>  Secuencias: <code>for i</code></a></li>
+  <li><a href="#cuando-el-final-es-incierto-while-y-repeat." id="toc-cuando-el-final-es-incierto-while-y-repeat." class="nav-link" data-scroll-target="#cuando-el-final-es-incierto-while-y-repeat."><span class="toc-section-number">4.4.4</span>  Cuando el final es incierto: <code>While</code> y <code>repeat</code>.</a></li>
+  <li><a href="#añadiendo-next-y-break" id="toc-añadiendo-next-y-break" class="nav-link" data-scroll-target="#añadiendo-next-y-break"><span class="toc-section-number">4.4.5</span>  Añadiendo <code>next</code> y <code>break</code></a></li>
+  <li><a href="#dinamizando-estructuras-dentro-de-funciones." id="toc-dinamizando-estructuras-dentro-de-funciones." class="nav-link" data-scroll-target="#dinamizando-estructuras-dentro-de-funciones."><span class="toc-section-number">4.4.6</span>  Dinamizando estructuras dentro de funciones.</a></li>
+  <li><a href="#funciones-dentro-de-ellas-mismas-recursividad." id="toc-funciones-dentro-de-ellas-mismas-recursividad." class="nav-link" data-scroll-target="#funciones-dentro-de-ellas-mismas-recursividad."><span class="toc-section-number">4.4.7</span>  Funciones dentro de ellas mismas: <em>recursividad.</em></a></li>
   </ul></li>
-  <li><a href="#funciones-anónimas" id="toc-funciones-anónimas" class="nav-link" data-scroll-target="#funciones-anónimas"><span class="toc-section-number">3.5</span>  Funciones anónimas</a>
+  <li><a href="#funciones-anónimas" id="toc-funciones-anónimas" class="nav-link" data-scroll-target="#funciones-anónimas"><span class="toc-section-number">4.5</span>  Funciones anónimas</a>
   <ul class="collapse">
-  <li><a href="#un-caso-de-uso" id="toc-un-caso-de-uso" class="nav-link" data-scroll-target="#un-caso-de-uso"><span class="toc-section-number">3.5.1</span>  Un caso de uso</a></li>
+  <li><a href="#un-caso-de-uso" id="toc-un-caso-de-uso" class="nav-link" data-scroll-target="#un-caso-de-uso"><span class="toc-section-number">4.5.1</span>  Un caso de uso</a></li>
   </ul></li>
-  <li><a href="#funciones-de-órden-superior-la-familia-apply" id="toc-funciones-de-órden-superior-la-familia-apply" class="nav-link" data-scroll-target="#funciones-de-órden-superior-la-familia-apply"><span class="toc-section-number">3.6</span>  Funciones de órden superior: La familia <code>apply</code></a>
+  <li><a href="#funciones-de-órden-superior-la-familia-apply" id="toc-funciones-de-órden-superior-la-familia-apply" class="nav-link" data-scroll-target="#funciones-de-órden-superior-la-familia-apply"><span class="toc-section-number">4.6</span>  Funciones de órden superior: La familia <code>apply</code></a>
   <ul class="collapse">
-  <li><a href="#las-variantes-de-apply" id="toc-las-variantes-de-apply" class="nav-link" data-scroll-target="#las-variantes-de-apply"><span class="toc-section-number">3.6.1</span>  Las variantes de <code>apply()</code></a></li>
+  <li><a href="#las-variantes-de-apply" id="toc-las-variantes-de-apply" class="nav-link" data-scroll-target="#las-variantes-de-apply"><span class="toc-section-number">4.6.1</span>  Las variantes de <code>apply()</code></a></li>
   </ul></li>
-  <li><a href="#entendiendo-los-parámetros-de-una-función" id="toc-entendiendo-los-parámetros-de-una-función" class="nav-link" data-scroll-target="#entendiendo-los-parámetros-de-una-función"><span class="toc-section-number">3.7</span>  Entendiendo los parámetros de una función</a>
+  <li><a href="#entendiendo-los-parámetros-de-una-función" id="toc-entendiendo-los-parámetros-de-una-función" class="nav-link" data-scroll-target="#entendiendo-los-parámetros-de-una-función"><span class="toc-section-number">4.7</span>  Entendiendo los parámetros de una función</a>
   <ul class="collapse">
-  <li><a href="#parámetros-con-valores-por-defecto." id="toc-parámetros-con-valores-por-defecto." class="nav-link" data-scroll-target="#parámetros-con-valores-por-defecto."><span class="toc-section-number">3.7.1</span>  Parámetros con valores por defecto.</a></li>
-  <li><a href="#parámetros-de-longitud-variable-el-uso-de" id="toc-parámetros-de-longitud-variable-el-uso-de" class="nav-link" data-scroll-target="#parámetros-de-longitud-variable-el-uso-de"><span class="toc-section-number">3.7.2</span>  Parámetros de longitud variable: El uso de “…”</a></li>
-  <li><a href="#parámetros-de-tipo-de-dato-variable" id="toc-parámetros-de-tipo-de-dato-variable" class="nav-link" data-scroll-target="#parámetros-de-tipo-de-dato-variable"><span class="toc-section-number">3.7.3</span>  Parámetros de tipo de dato variable</a></li>
-  <li><a href="#argumentos-de-evaluación-diferida-evaluación-perezosa" id="toc-argumentos-de-evaluación-diferida-evaluación-perezosa" class="nav-link" data-scroll-target="#argumentos-de-evaluación-diferida-evaluación-perezosa"><span class="toc-section-number">3.7.4</span>  Argumentos de evaluación diferida (evaluación perezosa)</a></li>
+  <li><a href="#parámetros-con-valores-por-defecto." id="toc-parámetros-con-valores-por-defecto." class="nav-link" data-scroll-target="#parámetros-con-valores-por-defecto."><span class="toc-section-number">4.7.1</span>  Parámetros con valores por defecto.</a></li>
+  <li><a href="#parámetros-de-longitud-variable-el-uso-de" id="toc-parámetros-de-longitud-variable-el-uso-de" class="nav-link" data-scroll-target="#parámetros-de-longitud-variable-el-uso-de"><span class="toc-section-number">4.7.2</span>  Parámetros de longitud variable: El uso de “…”</a></li>
+  <li><a href="#parámetros-de-tipo-de-dato-variable" id="toc-parámetros-de-tipo-de-dato-variable" class="nav-link" data-scroll-target="#parámetros-de-tipo-de-dato-variable"><span class="toc-section-number">4.7.3</span>  Parámetros de tipo de dato variable</a></li>
+  <li><a href="#argumentos-de-evaluación-diferida-evaluación-perezosa" id="toc-argumentos-de-evaluación-diferida-evaluación-perezosa" class="nav-link" data-scroll-target="#argumentos-de-evaluación-diferida-evaluación-perezosa"><span class="toc-section-number">4.7.4</span>  Argumentos de evaluación diferida (evaluación perezosa)</a></li>
   </ul></li>
-  <li><a href="#análisis-de-errores-y-alternativas" id="toc-análisis-de-errores-y-alternativas" class="nav-link" data-scroll-target="#análisis-de-errores-y-alternativas"><span class="toc-section-number">3.8</span>  Análisis de errores y alternativas</a>
+  <li><a href="#análisis-de-errores-y-alternativas" id="toc-análisis-de-errores-y-alternativas" class="nav-link" data-scroll-target="#análisis-de-errores-y-alternativas"><span class="toc-section-number">4.8</span>  Análisis de errores y alternativas</a>
   <ul class="collapse">
-  <li><a href="#tipos-comunes-de-errores-una-mala-sintaxis" id="toc-tipos-comunes-de-errores-una-mala-sintaxis" class="nav-link" data-scroll-target="#tipos-comunes-de-errores-una-mala-sintaxis"><span class="toc-section-number">3.8.1</span>  Tipos comunes de errores: Una mala sintaxis</a></li>
-  <li><a href="#el-uso-de-trycatch" id="toc-el-uso-de-trycatch" class="nav-link" data-scroll-target="#el-uso-de-trycatch"><span class="toc-section-number">3.8.2</span>  El uso de <code>tryCatch()</code></a></li>
-  <li><a href="#mensajes-de-error-alertas-y-notas" id="toc-mensajes-de-error-alertas-y-notas" class="nav-link" data-scroll-target="#mensajes-de-error-alertas-y-notas"><span class="toc-section-number">3.8.3</span>  Mensajes de error, alertas y notas</a></li>
+  <li><a href="#tipos-comunes-de-errores-una-mala-sintaxis" id="toc-tipos-comunes-de-errores-una-mala-sintaxis" class="nav-link" data-scroll-target="#tipos-comunes-de-errores-una-mala-sintaxis"><span class="toc-section-number">4.8.1</span>  Tipos comunes de errores: Una mala sintaxis</a></li>
+  <li><a href="#el-uso-de-trycatch" id="toc-el-uso-de-trycatch" class="nav-link" data-scroll-target="#el-uso-de-trycatch"><span class="toc-section-number">4.8.2</span>  El uso de <code>tryCatch()</code></a></li>
+  <li><a href="#mensajes-de-error-alertas-y-notas" id="toc-mensajes-de-error-alertas-y-notas" class="nav-link" data-scroll-target="#mensajes-de-error-alertas-y-notas"><span class="toc-section-number">4.8.3</span>  Mensajes de error, alertas y notas</a></li>
   </ul></li>
-  <li><a href="#concatenando-funciones-y" id="toc-concatenando-funciones-y" class="nav-link" data-scroll-target="#concatenando-funciones-y"><span class="toc-section-number">3.9</span>  Concatenando funciones: <code>|&gt;</code> y <code>%&gt;%</code></a>
+  <li><a href="#concatenando-funciones-y" id="toc-concatenando-funciones-y" class="nav-link" data-scroll-target="#concatenando-funciones-y"><span class="toc-section-number">4.9</span>  Concatenando funciones: <code>|&gt;</code> y <code>%&gt;%</code></a>
   <ul class="collapse">
-  <li><a href="#cuándo-no-usar-un-concatenador" id="toc-cuándo-no-usar-un-concatenador" class="nav-link" data-scroll-target="#cuándo-no-usar-un-concatenador"><span class="toc-section-number">3.9.1</span>  ¿Cuándo no usar un concatenador?</a></li>
+  <li><a href="#cuándo-no-usar-un-concatenador" id="toc-cuándo-no-usar-un-concatenador" class="nav-link" data-scroll-target="#cuándo-no-usar-un-concatenador"><span class="toc-section-number">4.9.1</span>  ¿Cuándo no usar un concatenador?</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -292,7 +297,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Creando mis propias funciones</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Creando mis propias funciones</span></h1>
 </div>
 
 
@@ -309,8 +314,8 @@ div.csl-indent {
 
 <p>Generalmente, los cursos y libros dedicados a programación inicial en R suelen dejar de lado la creación de funciones, pero a mi parecer estas son una pieza clave de tu camino en el aprendizaje de este lenguaje. En el 99% de los casos ya existirá una función o, en su defecto, una librería que cuente con la función que necesitas para casi cualquier situación, pero no siempre será así. Cuando te encuentres en una situación laboral o escolar en la que no exista una forma clara de resolver un problema específico, tu deberás ser capaz de crear dicha solución a partir del uso de la lógica y combinación de funciones/operaciones ya existentes.</p>
 <p>Básicamente, la idea de una función es simplificar el trabajo realizado. En muchas situaciones encontraremos que tenemos una gran cantidad de cálculos que debemos correr una y otra vez, por lo que el crear una función que englobe todo nuestro script nos ayudará a reducir tiempo, tener un código más limpio y mejor estructurado, sin mencionar que, al asignarle un nombre, podremos identificar de mejor manera el cálculo que realizamos mediante la función.</p>
-<section id="la-sintaxis-de-una-función" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="la-sintaxis-de-una-función"><span class="header-section-number">3.1</span> La sintaxis de una función</h2>
+<section id="la-sintaxis-de-una-función" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="la-sintaxis-de-una-función"><span class="header-section-number">4.1</span> La sintaxis de una función</h2>
 <p>Toda función en R se compone de 3 partes básicas:</p>
 <ul>
 <li><p>Argumentos de entrada</p></li>
@@ -356,8 +361,8 @@ div.csl-indent {
 </div>
 </div>
 </section>
-<section id="la-función-return" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="la-función-return"><span class="header-section-number">3.2</span> La función <code>return()</code></h2>
+<section id="la-función-return" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="la-función-return"><span class="header-section-number">4.2</span> La función <code>return()</code></h2>
 <p>En nuestro ejemplo anterior la función para calcular el cuadrado de un número nos devolvió el objeto creado, pero ¿qué pasaría si creáramos múltiples objetos dentro de la función? Dentro del lenguaje R, cuando nosotros establecemos una función, si no lo definimos previamente, siempre se nos devolverá el último objeto evaluado. Cuando nosotros queremos definir explícitamente el valor evaluado que nos va a retornar la función en cuestión, debemos utilizar <code>return()</code> de la siguiente manera:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Agregando return() a la función</span></span>
@@ -375,8 +380,8 @@ div.csl-indent {
 </div>
 <p>Este argumento es especialmente útil cuando tenemos múltiples objetos dentro de la función y queremos retornar uno en específico, sin que necesariamente sea el último que haya sido evaluado.</p>
 </section>
-<section id="el-operador--" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="el-operador--"><span class="header-section-number">3.3</span> El operador <code>&lt;&lt;-</code></h2>
+<section id="el-operador--" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="el-operador--"><span class="header-section-number">4.3</span> El operador <code>&lt;&lt;-</code></h2>
 <p>Cuando nosotros creamos objetos mediante <code>&lt;-</code> estos se guardan en memoria, por lo que podemos acceder a ellos llamándolos por su nombre, sin embargo, cuando creamos objetos dentro de una función estos al depender de valores dinámicos no se guardan, sin embargo, podemos definir utilizar el operador <code>&lt;&lt;-</code> para que al momento de que nosotros evaluemos una función de manera automática se guarde un objeto en memoria, por ejemplo:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Asignando &lt;&lt;- a la función</span></span>
@@ -440,8 +445,8 @@ $maximo
 </div>
 <p>Este ejemplo es bastante útil para entender la importancia de crear funciones cuando queremos simplificar los cálculos que realizamos. Imagina que tuvieras que evaluar el promedio, mínimo y máximo de múltiples vectores, hacer eso de forma manual habría sido bastante tardado, por lo que crear una función nos permite reducir el tiempo que destinamos a codificar los resultados.</p>
 </section>
-<section id="estructuras-de-control" class="level2" data-number="3.4">
-<h2 data-number="3.4" class="anchored" data-anchor-id="estructuras-de-control"><span class="header-section-number">3.4</span> Estructuras de control</h2>
+<section id="estructuras-de-control" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="estructuras-de-control"><span class="header-section-number">4.4</span> Estructuras de control</h2>
 <p>Una parte fundamental al trabajar con funciones son las estructuras de control, las cuales simplemente son una forma en la que, a partir de una condición original o secuencia establecida, podemos restringir la ejecución de nuestro código. La idea es sencilla: Una estructura de control nos permitirá ejecutar solamente la información que queremos en el rango que queremos e incluso ignorar los casos que queremos. Antes de introducir las estructuras de control dentro de las funciones, vamos a ver cada una de ellas de forma individual:</p>
 <ol type="1">
 <li><p>Condicionales: <code>if else</code> y <code>switch</code></p></li>
@@ -450,8 +455,8 @@ $maximo
 <p>2.2. Secuencia <code>while</code> y <code>repeat</code></p></li>
 <li><p>Interrumpiendo un bucle: <code>next</code> / <code>break</code></p></li>
 </ol>
-<section id="dos-o-más-posibles-resultados-condicional-if." class="level3" data-number="3.4.1">
-<h3 data-number="3.4.1" class="anchored" data-anchor-id="dos-o-más-posibles-resultados-condicional-if."><span class="header-section-number">3.4.1</span> Dos (o más) posibles resultados: Condicional <code>if</code>.</h3>
+<section id="dos-o-más-posibles-resultados-condicional-if." class="level3" data-number="4.4.1">
+<h3 data-number="4.4.1" class="anchored" data-anchor-id="dos-o-más-posibles-resultados-condicional-if."><span class="header-section-number">4.4.1</span> Dos (o más) posibles resultados: Condicional <code>if</code>.</h3>
 <p>Usualmente las funciones nos devuelven un resultado a partir de los argumentos que definimos, pero ¿y si quisieramos devolver un resultado a partir de una condición? Muchas veces nos encontraremos en un situación en la que, por ejemplo, si un valor predefinido cumple una condición, querremos devolver un resultado y, contrariamente, si dicha condición no se cumple, devolver otro resultado; para resolver esos casos podemos hacer uso del condicional <code>if else</code>. Veamos su estructura mediante un ejemplo: Imagina que tenemos un objeto x, el cuál es equivalente a un número aleatorio y queremos imprimir un mensaje dependiendo de si el resultado es mayor o menor a 5, podemos crear un condicional de la siguiente manera:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Número aleatorio</span></span>
@@ -484,8 +489,8 @@ $maximo
 <pre><code>[1] "El número 6 es mayor a 5"</code></pre>
 </div>
 </div>
-<section id="añadiendo-más-opciones-al-condicional-else-if" class="level4" data-number="3.4.1.1">
-<h4 data-number="3.4.1.1" class="anchored" data-anchor-id="añadiendo-más-opciones-al-condicional-else-if"><span class="header-section-number">3.4.1.1</span> Añadiendo más opciones al condicional: <code>else if</code></h4>
+<section id="añadiendo-más-opciones-al-condicional-else-if" class="level4" data-number="4.4.1.1">
+<h4 data-number="4.4.1.1" class="anchored" data-anchor-id="añadiendo-más-opciones-al-condicional-else-if"><span class="header-section-number">4.4.1.1</span> Añadiendo más opciones al condicional: <code>else if</code></h4>
 <p>La estructura básica de un condicional se basa en que si una condición (o más) se cumple(n) entonces obtendremos un resultado, mientras que de no ser el caso entonces obtendremos otro por fallo, pero encontraremos casos en los que tendremos que añadir más resultados posibles a la lista. Si dentro de esta estructura <code>if</code> significa <em>“si cierta situación se cumple”</em> y <code>else</code> significa <em>“entonces”,</em> para añadir un tercer (o más) caso(s) posible(s) al condicional utilizariamos la expresión <code>else if</code>, la cuál signifca <em>“por tanto si”</em> . Regresemos al ejemplo usado en el punto anterior, vamos a segmentarlo en 3 posibles escenarios: 1. El número es menor o igual 5, 2. El número es mayor a 5 y menor o gual a 10 y 3. El número es mayor a 10. Vamos a plantear la estructura de este condicional triple:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">6</span></span>
@@ -519,8 +524,8 @@ $maximo
 <p>Sin embargo, ese tipo de estructuras se recomiendan en casos en los que el segundo condicional se utilice para realizar una operación diferente a partir del primer resultado, claro que esto puede quedar a comodidad de cada persona.</p>
 </section>
 </section>
-<section id="múltiples-condiciones-switch." class="level3" data-number="3.4.2">
-<h3 data-number="3.4.2" class="anchored" data-anchor-id="múltiples-condiciones-switch."><span class="header-section-number">3.4.2</span> Múltiples condiciones: <code>Switch</code>.</h3>
+<section id="múltiples-condiciones-switch." class="level3" data-number="4.4.2">
+<h3 data-number="4.4.2" class="anchored" data-anchor-id="múltiples-condiciones-switch."><span class="header-section-number">4.4.2</span> Múltiples condiciones: <code>Switch</code>.</h3>
 <p>Usar el condicional <code>if else</code> es genial, ya que es bastante sencillo de entender y, en la gran mayoría de los casos, nos ayudará a resolver el problema al que nos estemos enfrentando, pero existen situaciones en las que no es la mejor opción, ya que nos encontramos con una cantidad considerable de escenarios posibles. Para situaciones en las que puede ser bastante engorroso el escribir tanto <code>if else</code> la solución más óptima será utilizar un condicional <code>switch</code>. Considera que un condicional <code>if</code> está diseñado para situaciones en las que tenemos una decisión a partir de un valor booleano (0 o 1, <code>TRUE</code> o <code>FALSE</code>, etc), mientras que <code>switch</code> está enfocado a casos en los que se toma una decisión en función del valor de una expresión. No existe una regla oficial para escoger cuando utilizar cada caso, pero mi recomendación es que si tienes más de 3 condiciones posibles cambies a <code>switch</code></p>
 <p>El uso de <code>switch</code> es bastante sencillo, ya que tiene una estructura muy similar a la de <code>if else</code>, pero siendo una versión algo más simplificada de ello, es decir, no es necesario escribir múltiples veces sentencias <code>else</code>, basta con escribir el posible valor y el resultado dado ese valor, por ejemplo: Supongamos que tenemos un objeto <code>operacion</code> el cuál puede ser uno de los siguientes posibles valores: “suma”, “resta”, “multiplicacion” u “division” y queremos realizar dicho cálculo dependiendo de lo que diga la cadena de caracteres, podemos hacer lo siguiente:</p>
 <div class="cell">
@@ -564,8 +569,8 @@ $maximo
 </div>
 <p>Más adelante veremos estas estructuras con funciones de la librería <code>dplyr</code> en casos más prácticos, por lo que podrás ver el potencial de dichas estructuras en una situación más realista.</p>
 </section>
-<section id="secuencias-for-i" class="level3" data-number="3.4.3">
-<h3 data-number="3.4.3" class="anchored" data-anchor-id="secuencias-for-i"><span class="header-section-number">3.4.3</span> Secuencias: <code>for i</code></h3>
+<section id="secuencias-for-i" class="level3" data-number="4.4.3">
+<h3 data-number="4.4.3" class="anchored" data-anchor-id="secuencias-for-i"><span class="header-section-number">4.4.3</span> Secuencias: <code>for i</code></h3>
 <p>Una de las estructuras de datos más útiles y que más frecuentemente vamos a utilizar, ya que nos permitirá simplificar mucho tiempo cuando estemos trabajando con tareas repetitivas. Si bien la función <code>lapply()</code> tiene un objetivo similar, por ahora nos limitaremos a la estructura <code>for i</code>, ya que <code>lapply()</code> cuenta con toda una familia de funciones que veremos con detalle en secciones posteriores. Comencemos con un ejemplo básico del tema: Imprimir un número en la consola de R. Supongamos que queremos imprimir el número 1, esto lo podemos hacer sencillamente usando la función print() como ya lo sabes, pero ¿y si quisiera imprimir los números del 1 al 5 de forma separada (es decir, sin utilizar una secuencia 1:5)? Aquí es donde entraría en juego una estructura for i, ya que nos permitirá realizar operaciones un número determinado de veces. Su estructura es bastante sencilla, básicamente tenemos que asignar un número fijo de números, los cuales serán adoptados por la variable <code>i</code>, la cual debe estar presente dentro de la estructura de datos para poder ser reciclada ese número determinado de veces. Veamos el ejemplo de los números del 1 al 5:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Secuencia de números del 1 al 5</span></span>
@@ -626,8 +631,8 @@ Nota
 <p>El valor <code>i</code> únicamente es un objeto que funciona como índice o contador, no necesariamente debe ser esa letra o nombre de objeto, aunque es comúnmente utilizado así.</p>
 </div>
 </div>
-<section id="bucles-anidados." class="level4" data-number="3.4.3.1">
-<h4 data-number="3.4.3.1" class="anchored" data-anchor-id="bucles-anidados."><span class="header-section-number">3.4.3.1</span> Bucles anidados.</h4>
+<section id="bucles-anidados." class="level4" data-number="4.4.3.1">
+<h4 data-number="4.4.3.1" class="anchored" data-anchor-id="bucles-anidados."><span class="header-section-number">4.4.3.1</span> Bucles anidados.</h4>
 <p>Un bucle para abarcar todos los elementos de un cierto cálculo siempre nos es útil, pero en ciertas ocasiones no es suficiente, ya que necesitamos implementar más de una estructura para poder abarcar todos los elementos que necesitaremos. La mejor forma de entender los bucles anidados es mediante el siguiente ejemplo: Imagina que tienes archivos excel con información macroeconómica separados por ciudades, que a su vez se separan por estado de México en carpetas contenedoras. Si quisieramos leerlos uno por uno mediante un bucle, necesariamente necesitaríamos dos: un bucle para seleccionar carpetas y otro bucle para seleccionar archivos individuales y leerlos. En este caso podemos apoyarnos de la función <code>list.files()</code> que nos indica las carpetas/archivos disponibles en una ruta específica. Supongamos que tenemos toda la información dentro de un proyecto (lo que nos evita preocuparnos por una ruta más larga del directorio de trabajo), el primer paso será establecer el primer nivel para selección de carpetas, es decir:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>carpetas <span class="ot">&lt;-</span> <span class="fu">list.files</span>()</span>
@@ -663,8 +668,8 @@ Cuidado
 </div>
 </section>
 </section>
-<section id="cuando-el-final-es-incierto-while-y-repeat." class="level3" data-number="3.4.4">
-<h3 data-number="3.4.4" class="anchored" data-anchor-id="cuando-el-final-es-incierto-while-y-repeat."><span class="header-section-number">3.4.4</span> Cuando el final es incierto: <code>While</code> y <code>repeat</code>.</h3>
+<section id="cuando-el-final-es-incierto-while-y-repeat." class="level3" data-number="4.4.4">
+<h3 data-number="4.4.4" class="anchored" data-anchor-id="cuando-el-final-es-incierto-while-y-repeat."><span class="header-section-number">4.4.4</span> Cuando el final es incierto: <code>While</code> y <code>repeat</code>.</h3>
 <p>Estas estructuras son personalmente unas de mis favoritas, ya que podemos sacar muchísimo provecho de ellas cuando no sabemos exactamente cuantas veces debemos realizar una tarea. Te voy a contar una pequeña historia de uso de esta estructura, pero antes veamos como funciona. La idea es sencilla: Mientras se cumpla una condición, el bucle se va a ejecutar de manera indefinida, por ejemplo, si quisieramos imprimir un mensaje mientras el valor de un objeto sea menor a 4, podemos hacer lo siguiente:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Objeto a evaluar</span></span>
@@ -683,8 +688,8 @@ Cuidado
 </div>
 <p>Como puedes ver, cada vez que se ejecuta este código, al objeto <code>x</code> se le suma un número entero, por lo que la siguiente vez que se evalue ese objeto, este habrá incrementado. Es importante considerar que estos bucles pueden salirse de control fácilmente si no son estructurados correctamente, por ejemplo, en el caso anterior, si no se le sumara un número entero al objeto <code>x</code> este bucle se ejecutaría infinitamente.</p>
 <p>El uso de <code>repeat</code> se podría decir que considera una lógica contraria a <code>while</code>, ya que mientras este último se basa en la idea de “mientras se cumpla cierta condición se ejecutará el código”, <code>repeat</code> se va a ejecutar indefinidamente hasta encontrarse con una condición que detenga dicha iteración. Es importante considerar que, al igual que <code>while</code>, <code>repeat</code> debe usarse con cuidado de tener una condición que pueda pararlo en cierto momento, ya que de lo contrario se ejecutará indefinidamente y puede demandar una gran cantidad de recursos de tu ordenador.</p>
-<section id="usando-while-en-un-caso-real." class="level4" data-number="3.4.4.1">
-<h4 data-number="3.4.4.1" class="anchored" data-anchor-id="usando-while-en-un-caso-real."><span class="header-section-number">3.4.4.1</span> Usando <code>while</code> en un caso real.</h4>
+<section id="usando-while-en-un-caso-real." class="level4" data-number="4.4.4.1">
+<h4 data-number="4.4.4.1" class="anchored" data-anchor-id="usando-while-en-un-caso-real."><span class="header-section-number">4.4.4.1</span> Usando <code>while</code> en un caso real.</h4>
 <p>Se que puedes estar preguntándote el uso real de esta estructura y si realmente podrás sacarle provecho en el mundo laboral. No te culpo, yo también me pregunté eso cuando aprendí como funcionaba, ya que los libros y artículos al respecto solo proporcionan ejemplos muy básicos, así que dedicaré esta pequeña sección a mostrarte cómo utilicé un ciclo <code>while</code> (y como aún lo sigo utilizando) en mi trabajo para extraer información de una base de datos.</p>
 <p>Una de las labores mensuales más importantes que me tocó realizar fue el obtener datos de encuestas que se alojaban en una base de datos no relacional en firestore, un servicio de Google Cloud. Para obtener esta información es necesario estar registrado y ser invitado al proyecto por el equipo de TI de la empresa, pero el gestor de firestore tiene un problema considerable: Para que las aplicaciones que estén conectadas en tiempo real a esa base de datos puedan funcionar de manera óptima, hace particiones de la información en secciones de máximo 300 observaciones. Al yo conectarme a esa base de datos y utilizar código de R para poder exportar esos datos a un archivo de excel, me es imposible hacerlo todo en un solo movimiento, ya que la consulta te devuelve 2 objetos: Un <strong>token</strong> que te redireccionará a la siguiente consulta y las primeras 300 observaciones (si las hay, es decir, si existe esa cantidad de registros). En este punto es donde entra el ciclo <code>while</code> y un poco de lógica, ya que se me ocurrió la siguiente idea: No tengo idea de cuantas secciones de 300 observaciones existen, pero si cada consulta te regresa un token para acceder a la siguiente sección, entonces en algún momento ese token dejará de existir porque llegué al final de consultas. La aplicación de un ciclo <code>while</code> es fundamental para realizar esto de manera automática, así que vamos a desglozar la idea en partes:</p>
 <ol type="1">
@@ -706,8 +711,8 @@ Cuidado
 <p>Claramente esto solo es la estructura lógica que se siguió para la extracción de los datos, pero quiero que notes que, cada que se ejecuta la consulta, esta debe incluir el token utilizado en la consulta anterior, ya que esto me permitió acceder a la siguiente página de valores y, consecuentemente, al siguiente token. La consulta es una lista, por lo que si yo intento acceder a su token mediante el operador <code>$</code> y este no existe, me retornará el valor <code>NULL</code>, razón por la que se evalua que este objeto sea diferente a ese valor, porque aún existe.</p>
 </section>
 </section>
-<section id="añadiendo-next-y-break" class="level3" data-number="3.4.5">
-<h3 data-number="3.4.5" class="anchored" data-anchor-id="añadiendo-next-y-break"><span class="header-section-number">3.4.5</span> Añadiendo <code>next</code> y <code>break</code></h3>
+<section id="añadiendo-next-y-break" class="level3" data-number="4.4.5">
+<h3 data-number="4.4.5" class="anchored" data-anchor-id="añadiendo-next-y-break"><span class="header-section-number">4.4.5</span> Añadiendo <code>next</code> y <code>break</code></h3>
 <p>Estos operadores son por si solos inútiles, ya que funcionan en conjunto con bucles como <code>while</code> o <code>repeat</code> en situaciones en las que queremos detener una ejecución o ignorar ciertos casos en concreto. Comencemos por analizar <code>break</code>: Es utilizado cuando queremos detener la ejecución de la estructura <code>repeat</code> al encontrar una iteración que cumpla una condición, por ejemplo, supongamos que queremos calcular el cuadrado de un número de manera indefinida pero sin pasarnos del número 30 en el resultado, tal que:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>numero <span class="ot">&lt;-</span> <span class="dv">3</span></span>
@@ -747,8 +752,8 @@ Cuidado
 </div>
 <p>Como puedes ver, si el residuo del número dividido entre 2 es igual a 0, eso implica que el número es par, por lo que se ignora ese caso y se pasa a evaluar al siguiente número. El uso de <code>next</code> es en realidad algo muy sencillo, ya que simplemente implica incluir un condicional para ejecutar solo lo que nosotros queremos, limitando la demanda de recursos que podría utilizar el ejecutar un código sin esta condición.</p>
 </section>
-<section id="dinamizando-estructuras-dentro-de-funciones." class="level3" data-number="3.4.6">
-<h3 data-number="3.4.6" class="anchored" data-anchor-id="dinamizando-estructuras-dentro-de-funciones."><span class="header-section-number">3.4.6</span> Dinamizando estructuras dentro de funciones.</h3>
+<section id="dinamizando-estructuras-dentro-de-funciones." class="level3" data-number="4.4.6">
+<h3 data-number="4.4.6" class="anchored" data-anchor-id="dinamizando-estructuras-dentro-de-funciones."><span class="header-section-number">4.4.6</span> Dinamizando estructuras dentro de funciones.</h3>
 <p>Hasta ahora ya hemos analizado el uso de cada una de las estructuras de control y su uso más básico, por lo que ahora tocará simplificar nuestro código introduciendo dichas estructuras en una función que nos evite el escribir demasiadas órdenes. Regresemos a un caso anterior: Imprimir el cuadrado de un número mientras este sea menor a 100. Este proceso es bastante sencillo, pero puede convertirse en algo engorroso si quisieramos hacerlo para muchos números diferentes, ya que tendríamos que reemplazar el objeto original que contiene el número y ejecutar ese código de nuevo. Una forma de simplificar este proceso es, simplemente, introducir la estructura en una función, tal que:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>cuadrado <span class="ot">&lt;-</span> <span class="cf">function</span>(numero){</span>
@@ -788,8 +793,8 @@ Cuidado
 </div>
 </div>
 </section>
-<section id="funciones-dentro-de-ellas-mismas-recursividad." class="level3" data-number="3.4.7">
-<h3 data-number="3.4.7" class="anchored" data-anchor-id="funciones-dentro-de-ellas-mismas-recursividad."><span class="header-section-number">3.4.7</span> Funciones dentro de ellas mismas: <em>recursividad.</em></h3>
+<section id="funciones-dentro-de-ellas-mismas-recursividad." class="level3" data-number="4.4.7">
+<h3 data-number="4.4.7" class="anchored" data-anchor-id="funciones-dentro-de-ellas-mismas-recursividad."><span class="header-section-number">4.4.7</span> Funciones dentro de ellas mismas: <em>recursividad.</em></h3>
 <p>Cuando queremos simplificar el código de una función, el uso de la recursividad nos puede ser bastante útil, pero ¿a qué me refiero con esto? Una función recursiva es una manera diferente de resolver problemas de forma repetitiva en R, sin la necesidad directa de crear un ciclo, o bien, sin tener que generar directamente una iteración. Se llama a sí misma dentro de su propia definición y se utiliza cuando no se sabe cuántas veces se necesitará repetir una acción. La recursividad ayuda a crear funciones más avanzadas y flexibles que las funciones normales. Retomemos el ejemplo de la función para calcular un factorial de un número, mediante recursividad nuestra función puede simplificarse de la siguiente manera:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>factorial_recursivo <span class="ot">&lt;-</span> <span class="cf">function</span>(numero){</span>
@@ -829,8 +834,8 @@ Tip
 </div>
 </section>
 </section>
-<section id="funciones-anónimas" class="level2" data-number="3.5">
-<h2 data-number="3.5" class="anchored" data-anchor-id="funciones-anónimas"><span class="header-section-number">3.5</span> Funciones anónimas</h2>
+<section id="funciones-anónimas" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="funciones-anónimas"><span class="header-section-number">4.5</span> Funciones anónimas</h2>
 <p>Este concepto es sumamente útil cuando queremos evitar la creación de múltiples objetos (funciones), principalmente si estas solo van a realizar una parte del cálculo final. En R, una función anónima es una función que no tiene nombre asignado directamente (al no utilizar un operador <code>&lt;-</code>). En su lugar, se define utilizando la función <code>function()</code> dentro de otra expresión y se asigna a una variable o se utiliza directamente, lo que, dicho de otra manera, nos dice que una función anónima no es más que una función corta (temporal) a la cual no nombramos para simplificar secciones de código y ahorrarnos tiempo <span class="citation" data-cites="hofmann2017functional">(<a href="referencias.html#ref-hofmann2017functional" role="doc-biblioref">Hofmann, H"ormann, and Krivobokova 2017</a>)</span>. Imaginemos la siguiente situación: Qué pasaría si quisieramos hacer un cálculo rápido del cuadrado de un número sin tener que directamente crear el objeto de la expresión, podemos hacer lo siguiente:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a>(<span class="cf">function</span>(x)x<span class="sc">^</span><span class="dv">3</span>)(<span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -873,8 +878,8 @@ Tip
 </div>
 </div>
 <p>De esta forma pudimos crear una función que englobe ambos cálculos sin la necesidad de crear dos expresiones por separado, simplificando el trabajo que hay de por medio.</p>
-<section id="un-caso-de-uso" class="level3" data-number="3.5.1">
-<h3 data-number="3.5.1" class="anchored" data-anchor-id="un-caso-de-uso"><span class="header-section-number">3.5.1</span> Un caso de uso</h3>
+<section id="un-caso-de-uso" class="level3" data-number="4.5.1">
+<h3 data-number="4.5.1" class="anchored" data-anchor-id="un-caso-de-uso"><span class="header-section-number">4.5.1</span> Un caso de uso</h3>
 <p>Discutiremos la creación y customización de tablas en capítulos posteriores, por lo que ahora mismo no voy a profundizar demasiado en este tema, pero un caso muy conocido en el uso de las funciones anónimas está en la librería <code>reactable</code> <span class="citation" data-cites="reactable">(<a href="referencias.html#ref-reactable" role="doc-biblioref">Lin and Sievert 2021</a>)</span> dedicada a la renderización de tablas interactivas. Las funciones anónimas se pueden utilizar como un argumento en la creación de tablas para generar un color condicional en una columna dependiendo del valor. Veamos un ejemplo sencillo de ello:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb62"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cargamos la librería</span></span>
@@ -914,8 +919,8 @@ Tip
 </div>
 </section>
 </section>
-<section id="funciones-de-órden-superior-la-familia-apply" class="level2" data-number="3.6">
-<h2 data-number="3.6" class="anchored" data-anchor-id="funciones-de-órden-superior-la-familia-apply"><span class="header-section-number">3.6</span> Funciones de órden superior: La familia <code>apply</code></h2>
+<section id="funciones-de-órden-superior-la-familia-apply" class="level2" data-number="4.6">
+<h2 data-number="4.6" class="anchored" data-anchor-id="funciones-de-órden-superior-la-familia-apply"><span class="header-section-number">4.6</span> Funciones de órden superior: La familia <code>apply</code></h2>
 <p>Una de las expresiones más útiles en el proceso de programación en R es algo a lo que conocemos comunmente como <em>función de orden superior</em>, ¿A que se refiere este concepto? En términos generales, podemos decir que las funciones de este estilo se basan en tomar como argumento <strong>otra función</strong> y aplicarlo enteramente a una estructura de datos, como una matriz, data frame (convirtiéndolo a una matriz), array, etc. Este tipo de funciones son extremadamente útiles cuando queremos simplificar una tarea que involucre trabajar con más de un vector a la vez. Veamos un ejemplo sencillo: Vamos a usar el data frame <em>USArrests</em> y, con esa información, vamos a calcular el promedio de cada columna. Con lo que hemos aprendido hasta ahora, probablemente pienses que tendríamos que crear un objeto (o simplemente hacer un cálculo individual) para cada columna, al estilo siguiente:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb63"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(USArrests<span class="sc">$</span>Murder)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -996,11 +1001,11 @@ Tip
 </div>
 <p>De esta forma evitaremos el problema de transformación sin importar el número de columnas no numéricas y la posición de ellas.</p></li>
 </ol>
-<section id="las-variantes-de-apply" class="level3" data-number="3.6.1">
-<h3 data-number="3.6.1" class="anchored" data-anchor-id="las-variantes-de-apply"><span class="header-section-number">3.6.1</span> Las variantes de <code>apply()</code></h3>
+<section id="las-variantes-de-apply" class="level3" data-number="4.6.1">
+<h3 data-number="4.6.1" class="anchored" data-anchor-id="las-variantes-de-apply"><span class="header-section-number">4.6.1</span> Las variantes de <code>apply()</code></h3>
 <p>Esta última función que revisamos en el punto anterior es, posiblemente, la más conocida y popular de toda la familia de funciones superiores, sin embargo, existen muchas otras variantes diseñadas para diferentes situaciones y estructuras de datos, vamos e revisar cada una de ellas, así como su funcionamiento básico y ejemplos de ello en los puntos siguientes. El objetivo de esta sección será que puedas familiarizarte con cada una de estas variantes y, durante tu vida profesional, sepas escoger la que mejor se acomode a tus necesidades (las necesidades de modelado de tus datos).</p>
-<section id="lapply" class="level4" data-number="3.6.1.1">
-<h4 data-number="3.6.1.1" class="anchored" data-anchor-id="lapply"><span class="header-section-number">3.6.1.1</span> <code>lapply()</code></h4>
+<section id="lapply" class="level4" data-number="4.6.1.1">
+<h4 data-number="4.6.1.1" class="anchored" data-anchor-id="lapply"><span class="header-section-number">4.6.1.1</span> <code>lapply()</code></h4>
 <p>Mientras que <code>apply()</code> está enfocado a matrices o arrays y, por consiguiente, presupone que todas las columnas o filas tienen la misma estructura (ya sea numérica, de tipo caracter, etc), <code>lapply()</code> está enfocada y diseñada para las listas, razón por la que tiene una mayor versatilidad al momento de realizar algunos cálculos. Básicamente, lapply considera que la estructura de datos de entrada es una lista, por lo que hará la conversión basado en ello y, por lo tanto, trabajará cada elemento por separado, devolviendo como resultado una lista de igual manera. Supongamos que queremos calcular la media de cada columna del data frame <code>iris</code>, cosa que ya hicimos con <code>apply()</code>, en este caso el resultado que nos devolverá es el siguiente:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb80"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb80-1"><a href="#cb80-1" aria-hidden="true" tabindex="-1"></a>promedios <span class="ot">&lt;-</span> <span class="fu">lapply</span>(iris, mean)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1053,8 +1058,8 @@ $Species
 </div>
 <p>Es evidente que <code>apply()</code> tiene ciertas ventajas sobre <code>apply()</code> al momento de realizar cálculos, sin embargo, sus propias ventajas pueden no serlo en un caso más complejo de uso. Transformar los datos de entrada a una lista puede hacer que la tarea de extraerlos se vuelva más complicada, al ser un elemento separado el resultado de cada columna. Una desventaja notable en el uso de <code>lapply()</code> es la imposibilidad de realizar el cálculo a nivel <em>fila</em>, lo que la hace menos versatil en este aspecto.</p>
 </section>
-<section id="sapply" class="level4" data-number="3.6.1.2">
-<h4 data-number="3.6.1.2" class="anchored" data-anchor-id="sapply"><span class="header-section-number">3.6.1.2</span> <code>sapply()</code></h4>
+<section id="sapply" class="level4" data-number="4.6.1.2">
+<h4 data-number="4.6.1.2" class="anchored" data-anchor-id="sapply"><span class="header-section-number">4.6.1.2</span> <code>sapply()</code></h4>
 <p>Como te dije anteriormente, una desventaja notable de <code>lapply()</code> trabajando con vectores es el formato de salida en una lista, el cual puede ser algo complejo al momento de extraer información. La intención de <code>sapply()</code> es precisamente corregir la complejidad de <code>lapply()</code>, devolviendo los resultados obtenidos en un formato de vector mucho más simple. Regresemos al ejemplo anterior: Separación de cadenas ubicadas dentro de un vector. Al realizar este ejercicio mediante <code>sapply()</code> el resultado que nos devuelve es:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb88"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb88-1"><a href="#cb88-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sapply</span>(cadena, <span class="cf">function</span>(x) <span class="fu">strsplit</span>(x, <span class="st">"-"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1081,8 +1086,8 @@ returning NA</code></pre>
 <p>Nos devuelve el mismo formato que el realizado mediante <code>apply()</code>, pero sin la necesidad de una función anónima, lo que resuelve el problema original en el que teníamos que transformar toda la matriz a numérica y, además, resuelve el problema del formato de lista que teníamos en <code>lapply()</code>.</p>
 <p>A pesar de lo mencionado anteriormente, <code>sapply()</code> sigue teniendo la misma limitante de <code>lapply()</code>, al no poder trabajar directamente a nivel fila de la manera sencilla en la que lo hacíamos en <code>apply()</code>.</p>
 </section>
-<section id="tapply" class="level4" data-number="3.6.1.3">
-<h4 data-number="3.6.1.3" class="anchored" data-anchor-id="tapply"><span class="header-section-number">3.6.1.3</span> <code>tapply()</code></h4>
+<section id="tapply" class="level4" data-number="4.6.1.3">
+<h4 data-number="4.6.1.3" class="anchored" data-anchor-id="tapply"><span class="header-section-number">4.6.1.3</span> <code>tapply()</code></h4>
 <p>Esta es, a mi consideración, una de las más útiles variantes, ya que se basa en agrupaciones más generales para realizar un cálculo particular. La idea detrás de <code>tapply()</code> es muy sencilla: Vamos a realizar un cálculo alrededor de un vector dividiéndolo a partir de “características en común” que tengan sus elementos, esto basándonos en otro vector. Vamos a imaginar el siguiente escenario: Supongamos que tenemos una tabla de registros que lleva a cuenta las ventas de 3 sucursales diferentes, pero todos esos registros se encuentran alojados en la misma columna, únicamente identificados por otra columna que tiene el nombre de la tienda a la cual pertenece esa venta. Mediante el uso de <code>tapply()</code> podemos calcular rápidamente el valor de ingresos para cada tienda, tal que:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb93"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb93-1"><a href="#cb93-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Establecemos una semilla para que los números aleatorios no cambien</span></span>
@@ -1103,8 +1108,8 @@ returning NA</code></pre>
 </div>
 <p>Como puedes ver, lo que hice dentro de <code>tapply()</code> fue referenciar al vector al que se le va a hacer el cálculo de ventas totales, después hago referencia al vector en el que se va a basar la agrupación y, finalmente, la función a realizar, al igual que en el resto de variantes de <code>apply()</code> que hemos analizado.</p>
 </section>
-<section id="mapply" class="level4" data-number="3.6.1.4">
-<h4 data-number="3.6.1.4" class="anchored" data-anchor-id="mapply"><span class="header-section-number">3.6.1.4</span> <code>mapply()</code></h4>
+<section id="mapply" class="level4" data-number="4.6.1.4">
+<h4 data-number="4.6.1.4" class="anchored" data-anchor-id="mapply"><span class="header-section-number">4.6.1.4</span> <code>mapply()</code></h4>
 <p>Esta variante es más versatil en cuanto a los datos de entrada, ya que la cantidad de argumentos aquí es ilimitada. La idea tras <code>mapply()</code> no es más que realizar un cálculo a nivel vector, aplicado a cada uno de sus elementos, siendo que podemos escribir una cantidad infinita de vectores a los cuales aplicar el cálculo, razón por la que el argumento de la función a realizar en este caso será el primero que escribamos. Veamos un ejemplo, haciendo una suma simple de vectores, tal que:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb95"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb95-1"><a href="#cb95-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Establecemos una semilla para que los números aleatorios no cambien</span></span>
@@ -1152,8 +1157,8 @@ longer argument not a multiple of length of shorter</code></pre>
 </figure>
 </div>
 </section>
-<section id="vapply" class="level4" data-number="3.6.1.5">
-<h4 data-number="3.6.1.5" class="anchored" data-anchor-id="vapply"><span class="header-section-number">3.6.1.5</span> <code>vapply()</code></h4>
+<section id="vapply" class="level4" data-number="4.6.1.5">
+<h4 data-number="4.6.1.5" class="anchored" data-anchor-id="vapply"><span class="header-section-number">4.6.1.5</span> <code>vapply()</code></h4>
 <p>Al igual que <code>sapply()</code> esta variante nos retorna los valores de forma vectorizada, simplificando la información. Esta versión es específicamente útil ya que nos permite manejar manualmente el tipo de valor retornado que necesitemos, lo cuál puede evitarnos errores en el código. Retomemos un ejemplo sencillo de uso: La separación de cadenas de texto que vimos en <code>sapply()</code>. En el caso analizado anteriormente simplemente tuvimos que aplicar la función al vector de texto sin importar el tipo de dato que fuese, siendo que <code>sapply()</code> nos devolvió un resultado simplificado en el resultado, pero ¿qué pasaría si lo aplicamos con <code>vapply()</code>? Veamos el caso a continuación:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb102"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb102-1"><a href="#cb102-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vapply</span>(cadena, <span class="cf">function</span>(x) <span class="fu">strsplit</span>(x, <span class="st">"-"</span>), <span class="fu">list</span>(<span class="dv">1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1245,11 +1250,11 @@ $`luis-escobedo`
 </section>
 </section>
 </section>
-<section id="entendiendo-los-parámetros-de-una-función" class="level2" data-number="3.7">
-<h2 data-number="3.7" class="anchored" data-anchor-id="entendiendo-los-parámetros-de-una-función"><span class="header-section-number">3.7</span> Entendiendo los parámetros de una función</h2>
+<section id="entendiendo-los-parámetros-de-una-función" class="level2" data-number="4.7">
+<h2 data-number="4.7" class="anchored" data-anchor-id="entendiendo-los-parámetros-de-una-función"><span class="header-section-number">4.7</span> Entendiendo los parámetros de una función</h2>
 <p>En este punto quiero explicarte un poco sobre los tipos de parámetros (variables) que se pueden leer al escribir una función, sus tipos, sus diferencias y cómo aplicarlos de la manera más óptima posible. Recuerda que una función tiene la intención de simplificar la tarea general de un código (sobre todo cuando trabajamos con funciones personalizadas), por lo que es importante tener una estructura correcta, mismo caso para las variables de entrada, ya que estas son las que harán que nuestra función trabaje correctamente.</p>
-<section id="parámetros-con-valores-por-defecto." class="level3" data-number="3.7.1">
-<h3 data-number="3.7.1" class="anchored" data-anchor-id="parámetros-con-valores-por-defecto."><span class="header-section-number">3.7.1</span> Parámetros con valores por defecto.</h3>
+<section id="parámetros-con-valores-por-defecto." class="level3" data-number="4.7.1">
+<h3 data-number="4.7.1" class="anchored" data-anchor-id="parámetros-con-valores-por-defecto."><span class="header-section-number">4.7.1</span> Parámetros con valores por defecto.</h3>
 <p>Básicamente, al nosotros escribir una función simple e introducir los parámetros de ella, simplemente vamos a asignar un valor por defecto, el cuál se va a ejecutar en caso de que nosotros llamenos a la función sin especificar el valor de entrada, por ejemplo: Supongamos que tenemos una función simple para sumar dos vectores, es decir:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb107"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb107-1"><a href="#cb107-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Estableciendo la función</span></span>
@@ -1295,8 +1300,8 @@ $`luis-escobedo`
 </div>
 <p>¿Por qué fue importante el uso de parámetros por defecto en esta función? Lo que quiero que notes con este caso es que estamos trabajando con información específica. En este caso estamos suponiendo que constantemente la función trabajará con números redondeados y estos serán normálmente dólares, por lo que al usarla en un futuro sabremos de manera más concisa a que se refiere el valor devuelto y el uso que deberíamos darle a dichos argumentos, teniendo aún la libertad de poder cambiarlos a nuestro gusto.</p>
 </section>
-<section id="parámetros-de-longitud-variable-el-uso-de" class="level3" data-number="3.7.2">
-<h3 data-number="3.7.2" class="anchored" data-anchor-id="parámetros-de-longitud-variable-el-uso-de"><span class="header-section-number">3.7.2</span> Parámetros de longitud variable: El uso de “…”</h3>
+<section id="parámetros-de-longitud-variable-el-uso-de" class="level3" data-number="4.7.2">
+<h3 data-number="4.7.2" class="anchored" data-anchor-id="parámetros-de-longitud-variable-el-uso-de"><span class="header-section-number">4.7.2</span> Parámetros de longitud variable: El uso de “…”</h3>
 <p>Este tipo de parámetros son sumamente interesantes y útiles, ya que se refieren a la capacidad de una función para aceptar una cantidad no especificada de parámetros a evaluar, devolviéndonos un resultado a partir de ello. Lo normal al evaluar una función es tener ciertos parámetros ya establecidos, los cuales iremos cambiando para obtener diferentes resultados, pero en este tipo de casos podemos obtener un resultado a partir de múltiples argumentos que no estén establecidos de manera explícita, por ejemplo: Supongamos que queremos crear una función que clasifique diferentes tipos de elementos dependiendo de su clase (numéricos, boleanos, carácteres, etc), utilizando parámetros explícitos la tarea de introducir distintos elementos y catalogarlos se complicaría considerablemente. Haciendo uso de parámetros de longitud variable podemos facilitar el planteamiento de la función, tal que:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb115"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb115-1"><a href="#cb115-1" aria-hidden="true" tabindex="-1"></a>clasificador <span class="ot">&lt;-</span> <span class="cf">function</span>(...){</span>
@@ -1330,8 +1335,8 @@ $no_num[[2]]
 </div>
 <p>Como puedes ver, en este tipo de funciones la introducción de un argumento es mucho más flexible. De hecho, la mayoría de las funciones básicas en R son de este tipo, ya que nos permiten formular lógicas más complejas y específicas.</p>
 </section>
-<section id="parámetros-de-tipo-de-dato-variable" class="level3" data-number="3.7.3">
-<h3 data-number="3.7.3" class="anchored" data-anchor-id="parámetros-de-tipo-de-dato-variable"><span class="header-section-number">3.7.3</span> Parámetros de tipo de dato variable</h3>
+<section id="parámetros-de-tipo-de-dato-variable" class="level3" data-number="4.7.3">
+<h3 data-number="4.7.3" class="anchored" data-anchor-id="parámetros-de-tipo-de-dato-variable"><span class="header-section-number">4.7.3</span> Parámetros de tipo de dato variable</h3>
 <p>La idea tras este tipo de parámetros es básicamente que una función tenga la flexibilidad de aceptar, dentro de un mismo rango, diferentes tipos de datos, ya sean estos numéricos, carácteres, etc. Típicamente, este tipo de funciones suelen ser de longitud variable en cuanto a sus variables, ya que al ser más flexibles en cuanto a la entrada de esos datos, suelen requerir ese nivel de flexibilidad en la cantidad de parámetros a introducir. Pensemos en el ejemplo del punto anterior, donde la función <code>clasificador()</code> funciona también como una función con parámetros de tipo de dato variable, al nosotros poder introducir de manera indefinida valores de diferentes clases sin un órden específico. A pesar de ser algo común en este tipo de funciones, la longitud variable no es una regla, por ejemplo, supongamos una función que, dependiendo del tipo de vector introducido, sume los valores o los concatene:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb118"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb118-1"><a href="#cb118-1" aria-hidden="true" tabindex="-1"></a>sumar_o_conc <span class="ot">&lt;-</span> <span class="cf">function</span>(vector){</span>
@@ -1355,8 +1360,8 @@ $no_num[[2]]
 </div>
 <p>Como puedes notar, la intención de este tipo de funciones es poder simplificar el trabajo de tal manera que, sin importar el tipo de dato de entrada, nosotros obtengamos un resultado y no un mensaje de error.</p>
 </section>
-<section id="argumentos-de-evaluación-diferida-evaluación-perezosa" class="level3" data-number="3.7.4">
-<h3 data-number="3.7.4" class="anchored" data-anchor-id="argumentos-de-evaluación-diferida-evaluación-perezosa"><span class="header-section-number">3.7.4</span> Argumentos de evaluación diferida (evaluación perezosa)</h3>
+<section id="argumentos-de-evaluación-diferida-evaluación-perezosa" class="level3" data-number="4.7.4">
+<h3 data-number="4.7.4" class="anchored" data-anchor-id="argumentos-de-evaluación-diferida-evaluación-perezosa"><span class="header-section-number">4.7.4</span> Argumentos de evaluación diferida (evaluación perezosa)</h3>
 <p>Es posible que no hayas escuchado hablar de este tipo de argumentos, al ser los menos conocidos dentro del tema de creación de funciones, pero sin duda van a tomar relevancia cuando desarrolles funciones cada vez más complejas y proyectos que necesiten ser escalables.</p>
 <p>Estos argumentos tienen un objetivo: Ser evaluados únicamente hasta que sea absolutamente necesario. Cuando trabajamos con funciones que realizan cientos (o más) de cálculos complejos, es normal que comiencen a volverse lentas y poco prácticas de ejecutar, por lo que una alternativa para acelerar el proceso y crear funciones escalables es convertir a sus argumentos en sus homólogos de evaluación peresoza, siendo que ahora solo se van a ejecutar hasta que la función sea llamada explícitamente como un objeto, por ejemplo: Supongamos una función simple para realizar una suma, si quisieramos retrasar la salida de ella hasta que sea llamada como un objeto lo podemos hacer de la siguiente manera:</p>
 <div class="cell">
@@ -1384,11 +1389,11 @@ $no_num[[2]]
 <p>Nótese que llamamos al objeto creado como una función secundaria, la cual ya evalúa el resultado. Esta funcionalidad es sumamente útil cuando queremos evitar que una función más compleja pierda tiempos intermedios en cálculos inecesarios hasta que directamente los llamemos. Puede que en este punto no parezca que haya un aumento notable de la eficiencia de una función, pero esto va a tomar mucho peso cuando trabajemos con dashboards complejos y archivos que llamen a múltiples funciones a la vez.</p>
 </section>
 </section>
-<section id="análisis-de-errores-y-alternativas" class="level2" data-number="3.8">
-<h2 data-number="3.8" class="anchored" data-anchor-id="análisis-de-errores-y-alternativas"><span class="header-section-number">3.8</span> Análisis de errores y alternativas</h2>
+<section id="análisis-de-errores-y-alternativas" class="level2" data-number="4.8">
+<h2 data-number="4.8" class="anchored" data-anchor-id="análisis-de-errores-y-alternativas"><span class="header-section-number">4.8</span> Análisis de errores y alternativas</h2>
 <p>En cualquier lenguaje de programación, es inevitable cometer errores al escribir código. En R, cuando se trabaja con funciones, es importante saber cómo identificar y solucionar los errores que puedan surgir. En esta sección, abordaremos los tipos comunes de errores que pueden ocurrir al definir o llamar a una función, y las alternativas que se pueden emplear para solucionarlos. Comprender cómo manejar los errores de función es fundamental para crear código robusto y confiable en R.</p>
-<section id="tipos-comunes-de-errores-una-mala-sintaxis" class="level3" data-number="3.8.1">
-<h3 data-number="3.8.1" class="anchored" data-anchor-id="tipos-comunes-de-errores-una-mala-sintaxis"><span class="header-section-number">3.8.1</span> Tipos comunes de errores: Una mala sintaxis</h3>
+<section id="tipos-comunes-de-errores-una-mala-sintaxis" class="level3" data-number="4.8.1">
+<h3 data-number="4.8.1" class="anchored" data-anchor-id="tipos-comunes-de-errores-una-mala-sintaxis"><span class="header-section-number">4.8.1</span> Tipos comunes de errores: Una mala sintaxis</h3>
 <p>En la mayoría de los casos los errores a los que nos vamos a enfrentar serán meramente de sintaxis, por lo que es importante dar un breve repaso de dos características principales del lenguaje R, haciendo énfasis en las secciones más propensas a estos casos:</p>
 <ol type="1">
 <li><p>Lenguaje “case-sensitive”<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>: a diferencia de lenguajes más simples como SQL, donde no importa si escribimos <code>sum()</code> en lugar de <code>SUM()</code>, R es un lenguaje que reconoce mayúsculas y minúsculas. Imaginemos que creamos un objeto cualquiera, por ejemplo:</p>
@@ -1427,8 +1432,8 @@ $no_num[[2]]
 <p>Independientemente de que esta función no tenga ningún argumento explícito, es necesario agregar esta sección de código ya que es la forma en la que el lenguaje interpretará que se trata de una función a crear y no un objeto estático.</p></li>
 </ol>
 </section>
-<section id="el-uso-de-trycatch" class="level3" data-number="3.8.2">
-<h3 data-number="3.8.2" class="anchored" data-anchor-id="el-uso-de-trycatch"><span class="header-section-number">3.8.2</span> El uso de <code>tryCatch()</code></h3>
+<section id="el-uso-de-trycatch" class="level3" data-number="4.8.2">
+<h3 data-number="4.8.2" class="anchored" data-anchor-id="el-uso-de-trycatch"><span class="header-section-number">4.8.2</span> El uso de <code>tryCatch()</code></h3>
 <p>Cuando trabajamos con un proceso, ya sea una función o una estructura de control, siempre existe la posibilidad de que la evaluación falle en cierto punto, ya sea por un dato erroneo, una mala sintaxis, un error de conexión, etc. El uso de <code>tryCatch()</code> se puede definir de la siguiente manera: En lugar de ejecutar una función, vamos a <strong>intentar</strong> ejecutar una función, siendo que en caso de que algo falle vamos a establecer una alternativa. Pensemos en un caso sencillo de suma de vectores: Sabemos que si utilizamos un vector no numérico la función nos retornará un error, por lo que si añadimos <code>tryCatch()</code> en la estructura podemos establecer una alternativa en caso de que esto ocurra, con el objetivo de evitar que la evaluación se detenga, por ejemplo:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb135"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb135-1"><a href="#cb135-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Función usando `tryCatch()`</span></span>
@@ -1470,8 +1475,8 @@ $no_num[[2]]
 </div>
 <p>En este caso, a pesar de contener argumentos erroneos la suma se llevó hasta el final haciendo uso de <code>tryCatch()</code>.</p>
 </section>
-<section id="mensajes-de-error-alertas-y-notas" class="level3" data-number="3.8.3">
-<h3 data-number="3.8.3" class="anchored" data-anchor-id="mensajes-de-error-alertas-y-notas"><span class="header-section-number">3.8.3</span> Mensajes de error, alertas y notas</h3>
+<section id="mensajes-de-error-alertas-y-notas" class="level3" data-number="4.8.3">
+<h3 data-number="4.8.3" class="anchored" data-anchor-id="mensajes-de-error-alertas-y-notas"><span class="header-section-number">4.8.3</span> Mensajes de error, alertas y notas</h3>
 <p>A pesar de que podemos evitar que una función se detenga por un error hasta cierta medida, esto no siempre es posible y, de hecho, no es recomendable en todos los casos, ya que una entrada de datos que no sea la que la función requiere de manera específica puede generar resultados erroneos, si se ejecuta mediante una alternativa con <code>tryCatch()</code>, razón por la que debemos saber abordar esta situación correctamente.</p>
 <p>Pensemos en una situación sencilla en la que queremos calcular la media de un vector de longitud variable de manera manual a partir de una función, claramente esto solo aplica para vectores numéricos, por lo que podríamos convertirlo a esta clase utilizando <code>as.numeric()</code>, tal que:</p>
 <div class="cell">
@@ -1523,8 +1528,8 @@ $no_num[[2]]
 </div>
 </div>
 <p>Recuerda que las funciones generalmente son escritas para funciones con diferentes conjuntos de datos, por lo que debemos estar concientes de las diferentes situaciones a las que se van a exponer y, a partir de ello, establecer una alerta o utilizar <code>stop()</code> para detener la ejecución y evitar retornar valores incorrectos.</p>
-<section id="un-caso-de-uso." class="level4" data-number="3.8.3.1">
-<h4 data-number="3.8.3.1" class="anchored" data-anchor-id="un-caso-de-uso."><span class="header-section-number">3.8.3.1</span> Un caso de uso.</h4>
+<section id="un-caso-de-uso." class="level4" data-number="4.8.3.1">
+<h4 data-number="4.8.3.1" class="anchored" data-anchor-id="un-caso-de-uso."><span class="header-section-number">4.8.3.1</span> Un caso de uso.</h4>
 <p>Vamos a discutir una situación a la que, como analista de datos, te vas a enfrentar tarde o temprano: Identificación de <strong>outliers</strong>.</p>
 <p>Cuando trabajamos con estadística descriptiva, probabilidad e incluso temas más complejos como pronósticos de series de tiempo, el resultado final puede ser afectado enormemente por <strong>outliers</strong>, también conocidos como <em>valores atípicos</em>. Eliminar o no estos valores al momento de hacer pronósticos o generar estadísticos dependerá de cada caso particular, sin embargo, detectar estos valores es algo fundamental en el proceso de trabajo de un proyecto de análisis de datos. Una forma sencilla de detectar valores atípicos es mediante la función <code>boxplot()</code>, la cual nos retornará un gráfico de caja que tiene como uno de sus componentes a los valores atípicos seccionados. Más adelante analizaremos con detalle gráficos estadísticos, por lo que ahora solo nos vamos a centrar en la detección de outliers con el uso de esta función.</p>
 <p>Pensemos en la siguiente situación: Tenemos un data frame del cual queremos obtener estadística descriptiva, pero queremos identificar cuando tenemos una gran cantidad de valores atípicos, lo que nos permita tomar acciones preventivas al respecto, para esta situación podríamos definir una función que calcule la cantidad de valores atípicos en relación al número de observaciones, por ejemplo:</p>
@@ -1572,8 +1577,8 @@ $no_num[[2]]
 </section>
 </section>
 </section>
-<section id="concatenando-funciones-y" class="level2" data-number="3.9">
-<h2 data-number="3.9" class="anchored" data-anchor-id="concatenando-funciones-y"><span class="header-section-number">3.9</span> Concatenando funciones: <code>|&gt;</code> y <code>%&gt;%</code></h2>
+<section id="concatenando-funciones-y" class="level2" data-number="4.9">
+<h2 data-number="4.9" class="anchored" data-anchor-id="concatenando-funciones-y"><span class="header-section-number">4.9</span> Concatenando funciones: <code>|&gt;</code> y <code>%&gt;%</code></h2>
 <p>Un aspecto algo tedioso de la programación orientada a objetos es que, cuando estamos trabajando un script cualquiera, debemos ir guardando los objetos que vamos creando a partir de una secuencia de funciones para llegar a la transformación final de nuestros datos. Una forma de limitar la creación de objetos que se guarden en memoria es mediante un operador <em>pipe</em>, el cual funciona como concatenador de funciones. La idea tras este operador es sencilla: En lugar de crear un objeto en el cual se aplica una función para transformarlo, guardarlo y después volver a aplicarle otra transformación, simplemente se va a llamar a ese objeto una sola vez y se le aplicarán todas las transformaciones necesarias al mismo tiempo, una tras otra, encadenando las funciones.</p>
 <p>Los dos principales concatenadores de funciones son <code>|&gt;</code> y <code>%&gt;%</code>. La versión original <code>%&gt;%</code> fue introducida en la librería <code>magrittr</code> siendo que, a partir de la versión 4.1.0 de RStudio se incluyó de forma nativa en el IDE mediante el símbolo <code>|&gt;</code>.</p>
 <p>Pensemos en un caso práctico: El data frame de muestra <code>USArrests</code> nos da los números de casos de arrestos por cada 100,000 habitantes en EEUU para 1973, ¿cómo podríamos simplificar nuestro código para obtener un <em>top 5</em> de estados con mayor nivel de arrestos por asaltos? Aquí hay varios puntos a tomar en cuenta: Los estados no son una columna aparte, si no el índice del data frame, por lo que podemos ayudarnos de la función <code>rownames_to_column()</code> de la librería <code>tibble</code> para extraer estos datos. Una vez obtenida esa información, el siguiente paso lógico será reordenar la columna de arrestos por asalto (Assault) mediante las funciones <code>arrange()</code> y <code>desc()</code> de la librería <code>dplyr</code> para que, tras esto, podamos seleccionar únicamente las cinco primeras observaciones con el mayor valor. Con lo que has aprendido hasta ahora, la estructura lógica de tu código debería tener tres objetos creados para cada paso mencionado anteriormente, cosa que ahora vamos a simplificar encadenando las funciones de la siguiente manera:</p>
@@ -1611,8 +1616,8 @@ Attaching package: 'dplyr'</code></pre>
 </div>
 <p>Como puedes ver, utilizando el operador <code>|&gt;</code> simplemente debemos llamar al data frame una sola vez, para después realizar de manera inmediata los cálculos necesarios. Opté por cargar únicamente la librería <code>dplyr</code> ya que utilizo dos funciones de ella: <code>arrange()</code> para reordenar los datos y <code>desc()</code> para que este órden sea de manera descendente, mientras que para el caso de <code>rownames_to_column()</code> simplemente hice referencia a la función evitando llamar a la librería en cuestión, al ser solo una función la que se necesitaría.</p>
 <p>Es importante mencionar que no todas las funciones son compatibles con un concatenador, principalmente aquellas provenientes de R nativo. Las funciones que más se prestan para funcionar con concatenadores generalmente van a provenir de librerías introducidas en <code>Tidyverse</code>, un compendio de paquetes destinados a análisis y ciencia de datos.</p>
-<section id="cuándo-no-usar-un-concatenador" class="level3" data-number="3.9.1">
-<h3 data-number="3.9.1" class="anchored" data-anchor-id="cuándo-no-usar-un-concatenador"><span class="header-section-number">3.9.1</span> ¿Cuándo no usar un concatenador?</h3>
+<section id="cuándo-no-usar-un-concatenador" class="level3" data-number="4.9.1">
+<h3 data-number="4.9.1" class="anchored" data-anchor-id="cuándo-no-usar-un-concatenador"><span class="header-section-number">4.9.1</span> ¿Cuándo no usar un concatenador?</h3>
 <p>Limitar la creación de objetos en general es una buena práctica, ya que no se van a guardar en memoria y tendremos un código más sencillo de leer, sin embargo, esto también implica que el código dentro de este encadenamiento se va a ejecutar una y otra vez, cosa que en ciertas ocasiones vamos a querer evitar. Usualmente nos encontraremos con situaciones en las que tendremos una variable global a la cual vamos a realizarle ciertos cálculos, sin embargo, uno de ellos será un cálculo que, independientemente de la cantidad de veces que ejecutemos nuestro código, siempre será el mismo, por lo que ejecutar esa línea hará que toda la estructura sea más lenta de lo que podría ser si simplemente creáramos un objeto que ya realizó esa operación previamente. Veamos un ejemplo sencillo: Utilizando el mismo data frame <code>USArrests</code> vamos a calcular el promedio de arrestos para cada tipo de crimen, pero únicamente considerando los estados de California, Florida y Arizona. En primera instancia nosotros podríamos filtrar nuestros datos utilizando la funciones <code>filter()</code> y resumir la información en medias con <code>summarise()</code>, ambas funciones del paquete <code>dplyr</code> de la siguiente manera:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb158"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb158-1"><a href="#cb158-1" aria-hidden="true" tabindex="-1"></a>USArrests <span class="sc">|&gt;</span> </span>
@@ -1798,13 +1803,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./conocimientos_previos.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Conocimientos previos</span></span>
+      <a href="./basics.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Primeros pasos en R</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./limpieza.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Extracción, entendimiento y exportación de nuestros datos</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Extracción, entendimiento y exportación de nuestros datos</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

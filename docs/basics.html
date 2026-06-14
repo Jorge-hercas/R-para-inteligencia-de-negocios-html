@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.335">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>R para inteligencia de negocios - 3&nbsp; Primeros pasos en R</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./funcs.html" rel="next">
+<link href="./conocimientos_previos.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Primeros pasos en R</span></h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">R para inteligencia de negocios</a> 
+    </div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Prefacio</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introducción</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./conocimientos_previos.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Conocimientos previos</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./basics.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Primeros pasos en R</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./funcs.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Creando mis propias funciones</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./limpieza.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Extracción, entendimiento y exportación de nuestros datos</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./limpieza2.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Limpieza y manejo de datos: Principales problemas y soluciones</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./analisis_exploratorio.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Análisis exploratorio de datos</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./forecasts.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Pronósticos y estimaciones</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./dashboards.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Presentando mis datos: Dashboards (Shiny) y apps web</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./apendice.html" class="sidebar-item-text sidebar-link">Apéndice: Simbología y temas complementarios</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./referencias.html" class="sidebar-item-text sidebar-link">Referencias</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./agradecimientos.html" class="sidebar-item-text sidebar-link">Agradecimientos</a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#descarga-e-instalación" id="toc-descarga-e-instalación" class="nav-link active" data-scroll-target="#descarga-e-instalación"><span class="toc-section-number">3.1</span>  Descarga e instalación</a>
+  <ul class="collapse">
+  <li><a href="#r" id="toc-r" class="nav-link" data-scroll-target="#r"><span class="toc-section-number">3.1.1</span>  R</a></li>
+  <li><a href="#rstudio" id="toc-rstudio" class="nav-link" data-scroll-target="#rstudio"><span class="toc-section-number">3.1.2</span>  RStudio</a></li>
+  <li><a href="#otros-ides-para-r" id="toc-otros-ides-para-r" class="nav-link" data-scroll-target="#otros-ides-para-r"><span class="toc-section-number">3.1.3</span>  Otros IDE’s para R</a></li>
+  </ul></li>
+  <li><a href="#entendiendo-el-lenguaje-r" id="toc-entendiendo-el-lenguaje-r" class="nav-link" data-scroll-target="#entendiendo-el-lenguaje-r"><span class="toc-section-number">3.2</span>  Entendiendo el lenguaje R</a>
+  <ul class="collapse">
+  <li><a href="#sintaxis-general" id="toc-sintaxis-general" class="nav-link" data-scroll-target="#sintaxis-general"><span class="toc-section-number">3.2.1</span>  Sintaxis general</a></li>
+  <li><a href="#algunos-atajos-de-teclado" id="toc-algunos-atajos-de-teclado" class="nav-link" data-scroll-target="#algunos-atajos-de-teclado"><span class="toc-section-number">3.2.2</span>  Algunos atajos de teclado</a></li>
+  <li><a href="#opciones-globales" id="toc-opciones-globales" class="nav-link" data-scroll-target="#opciones-globales"><span class="toc-section-number">3.2.3</span>  Opciones globales</a></li>
+  </ul></li>
+  <li><a href="#vectores-matrices-y-arreglos" id="toc-vectores-matrices-y-arreglos" class="nav-link" data-scroll-target="#vectores-matrices-y-arreglos"><span class="toc-section-number">3.3</span>  Vectores, matrices y arreglos</a>
+  <ul class="collapse">
+  <li><a href="#vectores" id="toc-vectores" class="nav-link" data-scroll-target="#vectores"><span class="toc-section-number">3.3.1</span>  Vectores</a></li>
+  <li><a href="#matrices" id="toc-matrices" class="nav-link" data-scroll-target="#matrices"><span class="toc-section-number">3.3.2</span>  Matrices</a></li>
+  <li><a href="#arreglos-arrays" id="toc-arreglos-arrays" class="nav-link" data-scroll-target="#arreglos-arrays"><span class="toc-section-number">3.3.3</span>  Arreglos (arrays)</a></li>
+  </ul></li>
+  <li><a href="#data-frames" id="toc-data-frames" class="nav-link" data-scroll-target="#data-frames"><span class="toc-section-number">3.4</span>  Data frames</a>
+  <ul class="collapse">
+  <li><a href="#uso-de-corchetes-con-un-data-frame-indexación." id="toc-uso-de-corchetes-con-un-data-frame-indexación." class="nav-link" data-scroll-target="#uso-de-corchetes-con-un-data-frame-indexación."><span class="toc-section-number">3.4.1</span>  Uso de corchetes con un data frame: Indexación.</a></li>
+  <li><a href="#reasignación-de-columnas" id="toc-reasignación-de-columnas" class="nav-link" data-scroll-target="#reasignación-de-columnas"><span class="toc-section-number">3.4.2</span>  Reasignación de columnas</a></li>
+  <li><a href="#filtrado-de-datos-mediante-indexación" id="toc-filtrado-de-datos-mediante-indexación" class="nav-link" data-scroll-target="#filtrado-de-datos-mediante-indexación"><span class="toc-section-number">3.4.3</span>  Filtrado de datos mediante indexación</a></li>
+  <li><a href="#indexación-múltiple" id="toc-indexación-múltiple" class="nav-link" data-scroll-target="#indexación-múltiple"><span class="toc-section-number">3.4.4</span>  Indexación múltiple</a></li>
+  </ul></li>
+  <li><a href="#listas" id="toc-listas" class="nav-link" data-scroll-target="#listas"><span class="toc-section-number">3.5</span>  Listas</a>
+  <ul class="collapse">
+  <li><a href="#indexación-en-una-lista" id="toc-indexación-en-una-lista" class="nav-link" data-scroll-target="#indexación-en-una-lista"><span class="toc-section-number">3.5.1</span>  Indexación en una lista</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Primeros pasos en R</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<p>Este capítulo estará destinado a darte una guía introductoría en el lenguaje de programación, comenzando por la sintaxis general del mismo, los comandos básicos que más comúnmente vas a utilizar y, por supuesto, algunos atajos de teclado que te harán más veloz al programar una vez que los domines.</p>
+<p>Este capítulo es crucial para entender el resto del libro (al menos la parte práctica), por lo que te recomiendo leerlo las veces que sean necesarias hasta comprenderlo (no memorizarlo) y realizar los ejercicios que pondré al final del capítulo como una forma de retroalimentación.</p>
+<section id="descarga-e-instalación" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="descarga-e-instalación"><span class="header-section-number">3.1</span> Descarga e instalación</h2>
+<section id="r" class="level3" data-number="3.1.1">
+<h3 data-number="3.1.1" class="anchored" data-anchor-id="r"><span class="header-section-number">3.1.1</span> R</h3>
+<p>Antes de comenzar, debemos tener instalado en nuestro equipo el lenguaje R, así como el IDE<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> RStudio, el cual nos brindará muchas ayudas, autocompletado en el código y un entorno mucho más amigable para trabajar. Claro que puedes tener utilizar otro IDE, como Visual Studio Code o aquel que más te agrade, pero yo te recomiendo comenzar utilizando RStudio, ya que es el más sencillo de instalar y configurar.</p>
+<p>Empezaremos descargando R de su <a href="https://www.r-project.org">sitio oficial</a>, para ello tendremos que dirigirnos al hyperlink de <a href="https://cran.r-project.org/mirrors.html"><em>Download R</em></a> y escoger el país del cuál provengamos. En este caso escogeré el link de México, el cuál es el siguiente:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://cran.itam.mx"><img src="images/link download.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<p>Una vez aquí, podremos descargar la versión más nueva de R para nuestro sistema operativo.</p>
+</section>
+<section id="rstudio" class="level3" data-number="3.1.2">
+<h3 data-number="3.1.2" class="anchored" data-anchor-id="rstudio"><span class="header-section-number">3.1.2</span> RStudio</h3>
+<p>Instalar RStudio es igual de sencillo que el paso anterior. Básicamente solo debemos entrar al <a href="https://posit.co">sitio web oficial de RStudio</a> (ahora llamado POSIT) y dar click en <a href="https://posit.co/downloads/"><em>Download RStudio</em></a><em>,</em> lo que nos llevará a otra ventana que nos dará la opción de descargar la versión de escritorio de RStudio, o bien, utilizar la versión en línea (RStudio Cloud). En este caso seleccionaremos la versión de escritorio, la cual nos abrirá <a href="https://posit.co/download/rstudio-desktop/">otra ventana</a> con los pasos a seguir para usar RStudio y, posterior a esto, nos proporcionará un link directo para nuestro sistema operativo, aunque tenemos la opción de escoger otra versión de RStudio, pero te recomiendo que descargues la versión que te asigna por default.</p>
+<p>Una vez instalado, el IDE reconocerá automáticamente si nosotros ya tenemos instalado el lenguaje R en nuestro ordenador, en caso contrario nos saltará un mensaje de alerta diciendonos que no se encontró R en nuestro equipo <span class="citation" data-cites="R-base">(<a href="referencias.html#ref-R-base" role="doc-biblioref">R Core Team 2022</a>)</span>.</p>
+</section>
+<section id="otros-ides-para-r" class="level3" data-number="3.1.3">
+<h3 data-number="3.1.3" class="anchored" data-anchor-id="otros-ides-para-r"><span class="header-section-number">3.1.3</span> Otros IDE’s para R</h3>
+<p>Como mencioné anteriormente, este libro va a estar enfocado en RStudio, ya que es el IDE más sencillo de instalar y configurar, sin embargo, tenemos a nuestra disposición muchos otros IDE’s que cuentan con una gran cantidad de complementos, por lo que a continuación te enlistaré los que más recomiendo (sobre todo por su fácil integración con otros lenguajes de programación):</p>
+<ul>
+<li><p><a href="https://code.visualstudio.com">Visual Studio Code</a>: El entorno de desarrollo más popular y dinámico.</p></li>
+<li><p><a href="https://www.anaconda.com/products/distribution">Anaconda</a>: Un software que combina diferentes entornos de desarrollo enfocados principalmente en Python, el cual también soporta lenguaje R.</p></li>
+<li><p><a href="https://www.jetbrains.com/pycharm/download/">PyCharm</a>: Otro IDE enfocado principalmente a Python, pero compatible con código de R y, además, es muy agradable visualmente, por lo que nos será muy útil para compilar códigos muy largos.</p></li>
+</ul>
+</section>
+</section>
+<section id="entendiendo-el-lenguaje-r" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="entendiendo-el-lenguaje-r"><span class="header-section-number">3.2</span> Entendiendo el lenguaje R</h2>
+<p>Ahora si, a partir de aquí formalmente comenzaré a explicar el lenguaje de programación, como se compone, su sintaxis básica, etc. Comencemos haciéndonos la siguiente pregunta: ¿Qué tipo de lenguaje es R? A nivel general lo podemos definir como un <strong>lenguaje orientado a objetos</strong>, ¿qué es lo que esto implica? Un lenguaje de este tipo es aquel que nos permite reutilizar código declarando variables, ya que se basa en la utilización de, valga la redundancia, datos y variables <span class="citation" data-cites="barnes2007programacion">(<a href="referencias.html#ref-barnes2007programacion" role="doc-biblioref">Barnes, Kölling, and Brenta 2007</a>)</span>. Un objeto dentro de este tipos de lenguajes debe cumplir con ciertas características:</p>
+<ul>
+<li><p><strong>Polimorfismo</strong>: El objeto creado puede cambiar de forma, dependiendo de lo que se necesite para el programa/código compilado.</p></li>
+<li><p><strong>Abstracción</strong>: Los objetos creados solo mostrarán sus atributos más relevantes para su uso, ocultando información innecesaria de ellos, lo que permite crear códigos más limpios.</p></li>
+<li><p><strong>Herencia</strong>: Asignación de relaciones y subclases en los objetos creados, lo que permite mantener la jerarquía del código/objeto en todo momento.</p></li>
+<li><p><strong>Encapsulación</strong>: Los atributos y estados de los objetos creados siempre se encontrarán con una delimitación fija dentro del código, lo que evita que otros objetos realicen cambios no deseados.</p></li>
+</ul>
+<p>Además de las características anteriores, es importante mencionar que una variable siempre se va a identificar con un nombre único, por lo que es muy importante no repetir nombres al momento de crear objetos, ya que de ser el caso éstos se van a reemplazar por el último objeto con el mismo nombre <span class="citation" data-cites="barnes2007programacion">(<a href="referencias.html#ref-barnes2007programacion" role="doc-biblioref">Barnes, Kölling, and Brenta 2007</a>)</span>.</p>
+<p>La información anterior puede parecer un poco complicada de entender, por lo que vayamos con el siguiente ejemplo: Imaginemos que quisieramos crear un objeto en R, el cual tenga un valor igual a 5. Para crear objetos en r debemos hacer uso del siguiente operador: <code>&lt;-</code>, el cuál nos permite asignarle el valor a una variable. Creando el objeto del ejemplo, tendremos que hacer lo siguiente:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>objeto <span class="ot">&lt;-</span> <span class="dv">5</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Por lo tanto, si nosotros en algún otro momento decidimos escribir en la consola el nombre de la variable <code>objeto</code> se nos devolverá el valor actual de ese objeto, el que en este caso es 5. Visualmente:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>objeto</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 5</code></pre>
+</div>
+</div>
+<p>Volviendo a lo que mencioné anteriormente sobre mantener un nombre único a los objetos, veamos lo que pasaría si no cumplimos esta regla. Supongamos que creamos un objeto <code>x</code> con un valor de 10, pero después creamos otro objeto igualmente llamado <code>x</code> con un valor de 3, ¿qué nos devolverá la consola al llamar al objeto <code>x</code>?</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">10</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">3</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3</code></pre>
+</div>
+</div>
+<p>Como podemos ver, nos devolvió un valor de 3, ya que el valor guardado en el primer objeto fue reemplazado por el último valor guardado, al tener estos el mismo nombre, por lo que es muy importante tener en cuenta esta regla.</p>
+<section id="sintaxis-general" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="sintaxis-general"><span class="header-section-number">3.2.1</span> Sintaxis general</h3>
+<p>R es un lenguaje con una sintaxis sumamente sencilla, la cuál podríamos dividirla en las siguientes características:</p>
+<ul>
+<li><p>No toma en cuenta los espacios en blanco.</p></li>
+<li><p>Reconoce mayúsculas y minúsculas al momento de crear objetos, por lo que no será lo mismo referirnos al objeto <code>x</code> y al objeto <code>X</code>.</p></li>
+<li><p>Se nos permite incluir comentarios en el código utilizando el signo <code>#</code> y, posterior a esto, el comentario que vayamos a incluir.</p></li>
+<li><p>No se requiere el uso del signo <code>;</code> para terminar una sentencia de código, lo que lo vuelve mucho más simple. <span class="citation" data-cites="butler2009asreml">(<a href="referencias.html#ref-butler2009asreml" role="doc-biblioref">Butler et al. 2009</a>)</span></p></li>
+</ul>
+<p>Supongamos el siguiente par de objetos y operaciones creadas:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Ejemplo de una suma</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>suma <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">+</span><span class="dv">2</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>Suma <span class="ot">&lt;-</span> <span class="dv">2</span><span class="sc">+</span><span class="dv">3</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>suma</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3</code></pre>
+</div>
+</div>
+<p>Como podemos observar, tenemos 2 objetos con el mismo nombre, pero con una pequeña diferencia: la primer letra es una minúscula en un caso y mayúscula en el otro, razón por la que al llamar al primer objeto creado, este nos devuelve el resultado original al no ser reemplazado por el de el segundo objeto creado, ya que al tener un carácter diferente es reconocido como un objeto completamente aparte del primero. El ejemplo anterior nos sirve para entender la sintaxis del lenguaje, ya que al principio del código incluí un comentario con la nota <code>Ejemplo de una suma</code>, además de que cada sentencia de código no termina con un <code>;</code>, simplemente se realiza la operación y después se puede llamar al objeto. Esta es una característica de R que me encanta, su simplicidad, la facilidad con la que puedes crear código sin la necesidad de utilizar caracteres inecesarios.</p>
+</section>
+<section id="algunos-atajos-de-teclado" class="level3" data-number="3.2.2">
+<h3 data-number="3.2.2" class="anchored" data-anchor-id="algunos-atajos-de-teclado"><span class="header-section-number">3.2.2</span> Algunos atajos de teclado</h3>
+<p>En la medida en que avances con cada capítulo y practiques los ejercicios sugeridos será normal que trates de optimizar tiempo, sobre todo al aumentar el tamaño y complejidad de las prácticas que realicemos, por lo que te mostraré algunos de los atajes de teclado que te permitirán ahorrar tiempo y simplificarte la vida:</p>
+<ul>
+<li><p><strong>Command + Alt + N</strong>: Nos abrirá una nueva ventana.</p></li>
+<li><p><strong>Command + O</strong>: Abrirá el buscador de archivos (para abrir un script o proyecto guardado).</p></li>
+<li><p><strong>Command + S</strong>: Guardar el archivo actual.</p></li>
+<li><p><strong>Command + D</strong>: Eliminar la línea anterior de nuestro script.</p></li>
+<li><p><strong>Command + Alt + M</strong>: Para llamar un concatenador de funciones. Si tenemos activo el paquete <code>magrittr</code> se utilizará <code>%&gt;%</code>, o si tenemos el <em>pipe</em> nativo<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> (el cuál analizaremos en próximos capítulos) activado en las opciones globales, automáticamente nos escribirá en la consola el operador <code>|&gt;</code>.</p></li>
+</ul>
+</section>
+<section id="opciones-globales" class="level3" data-number="3.2.3">
+<h3 data-number="3.2.3" class="anchored" data-anchor-id="opciones-globales"><span class="header-section-number">3.2.3</span> Opciones globales</h3>
+<p>Antes de establecer los códigos que vayamos a utilizar, normalmente vamos a establecer ciertas reglas con las que vamos a configurar la forma en la que se interpretan algunas funciones y/o resultados en la consola, lo que haremos mediante el comando <code>options()</code>, por ejemplo, al escribir un número grande e imprimirlo en la consola, normalmente se nos devolverá con notación científica, por lo que si queremos ver el número completo tendremos que establecer la opción <code>scipen=n</code>, con el número de dígitos que queramos mostrar:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Número en notación científica</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="dv">1000000</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1e+06</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cambiando opciones globales</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">scipen =</span> <span class="dv">999</span>)</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="dv">1000000</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1000000</code></pre>
+</div>
+</div>
+<p>Las opciones globales que utilizaremos más comunmente son:</p>
+<ul>
+<li><code>scipen</code>: Para cambiar el número de dígitos a imprimir en la consola.</li>
+<li><code>encoding</code>: Para cambiar la codificación de caracteres (y caracteres especiales) en nuestra sesión (<code>native.enc</code> por default).</li>
+<li><code>digits</code>: Número de dígitos a imprimir después del punto decimal (más el número después del punto).</li>
+<li><code>max.print</code>: Número de elementos a imprimir.</li>
+<li><code>na.action</code>: Acción a realizar por defecto cuando se evaluen valores <code>NA</code>.</li>
+<li><code>nwarnings</code>: Número de alertas máximo a imprimir.</li>
+<li><code>stringsAsFactors</code>: Conversión automática de cadenas de caracteres a factores.</li>
+<li><code>timeout</code>: Tiempo de espera máximo para la lectura de código en la sesión.</li>
+</ul>
+<p>Además de las opciones a configurar, usualmente también guardaremos valores globales en la sesión en la que trabajemos. A este tipo de valores que se guardan en el sistema se les conoce como <em>variables de entorno</em>, las cuales tienen como objetivo el guardar preferencias de usuario, contraseñas o llaves de acceso. Para guardar y acceder a variables de entorno podemos hacer uso de los comandos <code>Sys.setenv()</code> y <code>Sys.getenv()</code>, por ejemplo:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Crear variable de entorno</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">Sys.setenv</span>(<span class="at">password =</span> <span class="st">"ejemplo_password"</span>)</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Acceder a la variable</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="fu">Sys.getenv</span>(<span class="st">"password"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "ejemplo_password"</code></pre>
+</div>
+</div>
+<p>Este tipo de variables son útiles cuando trabajamos con códigos que compartiremos con otros usuarios, ya que nos ayudan a mantener seguros datos personales que no queremos escribir directamente como línea de código.</p>
+</section>
+</section>
+<section id="vectores-matrices-y-arreglos" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="vectores-matrices-y-arreglos"><span class="header-section-number">3.3</span> Vectores, matrices y arreglos</h2>
+<p>En esta sección vamos a analizar los pilares básicos con los que trabajaremos siempre en R. A mi parecer, podemos ver a estos 3 tipos de estructuras de datos como una secuencia lógica: Un vector es la forma más simple de estructura, siendo de una sola dimensión, mientras que una matriz es el siguiente nivel, el cuál es de dos dimensiones, teniendo finalmente a un arreglo, el cuál puede ser de tres dimensiones. ¿A qué me refiero con las dimensiones de cada estructura de datos? Vamos con cada una:</p>
+<section id="vectores" class="level3" data-number="3.3.1">
+<h3 data-number="3.3.1" class="anchored" data-anchor-id="vectores"><span class="header-section-number">3.3.1</span> Vectores</h3>
+<p>Un vector es, simplemente, una colección de datos del mismo tipo, los cuales tienen unicamente una dimensión: la longitud del vector, o bien, la cantidad de elementos que contienen. Los vectores deben contener elementos del mismo tipo únicamente. Dentro del lenguaje R, para crear un vector tenemos que usar la función <code>c()</code>, la cual nos pasará todos los elementos que escribamos adentro en la forma de un vector, valga la redundancia, por ejemplo:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Vector con elementos definidos</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">3</span>,<span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1 3 5</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Vector con una secuencia de números</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
+</div>
+</div>
+<p>Notese que para el segundo ejemplo utilicé un signo de <code>:</code>, el cuál nos va a generar una secuencia numérica entre un número inicial y un número final (si el número inicial es menor, la secuencia irá en reversa), algo bastante útil cuando queremos crear un vector con bastantes elementos.</p>
+<p>¿Qué pasaría si intentáramos crear un vector con elementos de diferentes tipos? Por ejemplo:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>vector <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="st">"ejemplo"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Al incluir una cadena de caracteres como elemento dentro del vector, automáticamente todos sus elementos se van a considerar de este tipo, ya que es el tipo de dato más flexible respecto a otros <span class="citation" data-cites="ahumada2003r">(<a href="referencias.html#ref-ahumada2003r" role="doc-biblioref">Ahumada 2003</a>)</span>, lo que podemos observar a continuación:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Clase del vector creado</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(vector)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "character"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Otra forma de ver el tipo de vector</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="fu">typeof</span>(vector)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "character"</code></pre>
+</div>
+</div>
+<p>Ambas funciones nos dicen que tipo de que clase es nuestro vector (la función <code>typeof()</code> profundiza más en cuanto a los tipos de valores numéricos, como los enteros).</p>
+<p>Existe la posibilidad de transformar un vector de tipo <code>character</code> a tipo numérico. Recordemos que uno de los elementos que se incluyeron en el vector era un número, por lo que a pesar de que ahora mismo lo catalogue como una cadena de caracteres, la función <code>as.numeric()</code> reconocerá que elementos que solo incluyan caracteres de números y los transformará, mientras que para cualquier otro elemento lo transformará en <code>NA</code><a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>. Veamos un ejemplo de ello:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">as.numeric</span>(vector)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: NAs introduced by coercion</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1]  1 NA</code></pre>
+</div>
+</div>
+<p>Notese que nos saltó una alerta, ya que al transformar el vector a numérico se perdió una observación.</p>
+<p>Podemos hacer el proceso inverso, es decir, convertir un vector numérico a cadena de caracteres con la función <code>as.character()</code>, siendo que en este caso no se perderán observaciones, pero tampoco se recuperarán las observaciones perdidas o <code>NA</code>.</p>
+<p>Ahora, veamos los tipos de datos que puede incluir un vector:</p>
+<ul>
+<li><p><strong>Numérico</strong>: Estos se pueden dividir en <code>integer</code> para números enteros y <code>double</code> para números con decimales</p></li>
+<li><p><strong>Lógico</strong>: Puede asumir únicamente dos valores: <code>TRUE</code> y <code>FALSE</code>.</p></li>
+<li><p><strong>Caracter</strong>: Cadenas de caracteres como textos, nombres, etc. Estos siempre deben ir escritos entre comillas para que no se consideren un objeto.</p></li>
+<li><p><strong>Factor</strong>: Son muy parecidos a las cadenas de caracteres, aunque estos se utilizan para categorizar la información, por ejemplo, con sexos, especies, etc. Se pueden crear con la función <code>factor()</code>.</p></li>
+<li><p><strong>Fecha</strong>: Este otro tipo de vectores son parecidos a las cadenas de texto ya que se escriben entre comillas, sin embargo, se pueden realizar algunas operaciones con ellos que veremos más adelante.</p></li>
+<li><p><strong>NA</strong>: Las observaciones perdidas o valores nulos no son propiamente un tipo de dato, si no más bien la falta de estos en una estructura de datos. Se pueden identificar con la función <code>is.na()</code>.</p></li>
+</ul>
+</section>
+<section id="matrices" class="level3" data-number="3.3.2">
+<h3 data-number="3.3.2" class="anchored" data-anchor-id="matrices"><span class="header-section-number">3.3.2</span> Matrices</h3>
+<p>Cuando aumentamos una dimensión en nuestros conjuntos de datos surgen las llamadas matrices, las cuales tienen renglones y columnas. Formalmente, las podemos definir como un arreglo de <span class="math inline">\(m*n\)</span> números, donde <span class="math inline">\(m\)</span> son las filas y <span class="math inline">\(n\)</span> las columnas <span class="citation" data-cites="del2011algebra">(<a href="referencias.html#ref-del2011algebra" role="doc-biblioref">Valle Sotelo 2011</a>)</span>. Imaginemos una matriz que contenga 5 columnas y 2 filas, gráficamente se vería de la siguiente manera:</p>
+<p><span class="math display">\[
+\overset{\downarrow \;Columna \; \downarrow \qquad \qquad \quad \; \;}{\begin{pmatrix}\alpha_1 &amp; \alpha_3  &amp; \alpha_5 &amp; \alpha_7 &amp; \alpha_9\\ \alpha_2 &amp; \alpha_4 &amp; \alpha_6 &amp; \alpha_8 &amp; \alpha_{10}\end{pmatrix}\left.\begin{matrix}\leftarrow \\\leftarrow \end{matrix}\right\} \text{Renglon}}
+\]</span></p>
+<p>¿Cómo podríamos traducirla a lenguaje R? Vamos paso a paso. Para poder generar un objeto de tipo matriz utilizaremos la función <code>matrix()</code>, en la cual vamos a introducir un vector. Notemos que nuestro ejemplo cuenta con un total de 10 elementos, por lo que usaremos un vector de números del 1 al 10, es decir:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">matrix</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>      [,1]
+ [1,]    1
+ [2,]    2
+ [3,]    3
+ [4,]    4
+ [5,]    5
+ [6,]    6
+ [7,]    7
+ [8,]    8
+ [9,]    9
+[10,]   10</code></pre>
+</div>
+</div>
+<p>Ahora, para que nuestra matriz tenga 5 columnas debemos asignarlas con el argumento <code>ncol</code>, es decir:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">matrix</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, <span class="at">ncol =</span> <span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     [,1] [,2] [,3] [,4] [,5]
+[1,]    1    3    5    7    9
+[2,]    2    4    6    8   10</code></pre>
+</div>
+</div>
+<p>Igualemente podemos asignar el número de filas en la matriz a, por ejemplo, 3, pero debemos considerar que un vector de números del 1 al 10 no tiene la cantidad de elementos suficientes para llenar una matriz de 5 columnas por 3 filas (la cuál necesitaría 15 elementos), por lo que para que la matriz pueda cumplir con el número de elementos suficientes va a reutilizar los elementos del vector original hasta llenar la matriz por completo, es decir:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">matrix</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, <span class="at">ncol =</span> <span class="dv">5</span>, <span class="at">nrow =</span> <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     [,1] [,2] [,3] [,4] [,5]
+[1,]    1    4    7   10    3
+[2,]    2    5    8    1    4
+[3,]    3    6    9    2    5</code></pre>
+</div>
+</div>
+<section id="matrices-a-partir-de-vectores" class="level4" data-number="3.3.2.1">
+<h4 data-number="3.3.2.1" class="anchored" data-anchor-id="matrices-a-partir-de-vectores"><span class="header-section-number">3.3.2.1</span> Matrices a partir de vectores</h4>
+<p>Es posible que nos encontremos con situaciones en las que ya tengamos preestablecidos vectores dentro de un objeto en R, por lo que si quisieramos construir una matriz a partir de ello, podemos hacerlo utilizando las funciones <code>rbind()</code> para agregar los vectores como filas o <code>cbind()</code> para agregarlos como columnas. Imaginemos los siguientes 3 objetos con la misma longitud:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>vector_1 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>)</span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>vector_2 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">24</span><span class="sc">:</span><span class="dv">29</span>)</span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>vector_3 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">39</span><span class="sc">:</span><span class="dv">43</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Vamos a unirlos en una matriz:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Uniendo los vectores como filas</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="fu">rbind</span>(vector_1, vector_2, vector_3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>         [,1] [,2] [,3] [,4] [,5] [,6]
+vector_1    1    2    3    4    5    1
+vector_2   24   25   26   27   28   29
+vector_3   39   40   41   42   43   39</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Uniendo los vectores como columnas</span></span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="fu">rbind</span>(vector_1, vector_2, vector_3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>         [,1] [,2] [,3] [,4] [,5] [,6]
+vector_1    1    2    3    4    5    1
+vector_2   24   25   26   27   28   29
+vector_3   39   40   41   42   43   39</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="arreglos-arrays" class="level3" data-number="3.3.3">
+<h3 data-number="3.3.3" class="anchored" data-anchor-id="arreglos-arrays"><span class="header-section-number">3.3.3</span> Arreglos (arrays)</h3>
+<p>Llevando las cosas al siguiente nivel, ahora nos encontramos con los arreglos, los cuales agregan una dimensión extra al conjunto de datos que hemos armado hasta ahora. Veamoslo de la siguiente manera: Un vector es de una sola dimensión, por lo que si lo dibujáramos en una hoja de papel, este simplemente sería una línea, mientras que una matriz agregaría una dimensión extra, por lo que ahora podríamos dibujar un cuadrado. Un arreglo (array) sería el equivalente a dibujar un cubo, lo que gráficamente se podría traducir en lo siguiente:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><embed src="images/arreglos-02.pdf" width="1249" height="90"></p>
+<p></p><figcaption class="figure-caption">Objetos en R y sus dimensiones</figcaption><p></p>
+</figure>
+</div>
+<p>Teniendo lo anterior en cuenta, podemos regresar a R para compilar un arreglo. Imaginemos que queremos crear 2 matrices de <span class="math inline">\(3*3\)</span>, las cuales van de los números 1 al 9 y 10 al 19, en este caso partiríamos de 2 vectores <code>c(1:10)</code> y <code>c(11:20)</code>, los cuales vamos a introducir en otro vector contenedor en nuestra función array(), es decir:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">array</span>(</span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">c</span>(</span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>),</span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">c</span>(<span class="dv">11</span><span class="sc">:</span><span class="dv">20</span>)</span>
+<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb37-6"><a href="#cb37-6" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>En este caso solo hemos asignado los valores que estarán dentro de nuestro arreglo, ahora debemos utilizar el argumento <code>dim</code>, el cuál constará de 3 valores: Las filas, las columnas y el número de matrices en nuestro arreglo, o bien, la profundidad del mismo. Por lo tanto, tendríamos lo siguiente:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">array</span>(</span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">c</span>(</span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>),</span>
+<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">c</span>(<span class="dv">11</span><span class="sc">:</span><span class="dv">20</span>)</span>
+<span id="cb38-5"><a href="#cb38-5" aria-hidden="true" tabindex="-1"></a>  ),</span>
+<span id="cb38-6"><a href="#cb38-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">dim =</span> <span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">3</span>,<span class="dv">2</span>)</span>
+<span id="cb38-7"><a href="#cb38-7" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>, , 1
+
+     [,1] [,2] [,3]
+[1,]    1    4    7
+[2,]    2    5    8
+[3,]    3    6    9
+
+, , 2
+
+     [,1] [,2] [,3]
+[1,]   10   13   16
+[2,]   11   14   17
+[3,]   12   15   18</code></pre>
+</div>
+</div>
+<p>Quisiera que notes lo siguiente: cuando creamos el arreglo cada matriz dentro de el tiene como encabezado dos comas y un número, lo cuál nos estaría diciendo el número de elemento al que pertenece esa matriz. Si quisieramos acceder únicamente a una matriz en particular, podríamos hacer uso de los corchetes <code>[]</code>, los cuales funcionan como una forma de trabajar con el índice de un conjunto de datos, por ejemplo, si quisieramos acceder a la segunda matriz creada en nuestro arreglo, podríamos hacerlo de la siguiente manera:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>arreglo <span class="ot">&lt;-</span></span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">array</span>(</span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">c</span>(</span>
+<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>),</span>
+<span id="cb40-5"><a href="#cb40-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">c</span>(<span class="dv">11</span><span class="sc">:</span><span class="dv">20</span>)</span>
+<span id="cb40-6"><a href="#cb40-6" aria-hidden="true" tabindex="-1"></a>  ),</span>
+<span id="cb40-7"><a href="#cb40-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">dim =</span> <span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">3</span>,<span class="dv">2</span>)</span>
+<span id="cb40-8"><a href="#cb40-8" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb40-9"><a href="#cb40-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb40-10"><a href="#cb40-10" aria-hidden="true" tabindex="-1"></a>arreglo[,,<span class="dv">2</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     [,1] [,2] [,3]
+[1,]   10   13   16
+[2,]   11   14   17
+[3,]   12   15   18</code></pre>
+</div>
+</div>
+<p>Los corchetes igualmente nos permiten acceder a ciertos elementos de las matrices y vectores, pero eso lo veremos más adelante con mucho más detalle, ya que haremos uso de ello para la manipulación de bases de datos en capítulos siguientes.</p>
+</section>
+</section>
+<section id="data-frames" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="data-frames"><span class="header-section-number">3.4</span> Data frames</h2>
+<p>Hasta ahora hemos visto las estructuras de datos más primitivas dentro de los lenguajes de programación, como funcionan, como combinarlas y como interpretarlas, pero hay un inconveniente cuando trabajamos con ellas, y es que solo admiten un solo tipo de datos a la vez, es decir, un vector, una matriz o un arreglo solo pueden tener números, valores lógicos o cadenas de caracteres uno a la vez, no puede existir una matriz con números y un caracter o al revés. Cuando hacemos análisis de datos muchas veces necesitamos saber el contexto de la información, un indicador que nos diga a qué se refieren ciertos valores, si estos pertenecen al mismo conjunto de datos, si están validados, etc, por lo que para ayudarnos con esto, surgieron los <strong>data frames</strong>, una estructura que nos permite unir diferentes tipos de datos en columnas separadas y poder trabajar con ellos de manera más eficiente que con un arreglo o una matriz <span class="citation" data-cites="chan2018data">(<a href="referencias.html#ref-chan2018data" role="doc-biblioref">Chan and Chan 2018</a>)</span>. Básicamente, un data frame trabaja con columnas delimitadas por nombres, como lo pueden ser las tablas en Excel. Imaginemos que tenemos un vector que nos indica valores sobre edades de alumnos de una primaria y otro con los nombres de estos alumnos, por ejemplo:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>edad <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">8</span>,<span class="dv">9</span>,<span class="dv">7</span>)</span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>nombre <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Roberto"</span>, <span class="st">"Luis"</span>, <span class="st">"Susana"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Para poder nosotros ligar a cada alumno con su respectiva edad, lo que debemos hacer es crear un data frame con ambas variables, de la siguiente manera:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data.frame</span>(</span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>  edad,</span>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a>  nombre</span>
+<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  edad  nombre
+1    8 Roberto
+2    9    Luis
+3    7  Susana</code></pre>
+</div>
+</div>
+<p>Ahora, si quisieramos ahorrarnos un paso y no tener que crear un objeto para cada variable de nuestro data frame, podemos simplificar el proceso introduciendo los vectores directamente dentro de la función de <code>data.frame()</code>, es decir:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>tabla <span class="ot">&lt;-</span> </span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">data.frame</span>(</span>
+<span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">edad =</span> <span class="fu">c</span>(<span class="dv">8</span>,<span class="dv">9</span>,<span class="dv">7</span>),</span>
+<span id="cb45-4"><a href="#cb45-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">nombre =</span> <span class="fu">c</span>(<span class="st">"Roberto"</span>, <span class="st">"Luis"</span>, <span class="st">"Susana"</span>)</span>
+<span id="cb45-5"><a href="#cb45-5" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb45-6"><a href="#cb45-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-7"><a href="#cb45-7" aria-hidden="true" tabindex="-1"></a>tabla</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  edad  nombre
+1    8 Roberto
+2    9    Luis
+3    7  Susana</code></pre>
+</div>
+</div>
+<p>Individualmente, al analizar un data frame previo a trabajar con su información, podemos ver el tipo de columnas con las que contamos de la siguiente manera:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="fu">typeof</span>(tabla<span class="sc">$</span>edad)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "double"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="fu">typeof</span>(tabla<span class="sc">$</span>nombre)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "character"</code></pre>
+</div>
+</div>
+<p>Directamente haciendo referencia a sus columnas con el signo $, el cuál analizaremo con detalle después, pero que básicamente nos permite acceder a vectores de manera unidimensional.</p>
+<p>De igual manera, si queremos ver el tipo de columna para todo nuestro data frame, podemos utilizar la función <code>str()</code>, tal que:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(tabla)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>'data.frame':   3 obs. of  2 variables:
+ $ edad  : num  8 9 7
+ $ nombre: chr  "Roberto" "Luis" "Susana"</code></pre>
+</div>
+</div>
+<p>Es importante procupar siempre comenzar nuestro proceso de trabajo analizando el tipo de columnas con las que contamos, ya que podemos encontrarnos con situaciones en las que, por ejemplo, tenemos una columna de números, pero éstos se leyeron como cadenas de caracteres, por lo que será necesario transformar esa información a numérica de tal forma que podamos generar cálculos con esos valores sin que la consola nos devuelva un error.</p>
+<section id="uso-de-corchetes-con-un-data-frame-indexación." class="level3" data-number="3.4.1">
+<h3 data-number="3.4.1" class="anchored" data-anchor-id="uso-de-corchetes-con-un-data-frame-indexación."><span class="header-section-number">3.4.1</span> Uso de corchetes con un data frame: Indexación.</h3>
+<p>Anteriormente ya habíamos trabajado con corchetes para obtener un elemento de un arreglo, lo que hicimos en ese caso es obtener un subconjunto del objeto a partir de su índice. Formalmente tenemos 3 operadores de selección: [], [[]] y $, los cuales iremos viendo poco con cada tipo de elemento, pero por ahora comenzaremos desde lo más básico: El uso con vectores. Imaginemos que tenemos el siguiente vector de números:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a>vector <span class="ot">&lt;-</span> <span class="dv">10</span><span class="sc">:</span><span class="dv">20</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>En este caso podríamos obtener elementos indexando un segundo vector que sea subconjunto del primero de manera directa o a la inversa, es decir, supongamos que queremos obtener los primeros 3 elementos del vector anterior, en ese caso lo haríamos de la siguiente manera:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a>vector[<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 10 11 12</code></pre>
+</div>
+</div>
+<p>O bien,</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a>vector[<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 10 11 12</code></pre>
+</div>
+</div>
+<p>Que es básicamente lo mismo. Ahora, si queremos obtener una selección inversa, es decir, los elementos contrarios a lo que indexemos, basta con escribir un signo negativo de la siguiente manera:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a>vector[<span class="sc">-</span><span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>) ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 13 14 15 16 17 18 19 20</code></pre>
+</div>
+</div>
+<p>En ese caso será necesario que escribamos la secuencia dentro de un vector <code>c()</code>, para que pueda considerar el signo negativo para todos los elementos.</p>
+<p>Utilicemos ahora la indexación con un data frame. Vayamos a nuestro ejemplo anterior: Las edades de un grupo de alumnos. Al tener un objeto con 2 dimensiones, al nosotros escribir un vector de selección como en el caso de los vectores simplemente nos devolverá columnas seleccionadas, por ejemplo:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Selección de la primer columna</span></span>
+<span id="cb60-2"><a href="#cb60-2" aria-hidden="true" tabindex="-1"></a>tabla[<span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  edad
+1    8
+2    9
+3    7</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Selección de ambas columnas</span></span>
+<span id="cb62-2"><a href="#cb62-2" aria-hidden="true" tabindex="-1"></a>tabla[<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  edad  nombre
+1    8 Roberto
+2    9    Luis
+3    7  Susana</code></pre>
+</div>
+</div>
+<p>Pero, ¿y si quisieramos seleccionar la primera observación de ambas columnas? Para ello debemos escribir una coma posterior al número índice, es decir:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb64"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Selección de la primer fila de observaciones</span></span>
+<span id="cb64-2"><a href="#cb64-2" aria-hidden="true" tabindex="-1"></a>tabla[<span class="dv">1</span>,]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  edad  nombre
+1    8 Roberto</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb66"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Selección de las filas 1 y 3</span></span>
+<span id="cb66-2"><a href="#cb66-2" aria-hidden="true" tabindex="-1"></a>tabla[<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">3</span>),]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  edad  nombre
+1    8 Roberto
+3    7  Susana</code></pre>
+</div>
+</div>
+<p>Podemos utilizar el signo de coma antes del número índice, lo que igualmente nos devolverá toda la información de la primer columna, pero en formato de vector unidimensional, es decir;</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb68"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a>tabla[,<span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 8 9 7</code></pre>
+</div>
+</div>
+<p>Vayamos a algo un poco más específico, ¿qué pasaría si quisieramos extraer la segunda observación de la primer columna? Recordemos que un data frame es, básicamente, un arreglo de dos dimensiones, por lo que mediante indexación podemos especificar que nos devuelva este elemento al especificar esta información de la siguiente manera:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb70"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Indexación de un valor específico para una columna específica</span></span>
+<span id="cb70-2"><a href="#cb70-2" aria-hidden="true" tabindex="-1"></a>tabla[<span class="dv">1</span>,<span class="dv">2</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Roberto"</code></pre>
+</div>
+</div>
+<p>Como puedes observar, el primer valor es el número de fila de nuestro data frame, mientras que el segundo valor nos indica la columna seleccionada.</p>
+</section>
+<section id="reasignación-de-columnas" class="level3" data-number="3.4.2">
+<h3 data-number="3.4.2" class="anchored" data-anchor-id="reasignación-de-columnas"><span class="header-section-number">3.4.2</span> Reasignación de columnas</h3>
+<p>Veamos una situación elemental pero igualmente crucial en el análisis de datos: Los tipos de columnas y como cambiarlos. Como recordarás, te mencioné que que podías cambiar el tipo de vector con el que estuvieras trabajando con funciones como <code>as.numeric()</code>, <code>as.character()</code>, etc. Supongamos una situación en la que tenemos un data frame que contiene una columna de números, pero estos están catalogados como cadenas de caracteres, tal que:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb72"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a>df_caracteres <span class="ot">&lt;-</span> </span>
+<span id="cb72-2"><a href="#cb72-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">data.frame</span>(</span>
+<span id="cb72-3"><a href="#cb72-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">col_1 =</span> <span class="fu">c</span>(<span class="st">"1"</span>, <span class="st">"2"</span>, <span class="st">"3"</span>)</span>
+<span id="cb72-4"><a href="#cb72-4" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb72-5"><a href="#cb72-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-6"><a href="#cb72-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Tipo de columna</span></span>
+<span id="cb72-7"><a href="#cb72-7" aria-hidden="true" tabindex="-1"></a><span class="fu">typeof</span>(df_caracteres<span class="sc">$</span>col_1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "character"</code></pre>
+</div>
+</div>
+<p>Como puedes observar, dicha columna se encuentra catalogada como una cadena de caracteres y, por lo tanto, al querer sumar sus valores, obtener una media o querer hacer alguna otra operación nos devolverá un error. Para poder nosotros trabajar de manera correcta debemos hacer una reasignación de nuestro vector y transformarlo a una columna numérica. Para convertir el vector en cuestión simplemente debemos enmascararlo utilizando un objeto ya transformado que tenga los valores en formato numérico con la función <code>as.numeric()</code>, tal que:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb74"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb74-1"><a href="#cb74-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Reasignación del vector</span></span>
+<span id="cb74-2"><a href="#cb74-2" aria-hidden="true" tabindex="-1"></a>df_caracteres<span class="sc">$</span>col_1 <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(df_caracteres<span class="sc">$</span>col_1)</span>
+<span id="cb74-3"><a href="#cb74-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb74-4"><a href="#cb74-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Tipo de columna</span></span>
+<span id="cb74-5"><a href="#cb74-5" aria-hidden="true" tabindex="-1"></a><span class="fu">typeof</span>(df_caracteres<span class="sc">$</span>col_1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "double"</code></pre>
+</div>
+</div>
+</section>
+<section id="filtrado-de-datos-mediante-indexación" class="level3" data-number="3.4.3">
+<h3 data-number="3.4.3" class="anchored" data-anchor-id="filtrado-de-datos-mediante-indexación"><span class="header-section-number">3.4.3</span> Filtrado de datos mediante indexación</h3>
+<p>Hasta ahora hemos visto como seleccionar posiciones específicas de un data frame, pero en el mundo real, cuando trabajamos con tablas y bases de datos extremadamente grandes, es muy raro que sepamos la posición de lo que queremos localizar. Imaginemos que tenemos un data frame con 50 elementos (para el cuál utilzaremos la función sample(), con la que generaremos información aleatoria), por ejemplo:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb76"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb76-1"><a href="#cb76-1" aria-hidden="true" tabindex="-1"></a>tabla_larga <span class="ot">&lt;-</span></span>
+<span id="cb76-2"><a href="#cb76-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">data.frame</span>(</span>
+<span id="cb76-3"><a href="#cb76-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">letras =</span> <span class="fu">sample</span>(</span>
+<span id="cb76-4"><a href="#cb76-4" aria-hidden="true" tabindex="-1"></a>      <span class="fu">c</span>(<span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span>),</span>
+<span id="cb76-5"><a href="#cb76-5" aria-hidden="true" tabindex="-1"></a>      <span class="at">size =</span> <span class="dv">50</span>,</span>
+<span id="cb76-6"><a href="#cb76-6" aria-hidden="true" tabindex="-1"></a>      <span class="at">replace =</span> <span class="cn">TRUE</span></span>
+<span id="cb76-7"><a href="#cb76-7" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb76-8"><a href="#cb76-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">valores =</span> <span class="fu">sample</span>(</span>
+<span id="cb76-9"><a href="#cb76-9" aria-hidden="true" tabindex="-1"></a>      <span class="dv">1</span><span class="sc">:</span><span class="dv">20</span>,</span>
+<span id="cb76-10"><a href="#cb76-10" aria-hidden="true" tabindex="-1"></a>      <span class="at">size =</span> <span class="dv">50</span>,</span>
+<span id="cb76-11"><a href="#cb76-11" aria-hidden="true" tabindex="-1"></a>      <span class="at">replace =</span> <span class="cn">TRUE</span></span>
+<span id="cb76-12"><a href="#cb76-12" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb76-13"><a href="#cb76-13" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb76-14"><a href="#cb76-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb76-15"><a href="#cb76-15" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(tabla_larga)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  letras valores
+1      b      20
+2      b      18
+3      b       2
+4      a      19
+5      c      15
+6      c       4</code></pre>
+</div>
+</div>
+<p>En este sencillo ejemplo tenemos una columna <code>letras</code> con tres elementos y otra columna <code>valores</code> con números aleatorios del 1 al 20, ¿cómo podríamos obtener del anterior objeto unicamente los números pertenecientes a la letra <em>“a”</em>? Para ello, mediante el uso de índices, podemos seleccionar un subconjunto del data frame donde solamente se cumpla esa condición. Para obtener un subconjunto a partir de una condición debemos utilizar los índices como normalmente lo hacemos, solo que en esta ocasión vamos a acceder directamente a una columna en forma unidimensional con el signo <code>$</code> de la siguiente manera:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb78"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb78-1"><a href="#cb78-1" aria-hidden="true" tabindex="-1"></a>tabla_filt <span class="ot">&lt;-</span> tabla_larga[tabla_larga<span class="sc">$</span>letras <span class="sc">==</span> <span class="st">"a"</span>,]</span>
+<span id="cb78-2"><a href="#cb78-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb78-3"><a href="#cb78-3" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(tabla_filt,<span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   letras valores
+4       a      19
+7       a       3
+14      a       3
+18      a       6
+19      a      17</code></pre>
+</div>
+</div>
+<p>Quiero que notes que después de seleccionar la columna mediante el signo de dolar<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> utilizamos otro signo con un doble igual y escribimos la condición, esto se hace así ya que un único signo de <code>=</code> funciona de la misma manera que el signo <code>&lt;-</code>, para asignar variables. Las condiciones lógicas que podemos utilizar son las siguientes:</p>
+<ul>
+<li><p><code>==</code> Para una igualdad.</p></li>
+<li><p><code>&lt;=</code> Para un valor menor o igual a uno especificado.</p></li>
+<li><p><code>&gt;=</code> Para un valor mayor o igual a uno especificado.</p></li>
+<li><p><code>&lt;</code> Para un valor menor únicamente a uno especificado.</p></li>
+<li><p><code>&gt;</code> Para un valor mayor únicamente a uno especificado.</p></li>
+<li><p><code>!=</code> Para valores diferentes a uno especificado.</p></li>
+<li><p><code>%in%</code> Para valores iguales a un conjunto dentro de un vector.</p></li>
+</ul>
+<p>De igual forma podemos utilizar estas condiciones lógicas en conjunto con operadores lógicos, los cuales son los siguientes:</p>
+<ul>
+<li><p><code>|</code> Para situaciones en las que se busca cumplir una condición u otra.</p></li>
+<li><p><code>&amp;</code> Para situaciones en las que se busca cumplir más de una condición a la vez.</p></li>
+<li><p><code>&amp;&amp;</code> Para situaciones en las que se busca cumplir más de una condición a la vez, pero evaluando únicamente el primer elemento de cada vector a comparar.</p></li>
+<li><p><code>isTRUE()</code> o <code>isFALSE()</code> para evaluar un vector lógico.</p></li>
+</ul>
+<p>En nuestro ejemplo anterior filtramos el data frame mediante una igualdad, siendo esta la única forma válida de filtrar cadenas de caracteres (o con el operador <code>%in%</code>, si escogemos más de un valor para filtrar). Supongamos ahora que queremos seleccionar (o filtrar) únicamente observaciones de nuestro data frame mayores o iguales, por ejemplo, a 15, esto lo podemos hacer de la siguiente manera:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb80"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb80-1"><a href="#cb80-1" aria-hidden="true" tabindex="-1"></a>tabla_filt <span class="ot">&lt;-</span> tabla_larga[tabla_larga<span class="sc">$</span>valores <span class="sc">&gt;=</span> <span class="dv">15</span>,]</span>
+<span id="cb80-2"><a href="#cb80-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb80-3"><a href="#cb80-3" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(tabla_filt,<span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   letras valores
+1       b      20
+2       b      18
+4       a      19
+5       c      15
+10      b      17</code></pre>
+</div>
+</div>
+<p>Ahora, si combinamos el uso de los operadores lógicos con las condiciones lógicas, podemos obtener información de manera más específica, por ejemplo, en un caso en el que necesitemos extraer únicamente los valores pertenecientes a “b” mayores a 15 podemos hacerlo de la siguiente manera:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb82"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb82-1"><a href="#cb82-1" aria-hidden="true" tabindex="-1"></a>tabla_filt <span class="ot">&lt;-</span> tabla_larga[tabla_larga<span class="sc">$</span>valores <span class="sc">&gt;=</span> <span class="dv">15</span> <span class="sc">&amp;</span> tabla_larga<span class="sc">$</span>letras <span class="sc">==</span> <span class="st">"a"</span>,]</span>
+<span id="cb82-2"><a href="#cb82-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb82-3"><a href="#cb82-3" aria-hidden="true" tabindex="-1"></a>tabla_filt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   letras valores
+4       a      19
+19      a      17
+40      a      15
+41      a      17
+44      a      18</code></pre>
+</div>
+</div>
+</section>
+<section id="indexación-múltiple" class="level3" data-number="3.4.4">
+<h3 data-number="3.4.4" class="anchored" data-anchor-id="indexación-múltiple"><span class="header-section-number">3.4.4</span> Indexación múltiple</h3>
+<p>Hasta ahora hemos visto el uso de corchetes para poder seleccionar columnas y filtrar información de manera simple, pero ¿sabías que puedes usar más de un corchete a la vez? Esto nos sirve esencialmente cuando necesitamos realizar una operación o tratamiento a datos que ya se encuentran seleccionados o filtrados mediante un primer corchete. No quiero que confundas a la indexación múltiple con el uso de dobles corchetes entre si, es decir <code>[[]]</code>, ya que ese tipo de indexación se utiliza para obtener elementos en formato unidimensional de objetos más complejos, como lo son las listas (las cuales analizaremos en el siguiente punto), pero eso lo veremos en su respectiva sección. Partamos de una situación simple en la que queremos buscar valores en una columna. Supongamos lo siguiente: Consideremos el dataset de muestra <code>mtcars</code>, el cuál nos proporciona la siguiente información:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb84"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb84-1"><a href="#cb84-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(mtcars,<span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>               mpg cyl disp  hp drat    wt  qsec vs am gear carb
+Mazda RX4     21.0   6  160 110 3.90 2.620 16.46  0  1    4    4
+Mazda RX4 Wag 21.0   6  160 110 3.90 2.875 17.02  0  1    4    4
+Datsun 710    22.8   4  108  93 3.85 2.320 18.61  1  1    4    1</code></pre>
+</div>
+</div>
+<p>¿Qué ocurriría si nos encontraramos en una situación en la que únicamente necesitamos las primeras dos columnas de información, pero con valores mayores o iguales a, por ejemplo, 5 en ambos casos? Como puedes observar, para seleccionar las primeras dos columnas basta con utilizar [1:2] dentro de los corchetes, pero ahora nos surge un problema, y es que esto nos imposibilita el filtrar los datos para valores mayores a 5, ya que utilizar un operador lógico en este caso solo es válido para operaciones del mismo tipo y utilizar una coma sería indicativo del uso de la siguiente dimensión en nuestro data frame, es decir, estaríamos haciendo alución a la columna y no a las observaciones que queremos, lo cual en este caso sería incorrecto. Para poder obtener valores mayores a 5 únicamente en las columnas que seleccionemos, tendremos que usar un segundo corchete de la siguiente manera:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb86"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb86-1"><a href="#cb86-1" aria-hidden="true" tabindex="-1"></a>filtro <span class="ot">&lt;-</span> mtcars[<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>][mtcars<span class="sc">$</span>mpg <span class="sc">&gt;</span> <span class="dv">5</span> <span class="sc">&amp;</span> mtcars<span class="sc">$</span>cyl <span class="sc">&gt;</span> <span class="dv">5</span>,]</span>
+<span id="cb86-2"><a href="#cb86-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb86-3"><a href="#cb86-3" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(filtro,<span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                   mpg cyl
+Mazda RX4         21.0   6
+Mazda RX4 Wag     21.0   6
+Hornet 4 Drive    21.4   6
+Hornet Sportabout 18.7   8
+Valiant           18.1   6</code></pre>
+</div>
+</div>
+<p>Más adelante veremos que existen formas mucho más sencillas e intuitivas de hacer lo anterior, pero por ahora quiero introducir otro caso más complejo de indexación múltiple: El reemplazo de valores. Cuando trabajamos con data frames sumamente largos es muy normal encontrarnos con que están llenos de valores nulos o NA, lo cuál podría sesgar nuestros análisis o darnos resultados incorrectos, por lo que en algunas ocasiones se suele optar por reemplazar esos valores nulos con 0’s, esto no siempre es lo correcto pero por el momento vamos a poner en práctica un caso así. Pensemos en la siguiente situación: Tenemos un data frame que cuenta con 3 columnas las cuales tienen múltiples valores nulos que queremos reemplazar con 0’s. Vamos a construir el data frame que necesitamos para este ejemplo:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb88"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb88-1"><a href="#cb88-1" aria-hidden="true" tabindex="-1"></a>df_na <span class="ot">&lt;-</span></span>
+<span id="cb88-2"><a href="#cb88-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">data.frame</span>(</span>
+<span id="cb88-3"><a href="#cb88-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">col_1 =</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>,<span class="cn">NA</span>),<span class="at">size =</span> <span class="dv">20</span>,<span class="at">replace =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb88-4"><a href="#cb88-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">col_2 =</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="dv">15</span><span class="sc">:</span><span class="dv">18</span>,<span class="cn">NA</span>),<span class="at">size =</span> <span class="dv">20</span>,<span class="at">replace =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb88-5"><a href="#cb88-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">col_3 =</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="dv">50</span><span class="sc">:</span><span class="dv">55</span>,<span class="cn">NA</span>),<span class="at">size =</span> <span class="dv">20</span>,<span class="at">replace =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb88-6"><a href="#cb88-6" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb88-7"><a href="#cb88-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb88-8"><a href="#cb88-8" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(df_na,<span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  col_1 col_2 col_3
+1     5    17    52
+2     1    18    53
+3     1    17    NA
+4     2    16    55
+5     2    18    51</code></pre>
+</div>
+</div>
+<p>Ahora, para reasignar valores en un data frame haremos uso del operador <code>&lt;-</code>, el cual como recordaremos nos permite asignarle un valor a un objeto, lo que a su vez implica que podemos reasignar valores a un objeto basándonos en condiciones. Empecemos por la primer columna: Para hacer referencia únicamente a los valores nulos que tengamos allí utilizaremos la función <code>is.na()</code>, la cual nos ayudará a evaluar esa columna y devolvernos todos los <code>NA</code>, es decir:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb90"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb90-1"><a href="#cb90-1" aria-hidden="true" tabindex="-1"></a>df_na<span class="sc">$</span>col_1[<span class="fu">is.na</span>(df_na<span class="sc">$</span>col_1)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] NA NA NA</code></pre>
+</div>
+</div>
+<p>Ahora, para reasignar los valores nulos a 0, necesitaremos introducirlos en forma de un objeto bajo condición, es decir:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb92"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb92-1"><a href="#cb92-1" aria-hidden="true" tabindex="-1"></a>df_na<span class="sc">$</span>col_1[<span class="fu">is.na</span>(df_na<span class="sc">$</span>col_1)] <span class="ot">&lt;-</span> <span class="dv">0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>O dicho de forma más sencilla, al hacer referencia a los NA en nuestro data frame, podemos reasignar su valor con <code>&lt;-</code>. Si volvemos a evaluar nuestra tabla con la misma indexación para encontrar valores nulos, notaremos que ya no tenemos ninguno, tal que:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb93"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb93-1"><a href="#cb93-1" aria-hidden="true" tabindex="-1"></a>df_na<span class="sc">$</span>col_1[<span class="fu">is.na</span>(df_na<span class="sc">$</span>col_1)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>numeric(0)</code></pre>
+</div>
+</div>
+<p>Aplicando este mismo método podemos reasignar valores de toda clase por otros, tal como lo haríamos en SQL con la función <code>WHERE</code>, pero ahora toca preguntarnos lo siguiente: ¿y si quisieramos reasignar todos los NA del data frame a 0’s sin considerar una columna? Aquí es donde el ejercicio comienza a tornarse interesante. Supongamos el siguiente data frame con diferentes tipos de columnas:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb95"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb95-1"><a href="#cb95-1" aria-hidden="true" tabindex="-1"></a>mult_df <span class="ot">&lt;-</span> </span>
+<span id="cb95-2"><a href="#cb95-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">data.frame</span>(</span>
+<span id="cb95-3"><a href="#cb95-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">val1 =</span> <span class="fu">sample</span>(letters, <span class="at">size =</span> <span class="dv">100</span>, <span class="at">replace =</span> T),</span>
+<span id="cb95-4"><a href="#cb95-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">val2 =</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>,<span class="cn">NA</span>), <span class="at">size =</span> <span class="dv">100</span>, <span class="at">replace =</span> T),</span>
+<span id="cb95-5"><a href="#cb95-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">val3 =</span> <span class="cn">NA</span></span>
+<span id="cb95-6"><a href="#cb95-6" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb95-7"><a href="#cb95-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb95-8"><a href="#cb95-8" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(mult_df,<span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  val1 val2 val3
+1    t   68   NA
+2    o   61   NA
+3    n   42   NA
+4    j   20   NA
+5    c   75   NA</code></pre>
+</div>
+</div>
+<p>Como puedes observar, tenemos 1 columna con caracteres (el vector <code>letters</code> incluido por default en R es el abedecedario en minúsculas), una columna numérica y otra columna que únicamente contiene <code>NA</code> (por default lógica). ¿Cómo podemos transformar la información faltante de las 2 columnas en, por ejemplo, 0’s? Al igual que en el caso anterior, debemos utilizar primero un corchete para definir las columnas que vamos a utilizar, para después utilizar otro en el que vamos a seleccionar los valores nulos con <code>is.na()</code>, pero aquí debemos considerar un asunto extra: El número de columnas en las que vamos a trabajar es mayor a 1, por lo que no es posible utilizar el operador <code>$</code> para hacer referencia a una cierta columna directamente, en este caso es necesario utilizar el corchete para referenciar las columnas a las que vamos a reemplazar, es decir:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb97"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb97-1"><a href="#cb97-1" aria-hidden="true" tabindex="-1"></a>mult_df[<span class="dv">2</span><span class="sc">:</span><span class="dv">3</span>][<span class="fu">is.na</span>(mult_df[<span class="dv">2</span><span class="sc">:</span><span class="dv">3</span>])] <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb97-2"><a href="#cb97-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb97-3"><a href="#cb97-3" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(mult_df,<span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  val1 val2 val3
+1    t   68    0
+2    o   61    0
+3    n   42    0
+4    j   20    0
+5    c   75    0</code></pre>
+</div>
+</div>
+<p>Como puedes ver, dentro del segundo corchete se hizo referencia a las 2 columnas a partir de otro más, ya que nos era imposible seleccionar a todas las columnas a la vez de forma directa. Ahora, este ejemplo es relativamente sencillo de resolver, pero es posible que te encuentres en una situación en la que tengas una tabla más dinámica, la cuál aumente el número de columnas todos los días o al menos constantemente, por lo que en lugar de escribir directamente la secuencia del vector <code>1:3</code> en ese caso lo más conveniente sería obtener automáticamente el número de columnas que contiene con la función <code>length()</code>, la cuál nos devolverá simplemente este número, tal que:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb99"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb99-1"><a href="#cb99-1" aria-hidden="true" tabindex="-1"></a>mult_df[<span class="dv">2</span><span class="sc">:</span><span class="fu">length</span>(mult_df)][<span class="fu">is.na</span>(mult_df[<span class="dv">2</span><span class="sc">:</span><span class="fu">length</span>(mult_df)])] <span class="ot">&lt;-</span> <span class="dv">0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Como puedes observar, ya no tenemos que preocuparnos por la cantidad de valores nulos ni que estos se encuentren en múltiples columnas, ya que acabamos de generar una operación mediante indexación que nos reemplaza toda esta información de manera eficiente y semi automática.</p>
+</section>
+</section>
+<section id="listas" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="listas"><span class="header-section-number">3.5</span> Listas</h2>
+<p>En esta sección discutiremos la utilidad y función de las listas, así como su estructura general y formas para trabajar con ellas.</p>
+<p>A pesar de que los data frames suelen ser los objetos más utilizados y mejor entendidos por los usuarios de R, las listas son una clase de objetos más densos y bastante útiles, los cuales nos servirán bastante durante la creación de funciones, librerías o aplicaciones web, ya que tienen como objetivo el <strong>contener diferentes estructuras en un mismo objeto</strong>.</p>
+<p>Si bien puede parecer algo más sencillo el simplemente guardar información en un data frame, lo cierto es que estos tienen sus limitantes, como el nivel de dimensiones que pueden contener y su estructura es más estricta.</p>
+<p>Pensemos en una situación en la que contamos con un data frame que tiene, por ejemplo, la edad de un grupo de alumnos, al cuál queremos obtenerle ciertos estadísticos y, posterior a esto conservar toda esa información para utilizarla después, nuestra primera idea podría ser guardar todos los datos en un data frame, quizá en una nueva columna con un nombre indicativo de “<strong>resultados</strong>”, sin embargo, hacer esto no es la mejor práctica, ya que tendremos una columna extra en nuestro data frame, lo que resulta poco práctico si queremos, por ejemplo, remover valores nulos como lo hicimos en la sección anterior. Una solución a este problema es, simplemente, construir una lista en la que tengamos nuestra tabla original con las edades de los alumnos y nuestros resultados en otro objeto que no interfiera con el primero. Vamos paso por paso para construir dicha lista comenzando por los datos a usar:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb100"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb100-1"><a href="#cb100-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Creación del data frame</span></span>
+<span id="cb100-2"><a href="#cb100-2" aria-hidden="true" tabindex="-1"></a>edades <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb100-3"><a href="#cb100-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">valor =</span> <span class="fu">sample</span>(<span class="dv">10</span><span class="sc">:</span><span class="dv">15</span>, <span class="at">size =</span> <span class="dv">19</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb100-4"><a href="#cb100-4" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb100-5"><a href="#cb100-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb100-6"><a href="#cb100-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Creación de estadísticos</span></span>
+<span id="cb100-7"><a href="#cb100-7" aria-hidden="true" tabindex="-1"></a>promedio_edad <span class="ot">&lt;-</span> <span class="fu">mean</span>(edades<span class="sc">$</span>valor)</span>
+<span id="cb100-8"><a href="#cb100-8" aria-hidden="true" tabindex="-1"></a>edad_max <span class="ot">&lt;-</span> <span class="fu">max</span>(edades<span class="sc">$</span>valor)</span>
+<span id="cb100-9"><a href="#cb100-9" aria-hidden="true" tabindex="-1"></a>edad_min <span class="ot">&lt;-</span> <span class="fu">min</span>(edades<span class="sc">$</span>valor)</span>
+<span id="cb100-10"><a href="#cb100-10" aria-hidden="true" tabindex="-1"></a>mediana_edad <span class="ot">&lt;-</span> <span class="fu">median</span>(edades<span class="sc">$</span>valor)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Ahora que tenemos todos los valores que necesitamos, podemos construir una lista con todos ellos usando la función <code>list()</code>, sin que estos se afecten unos a otros, tal que:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb101"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb101-1"><a href="#cb101-1" aria-hidden="true" tabindex="-1"></a>lista <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb101-2"><a href="#cb101-2" aria-hidden="true" tabindex="-1"></a>  edades,</span>
+<span id="cb101-3"><a href="#cb101-3" aria-hidden="true" tabindex="-1"></a>  promedio_edad,</span>
+<span id="cb101-4"><a href="#cb101-4" aria-hidden="true" tabindex="-1"></a>  edad_max,</span>
+<span id="cb101-5"><a href="#cb101-5" aria-hidden="true" tabindex="-1"></a>  edad_min,</span>
+<span id="cb101-6"><a href="#cb101-6" aria-hidden="true" tabindex="-1"></a>  mediana_edad</span>
+<span id="cb101-7"><a href="#cb101-7" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="indexación-en-una-lista" class="level3" data-number="3.5.1">
+<h3 data-number="3.5.1" class="anchored" data-anchor-id="indexación-en-una-lista"><span class="header-section-number">3.5.1</span> Indexación en una lista</h3>
+<p>Para acceder a los elementos de nuestra lista, simplemente podemos hacer referencia a ellos mediante indexación con <code>[[]]</code>, incluyendo el número índice del elemento que queremos obtener, por ejemplo:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb102"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb102-1"><a href="#cb102-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Data frame</span></span>
+<span id="cb102-2"><a href="#cb102-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(lista[[<span class="dv">1</span>]],<span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  valor
+1    14
+2    11
+3    11
+4    10
+5    14</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb104"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb104-1"><a href="#cb104-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Promedio</span></span>
+<span id="cb104-2"><a href="#cb104-2" aria-hidden="true" tabindex="-1"></a>lista[[<span class="dv">2</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 12.47368</code></pre>
+</div>
+</div>
+<p>Siendo que el primer objeto que introducimos al crear la lista fue el data frame y el segundo el promedio. Una vez que accedemos a objetos como un data frame dentro de una lista, podemos hacer referencia a sus datos con el signo <code>$</code> como normalmente lo haríamos.</p>
+<p>Podemos simplificar la creación de listas asignando los objetos dentro de la misma función, tal que:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb106"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb106-1"><a href="#cb106-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Data frame</span></span>
+<span id="cb106-2"><a href="#cb106-2" aria-hidden="true" tabindex="-1"></a>edades <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb106-3"><a href="#cb106-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">valor =</span> <span class="fu">sample</span>(<span class="dv">10</span><span class="sc">:</span><span class="dv">15</span>, <span class="at">size =</span> <span class="dv">19</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb106-4"><a href="#cb106-4" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb106-5"><a href="#cb106-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb106-6"><a href="#cb106-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Lista</span></span>
+<span id="cb106-7"><a href="#cb106-7" aria-hidden="true" tabindex="-1"></a>lista <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb106-8"><a href="#cb106-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">edades =</span> edades,</span>
+<span id="cb106-9"><a href="#cb106-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">promedio_edad =</span> <span class="fu">mean</span>(edades<span class="sc">$</span>valor),</span>
+<span id="cb106-10"><a href="#cb106-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">edad_max =</span> <span class="fu">max</span>(edades<span class="sc">$</span>valor),</span>
+<span id="cb106-11"><a href="#cb106-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">edad_min =</span> <span class="fu">min</span>(edades<span class="sc">$</span>valor),</span>
+<span id="cb106-12"><a href="#cb106-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">mediana_edad =</span> <span class="fu">median</span>(edades<span class="sc">$</span>valor)</span>
+<span id="cb106-13"><a href="#cb106-13" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Nota como se asignó el data frame previamente a crear la lista, esto ya que el resto de los objetos creados son una consecuencia del primero, al ser cálculos de los datos de nuestra tabla, por lo que necesariamente necesitan que esa información ya exista antes de poder asignarla dentro de una lista.</p>
+<p>Cuando nosotros asignamos variables dentro de una lista con el signo <code>=</code> igualmente nos es posible hacer referencia a ellas mediante el signo <code>$</code> y el nombre que hayamos asignado, por ejemplo:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb107"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb107-1"><a href="#cb107-1" aria-hidden="true" tabindex="-1"></a>lista<span class="sc">$</span>promedio_edad</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 12.05263</code></pre>
+</div>
+</div>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
+<div id="ref-ahumada2003r" class="csl-entry" role="doc-biblioentry">
+Ahumada, Jorge A. 2003. <span>“R Para Principiantes.”</span> <em>University of Hawaii</em>.
+</div>
+<div id="ref-barnes2007programacion" class="csl-entry" role="doc-biblioentry">
+Barnes, David J, Michael Kölling, and Blanca Irene Brenta. 2007. <em>Programaci<span>ó</span>n Orientada a Objetos Con Java</em>. Pearson Educaci<span>ó</span>n.
+</div>
+<div id="ref-butler2009asreml" class="csl-entry" role="doc-biblioentry">
+Butler, DG, Brian R Cullis, AR Gilmour, and BJ Gogel. 2009. <span>“ASReml-r Reference Manual.”</span> <em>The State of Queensland, Department of Primary Industries and Fisheries, Brisbane</em>.
+</div>
+<div id="ref-chan2018data" class="csl-entry" role="doc-biblioentry">
+Chan, Bertram KC, and Bertram KC Chan. 2018. <span>“Data Analysis Using r Programming.”</span> <em>Biostatistics for Human Genetic Epidemiology</em>, 47–122.
+</div>
+<div id="ref-R-base" class="csl-entry" role="doc-biblioentry">
+R Core Team. 2022. <em>R: A Language and Environment for Statistical Computing</em>. Vienna, Austria: R Foundation for Statistical Computing. <a href="https://www.R-project.org/">https://www.R-project.org/</a>.
+</div>
+<div id="ref-del2011algebra" class="csl-entry" role="doc-biblioentry">
+Valle Sotelo, Juan Carlos del. 2011. <em><span>Á</span>lgebra Lineal Para Estudiantes de Ingenier<span>ı́</span>a y Ciencias</em>. McGraw-Hill/Interamericana.
+</div>
+</div>
+</section>
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p><em>Integrated development environment</em> o <em>Entorno de desarrollo integrado.</em> Programa diseñado para trabajar con lenguajes de programación de manera más agradable.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Operador para concatenar funciones.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>Missing Value o valor perdido.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>El signo <code>$</code> nos permite acceder a una variable u objeto en su forma unidimensional, o bien, en forma de vector.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./conocimientos_previos.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Conocimientos previos</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./funcs.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Creando mis propias funciones</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>

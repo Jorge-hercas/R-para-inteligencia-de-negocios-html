@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>R para inteligencia de negocios - 6&nbsp; Análisis exploratorio de datos</title>
+<title>R para inteligencia de negocios - 7&nbsp; Análisis exploratorio de datos</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -154,7 +154,7 @@ div.csl-indent {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Análisis exploratorio de datos</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Análisis exploratorio de datos</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -194,32 +194,37 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./funcs.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Creando mis propias funciones</span></a>
+  <a href="./basics.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Primeros pasos en R</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./limpieza.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Extracción, entendimiento y exportación de nuestros datos</span></a>
+  <a href="./funcs.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Creando mis propias funciones</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./limpieza2.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Limpieza y manejo de datos: Principales problemas y soluciones</span></a>
+  <a href="./limpieza.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Extracción, entendimiento y exportación de nuestros datos</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./analisis_exploratorio.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Análisis exploratorio de datos</span></a>
+  <a href="./limpieza2.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Limpieza y manejo de datos: Principales problemas y soluciones</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./forecasts.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Pronósticos y estimaciones</span></a>
+  <a href="./analisis_exploratorio.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Análisis exploratorio de datos</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./dashboards.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Presentando mis datos: Dashboards (Shiny) y apps web</span></a>
+  <a href="./forecasts.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Pronósticos y estimaciones</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./dashboards.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Presentando mis datos: Dashboards (Shiny) y apps web</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -246,29 +251,29 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#estadística-descriptiva-resumiendo-mis-datos" id="toc-estadística-descriptiva-resumiendo-mis-datos" class="nav-link active" data-scroll-target="#estadística-descriptiva-resumiendo-mis-datos"><span class="toc-section-number">6.1</span>  Estadística descriptiva: resumiendo mis datos</a>
+  <li><a href="#estadística-descriptiva-resumiendo-mis-datos" id="toc-estadística-descriptiva-resumiendo-mis-datos" class="nav-link active" data-scroll-target="#estadística-descriptiva-resumiendo-mis-datos"><span class="toc-section-number">7.1</span>  Estadística descriptiva: resumiendo mis datos</a>
   <ul class="collapse">
-  <li><a href="#medidas-de-tendencia-central" id="toc-medidas-de-tendencia-central" class="nav-link" data-scroll-target="#medidas-de-tendencia-central"><span class="toc-section-number">6.1.1</span>  Medidas de tendencia central</a></li>
-  <li><a href="#medidas-de-dispersión" id="toc-medidas-de-dispersión" class="nav-link" data-scroll-target="#medidas-de-dispersión"><span class="toc-section-number">6.1.2</span>  Medidas de dispersión</a></li>
+  <li><a href="#medidas-de-tendencia-central" id="toc-medidas-de-tendencia-central" class="nav-link" data-scroll-target="#medidas-de-tendencia-central"><span class="toc-section-number">7.1.1</span>  Medidas de tendencia central</a></li>
+  <li><a href="#medidas-de-dispersión" id="toc-medidas-de-dispersión" class="nav-link" data-scroll-target="#medidas-de-dispersión"><span class="toc-section-number">7.1.2</span>  Medidas de dispersión</a></li>
   </ul></li>
-  <li><a href="#distribución-de-los-datos-y-supuestos-estadísticos" id="toc-distribución-de-los-datos-y-supuestos-estadísticos" class="nav-link" data-scroll-target="#distribución-de-los-datos-y-supuestos-estadísticos"><span class="toc-section-number">6.2</span>  Distribución de los datos y supuestos estadísticos</a>
+  <li><a href="#distribución-de-los-datos-y-supuestos-estadísticos" id="toc-distribución-de-los-datos-y-supuestos-estadísticos" class="nav-link" data-scroll-target="#distribución-de-los-datos-y-supuestos-estadísticos"><span class="toc-section-number">7.2</span>  Distribución de los datos y supuestos estadísticos</a>
   <ul class="collapse">
-  <li><a href="#distribuciones-normales" id="toc-distribuciones-normales" class="nav-link" data-scroll-target="#distribuciones-normales"><span class="toc-section-number">6.2.1</span>  Distribuciones normales</a></li>
-  <li><a href="#distribuciones-no-normales" id="toc-distribuciones-no-normales" class="nav-link" data-scroll-target="#distribuciones-no-normales"><span class="toc-section-number">6.2.2</span>  Distribuciones no normales</a></li>
-  <li><a href="#una-pequeña-reflexión" id="toc-una-pequeña-reflexión" class="nav-link" data-scroll-target="#una-pequeña-reflexión"><span class="toc-section-number">6.2.3</span>  Una pequeña reflexión</a></li>
-  <li><a href="#teorema-de-tchebysheff" id="toc-teorema-de-tchebysheff" class="nav-link" data-scroll-target="#teorema-de-tchebysheff"><span class="toc-section-number">6.2.4</span>  Teorema de Tchebysheff</a></li>
-  <li><a href="#validando-los-supuestos-estadísticos" id="toc-validando-los-supuestos-estadísticos" class="nav-link" data-scroll-target="#validando-los-supuestos-estadísticos"><span class="toc-section-number">6.2.5</span>  Validando los supuestos estadísticos</a></li>
-  <li><a href="#por-qué-se-deben-cumplir-estos-supuestos" id="toc-por-qué-se-deben-cumplir-estos-supuestos" class="nav-link" data-scroll-target="#por-qué-se-deben-cumplir-estos-supuestos"><span class="toc-section-number">6.2.6</span>  ¿Por qué se deben cumplir estos supuestos?</a></li>
-  <li><a href="#validando-estos-supuestos-en-distribuciones-no-normales" id="toc-validando-estos-supuestos-en-distribuciones-no-normales" class="nav-link" data-scroll-target="#validando-estos-supuestos-en-distribuciones-no-normales"><span class="toc-section-number">6.2.7</span>  Validando estos supuestos en distribuciones no normales</a></li>
+  <li><a href="#distribuciones-normales" id="toc-distribuciones-normales" class="nav-link" data-scroll-target="#distribuciones-normales"><span class="toc-section-number">7.2.1</span>  Distribuciones normales</a></li>
+  <li><a href="#distribuciones-no-normales" id="toc-distribuciones-no-normales" class="nav-link" data-scroll-target="#distribuciones-no-normales"><span class="toc-section-number">7.2.2</span>  Distribuciones no normales</a></li>
+  <li><a href="#una-pequeña-reflexión" id="toc-una-pequeña-reflexión" class="nav-link" data-scroll-target="#una-pequeña-reflexión"><span class="toc-section-number">7.2.3</span>  Una pequeña reflexión</a></li>
+  <li><a href="#teorema-de-tchebysheff" id="toc-teorema-de-tchebysheff" class="nav-link" data-scroll-target="#teorema-de-tchebysheff"><span class="toc-section-number">7.2.4</span>  Teorema de Tchebysheff</a></li>
+  <li><a href="#validando-los-supuestos-estadísticos" id="toc-validando-los-supuestos-estadísticos" class="nav-link" data-scroll-target="#validando-los-supuestos-estadísticos"><span class="toc-section-number">7.2.5</span>  Validando los supuestos estadísticos</a></li>
+  <li><a href="#por-qué-se-deben-cumplir-estos-supuestos" id="toc-por-qué-se-deben-cumplir-estos-supuestos" class="nav-link" data-scroll-target="#por-qué-se-deben-cumplir-estos-supuestos"><span class="toc-section-number">7.2.6</span>  ¿Por qué se deben cumplir estos supuestos?</a></li>
+  <li><a href="#validando-estos-supuestos-en-distribuciones-no-normales" id="toc-validando-estos-supuestos-en-distribuciones-no-normales" class="nav-link" data-scroll-target="#validando-estos-supuestos-en-distribuciones-no-normales"><span class="toc-section-number">7.2.7</span>  Validando estos supuestos en distribuciones no normales</a></li>
   </ul></li>
-  <li><a href="#ab-testing-comparando-muestras" id="toc-ab-testing-comparando-muestras" class="nav-link" data-scroll-target="#ab-testing-comparando-muestras"><span class="toc-section-number">6.3</span>  A/B testing: Comparando muestras</a>
+  <li><a href="#ab-testing-comparando-muestras" id="toc-ab-testing-comparando-muestras" class="nav-link" data-scroll-target="#ab-testing-comparando-muestras"><span class="toc-section-number">7.3</span>  A/B testing: Comparando muestras</a>
   <ul class="collapse">
-  <li><a href="#grupo-control-y-grupo-tratamiento" id="toc-grupo-control-y-grupo-tratamiento" class="nav-link" data-scroll-target="#grupo-control-y-grupo-tratamiento"><span class="toc-section-number">6.3.1</span>  Grupo control y grupo tratamiento</a></li>
-  <li><a href="#métricas-comunes-en-negocio" id="toc-métricas-comunes-en-negocio" class="nav-link" data-scroll-target="#métricas-comunes-en-negocio"><span class="toc-section-number">6.3.2</span>  Métricas comunes en negocio</a></li>
-  <li><a href="#comparación-de-proporciones" id="toc-comparación-de-proporciones" class="nav-link" data-scroll-target="#comparación-de-proporciones"><span class="toc-section-number">6.3.3</span>  Comparación de proporciones</a></li>
-  <li><a href="#comparación-de-medias" id="toc-comparación-de-medias" class="nav-link" data-scroll-target="#comparación-de-medias"><span class="toc-section-number">6.3.4</span>  Comparación de medias</a></li>
-  <li><a href="#tamaño-del-efecto-y-relevancia-práctica" id="toc-tamaño-del-efecto-y-relevancia-práctica" class="nav-link" data-scroll-target="#tamaño-del-efecto-y-relevancia-práctica"><span class="toc-section-number">6.3.5</span>  Tamaño del efecto y relevancia práctica</a></li>
-  <li><a href="#tamaño-de-muestra-y-poder-estadístico" id="toc-tamaño-de-muestra-y-poder-estadístico" class="nav-link" data-scroll-target="#tamaño-de-muestra-y-poder-estadístico"><span class="toc-section-number">6.3.6</span>  Tamaño de muestra y poder estadístico</a></li>
+  <li><a href="#grupo-control-y-grupo-tratamiento" id="toc-grupo-control-y-grupo-tratamiento" class="nav-link" data-scroll-target="#grupo-control-y-grupo-tratamiento"><span class="toc-section-number">7.3.1</span>  Grupo control y grupo tratamiento</a></li>
+  <li><a href="#métricas-comunes-en-negocio" id="toc-métricas-comunes-en-negocio" class="nav-link" data-scroll-target="#métricas-comunes-en-negocio"><span class="toc-section-number">7.3.2</span>  Métricas comunes en negocio</a></li>
+  <li><a href="#comparación-de-proporciones" id="toc-comparación-de-proporciones" class="nav-link" data-scroll-target="#comparación-de-proporciones"><span class="toc-section-number">7.3.3</span>  Comparación de proporciones</a></li>
+  <li><a href="#comparación-de-medias" id="toc-comparación-de-medias" class="nav-link" data-scroll-target="#comparación-de-medias"><span class="toc-section-number">7.3.4</span>  Comparación de medias</a></li>
+  <li><a href="#tamaño-del-efecto-y-relevancia-práctica" id="toc-tamaño-del-efecto-y-relevancia-práctica" class="nav-link" data-scroll-target="#tamaño-del-efecto-y-relevancia-práctica"><span class="toc-section-number">7.3.5</span>  Tamaño del efecto y relevancia práctica</a></li>
+  <li><a href="#tamaño-de-muestra-y-poder-estadístico" id="toc-tamaño-de-muestra-y-poder-estadístico" class="nav-link" data-scroll-target="#tamaño-de-muestra-y-poder-estadístico"><span class="toc-section-number">7.3.6</span>  Tamaño de muestra y poder estadístico</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -278,7 +283,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Análisis exploratorio de datos</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Análisis exploratorio de datos</span></h1>
 </div>
 
 
@@ -300,8 +305,8 @@ div.csl-indent {
 <p>¿A qué se refiere el análisis exploratorio de datos? Para contestar esta pregunta debemos pensar en lo siguiente: Una empresa, negocio u organización gubernamental (casi) siempre tendrá como objetivo el mejorar sus procesos, hacerse más eficiente y buscar áreas de mejora. Para lograr todo lo anterior, la herramienta más poderosa que tienen las organizaciones siempre serán sus datos, por lo que nuestro trabajo será el de encontrar esas áreas de mejora y poder responder todas las preguntas del negocio a partir de la información que tengamos disponible. El AED será el paso inicial, ya que este tendrá como objetivo el dar un primer vistazo a nuestros datos a partir de ciertos cálculos de estadística descriptiva y gráficos generales.</p>
 <p>Para poder nosotros crear pronósticos, modelos estadísticos y análisis más complejos, será necesario que conozcamos a una mayor profundidad y exactitud la estructura y contenido de los datos con los que estemos trabajando, ya que esto nos permitirá establecer una lógica que se ajuste mejor al objetivo y resultados que estemos buscando.</p>
 <p>Dentro del AED también podemos incluir técnicas más específicas de limpieza de datos y detección de observaciones atípicas. Si te lo estas preguntando, estas técnicas no fueron incluidas en el capítulo anterior debido a que requieren de un análisis previo y más complejo de los datos para poder pasar a la parte de la limpieza, razón por la que se optó por incluir ese tema hasta este capítulo. No debes ser impaciente, las veremos a profundidad a su debido tiempo.</p>
-<section id="estadística-descriptiva-resumiendo-mis-datos" class="level2" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="estadística-descriptiva-resumiendo-mis-datos"><span class="header-section-number">6.1</span> Estadística descriptiva: resumiendo mis datos</h2>
+<section id="estadística-descriptiva-resumiendo-mis-datos" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="estadística-descriptiva-resumiendo-mis-datos"><span class="header-section-number">7.1</span> Estadística descriptiva: resumiendo mis datos</h2>
 <p>Es probable que hayas tenido clases de estadística básica en las que te hicieron calcular el promedio, la media, la moda, etc, pero ¿por qué la importancia de estas estadísticas? Estos cálculos se conocen como <em>medidas de tendencia central</em>, y nos serán de gran utilidad para entender hacia qué dirección tienden nuestros datos, es decir, el punto (o puntos) de mayor concentración de información y valores esperados. Además de las medidas de tendencia central, también tenemos las <em>medidas de dispersión</em>, como la varianza y desviación estandar, cálculos que nos ayudarán a entender la volatilidad y probabilidad de que el valor medio se cumpla. Iremos revisando cada uno de estos cálculos con detalle más adelante.</p>
 <p>Para comenzar a entender nuestros datos y las medidas de tendencia central/dispersión, vamos a usar el siguiente ejemplo: Una tabla con datos históricos del maratón de Reino Unido, <a href="https://raw.githubusercontent.com/Jorge-hercas/r-para-inteligencia-de-negocios/main/CSV/london_marathon.csv">disponibles en el siguiente enlace</a> del repositorio oficial del presente libro:</p>
 <div class="cell">
@@ -330,8 +335,8 @@ div.csl-indent {
 </div>
 </div>
 <p>Por supuesto, una buena práctica siempre será el visualizar las primeras observaciones de nuestra tabla, ya que con ello nos daremos una mejor idea del tipo de datos con los que vamos a estar trabajando. En este caso, a simple vista podemos darnos cuenta de que la tabla se refiere a los usuarios asociados a maratones en londres, en un rango de tiempo específico. Ahora conocemos el objetivo de la tabla, pero aún no podemos responder preguntas más específicas. Tendremos que hacer uso de estadística descriptiva para conocer más detalles.</p>
-<section id="medidas-de-tendencia-central" class="level3" data-number="6.1.1">
-<h3 data-number="6.1.1" class="anchored" data-anchor-id="medidas-de-tendencia-central"><span class="header-section-number">6.1.1</span> Medidas de tendencia central</h3>
+<section id="medidas-de-tendencia-central" class="level3" data-number="7.1.1">
+<h3 data-number="7.1.1" class="anchored" data-anchor-id="medidas-de-tendencia-central"><span class="header-section-number">7.1.1</span> Medidas de tendencia central</h3>
 <p>¿Qué cantidad de aplicantes suele haber en el maratón de londres? Imagina que eres un analista de datos para la organización que realiza los maratones; si tuvieras que calcular una estimación de aplicantes para el siguiente año, ¿qué tan confiable sería este cálculo a partir de un promedio?</p>
 <p>Para responder todas estas preguntas, como primer paso vamos a calcular el promedio<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>:</p>
 <div class="cell">
@@ -529,8 +534,8 @@ TC = \frac{(V_1 - V_0)}{V_0}*100
 <p>Devolviendo únicamente la amplitud de valores en columnas no numéricas.</p>
 <p>Evidentemente pudimos haber comenzado con esta función desde el principio de esta sección, sin embargo, mi interés primordial era que tuvieras un conocimiento más profundo de cada cálculo por separado, antes de comenzar a simplificar código.</p>
 </section>
-<section id="medidas-de-dispersión" class="level3" data-number="6.1.2">
-<h3 data-number="6.1.2" class="anchored" data-anchor-id="medidas-de-dispersión"><span class="header-section-number">6.1.2</span> Medidas de dispersión</h3>
+<section id="medidas-de-dispersión" class="level3" data-number="7.1.2">
+<h3 data-number="7.1.2" class="anchored" data-anchor-id="medidas-de-dispersión"><span class="header-section-number">7.1.2</span> Medidas de dispersión</h3>
 <p>¿Qué tan confiable sería calcular una estimación a partir del promedio? Ya que conocemos las medidas de tendencia central, es momento de comenzar a analizar la dispersión de los datos y entender qué tan volátiles son. Para calcular esta <em>variabilidad</em> en los datos, vamos a hacer uso de la varianza, la desviación estandar y la kurtosis <span class="citation" data-cites="gardener2012beginning">(<a href="referencias.html#ref-gardener2012beginning" role="doc-biblioref">Gardener 2012</a>)</span>. La varianza es calculada con la ecuación:</p>
 <p><span class="math display">\[
 S^2 =\frac{\sum_{i=1}^{N} (x_i - \bar{x})^2}{N}
@@ -681,12 +686,12 @@ attr(,"method")
 </table>
 </section>
 </section>
-<section id="distribución-de-los-datos-y-supuestos-estadísticos" class="level2" data-number="6.2">
-<h2 data-number="6.2" class="anchored" data-anchor-id="distribución-de-los-datos-y-supuestos-estadísticos"><span class="header-section-number">6.2</span> Distribución de los datos y supuestos estadísticos</h2>
+<section id="distribución-de-los-datos-y-supuestos-estadísticos" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="distribución-de-los-datos-y-supuestos-estadísticos"><span class="header-section-number">7.2</span> Distribución de los datos y supuestos estadísticos</h2>
 <p>Hasta ahora ya hemos analizado algunas medidas para entender mejor la naturaleza de nuestros datos, así como su variabilidad dentro de ciertos rangos, sin embargo, por lo que ahora nos vamos a enfocar en la forma en que se distribuyen los datos y los supuestos estadísticos fundamentales que permiten aplicar ciertos métodos de inferencia. Esta sección es especialmente importante, ya que entender los tipos de distribución a los que nos enfrentaremos en el futuro nos ayudará a poder utilizar los métodos y pruebas correctas. Existen múltiples procedimientos estadísticos que basan la veracidad de sus resultados en estos supuestos, por lo que si no se cumplen, los resultados pueden ser inválidos.</p>
 <p>Para esta sección, vamos a comenzar por entender cómo se comporta una distribución normal, qué se espera de ella, y después analizaremos otros tipos de distribuciones y sus respectivas diferencias entre ellas.</p>
-<section id="distribuciones-normales" class="level3" data-number="6.2.1">
-<h3 data-number="6.2.1" class="anchored" data-anchor-id="distribuciones-normales"><span class="header-section-number">6.2.1</span> Distribuciones normales</h3>
+<section id="distribuciones-normales" class="level3" data-number="7.2.1">
+<h3 data-number="7.2.1" class="anchored" data-anchor-id="distribuciones-normales"><span class="header-section-number">7.2.1</span> Distribuciones normales</h3>
 <p>Si tomaste clases de de estadística anteriormente, seguramente ya tienes clara la idea de que una distribución normal (o distribución gaussiana, como se conoce coloquialmente), es aquella que cumple con los siguientes supuestos:</p>
 <ol type="1">
 <li><p>Perfectamente simétrica en ambas colas, siendo que sus valores se distribuyen de forma simétrica.</p></li>
@@ -766,8 +771,8 @@ f(x) = \frac{1}{\sqrt{2\pi\sigma^2}} \, e^{ -\frac{(x - \mu)^2}{2\sigma^2} }
 </div>
 </div>
 <p>El cual agrupa los datos por intervalos, lo que nos permite ver frecuencias absoultas/relativas, siendo algo más intuitivo que un gráfico de densidad (a mi consideración personal).</p>
-<section id="teorema-del-límite-central" class="level4" data-number="6.2.1.1">
-<h4 data-number="6.2.1.1" class="anchored" data-anchor-id="teorema-del-límite-central"><span class="header-section-number">6.2.1.1</span> Teorema del límite central</h4>
+<section id="teorema-del-límite-central" class="level4" data-number="7.2.1.1">
+<h4 data-number="7.2.1.1" class="anchored" data-anchor-id="teorema-del-límite-central"><span class="header-section-number">7.2.1.1</span> Teorema del límite central</h4>
 <p>El ejemplo que vimos anteriormente nos puede ayudar a entender mejor el <strong>teorema del límite central</strong>, que nos dice que, bajo ciertos escenarios, si tomamos suficientes muestras aleatorias y calculamos su promedio, este tenderá a una distribución normal, incluso en poblaciones con distribuciones no normales. Esto no implica que los datos originales se vuelvan normales, si no que únicamente el promedio de muchas muestras tenderá a serlo <span class="citation" data-cites="feller1968introduction">(<a href="referencias.html#ref-feller1968introduction" role="doc-biblioref">Feller 1968</a>)</span>. Supongamos una secuencia de variables aleatorias:</p>
 <p><span class="math display">\[
 X_1, X_2, ...,X_n
@@ -890,25 +895,25 @@ X_1, X_2, ...,X_n
 <div id="fig-prom-muest" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="analisis_exploratorio_files/figure-html/fig-prom-muest-1.png" class="img-fluid figure-img" width="672"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;6.1: Promedios muestrales para distribución normal</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;7.1: Promedios muestrales para distribución normal</figcaption><p></p>
 </figure>
 </div>
 </div>
 </div>
-<p>Como puedes darte cuenta, en el gráfico <a href="#fig-prom-muest">Figure&nbsp;<span>6.1</span></a>, ahora aproximamos una distribución normal a partir de los promedios muestrales aleatorios. Con este sencillo ejercicio pudimos darnos una idea más clara de este teorema.</p>
+<p>Como puedes darte cuenta, en el gráfico <a href="#fig-prom-muest">Figure&nbsp;<span>7.1</span></a>, ahora aproximamos una distribución normal a partir de los promedios muestrales aleatorios. Con este sencillo ejercicio pudimos darnos una idea más clara de este teorema.</p>
 </section>
 </section>
-<section id="distribuciones-no-normales" class="level3" data-number="6.2.2">
-<h3 data-number="6.2.2" class="anchored" data-anchor-id="distribuciones-no-normales"><span class="header-section-number">6.2.2</span> Distribuciones no normales</h3>
+<section id="distribuciones-no-normales" class="level3" data-number="7.2.2">
+<h3 data-number="7.2.2" class="anchored" data-anchor-id="distribuciones-no-normales"><span class="header-section-number">7.2.2</span> Distribuciones no normales</h3>
 <p>A pesar de que la <em>“normalidad”</em> en los ejercicios en los que solemos trabajar sean las distribuciones normales (valga la redundancia), este no siempre será el caso. En muchos contextos reales, los datos que analizamos no siguen una forma simétrica ni en forma gaussiana, y esto tiene importantes implicaciones para el análisis estadístico (que analizaremos más adelante).</p>
 <p>Existen múltiples situaciones en las que las distribuciones pueden presentar asimetrías, colas pesadas, concentraciones atípicas o incluso formas completamente irregulares. Por ejemplo, variables como el ingreso, el tiempo hasta un evento, el número de fallos, etc, suelen tener distribuciones sesgadas o discretas que distan mucho del comportamiento normal teórico.</p>
 <p>En esta sección analizaremos algunos de estos comportamientos, sus implicaciones y sus respectivas características, para poder entender de mejor manera cómo trabajar cuando nos enfrentemos a cada uno de estos casos.</p>
 <p>Ahora bien, ¿Con qué tipo de distribuciones nos podemos encontrar? Podemos seccionarlas por el tipo de valores con los que nos encontraremos en cada caso a continuación.</p>
-<section id="distribuciones-discretas" class="level4" data-number="6.2.2.1">
-<h4 data-number="6.2.2.1" class="anchored" data-anchor-id="distribuciones-discretas"><span class="header-section-number">6.2.2.1</span> Distribuciones discretas</h4>
+<section id="distribuciones-discretas" class="level4" data-number="7.2.2.1">
+<h4 data-number="7.2.2.1" class="anchored" data-anchor-id="distribuciones-discretas"><span class="header-section-number">7.2.2.1</span> Distribuciones discretas</h4>
 <p>Este tipo de distribuciones de probabilidad se utilizan para describir fenómenos donde las variables aleatorias solo pueden tomar valores específicos, es decir, cuando el conjunto de posibles resultados no es infinito en densidad (aunque puede ser infinito en extensión) <span class="citation" data-cites="degroot2012probability">(<a href="referencias.html#ref-degroot2012probability" role="doc-biblioref">DeGroot and Schervish 2012</a>)</span>. Dentro de las distribuciones discretas podemos encontrar principalmente:</p>
-<section id="distribución-binomial" class="level5" data-number="6.2.2.1.1">
-<h5 data-number="6.2.2.1.1" class="anchored" data-anchor-id="distribución-binomial"><span class="header-section-number">6.2.2.1.1</span> Distribución Binomial</h5>
+<section id="distribución-binomial" class="level5" data-number="7.2.2.1.1">
+<h5 data-number="7.2.2.1.1" class="anchored" data-anchor-id="distribución-binomial"><span class="header-section-number">7.2.2.1.1</span> Distribución Binomial</h5>
 <p>Este tipo de distribución es utilizada para modelar el número de éxitos en una serie de ensayos independientes, en los que cada ensayo tiene únicamente dos posibles resultados mutuamente excluyentes: éxito o fracaso. Al estar centrada en estos dos resultados dicotómicos, la variable aleatoria que se analiza solo puede tomar valores enteros entre 0 y <span class="math inline">\(n\)</span>, donde <span class="math inline">\(n\)</span> es el número total de ensayos realizados. Entre los ejemplos más comunes de fenómenos que se pueden modelar con esta distribución se encuentran el lanzamiento de una moneda justa, donde los resultados posibles son cara o cruz; ensayos clínicos, donde un paciente puede responder o no responder a un tratamiento, entre otros más.</p>
 <p>Ahora, para que una variable aleatoria siga una distribución de tipo <em>binomial</em>, estas tienen que seguir las siguientes características:</p>
 <ol type="1">
@@ -971,8 +976,8 @@ P(X = x) = \left( \frac{n!}{x!(n - x)!} \right) p^x (1 - p)^{n - x}
 </div>
 <p>En este caso, cada barra del histograma representa la frecuencia con la que se observa un número específico de éxitos en una serie de ensayos binomiales, a partir de la replicación que hicimos de las diez mil simulaciones.</p>
 </section>
-<section id="distribución-de-poisson" class="level5" data-number="6.2.2.1.2">
-<h5 data-number="6.2.2.1.2" class="anchored" data-anchor-id="distribución-de-poisson"><span class="header-section-number">6.2.2.1.2</span> Distribución de Poisson</h5>
+<section id="distribución-de-poisson" class="level5" data-number="7.2.2.1.2">
+<h5 data-number="7.2.2.1.2" class="anchored" data-anchor-id="distribución-de-poisson"><span class="header-section-number">7.2.2.1.2</span> Distribución de Poisson</h5>
 <p>Este tipo de distribución discreta es utilizada para modelar el número de veces que ocurre un evento en un intervalo fijo de tiempo, espacio, área o volumen, bajo la condición de que dichos eventos ocurran de manera aleatoria, con una tasa constante y de forma independiente entre sí. A diferencia de otras distribuciones que requieren un número de ensayos definidos, en la distribución de <em>Poisson</em> no se conoce el número de oportunidades, sino que se observa la frecuencia de aparición de un fenómeno. Por lo tanto, la variable aleatoria que se analiza puede tomar cualquier valor entero no negativo: <span class="math inline">\(0,1,...,n\)</span> <span class="citation" data-cites="poisson1837recherches">(@ <a href="referencias.html#ref-poisson1837recherches" role="doc-biblioref">Poisson 1837</a>)</span></p>
 <p>Entre los ejemplos más comunes de fenómenos que se pueden modelar con esta distribución se encuentran el número de llamadas que recibe una central telefónica por hora, la cantidad de errores tipográficos en una página, los accidentes de tránsito en una intersección durante un día, entre otros.</p>
 <p>Ahora, para que una variable aleatoria siga una distribución de tipo <em>Poisson</em>, esta debe cumplir con las siguientes características:</p>
@@ -1041,8 +1046,8 @@ P(X = k) = \frac{\lambda^k e^{-\lambda}}{k!}
 </div>
 <p>Este histograma muestra la forma que puede adoptar una distribución de Poisson cuando el parámetro <span class="math inline">\(\lambda\)</span> es considerablemente grande. Como puedes ver, cada barra representa la frecuencia con la que se obtuvo un determinado número de eventos.</p>
 </section>
-<section id="distribución-geométrica" class="level5" data-number="6.2.2.1.3">
-<h5 data-number="6.2.2.1.3" class="anchored" data-anchor-id="distribución-geométrica"><span class="header-section-number">6.2.2.1.3</span> Distribución Geométrica</h5>
+<section id="distribución-geométrica" class="level5" data-number="7.2.2.1.3">
+<h5 data-number="7.2.2.1.3" class="anchored" data-anchor-id="distribución-geométrica"><span class="header-section-number">7.2.2.1.3</span> Distribución Geométrica</h5>
 <p>Este tipo de distribución discreta se utiliza para modelar el número de intentos necesarios hasta que ocurre el <strong>primer éxito</strong> en una secuencia de ensayos de Bernoulli independientes, donde en cada ensayo solo hay dos posibles resultados: éxito o fracaso. A diferencia de otras distribuciones que modelan la cantidad de éxitos en un número fijo de intentos, la distribución geométrica se enfoca en cuántos fracasos ocurren antes del primer éxito, o bien, en qué intento se obtiene ese primer éxito <span class="citation" data-cites="wasserman2004all">(@ <a href="referencias.html#ref-wasserman2004all" role="doc-biblioref">Wasserman 2004</a>)</span>.</p>
 <p>La variable aleatoria que se estudia en este caso puede tomar valores enteros positivos: <span class="math inline">\(1,2,3,...\)</span>, si se cuenta el número del intento donde se logra el primer éxito, o valores <span class="math inline">\(0,1,2,...\)</span> si se cuentan los fracasos previos al éxito.</p>
 <p>Entre los ejemplos más comunes que se pueden modelar con una distribución geométrica están: el número de veces que una persona lanza una moneda hasta que obtiene cara por primera vez, la cantidad de correos que una persona revisa hasta encontrar uno importante, o la cantidad de veces que se necesita ejecutar un proceso hasta que sea exitoso.</p>
@@ -1115,8 +1120,8 @@ P(X=k) = (1 - p)^{k-1}p
 <p>Para este histograma, cada barra muestra cuántas veces se obtuvo una suma determinada de fracasos antes del primer éxito en un conjunto de 100 repeticiones del experimento geométrico. Como puedes ver, la media de probabilidad para obtener 100 éxitos es de obtener 230 fracasos aproximadamente.</p>
 <p>Hasta ahora hemos visto que, a pesar de ser distribuciones discretas, cuando realizamos un gran número de simulaciones, el histograma resultante nos muestra una forma que se asemeja bastante a una distribución normal. Esta transformación en la forma de la distribución no es casual ni un simple artefacto visual, sino que responde al principio del Teorema del Límite Central. La dispersión de los datos se organiza de manera simétrica alrededor de una media, y la forma de campana característica de la distribución normal comienza a emerger, conforme vamos aumentando las simulaciones.</p>
 </section>
-<section id="otras-distribuciones-discretas" class="level5" data-number="6.2.2.1.4">
-<h5 data-number="6.2.2.1.4" class="anchored" data-anchor-id="otras-distribuciones-discretas"><span class="header-section-number">6.2.2.1.4</span> Otras distribuciones discretas</h5>
+<section id="otras-distribuciones-discretas" class="level5" data-number="7.2.2.1.4">
+<h5 data-number="7.2.2.1.4" class="anchored" data-anchor-id="otras-distribuciones-discretas"><span class="header-section-number">7.2.2.1.4</span> Otras distribuciones discretas</h5>
 <p>Además de las distribuciones discretas que vimos hasta ahora (Binomial, Poisson y Geométrica), también éxisten otras distribuciones para usos más particulares: <em>Binomial Negativa</em>, <em>Hipergeométrica</em>, <em>Bernoulli</em> y <em>Uniforme Discreta</em> <span class="citation" data-cites="wasserman2004all">(<a href="referencias.html#ref-wasserman2004all" role="doc-biblioref">Wasserman 2004</a>)</span>, las cuales no vamos a ahondar con detalle por ahora, ya que quedarán como ejercicio para el lector, pero, vamos rápidamente a mostrar la función en R para dichas distribuciones:</p>
 <ol type="1">
 <li>Binomial Negativa</li>
@@ -1170,11 +1175,11 @@ P(X=k) = (1 - p)^{k-1}p
 <p>Donde <code>x</code> es el vector de posibles valores, <code>size</code> el tamaño de la muestra y <code>replace</code> un parámetro para indicar que se pueden repetir valores.</p>
 </section>
 </section>
-<section id="distribuciones-continuas" class="level4" data-number="6.2.2.2">
-<h4 data-number="6.2.2.2" class="anchored" data-anchor-id="distribuciones-continuas"><span class="header-section-number">6.2.2.2</span> Distribuciones Continuas</h4>
+<section id="distribuciones-continuas" class="level4" data-number="7.2.2.2">
+<h4 data-number="7.2.2.2" class="anchored" data-anchor-id="distribuciones-continuas"><span class="header-section-number">7.2.2.2</span> Distribuciones Continuas</h4>
 <p>Este tipo de distribuciones de probabilidad se utilizan para describir fenómenos donde las variables aleatorias pueden tomar cualquier valor dentro de un intervalo en la recta real, es decir, cuando el conjunto de posibles resultados es infinito y densamente poblado <span class="citation" data-cites="degroot2012probability">(<a href="referencias.html#ref-degroot2012probability" role="doc-biblioref">DeGroot and Schervish 2012</a>)</span>. A diferencia de las distribuciones discretas, en las continuas no se asignan probabilidades a valores puntuales, sino a rangos de valores. Dentro de las distribuciones continuas podemos encontrar principalmente:</p>
-<section id="distribución-uniforme-continua" class="level5" data-number="6.2.2.2.1">
-<h5 data-number="6.2.2.2.1" class="anchored" data-anchor-id="distribución-uniforme-continua"><span class="header-section-number">6.2.2.2.1</span> Distribución Uniforme Continua</h5>
+<section id="distribución-uniforme-continua" class="level5" data-number="7.2.2.2.1">
+<h5 data-number="7.2.2.2.1" class="anchored" data-anchor-id="distribución-uniforme-continua"><span class="header-section-number">7.2.2.2.1</span> Distribución Uniforme Continua</h5>
 <p>Este tipo de distribución es utilizada para modelar fenómenos en los que cualquier valor dentro de un intervalo continuo tiene la misma probabilidad de ocurrir. Es decir, no hay una mayor inclinación hacia ningún número específico dentro del rango definido: todos los valores son igualmente probables. La variable aleatoria que se analiza puede tomar infinitos valores reales dentro de un intervalo cerrado <span class="math inline">\([a,b]\)</span>, donde <span class="math inline">\(a\)</span> es el límite inferior y <span class="math inline">\(b\)</span> el límite superior <span class="citation" data-cites="degroot2012probability">(<a href="referencias.html#ref-degroot2012probability" role="doc-biblioref">DeGroot and Schervish 2012</a>)</span>.</p>
 <p>Entre los ejemplos más comunes de fenómenos que se pueden modelar con esta distribución se encuentran la selección aleatoria de un punto sobre una línea de longitud conocida, el tiempo en que una persona llega a una cita si se asume que puede llegar en cualquier momento dentro de un rango horario y todos los minutos tienen la misma probabilidad de ocurrencia, entre otros más.</p>
 <p>Ahora, para que una variable aleatoria siga una distribución de tipo uniforme continua, esta debe cumplir con las siguientes características:</p>
@@ -1307,8 +1312,8 @@ Var(X) = \frac{(b-a)^2}{12}
 </div>
 </div>
 </section>
-<section id="distribución-exponencial" class="level5" data-number="6.2.2.2.2">
-<h5 data-number="6.2.2.2.2" class="anchored" data-anchor-id="distribución-exponencial"><span class="header-section-number">6.2.2.2.2</span> Distribución Exponencial</h5>
+<section id="distribución-exponencial" class="level5" data-number="7.2.2.2.2">
+<h5 data-number="7.2.2.2.2" class="anchored" data-anchor-id="distribución-exponencial"><span class="header-section-number">7.2.2.2.2</span> Distribución Exponencial</h5>
 <p>Este tipo de distribución es utilizada para modelar fenómenos en los que el tiempo entre eventos consecutivos de un proceso aleatorio sigue un patrón decreciente: los valores pequeños son más probables y la probabilidad disminuye exponencialmente conforme el valor aumenta, es decir, modela el tiempo de espera hasta que ocurra un evento en un proceso que sucede de manera continua y con una tasa constante <span class="citation" data-cites="degroot2012probability">(<a href="referencias.html#ref-degroot2012probability" role="doc-biblioref">DeGroot and Schervish 2012</a>)</span>.</p>
 <p>Este tipo de distribución es especialmente útil para modelar situaciones como el tiempo que tarda en fallar una máquina o un componente electrónico, el tiempo que una persona espera en una fila antes de ser atendida, etc. Básicamente, situaciones en las que, conforme vaya aumentando el valor (en este caso el tiempo), la probabilidad de ocurrencia del evento disminuye exponencialmente (es más probable que te atiendan en una tienda en los primeros 10 minutos que en los 20 minutos subsecuentes a esos 10).</p>
 <p>Para que una variable aleatoria siga una distribución exponencial, debe cumplir con las siguientes características:</p>
@@ -1385,8 +1390,8 @@ F(x;\lambda) = P(X \leq x) = 1 - e^{- \lambda x }, \: \: x \geq 0
 </div>
 <p>Como puedes ver, la probabilidad de que ocurra dicho evento disminuye de manera exponencial para 10, 20, 30 minutos, etc, conforme el tiempo se incrementa.</p>
 </section>
-<section id="distribución-gamma" class="level5" data-number="6.2.2.2.3">
-<h5 data-number="6.2.2.2.3" class="anchored" data-anchor-id="distribución-gamma"><span class="header-section-number">6.2.2.2.3</span> Distribución Gamma</h5>
+<section id="distribución-gamma" class="level5" data-number="7.2.2.2.3">
+<h5 data-number="7.2.2.2.3" class="anchored" data-anchor-id="distribución-gamma"><span class="header-section-number">7.2.2.2.3</span> Distribución Gamma</h5>
 <p>Este tipo de distribución es utilizada para modelar fenómenos en los que se desea conocer el tiempo hasta que ocurran k eventos en un proceso aleatorio continuo con tasa constante. A diferencia de la distribución exponencial, que modela el tiempo hasta que ocurra un solo evento, la distribución gamma generaliza este concepto permitiendo modelar la espera hasta varios eventos consecutivos <span class="citation" data-cites="johnson1994continuous">(<a href="referencias.html#ref-johnson1994continuous" role="doc-biblioref">Johnson, Kotz, and Balakrishnan 1994</a>)</span>.</p>
 <p>Dicho de otra manera, si la distribución exponencial describe la probabilidad de esperar cierto tiempo hasta el primer evento, la distribución gamma describe la probabilidad de esperar cierto tiempo hasta que hayan ocurrido <span class="math inline">\(k\)</span> eventos. Por ejemplo, se podría usar para modelar el tiempo total que tardan en llegar 3 clientes a una tienda, el tiempo total que tarda en fallar un sistema después de varias reparaciones, etc.</p>
 <p>Para que una variable aleatoria siga una distribución gamma, debe cumplir con las siguientes características:</p>
@@ -1459,8 +1464,8 @@ F(x;k,\lambda) = \frac{\gamma (k, \lambda x)}{\Gamma (k)}
 </div>
 <p>Este tipo de distribución es más interesante. Como puedes darte cuenta, la forma en este histograma es algo más parecida a una distribución normal. Esta forma se debe a que el valor más probable nunca es inmediatamente el 0, sino que se encuentra en un punto positivo mayor que cero, porque la distribución gamma con parámetro de forma mayor que 1 comienza desde cero, sube hasta un máximo y luego baja, reflejando así un comportamiento más “<em>suavizado</em>” y menos abrupto que la distribución exponencial, por ejemplo, imagina que estás midiendo el tiempo que tarda un proceso que requiere completar varias etapas consecutivas, como cocinar un platillo con varios pasos. No puedes terminar justo al empezar (tiempo 0), sino que lo más probable es que el tiempo se acumule hasta cierto punto donde el proceso se completa con mayor frecuencia.</p>
 </section>
-<section id="distribución-beta" class="level5" data-number="6.2.2.2.4">
-<h5 data-number="6.2.2.2.4" class="anchored" data-anchor-id="distribución-beta"><span class="header-section-number">6.2.2.2.4</span> Distribución Beta</h5>
+<section id="distribución-beta" class="level5" data-number="7.2.2.2.4">
+<h5 data-number="7.2.2.2.4" class="anchored" data-anchor-id="distribución-beta"><span class="header-section-number">7.2.2.2.4</span> Distribución Beta</h5>
 <p>Este tipo de distribución es utilizada para modelar variables aleatorias continuas limitadas en un rango finito, normalmente entre 0 y 1, cuya probabilidad depende de dos parámetros de forma que permiten modelar una gran variedad de comportamientos: distribuciones simétricas, sesgadas hacia la izquierda o derecha, y hasta distribuciones en forma de U o campana <span class="citation" data-cites="johnson1995continuous">(<a href="referencias.html#ref-johnson1995continuous" role="doc-biblioref">Johnson, Kotz, and Balakrishnan 1995</a>)</span>.</p>
 <p>Básicamente, la distribución Beta describe la probabilidad de que una proporción, fracción o probabilidad misma tome ciertos valores dentro del intervalo <span class="math inline">\([0,1]\)</span>. Este tipo de distribución es usada comúnmente en estadística bayesiana, control de calidad, estimación de probabilidades de éxito y, en general, en cualquier situación donde se estudien proporciones restringidas a un rango fijo. Por ejemplo, se podría usar para calcular la proporción de tiempo que una máquina está en funcionamiento en un día, la fracción de la población que prefiere cierto producto, etc.</p>
 <p>Para que una variable aleatoria siga una distribución Beta, debe cumplir con las siguientes características:</p>
@@ -1572,8 +1577,8 @@ B_x (\alpha, \beta) =  \int_0^x t^{\alpha-1} (1-t)^{\beta - 1 } dt
 </div>
 <p>Aunque no lo parezca, este tipo de casos con forma <em>U</em> no son extraños en la vida real. Pensemos tan solo en, por ejemplo, las reseñas de un restaurante publicadas en Google. En una gran cantidad de casos los usuarios se dividen en grupos extremos: Reseñas terriblemente malas o reseñas sumamente positivas, por lo que si normalizáramos estas calificaciones en una escala de 0 a 1, nos encontraríamos con una distribución bastante parecida en forma a la <em>U</em>.</p>
 </section>
-<section id="distribución-de-pareto" class="level5" data-number="6.2.2.2.5">
-<h5 data-number="6.2.2.2.5" class="anchored" data-anchor-id="distribución-de-pareto"><span class="header-section-number">6.2.2.2.5</span> Distribución de Pareto</h5>
+<section id="distribución-de-pareto" class="level5" data-number="7.2.2.2.5">
+<h5 data-number="7.2.2.2.5" class="anchored" data-anchor-id="distribución-de-pareto"><span class="header-section-number">7.2.2.2.5</span> Distribución de Pareto</h5>
 <p>Este tipo de distribución es utilizada para modelar variables aleatorias continuas no negativas cuyo comportamiento sigue una ley de potencias, es decir, donde la probabilidad decrece de forma proporcional a una potencia de la variable. Es conocida por describir fenómenos donde unos pocos valores grandes tienen un peso desproporcionado frente a muchos valores pequeños, como ocurre en la distribución de la riqueza, tamaños de ciudades, ventas de productos, etc.</p>
 <p>Básicamente, la distribución de Pareto describe la probabilidad de que una cantidad exceda un cierto umbral mínimo, dado que los valores grandes son menos frecuentes pero aún posibles con cierta probabilidad significativa. Por ejemplo, se podría usar para modelar la probabilidad de que el ingreso de una persona supere cierto valor <span class="citation" data-cites="pareto1896cours">(<a href="referencias.html#ref-pareto1896cours" role="doc-biblioref">Pareto 1896</a>)</span>.</p>
 <p>Para que una variable aleatoria siga una distribución de Pareto, debe cumplir con las siguientes características:</p>
@@ -1716,8 +1721,8 @@ S(x) = \left( \frac{x_m}{x}  \right)^\alpha
 </div>
 <p>Este sencillo ejercicio nos permite visualizar de forma tangible cómo una distribución de Pareto se manifiesta en datos económicos reales. A pesar de que la mayoría de las personas se concentra en rangos de ingreso bajos o medios, la cola de la distribución (aunque estrecha en número de individuos) representa montos de ingreso muy elevados. Este patrón no solo confirma la teoría, si no que también nos ayuda a comprender de mejor manera la dinámica de la realidad en un país.</p>
 </section>
-<section id="distribución-log-normal" class="level5" data-number="6.2.2.2.6">
-<h5 data-number="6.2.2.2.6" class="anchored" data-anchor-id="distribución-log-normal"><span class="header-section-number">6.2.2.2.6</span> Distribución Log-Normal</h5>
+<section id="distribución-log-normal" class="level5" data-number="7.2.2.2.6">
+<h5 data-number="7.2.2.2.6" class="anchored" data-anchor-id="distribución-log-normal"><span class="header-section-number">7.2.2.2.6</span> Distribución Log-Normal</h5>
 <p>Finalmente, este tipo de distribución es utilizada para modelar variables aleatorias continuas cuyo logaritmo natural sigue una distribución normal. Básicamente, una variable aleatoria <span class="math inline">\(X\)</span> es Log-Normal si <span class="math inline">\(Y = ln(X)\)</span> tiene una distribución normal.</p>
 <p>La distribución Log-Normal se caracteriza por ser asimétrica hacia la derecha (cola pesada positiva), lo que la hace idónea para modelar fenómenos en los que los valores pequeños son comunes pero también existen valores extremadamente grandes con baja probabilidad. Este patrón se suele dar frecuentemente en datos de ingresos, precios de activos, tamaños de partículas, duraciones de procesos, etc <span class="citation" data-cites="aitchison1957lognormal">(<a href="referencias.html#ref-aitchison1957lognormal" role="doc-biblioref">Aitchison and Brown 1957</a>)</span>.</p>
 <p>Pensemos en el ejemplo que vimos en el caso de la distribución de Pareto. A pesar de que ambas distribuciones pueden ser aplicadas a este caso, la Log-Normal tiende a describir de manera más precisa la parte baja y media de la distribución de ingresos, donde la mayoría de las personas se concentran y los valores extremos son menos frecuentes. Esto se debe a que la Log-Normal surge naturalmente cuando una variable es el resultado de la multiplicación de muchos factores independientes y positivos (escolaridad, experiencia, sector económico, etc). Claro que, dependiendo de la perspectiva que queramos modelar, podemos hacer uso de una u otra. Por norma general, es recomendable utilizar una distribución Log-Normal en la parte baja y media de la distribución de ingresos, mientras que para el pico (top de ingresos) suele funcionar mejor la distribución de Pareto.</p>
@@ -1850,16 +1855,16 @@ F(x; \mu, \sigma) = \Phi \left( \frac{ln \, x - \mu}{\sigma}  \right)
 </section>
 </section>
 </section>
-<section id="una-pequeña-reflexión" class="level3" data-number="6.2.3">
-<h3 data-number="6.2.3" class="anchored" data-anchor-id="una-pequeña-reflexión"><span class="header-section-number">6.2.3</span> Una pequeña reflexión</h3>
+<section id="una-pequeña-reflexión" class="level3" data-number="7.2.3">
+<h3 data-number="7.2.3" class="anchored" data-anchor-id="una-pequeña-reflexión"><span class="header-section-number">7.2.3</span> Una pequeña reflexión</h3>
 <p>Ahora que hemos terminado de analizar la mayoría de las distribuciones con las que probablemente nos encontraremos en algún momento, surge una pregunta importante: ¿por qué es útil estudiar cada una de ellas por separado?</p>
 <p>La sección anterior siguió una estructura lógica y bien definida: primero, presentamos el tipo de distribución; luego, los casos en los que se aplica; a continuación, sus características principales; después, la definición matemática que las describe; y finalmente, un ejemplo visual que facilita su comprensión. Esta organización no fue casual, sino que tiene un propósito claro: ayudarte a entender las distribuciones de manera sencilla y práctica.</p>
 <p>De esta forma, cuando te enfrentes a alguna de estas distribuciones en el ámbito laboral, podrás identificarla con precisión. Esto te permitirá seleccionar y aplicar las pruebas de validación estadísticas adecuadas, lo que a su vez evitará resultados sesgados o interpretaciones erróneas al realizar análisis estadísticos, pronósticos o estudios de correlación.</p>
 <p>Ahora, la ayuda visual de un histograma y una función de densidad son importantes, sin embargo, el entender el contexto y valores de cada distribución con detalle nos asegurará el entendimiento de a qué caso nos estamos enfrentando. Imagina esto: Supongamos que una fábrica ensambla vehículos cada hora. Si quisiéramos calcular la proporción de vehículos que tienen un defecto de fábrica en ese intervalo de tiempo, estaríamos hablando de una distribución beta, mientas que si quisiéramos visualizar la cantidad de vehículos con defecto que se presentan en cada hora, entonces estaríamos hablando de una distribución discreta, como la distribución binomial (si conocemos el número total de vehículos) o la distribución de Poisson (si los defectos ocurren de manera aleatoria e independiente en un intervalo de tiempo).</p>
 <p>A pesar de ser problemas parecidos, esas sutiles diferencias en los objetivos de cálculo hacen que tengamos que plantearnos una distribución completamente diferente, por lo que debemos entender con mucha precisión cada caso particular.</p>
 </section>
-<section id="teorema-de-tchebysheff" class="level3" data-number="6.2.4">
-<h3 data-number="6.2.4" class="anchored" data-anchor-id="teorema-de-tchebysheff"><span class="header-section-number">6.2.4</span> Teorema de Tchebysheff</h3>
+<section id="teorema-de-tchebysheff" class="level3" data-number="7.2.4">
+<h3 data-number="7.2.4" class="anchored" data-anchor-id="teorema-de-tchebysheff"><span class="header-section-number">7.2.4</span> Teorema de Tchebysheff</h3>
 <p>Hasta ahora hemos explorado cómo resumir los datos con medidas descriptivas y cómo entender su comportamiento a través de distintas distribuciones, tanto normales como no normales. Sin embargo, surge una pregunta fundamental: ¿Qué ocurre cuando no conocemos con certeza la forma de la distribución de nuestros datos? Es decir, ¿Cómo podemos establecer límites de probabilidad sin necesidad de asumir normalidad u otra distribución específica?</p>
 <p>Aquí es donde entra en juego el Teorema de Tchebysheff, una de las herramientas más poderosas y generales de la estadística. Este teorema nos garantiza que, independientemente de la forma de la distribución, podemos acotar la proporción de observaciones que se encuentran dentro de un cierto número de desviaciones estándar respecto a la media. Básicamente, el Teorema de Tchebysheff nos ofrece una manera de cuantificar la <em>concentración</em> de los datos alrededor de la media sin hacer suposiciones estrictas sobre la distribución, ya que es aplicable a cualquier tipo de estas, independientemente de su (no) normalidad <span class="citation" data-cites="feller1968introduction">(<a href="referencias.html#ref-feller1968introduction" role="doc-biblioref">Feller 1968</a>)</span>.</p>
 <p>Formalmente, este teorema nos dice que, para cualquier conjunto de datos con media <span class="math inline">\(\mu\)</span> y desviación estándar <span class="math inline">\(\sigma\)</span>, para cualquier número <span class="math inline">\(k &gt; 1\)</span>:</p>
@@ -1992,8 +1997,8 @@ P(|X-\mu | &lt; k \sigma) \geq 1- \frac{1}{2^2} = 0.75
 </div>
 <p>Como puedes darte cuenta, este teorema es importante en el análisis de datos porque permite cuantificar la dispersión y garantizar un mínimo porcentaje de valores dentro de un rango de desviaciones estándar, incluso cuando los datos no siguen una distribución normal. Así, complementa las medidas de tendencia central y dispersión, lo que nos da una base confiable para interpretar y resumir cualquier conjunto de datos, independientemente de su forma o momentos.</p>
 </section>
-<section id="validando-los-supuestos-estadísticos" class="level3" data-number="6.2.5">
-<h3 data-number="6.2.5" class="anchored" data-anchor-id="validando-los-supuestos-estadísticos"><span class="header-section-number">6.2.5</span> Validando los supuestos estadísticos</h3>
+<section id="validando-los-supuestos-estadísticos" class="level3" data-number="7.2.5">
+<h3 data-number="7.2.5" class="anchored" data-anchor-id="validando-los-supuestos-estadísticos"><span class="header-section-number">7.2.5</span> Validando los supuestos estadísticos</h3>
 <p>Una vez comprendida la importancia de las distribuciones y los fundamentos teóricos que las sustentan, el siguiente paso en nuestro análisis exploratorio de datos es verificar si los datos cumplen con ciertos supuestos que permitan aplicar de manera adecuada diferentes métodos de inferencia. Entre estos supuestos, el de normalidad ocupa un lugar central, ya que muchos procedimientos estadísticos, como pruebas de hipótesis, intervalos de confianza o modelos de regresión, parten de la idea de que los datos provienen de una población normalmente distribuida. Sin embargo, en la práctica los datos rara vez siguen esta distribución de manera exacta, por lo que resulta necesario apoyarse en pruebas estadísticas y herramientas gráficas que nos permitan evaluar de manera más clara si el supuesto de normalidad es correcto, o si debemos considerar alternativas más robustas o no paramétricas.</p>
 <p>Además del supuesto de normalidad, ¿Qué otros supuestos se deben seguir? Básicamente, nos enfocaremos en los siguientes:</p>
 <ul>
@@ -2003,8 +2008,8 @@ P(|X-\mu | &lt; k \sigma) \geq 1- \frac{1}{2^2} = 0.75
 <li>Normalidad.</li>
 </ul>
 <p>Es importante destacar que estos supuestos no aplican a una variable aleatoria independiente aislada, sino a modelos estadísticos, tema que abordaremos con mayor profundidad en el siguiente capítulo. En esta sección, solo ofreceré una breve explicación introductoria de los modelos estadísticos, para que puedas entender los conceptos de homoscedasticidad, no autocorrelación y otros supuestos relacionados. Más adelante, en el siguiente capítulo, discutiremos en detalle a la regresión lineal y demás modelos relacionados.</p>
-<section id="intervalos-de-confianza" class="level4" data-number="6.2.5.1">
-<h4 data-number="6.2.5.1" class="anchored" data-anchor-id="intervalos-de-confianza"><span class="header-section-number">6.2.5.1</span> Intervalos de confianza</h4>
+<section id="intervalos-de-confianza" class="level4" data-number="7.2.5.1">
+<h4 data-number="7.2.5.1" class="anchored" data-anchor-id="intervalos-de-confianza"><span class="header-section-number">7.2.5.1</span> Intervalos de confianza</h4>
 <p>Como conocimiento previo y necesario que debemos tener en cuenta antes de pasar directamente a la evaluación general de los supuestos estadísticos (y poder explicar de mejor manera las pruebas de hipótesis), debemos hacer un paréntesis para discutir los <strong>intervalos de confianza</strong>.</p>
 <p>Un intervalo de confianza es un rango de valores que usamos para estimar un parámetro poblacional desconocido <span class="citation" data-cites="casella2002statistical">(<a href="referencias.html#ref-casella2002statistical" role="doc-biblioref">Casella and Berger 2002</a>)</span>, lo que dicho de manera más simple:</p>
 <blockquote class="blockquote">
@@ -2015,8 +2020,8 @@ P(|X-\mu | &lt; k \sigma) \geq 1- \frac{1}{2^2} = 0.75
 IC_{95\%} = [810,\ 890]
 \]</span></p>
 <p>Aunque esto no significa que el 95% de los clientes gastan entre 810 y 890 pesos, ya que sería una interpretación incorrecta. Lo que significa es que, bajo las condiciones del método utilizado, si repitiéramos muchas veces el mismo proceso de muestreo y construyéramos un intervalo de confianza en cada muestra, aproximadamente el 95% de esos intervalos contendrían el verdadero gasto promedio poblacional, es decir, el intervalo de confianza no describe directamente la variabilidad individual de los clientes, sino la incertidumbre asociada a nuestra estimación.</p>
-<section id="estimación-puntual-e-intervalo-de-confianza" class="level5" data-number="6.2.5.1.1">
-<h5 data-number="6.2.5.1.1" class="anchored" data-anchor-id="estimación-puntual-e-intervalo-de-confianza"><span class="header-section-number">6.2.5.1.1</span> Estimación puntual e intervalo de confianza</h5>
+<section id="estimación-puntual-e-intervalo-de-confianza" class="level5" data-number="7.2.5.1.1">
+<h5 data-number="7.2.5.1.1" class="anchored" data-anchor-id="estimación-puntual-e-intervalo-de-confianza"><span class="header-section-number">7.2.5.1.1</span> Estimación puntual e intervalo de confianza</h5>
 <p>Cuando calculamos una media, una proporción o una diferencia entre grupos a partir de una muestra, estamos obteniendo una <strong>estimación puntual</strong>, y se le llama así porque resume nuestra estimación en un solo valor, por ejemplo:</p>
 <p><span class="math display">\[
 \bar{x} = 850
@@ -2044,8 +2049,8 @@ IC = \hat{\theta} \pm \text{valor crítico} \times SE(\hat{\theta})
 <li>El producto entre el valor crítico y el error estándar es el margen de error.</li>
 </ul>
 </section>
-<section id="error-estándar" class="level5" data-number="6.2.5.1.2">
-<h5 data-number="6.2.5.1.2" class="anchored" data-anchor-id="error-estándar"><span class="header-section-number">6.2.5.1.2</span> Error estándar</h5>
+<section id="error-estándar" class="level5" data-number="7.2.5.1.2">
+<h5 data-number="7.2.5.1.2" class="anchored" data-anchor-id="error-estándar"><span class="header-section-number">7.2.5.1.2</span> Error estándar</h5>
 <p>Como ya vimos previamente, la desviación estándar mide qué tanto varían los datos individuales respecto a su media. El <strong>error estándar</strong>, en cambio, mide qué tanto podría variar una estimación muestral de una muestra a otra.</p>
 <p>Para una media, el error estándar se calcula como:</p>
 <p><span class="math display">\[
@@ -2058,8 +2063,8 @@ SE(\bar{x}) = \frac{s}{\sqrt{n}}
 </ul>
 <p>En esta fórmula, podemos ver que, conforme aumenta el tamaño de la muestra, el error estándar disminuye, es decir, muestras más grandes tienden a producir estimaciones más precisas, por ejemplo, si dos empresas estiman su ticket promedio y ambas tienen la misma desviación estándar, pero una lo hace con 50 clientes y otra con 5,000 clientes, la segunda estimación será mucho más estable, no porque sus clientes sean necesariamente menos variables, sino porque el tamaño de muestra reduce la incertidumbre de la media estimada.</p>
 </section>
-<section id="intervalo-de-confianza-para-una-media" class="level5" data-number="6.2.5.1.3">
-<h5 data-number="6.2.5.1.3" class="anchored" data-anchor-id="intervalo-de-confianza-para-una-media"><span class="header-section-number">6.2.5.1.3</span> Intervalo de confianza para una media</h5>
+<section id="intervalo-de-confianza-para-una-media" class="level5" data-number="7.2.5.1.3">
+<h5 data-number="7.2.5.1.3" class="anchored" data-anchor-id="intervalo-de-confianza-para-una-media"><span class="header-section-number">7.2.5.1.3</span> Intervalo de confianza para una media</h5>
 <p>Cuando queremos estimar una media poblacional a partir de una muestra, usamos la siguiente forma general:</p>
 <p><span class="math display">\[
 IC = \bar{x} \pm t_{\alpha/2, n-1} \times \frac{s}{\sqrt{n}}
@@ -2099,8 +2104,8 @@ IC_{95\%} = [404.13,\ 435.87]
 \]</span></p>
 <p>Esto se interpretaría de la siguiente manera: con base en esta muestra, estimamos que el ticket promedio poblacional se encuentra aproximadamente entre 404.13 y 435.87 pesos, usando un nivel de confianza del 95%.</p>
 </section>
-<section id="nivel-de-confianza" class="level5" data-number="6.2.5.1.4">
-<h5 data-number="6.2.5.1.4" class="anchored" data-anchor-id="nivel-de-confianza"><span class="header-section-number">6.2.5.1.4</span> Nivel de confianza</h5>
+<section id="nivel-de-confianza" class="level5" data-number="7.2.5.1.4">
+<h5 data-number="7.2.5.1.4" class="anchored" data-anchor-id="nivel-de-confianza"><span class="header-section-number">7.2.5.1.4</span> Nivel de confianza</h5>
 <p>El nivel de confianza indica qué tan conservador será nuestro intervalo. Los niveles más comunes son:</p>
 <p><span class="math display">\[
 90\%,\ 95\%,\ 99\%
@@ -2199,8 +2204,8 @@ IC_{95\%} = [-1.5,\ 13.5]
 <p>Entonces la interpretación sería distinta, aunque la diferencia observada sigue siendo de 6, el intervalo incluye al cero, por lo que no tenemos suficiente evidencia para descartar que la diferencia real sea nula.</p>
 <p>Cuando discutamos el <em>A/B testing</em> más adelante, vamos a retomar este tema en particular, ya que será de gran importancia.</p>
 </section>
-<section id="precisión-del-intervalo" class="level5" data-number="6.2.5.1.5">
-<h5 data-number="6.2.5.1.5" class="anchored" data-anchor-id="precisión-del-intervalo"><span class="header-section-number">6.2.5.1.5</span> Precisión del intervalo</h5>
+<section id="precisión-del-intervalo" class="level5" data-number="7.2.5.1.5">
+<h5 data-number="7.2.5.1.5" class="anchored" data-anchor-id="precisión-del-intervalo"><span class="header-section-number">7.2.5.1.5</span> Precisión del intervalo</h5>
 <p>Como ya mencionamos previamente, un intervalo más estrecho indica mayor precisión, mientras que un intervalo más amplio indica mayor incertidumbre, y la amplitud del intervalo depende de:</p>
 <p><span class="math display">\[
 \text{Amplitud} \propto \text{valor crítico} \times SE
@@ -2248,8 +2253,8 @@ mean of x
 <p>Y podríamos leerlo como que, con base en los datos disponibles en iris, la longitud promedio real del sépalo se estima entre <code>5.71</code> y <code>5.98</code> unidades, usando un nivel de confianza del <span class="math inline">\(95\%\)</span>, tan sencillo como eso.</p>
 </section>
 </section>
-<section id="pruebas-de-hipótesis" class="level4" data-number="6.2.5.2">
-<h4 data-number="6.2.5.2" class="anchored" data-anchor-id="pruebas-de-hipótesis"><span class="header-section-number">6.2.5.2</span> Pruebas de hipótesis</h4>
+<section id="pruebas-de-hipótesis" class="level4" data-number="7.2.5.2">
+<h4 data-number="7.2.5.2" class="anchored" data-anchor-id="pruebas-de-hipótesis"><span class="header-section-number">7.2.5.2</span> Pruebas de hipótesis</h4>
 <p>Antes de adentrarnos en las pruebas de normalidad y en la evaluación de otros supuestos estadísticos, considerando que ya sabemos cómo funcionan los intervalos de confianza, es fundamental comprender el concepto de pruebas de hipótesis, ya que estas constituyen la base teórica sobre la cual se construyen todas estas evaluaciones, además de que serán muy recurrentes a partir de ahora y para el siguiente capítulo.</p>
 <p>Una prueba de hipótesis es un procedimiento estadístico que nos permite tomar decisiones sobre una población a partir de información obtenida de una muestra, estableciendo si existe evidencia suficiente para aceptar o rechazar una afirmación específica <span class="citation" data-cites="casella2002statistical">(<a href="referencias.html#ref-casella2002statistical" role="doc-biblioref">Casella and Berger 2002</a>)</span>. Básicamente, las pruebas de hipótesis parten de dos proposiciones:</p>
 <ul>
@@ -2381,8 +2386,8 @@ p-value = P (\text{resultado tan extremo como el observado } | \; H_0 \text{ ver
 </ul>
 <p>Ya que conocemos como funcionan las pruebas de hipótesis, estamos en posición de aplicar este conocimiento para evaluar los supuestos estadísticos de nuestros datos, comenzando por el supuesto de normalidad. Comprender cómo calcular un estadístico de prueba, compararlo con valores críticos y tomar decisiones basadas en evidencia nos permite ahora realizar pruebas formales de normalidad.</p>
 </section>
-<section id="comparación-de-medias-pruebas-t" class="level4" data-number="6.2.5.3">
-<h4 data-number="6.2.5.3" class="anchored" data-anchor-id="comparación-de-medias-pruebas-t"><span class="header-section-number">6.2.5.3</span> Comparación de medias: <em>Pruebas t</em></h4>
+<section id="comparación-de-medias-pruebas-t" class="level4" data-number="7.2.5.3">
+<h4 data-number="7.2.5.3" class="anchored" data-anchor-id="comparación-de-medias-pruebas-t"><span class="header-section-number">7.2.5.3</span> Comparación de medias: <em>Pruebas t</em></h4>
 <p>Hasta ahora hemos visto la lógica general detrás de las pruebas de hipótesis: plantear una hipótesis nula, calcular un estadístico de prueba y decidir si la evidencia observada es suficientemente extrema como para rechazar <span class="math inline">\(H_0\)</span>.</p>
 <p>Una de las aplicaciones más importantes (y más comunes) de la estadística inferencial es la comparación de medias, ya que en estadística aplicada, muchas de las preguntas que queremos responder pueden expresarse como comparaciones del tipo:</p>
 <ul>
@@ -2396,8 +2401,8 @@ p-value = P (\text{resultado tan extremo como el observado } | \; H_0 \text{ ver
 <li>La desviación estándar poblacional es desconocida y debemos estimarla a partir de la muestra.</li>
 </ul>
 <p>A continuación revisaremos los tres casos más comunes: el <em>t-test de una muestra</em>, el de d<em>os muestras independientes</em> y el <em>t-test pareado</em>.</p>
-<section id="t-test-de-una-muestra" class="level5" data-number="6.2.5.3.1">
-<h5 data-number="6.2.5.3.1" class="anchored" data-anchor-id="t-test-de-una-muestra"><span class="header-section-number">6.2.5.3.1</span> t-test de una muestra</h5>
+<section id="t-test-de-una-muestra" class="level5" data-number="7.2.5.3.1">
+<h5 data-number="7.2.5.3.1" class="anchored" data-anchor-id="t-test-de-una-muestra"><span class="header-section-number">7.2.5.3.1</span> t-test de una muestra</h5>
 <p>El caso más sencillo ocurre cuando tenemos una única muestra y queremos comparar su media contra un valor teórico o histórico. La pregunta que nos haremos es: <em>¿La media poblacional es igual a un valor específico</em> <span class="math inline">\(\mu_0\)</span>?. En este caso, la hipótesi será equivalente a:</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -2454,8 +2459,8 @@ mean of x
 </ul>
 <p>el resultado de la prueba t nos proporciona evidencia estadística suficiente para rechazar la hipótesis nula de que la media poblacional sea igual a 50. En este caso, la media muestral observada fue de aproximadamente 52.57, y el valor p obtenido (<span class="math inline">\(p=0.0082\)</span>) es considerablemente menor que el nivel de significancia del 5%, lo cual indica que sería muy poco probable observar una diferencia tan grande únicamente por variabilidad aleatoria si en realidad <span class="math inline">\(H_0\)</span> fuera cierta.</p>
 </section>
-<section id="t-test-de-dos-muestras-independientes" class="level5" data-number="6.2.5.3.2">
-<h5 data-number="6.2.5.3.2" class="anchored" data-anchor-id="t-test-de-dos-muestras-independientes"><span class="header-section-number">6.2.5.3.2</span> t-test de dos muestras independientes</h5>
+<section id="t-test-de-dos-muestras-independientes" class="level5" data-number="7.2.5.3.2">
+<h5 data-number="7.2.5.3.2" class="anchored" data-anchor-id="t-test-de-dos-muestras-independientes"><span class="header-section-number">7.2.5.3.2</span> t-test de dos muestras independientes</h5>
 <p>La prueba <span class="math inline">\(t\)</span> de dos muestras independientes se utiliza cuando queremos comparar la media de dos poblaciones distintas, es decir, cuando tenemos dos grupos que no están relacionados entre sí, por ejemplo:</p>
 <ul>
 <li>Grupo control vs grupo tratamiento</li>
@@ -2497,8 +2502,8 @@ mean of x mean of y
 </div>
 <p>Nótese que el argumento <code>var.equal = TRUE</code> indica que estamos asumiendo varianzas iguales. Si no estamos seguros de ello, lo mejor será usar la versión robusta, simplemente ignorando el argumento (<code>t.test(grupo_1, grupo_2)</code>). Ahora, podemos darnos cuenta de que (ignorando la notación científica) el <code>p-value</code> es extremadamente pequeño para el nivel de significancia manejado del 95% (e incluso para niveles de significancia más estrictos), por lo que podemos concluir que rechazamos la hipótesis nula de igualdad de medias y concluimos que existe evidencia estadísticamente significativa de que los promedios de ambos grupos son distintos.</p>
 </section>
-<section id="t-test-pareado" class="level5" data-number="6.2.5.3.3">
-<h5 data-number="6.2.5.3.3" class="anchored" data-anchor-id="t-test-pareado"><span class="header-section-number">6.2.5.3.3</span> t-test pareado</h5>
+<section id="t-test-pareado" class="level5" data-number="7.2.5.3.3">
+<h5 data-number="7.2.5.3.3" class="anchored" data-anchor-id="t-test-pareado"><span class="header-section-number">7.2.5.3.3</span> t-test pareado</h5>
 <p>El t-test pareado se utiliza cuando las observaciones no son independientes, sino que están emparejadas naturalmente. Esto ocurre en situaciones del tipo:</p>
 <ul>
 <li>Antes vs después</li>
@@ -2545,12 +2550,12 @@ d_i = \text{antes}_i - \text{después}_i
 <p>Como es evidente, el <code>p-value</code> es suficientemente pequeño como para considerarse estadísticamente significativo respecto al nivel de significancia (valga la redundancia) del 95%, por lo que podemos rechazamos la hipótesis nula y, por tanto, concluir que existe evidencia estadística de que el promedio de las diferencias no es cero. Dicho de otra manera, las mediciones posteriores tienden a ser distintas de las iniciales.</p>
 </section>
 </section>
-<section id="sec-normalidad" class="level4" data-number="6.2.5.4">
-<h4 data-number="6.2.5.4" class="anchored" data-anchor-id="sec-normalidad"><span class="header-section-number">6.2.5.4</span> Normalidad: Pruebas formales para este supuesto</h4>
+<section id="sec-normalidad" class="level4" data-number="7.2.5.4">
+<h4 data-number="7.2.5.4" class="anchored" data-anchor-id="sec-normalidad"><span class="header-section-number">7.2.5.4</span> Normalidad: Pruebas formales para este supuesto</h4>
 <p>A lo largo de esta sección vamos a discutir las pruebas que podemos utilizar para evaluar la normalidad de una muestra. Este paso resulta fundamental porque, como mencionamos anteriormente, si este supuesto no se cumple en los datos que estemos analizando, las conclusiones derivadas de ciertos análisis que haremos más adelante van a estar sesgadas, o pueden ser poco fiables. El siguiente capítulo estará centrado en los pronósticos y correlaciones que podemos obtener de nuestros datos, razón por la que es fundamental entender cómo verificar la normalidad en esta etapa. De esta manera, podremos asegurarnos de que los modelos que utilicemos se ajusten correctamente a las características de la información, evitando interpretaciones erróneas.</p>
 <p>A continuación, revisaremos pruebas formales, como el test de <strong>Shapiro-Wilk</strong>, <strong>Jarque-Bera</strong> o <strong>Kolmogorov-Smirnov</strong> <span class="citation" data-cites="thode2002testing">(<a href="referencias.html#ref-thode2002testing" role="doc-biblioref">Thode 2002</a>)</span>, y en la siguiente sección analizaremos aproximaciones más prácticas que combinan la evidencia numérica con la evaluación visual de gráficos.</p>
-<section id="prueba-de-shapiro-wilk" class="level5" data-number="6.2.5.4.1">
-<h5 data-number="6.2.5.4.1" class="anchored" data-anchor-id="prueba-de-shapiro-wilk"><span class="header-section-number">6.2.5.4.1</span> Prueba de Shapiro-Wilk</h5>
+<section id="prueba-de-shapiro-wilk" class="level5" data-number="7.2.5.4.1">
+<h5 data-number="7.2.5.4.1" class="anchored" data-anchor-id="prueba-de-shapiro-wilk"><span class="header-section-number">7.2.5.4.1</span> Prueba de Shapiro-Wilk</h5>
 <p>Como primera prueba estadística formal a analizar, se encuentra la prueba de Shapiro-Wilk, la cual tiene como propósito evaluar si los datos de una muestra pueden considerarse como provenientes de una distribución normal. Esta prueba fue propuesta en 1965 por <em>Samuel Shapiro</em> y <em>Martin Wilk</em> y, desde entonces, se ha consolidado como una de las más relevantes para detectar normalidad, debido a su alta potencia para detectar desviaciones respecto a la distribución normal <span class="citation" data-cites="shapiro1965analysis">(<a href="referencias.html#ref-shapiro1965analysis" role="doc-biblioref">Shapiro and Wilk 1965</a>)</span>.</p>
 <p>Una de las principales razones de su importancia es que, en comparación con otras pruebas de normalidad, la prueba de Shapiro-Wilk suele mostrar un mayor sensibilidad, inclusive cuando se trabaja con tamaños muestrales pequeños o moderados (menores a 50 observaciones). Esta prueba puede ser ser aplicable hasta rangos de 2000 datos.</p>
 <p>Básicamente, esta prueba se basa en el cálculo de un estadístico <span class="math inline">\(W\)</span>, definido por la siguiente fórmula:</p>
@@ -2615,8 +2620,8 @@ W = 0.82872, p-value &lt; 0.00000000000000022</code></pre>
 </div>
 <p>En este caso tenemos un valor de <span class="math inline">\(p\)</span> sumamente pequeño, por lo que si rechazamos la hipótesis nula, concluyendo que la distribución <strong>no es normal</strong>.</p>
 </section>
-<section id="prueba-de-kolmogorov-smirnov." class="level5" data-number="6.2.5.4.2">
-<h5 data-number="6.2.5.4.2" class="anchored" data-anchor-id="prueba-de-kolmogorov-smirnov."><span class="header-section-number">6.2.5.4.2</span> Prueba de Kolmogorov-Smirnov.</h5>
+<section id="prueba-de-kolmogorov-smirnov." class="level5" data-number="7.2.5.4.2">
+<h5 data-number="7.2.5.4.2" class="anchored" data-anchor-id="prueba-de-kolmogorov-smirnov."><span class="header-section-number">7.2.5.4.2</span> Prueba de Kolmogorov-Smirnov.</h5>
 <p>Otra de las pruebas estadísticas más utilizadas para contrastar la normalidad de una muestra es la prueba de <strong>Kolmogorov-Smirnov (K-S)</strong>. Su origen se remonta a 1933, cuando fue propuesta por Andrey Kolmogorov y después ampliada por Nikolai Smirnov. Esta prueba se distingue por ser no paramétrica y se utiliza para evaluar la bondad de ajuste de una distribución teórica respecto a una muestra de datos observados <span class="citation" data-cites="kolmogorov1933sulla">(<a href="referencias.html#ref-kolmogorov1933sulla" role="doc-biblioref">Kolmogorov 1933</a>)</span>.</p>
 <p>El propósito principal de la prueba es determinar si una muestra proviene de una distribución específica (en este caso, la normal). Para ello, se basa en la comparación entre la función de distribución acumulada empírica (<em>FDE</em>) de la muestra y la función de distribución acumulada teórica (<em>FDT</em>) de la distribución de referencia.</p>
 <p>Matemáticamente, el estadístico de Kolmogorov-Smirnov, denotado como <span class="math inline">\(D\)</span>, se define como:</p>
@@ -2728,8 +2733,8 @@ D = 0.014963, p-value = 0.8484</code></pre>
 </div>
 <p>Esta no es una prueba formal como tal, y de hecho, en la siguiente sección analizaremos pruebas no paramétricas (gráficos) de normalidad, sin embargo, esta me pareció una excelente oportunidad para comparar la función de densidad empírica con la función de densidad teórica ddescritas en la prueba de KS, ya que esta también es una forma muy intuitiva de confirmar los resultados obtenidos.</p>
 </section>
-<section id="prueba-de-jarque-bera" class="level5" data-number="6.2.5.4.3">
-<h5 data-number="6.2.5.4.3" class="anchored" data-anchor-id="prueba-de-jarque-bera"><span class="header-section-number">6.2.5.4.3</span> Prueba de Jarque-Bera</h5>
+<section id="prueba-de-jarque-bera" class="level5" data-number="7.2.5.4.3">
+<h5 data-number="7.2.5.4.3" class="anchored" data-anchor-id="prueba-de-jarque-bera"><span class="header-section-number">7.2.5.4.3</span> Prueba de Jarque-Bera</h5>
 <p>Si tuviste clases de econometría o estadística aplicada, muy probablemente ya conoces esta prueba, pero de igual forma le dedicaré una sección a continuación.</p>
 <p>Otra de las pruebas más utilizadas para evaluar la normalidad de una muestra es la prueba de <strong>Jarque-Bera</strong> (JB). Esta es de las más recientes, ya que fue propuesta en 1980 por Carlos Jarque y Anil K. Bera, y se basa en analizar si los coeficientes de asimetría y curtosis de los datos difieren significativamente de los que se esperarían en una distribución normal <span class="citation" data-cites="jarque1980efficient">(<a href="referencias.html#ref-jarque1980efficient" role="doc-biblioref">Jarque and Bera 1980</a>)</span>.</p>
 <p>Esta prueba es particularmente interesante, ya que se apoya en momentos muestrales, lo que la hace especialmente útil en grandes muestras de datos. De hecho, una característica importante es que la potencia de la prueba se incrementa a medida que el tamaño muestral crece, lo que la hace considerablemente mejor que pruebas como la ya vista Shapiro-Wilk, en contextos donde las muestras son muy considerables.</p>
@@ -2791,8 +2796,8 @@ X-squared = 0.16563, df = 2, p-value = 0.9205</code></pre>
 </div>
 <p>Como puedes darte cuenta, el valor del <span class="math inline">\(p\)</span>-value se volvió a incrementar, lo que nos dice que al aumentar el tamaño de la muestra, la prueba de Jarque-Bera reconoce con mayor claridad que los datos provienen de una distribución normal. Esto confirma que, al ser una prueba asintótica, su capacidad de detección mejora con muestras grandes, volviéndose más confiable y precisa al evaluar la normalidad en contextos donde contamos con una gran cantidad de observaciones.</p>
 </section>
-<section id="prueba-de-dagostino-pearson-k2" class="level5" data-number="6.2.5.4.4">
-<h5 data-number="6.2.5.4.4" class="anchored" data-anchor-id="prueba-de-dagostino-pearson-k2"><span class="header-section-number">6.2.5.4.4</span> Prueba de D’Agostino-Pearson (<span class="math inline">\(K^2\)</span>)</h5>
+<section id="prueba-de-dagostino-pearson-k2" class="level5" data-number="7.2.5.4.4">
+<h5 data-number="7.2.5.4.4" class="anchored" data-anchor-id="prueba-de-dagostino-pearson-k2"><span class="header-section-number">7.2.5.4.4</span> Prueba de D’Agostino-Pearson (<span class="math inline">\(K^2\)</span>)</h5>
 <p>Como última prueba a analizar, vamos a discutir la prueba de <strong>D’Agostino-Pearson</strong>, desarrollada a finales de la década de 1970 por Ralph D’Agostino. Esta prueba es sumamente interesante y conveniente para terminar la sección, ya que representa un punto intermedio respecto a las pruebas vistas anteriormente. Como recordarás, la prueba de <em>Shapiro-Wilk</em> es muy potente en muestras pequeñas y medias, ya que evalúa de forma directa el ajuste global de los datos a la distribución normal, aunque se vuelve demasiado estricta cuando el tamaño muestral se vuelve muy grande. Por otro lado, la prueba de <em>Kolmogorov-Smirnov</em> se centra en la distancia máxima entre la función de distribución empírica y la teórica, pero tiene limitaciones prácticas, ya que es menos sensible a diferencias en los extremos y depende de parámetros estimados. En contraste, la prueba de <em>Jarque-Bera</em> se construye a partir de los momentos de asimetría y curtosis, lo que la hace especialmente adecuada en contextos con grandes muestras, aunque menos precisa en muestras reducidas <span class="citation" data-cites="dagostino1971omnibus">(<a href="referencias.html#ref-dagostino1971omnibus" role="doc-biblioref">D’Agostino 1971</a>)</span>.</p>
 <p>La prueba de <em>D’Agostino-Pearson</em> combina de manera explícita las ventajas de los dos últimos enfoques: al igual que <em>Jarque-Bera</em>, utiliza información de la asimetría y la curtosis, pero en lugar de hacerlo con una aproximación directa, transforma estos coeficientes en estadísticos <span class="math inline">\(Z\)</span> que se distribuyen aproximadamente de forma normal bajo la hipótesis nula. Posteriormente, los combina en un único estadístico de contraste, <span class="math inline">\(K^2 = Z_1^2 + Z_2^2\)</span>, el cual sigue una distribución <span class="math inline">\(\chi^2\)</span> con 2 grados de libertad.</p>
 <p>El estadístico de prueba, denotado como <span class="math inline">\(K^2\)</span>, se calcula a partir de dos componentes:</p>
@@ -2846,8 +2851,8 @@ Test Results:
 <p>Como podemos darnos cuenta, el estadístico <span class="math inline">\(\chi^2\)</span>, que combina la información de asimetría y curtosis, tiene un valor bastante bajo, lo que ya sugiere que no hay grandes desviaciones respecto a la normalidad. Respectivamente, el <span class="math inline">\(p-value\)</span> global es mucho mayor que un nivel de significancia al 5%. Esto significa que no hay evidencia estadísticamente significativa para rechazar la hipótesis nula de normalidad.</p>
 </section>
 </section>
-<section id="normalidad-pruebas-no-formales-visuales" class="level4" data-number="6.2.5.5">
-<h4 data-number="6.2.5.5" class="anchored" data-anchor-id="normalidad-pruebas-no-formales-visuales"><span class="header-section-number">6.2.5.5</span> Normalidad: Pruebas no formales (visuales)</h4>
+<section id="normalidad-pruebas-no-formales-visuales" class="level4" data-number="7.2.5.5">
+<h4 data-number="7.2.5.5" class="anchored" data-anchor-id="normalidad-pruebas-no-formales-visuales"><span class="header-section-number">7.2.5.5</span> Normalidad: Pruebas no formales (visuales)</h4>
 <p>En este capítulo abordaremos métodos visuales para evaluar la normalidad, los cuales resultan sumamente importantes, ya que nos ayudan a detectar patrones que a veces pasan desapercibidos con pruebas puramente numéricas, además de que nos ayudan a entender de mejor manera la naturaleza de nuestros datos. Estas herramientas no sustituyen a los tests formales, pero los complementan al ofrecer una lectura intuitiva de asimetrías, colas pesadas o la presencia de valores atípicos. Su valor práctico es doble: ayudan a decidir si procede aplicar transformaciones (p.&nbsp;ej., logaritmos) y permiten verificar, más adelante, si los residuales de un modelo cumplen el supuesto de normalidad requerido por ciertos procedimientos.</p>
 <p>Trabajaremos con tres gráficos principales y cómo interpretarlos de manera consistente:</p>
 <ul>
@@ -2858,8 +2863,8 @@ Test Results:
 <p>En esta categoría también entrarían los gráficos de densidad y los histogramas, sin embargo, ya los estudiamos en repetidas ocasiones en secciones pasadas, por lo que sería redundante volver a explicarlos.</p>
 <p>Como seguramente ya lo sabes, podemos hacer estos gráficos de forma nativa en R con las funciones dedicadas, por ejemplo, <code>qqplot()</code>. Sin embargo, no voy a utilizarlas porque me parecen poco estéticos. Prefiero adaptarlos con Ggplot, ya que a mi consideración resultan más agradables a la vista, además de que son algo más personalizables y se adaptarán mejor al diseño de los informes/reportes que puedas trabajar en el futuro.</p>
 <div style="page-break-after: always;"></div>
-<section id="qq-plot-quantilequantile" class="level5" data-number="6.2.5.5.1">
-<h5 data-number="6.2.5.5.1" class="anchored" data-anchor-id="qq-plot-quantilequantile"><span class="header-section-number">6.2.5.5.1</span> Q–Q plot (Quantile–Quantile)</h5>
+<section id="qq-plot-quantilequantile" class="level5" data-number="7.2.5.5.1">
+<h5 data-number="7.2.5.5.1" class="anchored" data-anchor-id="qq-plot-quantilequantile"><span class="header-section-number">7.2.5.5.1</span> Q–Q plot (Quantile–Quantile)</h5>
 <p>Como primer gráfico a analizar, veremos el <em>Q–Q plot</em>, también conocido como gráfico de cuantiles. La idea principal de este gráfico es comparar los cuantiles teóricos de una distribución normal con los cuantiles observados de la muestra. Si los datos siguen aproximadamente una distribución normal, los puntos del gráfico deberían alinearse a lo largo de una línea recta (generalmente la diagonal).</p>
 <p>Básicamente, un <em>Q–Q plot</em> grafica los pares:</p>
 <p><span class="math display">\[
@@ -2965,8 +2970,8 @@ Q_{teo}(p_i) = Q_{emp}(p_i)
 </div>
 <p>De esta forma, podemos validar casi cualquier tipo de distribución con la que nos topemos, para poder identificar si el patrón que siguen los datos de la muestra se acopla a la distribución teórica a la que se supone pertenecen.</p>
 </section>
-<section id="pp-plot-probabilityprobability" class="level5" data-number="6.2.5.5.2">
-<h5 data-number="6.2.5.5.2" class="anchored" data-anchor-id="pp-plot-probabilityprobability"><span class="header-section-number">6.2.5.5.2</span> P–P plot (Probability–Probability)</h5>
+<section id="pp-plot-probabilityprobability" class="level5" data-number="7.2.5.5.2">
+<h5 data-number="7.2.5.5.2" class="anchored" data-anchor-id="pp-plot-probabilityprobability"><span class="header-section-number">7.2.5.5.2</span> P–P plot (Probability–Probability)</h5>
 <p>Como siguiente tipo de gráfico para analizar la normalidad de una muestra, utilizaremos el <em>Probability–Probability plot</em>. A diferencia del <em>Q–Q plot</em>, que compara cuantiles, el <em>P–P plot</em> compara las probabilidades acumuladas teóricas de una distribución normal con las probabilidades acumuladas empíricas de la muestra.</p>
 <p>La idea principal es observar si los valores de la función de distribución empírica (EDF) de los datos coinciden con los valores de la función de distribución teórica (CDF) de la normal. Obviamente, si los datos siguen una distribución normal, los puntos en el gráfico deberían aliearse sobre la diagonal del gráfico, tal cual vimos en el <em>Q-Q plot</em>.</p>
 <p>Formalmente, un P–P plot grafica los pares:</p>
@@ -3081,8 +3086,8 @@ F_{teo}(x_{(i)}) = F_{emp}(x_{(i)})
 </div>
 <p>Así que sí, podemos aplicar este gráfico a cualquier tipo de distribución, aunque cuando lo hagamos con distribuciones de tipo discretas el visual cambiará, ya que la función de distribución acumulada avanza en saltos en lugar de ser continua. Esto provoca que los puntos del gráfico se agrupen en niveles o “<em>escalones</em>”, en lugar de formar una línea más uniforme como en el caso continuo. Aun así, el <em>P–P plot</em> sigue siendo válido y útil para evaluar el ajuste, aunque en distribuciones discretas suele complementarse con un <em>Q–Q plot</em> para una interpretación más clara de los cuantiles.</p>
 </section>
-<section id="detrended-pp-plot-residuales-de-los-cuantiles" class="level5" data-number="6.2.5.5.3">
-<h5 data-number="6.2.5.5.3" class="anchored" data-anchor-id="detrended-pp-plot-residuales-de-los-cuantiles"><span class="header-section-number">6.2.5.5.3</span> Detrended P–P plot (residuales de los cuantiles)</h5>
+<section id="detrended-pp-plot-residuales-de-los-cuantiles" class="level5" data-number="7.2.5.5.3">
+<h5 data-number="7.2.5.5.3" class="anchored" data-anchor-id="detrended-pp-plot-residuales-de-los-cuantiles"><span class="header-section-number">7.2.5.5.3</span> Detrended P–P plot (residuales de los cuantiles)</h5>
 <p>Como extensión del <em>P-P plot</em>, podemos utilizar el gráfico de Detrended P–P plot. Este gráfico tiene como objetivo resaltar las desviaciones respecto a la línea de referencia (la diagonal en el P–P plot tradicional).</p>
 <p>En lugar de graficar directamente las probabilidades acumuladas teóricas contra las empíricas, el <em>Detrended P–P plot</em> representa en el eje vertical la diferencia entre ambas probabilidades, es decir:</p>
 <p><span class="math display">\[
@@ -3172,8 +3177,8 @@ F_{teo}(x_{(i)})
 <p>La razón por la que ya no nos limitamos a analizar una variable aleatoria independiente es que, dentro de un modelo estadístico (que discutiremos en el siguiente capítulo), lo relevante es cómo se comportan los errores y las relaciones entre variables, más que la distribución de una sola variable por sí sola.</p>
 </section>
 </section>
-<section id="validando-la-homogeneidad-de-varianzas-homoscedasticidad" class="level4" data-number="6.2.5.6">
-<h4 data-number="6.2.5.6" class="anchored" data-anchor-id="validando-la-homogeneidad-de-varianzas-homoscedasticidad"><span class="header-section-number">6.2.5.6</span> Validando la homogeneidad de varianzas (Homoscedasticidad)</h4>
+<section id="validando-la-homogeneidad-de-varianzas-homoscedasticidad" class="level4" data-number="7.2.5.6">
+<h4 data-number="7.2.5.6" class="anchored" data-anchor-id="validando-la-homogeneidad-de-varianzas-homoscedasticidad"><span class="header-section-number">7.2.5.6</span> Validando la homogeneidad de varianzas (Homoscedasticidad)</h4>
 <p>Uno de los supuestos fundamentales en la inferencia estadística, particularmente al aplicar modelos de regresión lineal o pruebas estadísticas comparativas entre grupos, es la <strong>homogeneidad de varianzas</strong>, también denominada homoscedasticidad. Este principio establece que la variabilidad de la variable dependiente debe permanecer constante a lo largo de los distintos niveles de la variable independiente, o a través del rango de valores predichos por un modelo. Cuando esta condición se cumple, los errores del modelo se distribuyen de manera uniforme, lo que permite obtener estimaciones eficientes y conclusiones estadísticamente válidas. Por el contrario, la presencia de heteroscedasticidad implica que la varianza cambia según el nivel de la variable explicativa, lo que puede sesgar las inferencias, afectar la significancia de los coeficientes e incrementar la imprecisión de los intervalos de confianza <span class="citation" data-cites="breusch1979simple">(<a href="referencias.html#ref-breusch1979simple" role="doc-biblioref">Breusch and Pagan 1979</a>)</span>.</p>
 <div class="callout-warning callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
@@ -3197,8 +3202,8 @@ OJO
 <li><p><strong>Gráfico de dispersión con bandas de variabilidad</strong>: Para analizar cómo cambia la amplitud de los datos al agruparlos por intervalos, lo que facilita detectar aumentos o disminuciones en la varianza.</p></li>
 <li><p><strong>Gráfico de varianza móvil</strong>: Para analizar datos secuenciales (series de tiempo), permitiendo identificar cambios en la varianza a lo largo del tiempo.</p></li>
 </ul>
-<section id="boxplots-por-grupo" class="level5" data-number="6.2.5.6.1">
-<h5 data-number="6.2.5.6.1" class="anchored" data-anchor-id="boxplots-por-grupo"><span class="header-section-number">6.2.5.6.1</span> Boxplots por grupo</h5>
+<section id="boxplots-por-grupo" class="level5" data-number="7.2.5.6.1">
+<h5 data-number="7.2.5.6.1" class="anchored" data-anchor-id="boxplots-por-grupo"><span class="header-section-number">7.2.5.6.1</span> Boxplots por grupo</h5>
 <p>Ya analizamos anteriormente los boxplots simples, por lo que no es necesario volver a explicar sus componentes ni su interpretación general. En esta sección, los utilizaremos específicamente como una herramienta visual para evaluar la homogeneidad de varianzas entre grupos. Esto se logra analizando si la dispersión de una variable <span class="math inline">\(Y\)</span> es similar cuando se divide en distintos niveles de una variable <span class="math inline">\(X\)</span>, la cual puede ser categórica o continua segmentada en intervalos.</p>
 <p>Desde una perspectiva más formal, si <span class="math inline">\(Y\)</span> representa nuestra variable dependiente y <span class="math inline">\(X\)</span> define grupos o estratos, estamos interesados en comparar la varianza condicional:</p>
 <p><span class="math display">\[
@@ -3268,8 +3273,8 @@ IQR = Q_3 - Q_1
 <p>Este es un ejemplo claro de por qué debemos tener siempre presente el supuesto de homoscedasticidad, ya que si la variabilidad de los ingresos cambia significativamente entre estados, regiones o grupos poblacionales, el modelo podría perder validez al asumir una varianza constante en los errores.</p>
 <p>Si bien la heteroscedasticidad no puede ser rechazada o no rechazada únicamente a nivel visual, sí comienza por darnos una mejor idea respecto a cómo se comportan los datos, identificando ciertos patrones que sugieren una posible variación no constante de la varianza, como lo es en el ejemplo que acabamos de analizar.</p>
 </section>
-<section id="gráfico-de-dispersión-simple" class="level5" data-number="6.2.5.6.2">
-<h5 data-number="6.2.5.6.2" class="anchored" data-anchor-id="gráfico-de-dispersión-simple"><span class="header-section-number">6.2.5.6.2</span> Gráfico de dispersión simple</h5>
+<section id="gráfico-de-dispersión-simple" class="level5" data-number="7.2.5.6.2">
+<h5 data-number="7.2.5.6.2" class="anchored" data-anchor-id="gráfico-de-dispersión-simple"><span class="header-section-number">7.2.5.6.2</span> Gráfico de dispersión simple</h5>
 <p>Como siguiente apoyo gráfico para identificar la heteroscedasticidad, vamos a hacer uso de un gráfico de dispersión simple. Este tipo de gráficos permite observar cómo se distribuyen los valores de una variable dependiente (<span class="math inline">\(Y\)</span>) a lo largo de los valores de una variable independiente (<span class="math inline">\(X\)</span>). A diferencia de los boxplots, que agrupan los datos en categorías, el gráfico de dispersión nos brinda una visión continua de la relación entre ambas variables, lo que resulta especialmente útil cuando la variable explicativa es numérica.</p>
 <p>Conceptualmente, si la varianza de <span class="math inline">\(Y\)</span> condicionada a <span class="math inline">\(X\)</span> (<span class="math inline">\(Var(Y|X)\)</span>) permanece aproximadamente constante a lo largo de los valores de <span class="math inline">\(X\)</span>, entonces podemos suponer homoscedasticidad. En cambio, si los puntos muestran una dispersión creciente o decreciente conforme avanza el eje <span class="math inline">\(X\)</span>, esto indica heteroscedasticidad, es decir, una varianza no constante.</p>
 <p>Visualmente, algunos patrones comunes que sugieren heteroscedasticidad son:</p>
@@ -3311,8 +3316,8 @@ IQR = Q_3 - Q_1
 <p>El gráfico anterior nos permite observar cómo se distribuyen los ingresos promedio por estado en función del tamaño del hogar simulada. Como esta nueva variable (<code>HouseholdSize</code>) fue creada aleatoriamente entre 2 y 4 para cada observación, no existe una relación real entre ambas variables, por lo que no esperamos ver un patrón definido en la nube de puntos, sin embargo, este gráfico es útil para ilustrar cómo se vería una relación potencialmente homoscedástica, siendo que, en un caso en el que los puntos se concentraran en ciertas regiones específicas con mayor frecuencia, formando ciertos patrones, podríamos estar en presencia de heteroscedasticidad.</p>
 <p>Resulta interesante contrastar un caso en el que tenemos una posible heteroscedasticidad y otro en el que no (para los mismos datos), ya que aunque el gráfico de dispersión previo sugería una varianza aproximadamente constante respecto al tamaño del hogar, el análisis mediante boxplots muestra que la variabilidad de los ingresos sí cambia entre estados. Esto nos demuestra un punto clave: la homoscedasticidad depende de la variable con la que se evalúe. Un mismo conjunto de datos puede ser homoscedástico respecto a una variable y heteroscedástico respecto a otra.</p>
 </section>
-<section id="gráfico-de-dispersión-con-bandas-de-variabilidad" class="level5" data-number="6.2.5.6.3">
-<h5 data-number="6.2.5.6.3" class="anchored" data-anchor-id="gráfico-de-dispersión-con-bandas-de-variabilidad"><span class="header-section-number">6.2.5.6.3</span> Gráfico de dispersión con bandas de variabilidad</h5>
+<section id="gráfico-de-dispersión-con-bandas-de-variabilidad" class="level5" data-number="7.2.5.6.3">
+<h5 data-number="7.2.5.6.3" class="anchored" data-anchor-id="gráfico-de-dispersión-con-bandas-de-variabilidad"><span class="header-section-number">7.2.5.6.3</span> Gráfico de dispersión con bandas de variabilidad</h5>
 <p>Como siguiente apoyo gráfico para identificar la heteroscedasticidad, haremos uso de un gráfico de dispersión con bandas de variabilidad. Este tipo de visualización parte del gráfico de dispersión tradicional, pero añade una banda suavizada (generalmente construida a partir de un ajuste LOESS<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a> o de intervalos basados en cuantiles) que permite observar no solo la relación central entre las variables, sino también cómo se comporta la variabilidad de la variable dependiente (<span class="math inline">\(Y\)</span>) a lo largo de la variable independiente (<span class="math inline">\(X\)</span>).</p>
 <p>A diferencia del gráfico de dispersión simple, que muestra únicamente la distribución de puntos, las bandas de variabilidad aportan información adicional sobre la dispersión local de los datos. Esto resulta especialmente útil cuando la relación entre <span class="math inline">\(X\)</span> y <span class="math inline">\(Y\)</span> no es estrictamente lineal, o cuando queremos evaluar si la varianza condicional <span class="math inline">\(Var(Y|X)\)</span> es aproximadamente constante.</p>
 <p>Conceptualmente, si el ancho de estas bandas se mantiene relativamente constante a lo largo del eje <span class="math inline">\(X\)</span>, podemos suponer homoscedasticidad, ya que la variabilidad alrededor de la tendencia es estable. En cambio, si las bandas se ensanchan o estrechan sistemáticamente, esto sugiere heteroscedasticidad. Dicho de otro modo, un patrón en el que la banda “se abre” o”se cierra” (similar a un embudo) estaría indicando que la varianza de <span class="math inline">\(Y\)</span> cambia en función de la variable <span class="math inline">\(X\)</span>.</p>
@@ -3370,8 +3375,8 @@ Y = 5+2X + \varepsilon
 \]</span></p>
 <p>incorpora una desviación estándar dependiente de <span class="math inline">\(X\)</span>, haciendo que la variabilidad de <span class="math inline">\(Y\)</span> se incremente de forma constante a medida que <span class="math inline">\(X\)</span> crece. Este comportamiento nos puede mostrar cómo se verían casos en los que la varianza <span class="math inline">\(Var(Y∣X)\)</span> no es constante, siendo casos de heteroscedasticidad sencillos de identificar visualmente.</p>
 </section>
-<section id="gráfico-de-varianza-móvil" class="level5" data-number="6.2.5.6.4">
-<h5 data-number="6.2.5.6.4" class="anchored" data-anchor-id="gráfico-de-varianza-móvil"><span class="header-section-number">6.2.5.6.4</span> Gráfico de varianza móvil</h5>
+<section id="gráfico-de-varianza-móvil" class="level5" data-number="7.2.5.6.4">
+<h5 data-number="7.2.5.6.4" class="anchored" data-anchor-id="gráfico-de-varianza-móvil"><span class="header-section-number">7.2.5.6.4</span> Gráfico de varianza móvil</h5>
 <p>Finalmente, como último apoyo gráfico para identificar la heteroscedasticidad, haremos uso del gráfico de varianza móvil. Este tipo de visualización se basa en calcular la varianza de la variable dependiente <span class="math inline">\(Y\)</span> dentro de ventanas móviles u observaciones agrupadas a lo largo de la variable independiente <span class="math inline">\(X\)</span>. De esta manera, en lugar de analizar la dispersión punto a punto, se examina cómo evoluciona la variabilidad local de <span class="math inline">\(Y\)</span> conforme cambia <span class="math inline">\(X\)</span>.</p>
 <p>A diferencia de los gráficos de dispersión, que permiten una inspección visual directa de la nube de puntos, el gráfico de varianza móvil resume la información de dispersión en una medida cuantitativa que se desplaza a lo largo del eje <span class="math inline">\(X\)</span>. Esto, de hecho, resulta particularmente útil cuando la relación entre <span class="math inline">\(X\)</span> y <span class="math inline">\(Y\)</span> es compleja o cuando la heteroscedasticidad no es fácilmente perceptible a simple vista.</p>
 <p>En este tipo de gráficos, si la varianza móvil muestra una tendencia creciente, decreciente o patrones claros, esto sugiere la presencia de heteroscedasticidad. Dicho de otra manera, cambios persistentes en el nivel de la varianza a lo largo de <span class="math inline">\(X\)</span> indican que <span class="math inline">\(VAR(Y|X)\)</span> no es constante.</p>
@@ -3436,8 +3441,8 @@ Y = 5+2X + \varepsilon
 <p>En este gráfico, una tendencia creciente de la varianza móvil conforme aumenta <span class="math inline">\(X\)</span> indica que la dispersión de <span class="math inline">\(Y\)</span> no es constante a lo largo del rango de la variable explicativa. Este patrón es bastante evidente con un escenario de heteroscedasticidad y refuerza, desde una perspectiva meramente visual, lo observado previamente mediante gráficos de dispersión con bandas de variabilidad.</p>
 </section>
 </section>
-<section id="comparación-de-medias-para-más-de-dos-grupos-anova" class="level4" data-number="6.2.5.7">
-<h4 data-number="6.2.5.7" class="anchored" data-anchor-id="comparación-de-medias-para-más-de-dos-grupos-anova"><span class="header-section-number">6.2.5.7</span> Comparación de medias para más de dos grupos: ANOVA</h4>
+<section id="comparación-de-medias-para-más-de-dos-grupos-anova" class="level4" data-number="7.2.5.7">
+<h4 data-number="7.2.5.7" class="anchored" data-anchor-id="comparación-de-medias-para-más-de-dos-grupos-anova"><span class="header-section-number">7.2.5.7</span> Comparación de medias para más de dos grupos: ANOVA</h4>
 <p>Como recordarás (ya que eso ocurrió hace solo unas cuantas páginas), previamente ya discutimos cómo comparar medias mediante <em>pruebas t</em>, las cuales son especialmente útiles cuando queremos contrastar una media contra un valor de referencia, comparar dos grupos independientes o evaluar mediciones antes y después sobre los mismos individuos, sin embargo, en la práctica no siempre trabajaremos únicamente con uno o dos grupos, ya que muchas veces necesitaremos comparar tres o más categorías al mismo tiempo, por ejemplo, ventas promedio entre distintas regiones, tiempos promedio de entrega entre varios centros de distribución o niveles de satisfacción entre diferentes segmentos de clientes. Para estos casos utilizamos el <strong>análisis de varianza</strong>, mejor conocido como <strong>ANOVA</strong>, cuyo objetivo es determinar si existen diferencias estadísticamente significativas entre las medias de varios grupos <span class="citation" data-cites="fisher1925statistical">(<a href="referencias.html#ref-fisher1925statistical" role="doc-biblioref">Fisher 1925</a>)</span>.</p>
 <p>Ahora bien, probablemente el nombre pueda parecer un poco confuso, ya que si estamos comparando medias, ¿por qué se llama análisis de varianza? Esto es simplemente porque <em>ANOVA</em> no compara las medias de manera directa como lo hace una <em>prueba t</em>, sino que evalúa si la variabilidad que existe entre los grupos es suficientemente grande en comparación con la variabilidad que existe dentro de los grupos, es decir, si las medias de los grupos son muy parecidas entre sí, entonces la variabilidad entre grupos será pequeña, mientras que si algunas medias están muy alejadas de otras, la variabilidad entre grupos será mayor. Precisamente, el <em>ANOVA</em> se encarga de comparar estas dos fuentes de variación:</p>
 <ol type="1">
@@ -3617,8 +3622,8 @@ W = 0.9932, p-value = 0.8292</code></pre>
 </div>
 </div>
 <p>Donde rápidamente podemos concluir que no hay evidencia de que los datos provengan de una distribución no normal, afortunadamente (o no tan afortunadamente en realidad, considerando que son datos inventados).</p>
-<section id="prueba-de-tukey" class="level5" data-number="6.2.5.7.1">
-<h5 data-number="6.2.5.7.1" class="anchored" data-anchor-id="prueba-de-tukey"><span class="header-section-number">6.2.5.7.1</span> Prueba de Tukey</h5>
+<section id="prueba-de-tukey" class="level5" data-number="7.2.5.7.1">
+<h5 data-number="7.2.5.7.1" class="anchored" data-anchor-id="prueba-de-tukey"><span class="header-section-number">7.2.5.7.1</span> Prueba de Tukey</h5>
 <p>Dado que estamos en un capítulo meramente exploratorio, voy a suponer que los datos también cuentan con homogeneidad en las varianzas, ya que discutiremos pruebas formales para ello hasta el siguiente capítulo, así que por ahora estaríamos suponiendo que tenemos un <em>ANOVA</em> con resultados válidos, por lo que en tal caso, ahora tenemos otro problema: No tenemos idea de cuál es la región que tiene una media diferente. Para resolver esto, necesitamos aplicar una prueba posterior al <em>ANOVA</em> que nos permita comparar los grupos entre sí, controlando el problema de comparaciones múltiples, siendo en este caso la prueba formal de <strong>Tukey</strong> <span class="citation" data-cites="tukey1949comparing">(<a href="referencias.html#ref-tukey1949comparing" role="doc-biblioref">Tukey 1949</a>)</span>.</p>
 <p>En esta prueba tenemos que, para cada par de grupos <span class="math inline">\(i\)</span> y <span class="math inline">\(j\)</span>, donde <span class="math inline">\(i \neq j\)</span>, entonces la hipótesis a contrastar será:</p>
 <ul>
@@ -3698,8 +3703,8 @@ Sur-Occidente    -22.58029 -29.847773 -15.31280 0.000000000003776535</code></pre
 <p>Más adelante discutiremos algunas pruebas no paramétricas para <em>ANOVA</em>, en caso de que alguno de los supuestos que vimos no se cumplan.</p>
 </section>
 </section>
-<section id="validando-la-autocorrelación" class="level4" data-number="6.2.5.8">
-<h4 data-number="6.2.5.8" class="anchored" data-anchor-id="validando-la-autocorrelación"><span class="header-section-number">6.2.5.8</span> Validando la autocorrelación</h4>
+<section id="validando-la-autocorrelación" class="level4" data-number="7.2.5.8">
+<h4 data-number="7.2.5.8" class="anchored" data-anchor-id="validando-la-autocorrelación"><span class="header-section-number">7.2.5.8</span> Validando la autocorrelación</h4>
 <p>Otro de los supuestos fundamentales en la inferencia estadística, especialmente en el contexto de modelos de regresión y análisis de series de tiempo, es la <strong>independencia de los errores</strong>, estrechamente relacionada con la <strong>autocorrelación</strong>. Este supuesto establece que los errores del modelo no deben estar correlacionados entre sí; es decir, el valor del error asociado a una observación no debe depender del valor de los errores correspondientes a observaciones previas o posteriores. Cuando esta condición se cumple, se garantiza que cada observación aporta información independiente al modelo, permitiendo obtener estimaciones insesgadas e inferencias estadísticas confiables. En contraste, la presencia de autocorrelación indica que los errores siguen un patrón sistemático a lo largo del tiempo o del orden de las observaciones, lo que puede conducir a una subestimación de la varianza de los coeficientes y generar conclusiones erróneas <span class="citation" data-cites="durbin1950testing">(<a href="referencias.html#ref-durbin1950testing" role="doc-biblioref">Durbin and Watson 1950</a>)</span>.</p>
 <div class="callout-warning callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
@@ -3722,8 +3727,8 @@ OJO
 <li><p><strong>Gráfico de dispersión de residuos rezagados (lag plot)</strong>: Muestra la relación entre un valor y su rezago inmediato (por ejemplo, <span class="math inline">\(t\)</span> frente a <span class="math inline">\(t-1\)</span>), facilitando la detección visual de correlación entre observaciones consecutivas cuando se observa una estructura definida en lugar de una nube aleatoria de puntos.</p></li>
 <li><p><strong>Correlograma (ACF)</strong>: Muestra los coeficientes de autocorrelación para distintos rezagos, permitiendo identificar hasta qué punto las observaciones están correlacionadas con valores pasados y en qué rezagos dicha dependencia es estadísticamente relevante.</p></li>
 </ul>
-<section id="gráfico-de-series-de-tiempo" class="level5" data-number="6.2.5.8.1">
-<h5 data-number="6.2.5.8.1" class="anchored" data-anchor-id="gráfico-de-series-de-tiempo"><span class="header-section-number">6.2.5.8.1</span> Gráfico de series de tiempo</h5>
+<section id="gráfico-de-series-de-tiempo" class="level5" data-number="7.2.5.8.1">
+<h5 data-number="7.2.5.8.1" class="anchored" data-anchor-id="gráfico-de-series-de-tiempo"><span class="header-section-number">7.2.5.8.1</span> Gráfico de series de tiempo</h5>
 <p>Como no es de extrañar, para las siguientes secciones del libro (y para el resto de tu vida laboral, obviamente) vamos a utilizar bastante los gráficos de series de tiempo y, sobre todo, los datos de este estilo, por lo que me parece importante comenzar con una explicación breve de estos gráficos, aunque la definición formal y explicación matemática de las series de tiempo la veremos con profundidad en el siguiente capítulo. Por ahora nos quedaremos con el apoyo visual para el análisis exploratorio de datos.</p>
 <p>Como primer apoyo gráfico para identificar la autocorrelación (de forma parcial), vamos a hacer uso de un gráfico de una serie temporal. Este tipo de gráfico permite observar la evolución de una variable aleatoria <span class="math inline">\(\{ k_t \}_{t=1}^{T}\)</span> a lo largo del tiempo, representando los valores observados en el eje vertical y el orden temporal en el eje horizontal, siendo cada valor <span class="math inline">\(Y_t\)</span> una observación indexada en un periodo temporal (años, meses, días, etc). A diferencia de otros gráficos exploratorios que analizan relaciones entre variables distintas, el gráfico de la serie temporal se enfoca en la dependencia interna de la variable consigo misma a través del tiempo <span class="citation" data-cites="hyndman2021forecasting">(<a href="referencias.html#ref-hyndman2021forecasting" role="doc-biblioref">Hyndman and Athanasopoulos 2021</a>)</span>.</p>
 <p>De manera muy resumida, los componentes más comunes de una serie de tiempo son:</p>
@@ -3850,8 +3855,8 @@ OJO
 <p>Podemos ver que el patrón estacional se pierde, lo cual tiene sentido considerando el tipo de datos epidemiológicos que estamos tratando. A diferencia de fenómenos como ventas, donde existen ciclos claramente asociados al calendario, la evolución de un brote epidémico suele estar dominada por factores estructurales y eventos exógenos, como la tasa de contagio, la efectividad de las medidas de contención, la capacidad del sistema de salud. etc, lo que si, nos puede llevar a pensar que situaciones del pasado van a interferir directamente en lo que ocurrirá después para esta serie de tiempo.</p>
 <p>Obviamente, este gráfico de la serie temporal nos permite comenzar a inferir la existencia de autocorrelación, pero no podemos rechazarla o no rechazarla hasta tener una prueba formal al respecto.</p>
 </section>
-<section id="gráfico-de-dispersión-de-residuos-rezagados-lag-plot" class="level5" data-number="6.2.5.8.2">
-<h5 data-number="6.2.5.8.2" class="anchored" data-anchor-id="gráfico-de-dispersión-de-residuos-rezagados-lag-plot"><span class="header-section-number">6.2.5.8.2</span> Gráfico de dispersión de residuos rezagados (lag plot)</h5>
+<section id="gráfico-de-dispersión-de-residuos-rezagados-lag-plot" class="level5" data-number="7.2.5.8.2">
+<h5 data-number="7.2.5.8.2" class="anchored" data-anchor-id="gráfico-de-dispersión-de-residuos-rezagados-lag-plot"><span class="header-section-number">7.2.5.8.2</span> Gráfico de dispersión de residuos rezagados (lag plot)</h5>
 <p>Si bien un gráfico de serie temporal general es una herramienta útil para comenzar a entender la naturaleza de nuestros datos, vamos ahora a avanzar con gráficos que nos permitan explorar esta dependencia de forma un poco más explícita, comenzando con un <strong>gráfico de dispersión de residuos rezagados (lag plot)</strong>.</p>
 <p>Un <em>lag plot</em> no es más que un gráfico de dispersión, donde en el eje horizontal se representan los valores de la serie en el periodo <span class="math inline">\(t-k\)</span> y en el eje vertical los valores en el periodo <span class="math inline">\(t\)</span>, es decir, se grafica <span class="math inline">\(Y_t\)</span> contra <span class="math inline">\(Y_{t-k}\)</span> para algún rezago <span class="math inline">\(k \geq 1\)</span>. Básicamente, cada punto del gráfico corresponde a un par ordenado <span class="math inline">\((Y_{t-k}, Y_t)\)</span>.</p>
 <p>Este tipo de gráfico es bastante sencillo de interpretar, ya que si <strong>no</strong> nos encontramos ante una situación de autocorrelación, entonces no debería existir una relación visible entre ambas variables, por lo que el gráfico debería asemejarse a una nube de puntos sin estructura aparente. Por el contrario, si existe autocorrelación, el gráfico tenderá a mostrar algún tipo de patrón reconocible. Los patrones que podemos encontrar en este gráfico son:</p>
@@ -3892,8 +3897,8 @@ OJO
 <p>Rápidamente, podemos darnos cuenta de la presencia de una relación positiva claramente definida entre <span class="math inline">\(Y_{t-1}\)</span> y <span class="math inline">\(Y_t\)</span>, siendo que los puntos no se distribuyen de forma aleatoria, sino que tienden a alinearse a lo largo de una diagonal creciente, lo cual indica que valores altos en un periodo suelen ser seguidos por valores altos en el periodo siguiente, por ejemplo. Básicamente, el número de casos registrados en una semana contiene información relevante para explicar el número de casos de la semana siguiente.</p>
 <p>Este Lag Plot refuerza la intuición obtenida a partir del gráfico de la serie temporal: <strong>la serie no cumple el supuesto de independencia temporal</strong>, aunque, al igual que en los casos anteriores, esta evidencia es únicamente descriptiva.</p>
 </section>
-<section id="correlograma-acf" class="level5" data-number="6.2.5.8.3">
-<h5 data-number="6.2.5.8.3" class="anchored" data-anchor-id="correlograma-acf"><span class="header-section-number">6.2.5.8.3</span> Correlograma (ACF)</h5>
+<section id="correlograma-acf" class="level5" data-number="7.2.5.8.3">
+<h5 data-number="7.2.5.8.3" class="anchored" data-anchor-id="correlograma-acf"><span class="header-section-number">7.2.5.8.3</span> Correlograma (ACF)</h5>
 <p>Hasta ahora hemos utilizado herramientas gráficas que nos permiten intuir la presencia de dependencia temporal en nuestros datos, sin embargo, tanto el <em>gráfico de la serie temporal</em> como el <em>lag plot</em> se enfocan en relaciones puntuales o visuales entre observaciones. Para avanzar un paso más en el análisis exploratorio, resulta conveniente utilizar una herramienta que nos permita resumir de forma sistemática la relación entre <span class="math inline">\(Y_t\)</span> y sus valores pasados para múltiples rezagos simultáneamente. Para esto, vamos a utilizar el correlograma (función de autocorrelación) <span class="citation" data-cites="box2015time">(<a href="referencias.html#ref-box2015time" role="doc-biblioref">Box et al. 2015</a>)</span>.</p>
 <p>La función de autocorrelación mide, para cada rezago <span class="math inline">\(k \geq 1\)</span>, la correlación lineal entre <span class="math inline">\(Y_t\)</span> y <span class="math inline">\(Y_{t-k}\)</span>, y podemos definirlo formalmente como:</p>
 <p><span class="math display">\[
@@ -3954,8 +3959,8 @@ p(k) = \text{Corr} (Y_t, \; Y_{t-k} )
 </section>
 </section>
 </section>
-<section id="por-qué-se-deben-cumplir-estos-supuestos" class="level3" data-number="6.2.6">
-<h3 data-number="6.2.6" class="anchored" data-anchor-id="por-qué-se-deben-cumplir-estos-supuestos"><span class="header-section-number">6.2.6</span> ¿Por qué se deben cumplir estos supuestos?</h3>
+<section id="por-qué-se-deben-cumplir-estos-supuestos" class="level3" data-number="7.2.6">
+<h3 data-number="7.2.6" class="anchored" data-anchor-id="por-qué-se-deben-cumplir-estos-supuestos"><span class="header-section-number">7.2.6</span> ¿Por qué se deben cumplir estos supuestos?</h3>
 <p>Cuando vamos más allá de la estadística descriptiva y comenzamos a hacer inferencia estadística, o incluso a generar pronósticos a partir de los datos, dejamos de limitarnos a resumir la información que tenemos enfrente y empezamos a responder preguntas mucho más interesantes, como:</p>
 <ul>
 <li>¿Qué tan confiables son mis estimaciones?</li>
@@ -3991,15 +3996,15 @@ p(k) = \text{Corr} (Y_t, \; Y_{t-k} )
 <p>En este contexto, el riesgo no es únicamente técnico, sino inferencial: podríamos concluir erróneamente que existe un cambio significativo en los contagios cuando en realidad se trata solo de variabilidad mal modelada (error tipo I), o bien podríamos no detectar un aumento real en los casos porque el modelo no tiene la potencia adecuada bajo supuestos incorrectos (error tipo II).</p>
 <p>Si extrapolamos estos problemas a querer hacer un pronóstico utilizando una muestra no normal, al final tendremos estimaciones demasiado (o muy poco) agresivas y poco realistas, <em>p-values</em> poco confiables o modelos que subestiman la incertidumbre real del fenómeno.</p>
 <p>Entendiendo lo anterior, me parece que queda bastante clara la razón por la que los supuestos estadísticos que hemos analizado hasta ahora se deben cumplir. Antes de aplicar cualquier procedimiento inferencial, es indispensable evaluar si los supuestos fundamentales son razonables en el contexto del problema, y de esta forma obtener conclusiones estadísticamente válidas.</p>
-<section id="qué-hacer-cuando-estos-supuestos-no-se-cumplen" class="level4" data-number="6.2.6.1">
-<h4 data-number="6.2.6.1" class="anchored" data-anchor-id="qué-hacer-cuando-estos-supuestos-no-se-cumplen"><span class="header-section-number">6.2.6.1</span> ¿Qué hacer cuando estos supuestos no se cumplen?</h4>
+<section id="qué-hacer-cuando-estos-supuestos-no-se-cumplen" class="level4" data-number="7.2.6.1">
+<h4 data-number="7.2.6.1" class="anchored" data-anchor-id="qué-hacer-cuando-estos-supuestos-no-se-cumplen"><span class="header-section-number">7.2.6.1</span> ¿Qué hacer cuando estos supuestos no se cumplen?</h4>
 <p>Cuando los supuestos clásicos no se cumplen, no necesariamente debemos abandonar el análisis, pero sí ajustar el enfoque. En lugar de aplicar automáticamente pruebas paramétricas, es fundamental evaluar qué tan grave es la violación y qué alternativas existen. Esto implica validar los supuestos incluso en contextos donde la normalidad no está presente, apoyándonos tanto en herramientas visuales como en criterios estadísticos más flexibles.</p>
 <p>En muchos casos, la solución puede ser utilizar pruebas no paramétricas, que no dependen estrictamente de distribuciones normales ni de varianzas constantes. En otros, es posible transformar los datos para aproximar mejor los supuestos requeridos y mantener la interpretabilidad del modelo. Sin embargo, estas estrategias tienen límites, y cuando no son suficientes, existen métodos más robustos, como regresiones resistentes (que discutiremos hasta el siguiente capítulo), ajustes como el test de Welch o técnicas de remuestreo como bootstrapping.</p>
 <p>En las siguientes secciones revisaremos estas alternativas de manera práctica: cómo validar supuestos en distribuciones no normales, cuándo conviene recurrir a pruebas no paramétricas, qué transformaciones son útiles y qué opciones robustas existen cuando los enfoques tradicionales dejan de ser confiables.</p>
 </section>
 </section>
-<section id="validando-estos-supuestos-en-distribuciones-no-normales" class="level3" data-number="6.2.7">
-<h3 data-number="6.2.7" class="anchored" data-anchor-id="validando-estos-supuestos-en-distribuciones-no-normales"><span class="header-section-number">6.2.7</span> Validando estos supuestos en distribuciones no normales</h3>
+<section id="validando-estos-supuestos-en-distribuciones-no-normales" class="level3" data-number="7.2.7">
+<h3 data-number="7.2.7" class="anchored" data-anchor-id="validando-estos-supuestos-en-distribuciones-no-normales"><span class="header-section-number">7.2.7</span> Validando estos supuestos en distribuciones no normales</h3>
 <p>En las secciones anteriores analizamos con detalle cómo se comportan distintas distribuciones, tanto normales como no normales, y por qué esta distinción es relevante dentro del análisis estadístico. También discutimos que muchos fenómenos reales pueden presentar estructuras alejadas de la normalidad, lo cual tiene implicaciones importantes cuando queremos avanzar más allá de la estadística descriptiva. Por supuesto, en este punto ya ha quedado bastante claro el por qué los supuestos estadísticos son importantes de acuerdo, y por qué ignorarlos puede llevarnos a conclusiones incorrectas. Sin embargo, ya que nos dimos cuenta de que los datos no siempre encajan dentro del marco ideal de la normalidad, el siguiente paso lógico es preguntarnos cómo debemos proceder en estos escenarios.</p>
 <p>La inferencia estadística no depende únicamente de que los datos <em>“se vean normales”</em>, sino de que el procedimiento que utilicemos sea consistente con la estructura real de la muestra. Lo anterior nos lleva a la idea de que validar supuestos en distribuciones no normales no significa <em>“comprobar normalidad”</em>, sino evaluar si el enfoque inferencial elegido sigue siendo apropiado. Lo anterior es, de hecho, algo interesante, porque ahora la validación se vuelve un proceso más flexible. En lugar de centrarnos únicamente en una prueba formal de normalidad, debemos ampliar el análisis hacia otros elementos igual o más importantes, como:</p>
 <ul>
@@ -4011,8 +4016,8 @@ p(k) = \text{Corr} (Y_t, \; Y_{t-k} )
 <p>Los <strong>métodos paramétricos</strong>, como ya hemos mencionado, suelen asumir una forma funcional específica para la distribución (normalidad, varianza constante, etc), lo cual permite construir resultados analíticos más <em>típicos</em>, intervalos cerrados y pruebas con alta potencia estadística cuando los supuestos se cumplen. Sin embargo, cuando estos supuestos se violan (como en ejemplos anteriores), su desempeño puede deteriorarse rápidamente.</p>
 <p>Por otra parte, los <strong>métodos no paramétricos</strong> surgen precisamente como una alternativa para situaciones donde no queremos (o podemos) asumir una distribución particular. En lugar de basarse directamente en parámetros como la media o la varianza, muchas de estas técnicas utilizan rangos, medianas o procedimientos de remuestreo, permitiendo realizar inferencia bajo condiciones mucho más generales.</p>
 <p>Ahora, los métodos no paramétricos no son <em>mejores</em> respecto a los paramétricos. Simplemente, cada tipo de enfoque responde a al contexto de nuestros datos. La elección entre un enfoque paramétrico o no paramétrico dependerá de factores como el tamaño muestral, la severidad de la desviación respecto a la normalidad, la presencia de <em>outliers</em> y, obviamente, el tipo de pregunta que queremos responder.</p>
-<section id="uso-de-pruebas-no-paramétricas" class="level4" data-number="6.2.7.1">
-<h4 data-number="6.2.7.1" class="anchored" data-anchor-id="uso-de-pruebas-no-paramétricas"><span class="header-section-number">6.2.7.1</span> Uso de pruebas no paramétricas</h4>
+<section id="uso-de-pruebas-no-paramétricas" class="level4" data-number="7.2.7.1">
+<h4 data-number="7.2.7.1" class="anchored" data-anchor-id="uso-de-pruebas-no-paramétricas"><span class="header-section-number">7.2.7.1</span> Uso de pruebas no paramétricas</h4>
 <p>En esta sección revisaremos algunas de las pruebas no paramétricas más utilizadas en estadística aplicada, junto con el tipo de preguntas que responden y los contextos donde conviene emplearlas. En particular, abordaremos:</p>
 <ul>
 <li><strong>Prueba de Mann–Whitney U</strong>: como alternativa al t-test para dos muestras independientes.</li>
@@ -4020,8 +4025,8 @@ p(k) = \text{Corr} (Y_t, \; Y_{t-k} )
 <li><strong>Prueba de Kruskal–Wallis</strong>: como equivalente no paramétrico del <em>ANOVA.</em></li>
 </ul>
 <p>Con esto, comenzaremos a desarrollar un análisis inferencial más flexible, que no dependa exclusivamente del caso ideal (con todos los supuestos funcionando perfectamente), sino que se adapte a la estructura real de los datos que estamos analizando.</p>
-<section id="prueba-de-mannwhitney-u" class="level5" data-number="6.2.7.1.1">
-<h5 data-number="6.2.7.1.1" class="anchored" data-anchor-id="prueba-de-mannwhitney-u"><span class="header-section-number">6.2.7.1.1</span> Prueba de Mann–Whitney U</h5>
+<section id="prueba-de-mannwhitney-u" class="level5" data-number="7.2.7.1.1">
+<h5 data-number="7.2.7.1.1" class="anchored" data-anchor-id="prueba-de-mannwhitney-u"><span class="header-section-number">7.2.7.1.1</span> Prueba de Mann–Whitney U</h5>
 <p>Como recordarás, anteriormente discutimos el uso de las pruebas <span class="math inline">\(t\)</span> para comparar muestras basándonos en la diferencia entre sus medias. Algo que no mencionamos en ese punto, pero que en este momento ya debes tener bastante claro, es que la prueba resulta muy poderosa <em>cuando</em> se cumplen los supuestos paramétricos clásicos: normalidad aproximada en los datos (o en los residuales), varianzas homogéneas entre grupos e independencia entre observaciones. Sin embargo, en la gran mayoría de los escenarios reales estos supuestos simplemente no aplican. Podemos encontrarnos con distribuciones altamente sesgadas, con presencia de valores extremos, o con tamaños muestrales pequeños donde la aproximación normal no es suficientemente confiable. En estos casos, aplicar directamente una prueba <span class="math inline">\(t\)</span> no será la mejor opción. Aquí es donde entra la prueba de <strong>Mann–Whitney U</strong> (propuesta formalmente en 1947 por <em>Henry B</em>. Mann y <em>Donald R. Whitney</em>), también conocida como <strong>Wilcoxon rank-sum test</strong>. Esta prueba es una alternativa no paramétrica al <em>t-test</em> para dos muestras independientes. Su principal ventaja es que no requiere asumir normalidad, ya que no se basa directamente en las medias de los grupos, sino en el orden <strong>relativo</strong> de las observaciones <span class="citation" data-cites="mann1947test">(<a href="referencias.html#ref-mann1947test" role="doc-biblioref">Mann and Whitney 1947</a>)</span>.</p>
 <p>Esta prueba busca evaluar si dos grupos provienen de la misma distribución, tal como en la <span class="math inline">\(t\)</span>. Formalmente, su prueba de hipótesis será:</p>
 <p><span class="math display">\[
@@ -4200,8 +4205,8 @@ alternative hypothesis: true location shift is not equal to 0</code></pre>
 </div>
 <p>Aquí podemos ver de forma más clara que los pacientes fumadores presentan cargos médicos considerablemente más altos, ya que además, no solo cambia el centro de la distribución, sino también la dispersión, al tener que el grupo de fumadores concentra una mayor cantidad de observaciones con costos elevados.</p>
 </section>
-<section id="prueba-de-wilcoxon" class="level5" data-number="6.2.7.1.2">
-<h5 data-number="6.2.7.1.2" class="anchored" data-anchor-id="prueba-de-wilcoxon"><span class="header-section-number">6.2.7.1.2</span> Prueba de Wilcoxon</h5>
+<section id="prueba-de-wilcoxon" class="level5" data-number="7.2.7.1.2">
+<h5 data-number="7.2.7.1.2" class="anchored" data-anchor-id="prueba-de-wilcoxon"><span class="header-section-number">7.2.7.1.2</span> Prueba de Wilcoxon</h5>
 <p>Ya que discutimos la prueba de <em>Mann–Whitney U</em> y sabemos qué alternativa podemos cuando no podemos asumir normalidad, el siguiente paso lógico es preguntarnos qué ocurre cuando las observaciones no son independientes, sino que vienen en pares, es decir, cuando tenemos dos mediciones relacionadas entre sí, como una medición antes y después sobre los mismos individuos, dos evaluaciones aplicadas al mismo grupo o dos condiciones experimentales observadas sobre las mismas unidades.</p>
 <p>En estos casos, la prueba más común es la prueba de <strong>Wilcoxon para rangos con signo</strong> (propuesta por <em>Frank Wilcoxon</em> en 1945), también conocida como <strong>Wilcoxon signed-rank test</strong>, la cual funciona como una alternativa no paramétrica a la prueba <span class="math inline">\(t\)</span> pareada, pero con una diferencia importante: En lugar de analizar directamente la media de las diferencias, trabaja con los rangos de las diferencias absolutas, incorporando además el signo de cada diferencia, y lo que queremos evaluar mediante esta prueba es si existe un cambio sistemático entre dos mediciones relacionadas, pero no queremos asumir que las diferencias siguen una distribución normal <span class="citation" data-cites="wilcoxon1945individual">(<a href="referencias.html#ref-wilcoxon1945individual" role="doc-biblioref">Wilcoxon 1945</a>)</span>.</p>
 <p>En este punto es posible que estes un poco confundido respecto al uso de esta prueba y el uso de la prueba de <em>Mann–Whitney U</em>, ya que por la descripción actual suenan muy parecidas, sin embargo, la diferencia fundamental entre ambas es la <strong>relación entre grupos</strong>, por ejemplo, en el caso de <code>insurance.csv</code>, al comparar cargos médicos entre fumadores y no fumadores, usamos <em>Mann–Whitney U</em>, porque son personas distintas en dos grupos independientes, mientras que si, por ejemplo, tuviéramos los cargos médicos de los mismos pacientes antes y después de un tratamiento, entonces usaríamos el test de <em>Wilcoxon</em>, ya que son las mismas personas y sus datos van a estar relacionados. Para simplificarlo de forma sencilla, podemos verlo en la siguiente tabla:</p>
@@ -4429,8 +4434,8 @@ alternative hypothesis: true location shift is less than 0</code></pre>
 </div>
 </div>
 </section>
-<section id="prueba-de-kruskalwallis" class="level5" data-number="6.2.7.1.3">
-<h5 data-number="6.2.7.1.3" class="anchored" data-anchor-id="prueba-de-kruskalwallis"><span class="header-section-number">6.2.7.1.3</span> Prueba de Kruskal–Wallis</h5>
+<section id="prueba-de-kruskalwallis" class="level5" data-number="7.2.7.1.3">
+<h5 data-number="7.2.7.1.3" class="anchored" data-anchor-id="prueba-de-kruskalwallis"><span class="header-section-number">7.2.7.1.3</span> Prueba de Kruskal–Wallis</h5>
 <p>Como siguiente y último caso de pruebas no paramétricas, vamos a discutir la <strong>prueba de Kruskal–Wallis</strong> (propuesta por William H. Kruskal y W. Allen Wallis en 1952), enfocada a reemplazar a <em>ANOVA</em> si la variable de interés presenta una distribución claramente no normal, si tenemos valores extremos importantes o estamos trabajando con tamaños de muestra pequeños <span class="citation" data-cites="kruskal1952use">(<a href="referencias.html#ref-kruskal1952use" role="doc-biblioref">Kruskal and Wallis 1952</a>)</span>.</p>
 <p>Esta prueba puede entenderse como una extensión de la prueba de <em>Mann–Whitney U</em> para el caso de tres o más grupos independientes, y, de hecho, mientras que esta última nos permite comparar dos grupos independientes, <em>Kruskal–Wallis</em> generaliza la misma lógica basada en rangos para evaluar si existen diferencias sistemáticas entre varios grupos.</p>
 <p>Básicamente, esta prueba funciona como una alternativa no paramétrica al <em>ANOVA</em> de una vía, como ya lo mencioné previamente, pero la diferencia principal radica en que, mientras que <em>ANOVA</em> compara medias directamente, <em>Kruskal–Wallis</em> compara los rangos de las observaciones, razón por la que no requiere asumir normalidad en la variable dependiente. Supongamos, por ejemplo, que queremos comparar los cargos médicos entre más de dos regiones, los tiempos de entrega entre varios centros de distribución, las ventas entre distintos canales comerciales o los niveles de satisfacción entre diferentes sucursales, por lo que si la variable de interés no cumple los supuestos paramétricos necesarios para aplicar un <em>ANOVA</em>, entonces podemos usar <em>Kruskal–Wallis</em> como alternativa.</p>
@@ -4628,8 +4633,8 @@ P value adjustment method: bonferroni </code></pre>
 <p>Como anéctoda personal, cuando estaba en la universidad esta era la prueba que más solía recordar y aplicar, simplemente porque me recordaba al nombre del <em>crustáceo cascarudo</em>.</p>
 </section>
 </section>
-<section id="transformaciones-en-los-datos" class="level4" data-number="6.2.7.2">
-<h4 data-number="6.2.7.2" class="anchored" data-anchor-id="transformaciones-en-los-datos"><span class="header-section-number">6.2.7.2</span> Transformaciones en los datos</h4>
+<section id="transformaciones-en-los-datos" class="level4" data-number="7.2.7.2">
+<h4 data-number="7.2.7.2" class="anchored" data-anchor-id="transformaciones-en-los-datos"><span class="header-section-number">7.2.7.2</span> Transformaciones en los datos</h4>
 <p>Hasta ahora hemos revisado una primera familia de alternativas cuando los supuestos clásicos no se cumplen: Las pruebas no paramétricas, las cuales son bastante útiles cuando no queremos asumir normalidad, cuando tenemos valores extremos o cuando la estructura de los datos hace poco razonable trabajar directamente con medias, sin embargo, esta no es la única forma o estrategia disponible. Como mencionamos al inicio de esta sección, otra posibilidad consiste en <strong>transformar los datos</strong> para intentar aproximar mejor los supuestos requeridos por ciertos métodos paramétricos <span class="citation" data-cites="box1964analysis">(<a href="referencias.html#ref-box1964analysis" role="doc-biblioref">Box and Cox 1964</a>)</span>.</p>
 <p>La idea de transformar una variable es bastante simple, ya que en lugar de analizar directamente la variable original, por ejemplo, <span class="math inline">\(Y\)</span>, analizamos una nueva versión de ella, digamos <span class="math inline">\(Y^*\)</span>, obtenida mediante alguna función matemática:</p>
 <p><span class="math display">\[
@@ -5081,13 +5086,13 @@ W = 0.98348, p-value = 0.00000000003141</code></pre>
 </div>
 <p>Si bien en este caso aún no tenemos normalidad total en nuestra variable transformada, el estadístico <span class="math inline">\(W\)</span> es casi 1, lo que nos estaría indicando que la variable está muy cerca a tener una distribución normal (y definitivamente es ganancia, ya que la transformación mejora el comportamiento de la variable, aunque no tanto como nos gustaría).</p>
 </section>
-<section id="cuando-lo-anterior-no-funciona-otros-métodos-más-robustos" class="level4" data-number="6.2.7.3">
-<h4 data-number="6.2.7.3" class="anchored" data-anchor-id="cuando-lo-anterior-no-funciona-otros-métodos-más-robustos"><span class="header-section-number">6.2.7.3</span> Cuando lo anterior no funciona: Otros métodos más robustos</h4>
+<section id="cuando-lo-anterior-no-funciona-otros-métodos-más-robustos" class="level4" data-number="7.2.7.3">
+<h4 data-number="7.2.7.3" class="anchored" data-anchor-id="cuando-lo-anterior-no-funciona-otros-métodos-más-robustos"><span class="header-section-number">7.2.7.3</span> Cuando lo anterior no funciona: Otros métodos más robustos</h4>
 <p>Ya discutimos dos estrategias bastante útiles cuando los supuestos clásicos no se cumplen: Utilizar pruebas no paramétricas o aplicar transformaciones sobre los datos, y en realidad, ambas opciones suelen funcionar bien en muchos escenarios, pero no siempre es el caso. Hay situaciones en donde los datos siguen siendo problemáticos incluso después de transformar la variable, o donde una prueba no paramétrica no responde exactamente la pregunta que queremos contestar, por ejemplo, una transformación <em>Box-Cox</em> puede reducir la asimetría de una variable, pero eso no garantiza que la distribución transformada sea perfectamente normal, tal como lo vimos en el ejercicio pasado, en el que la prueba de <em>Shapiro-Wilk</em> aún nos dio un <em>p-value</em> menor al nivel de significancia.</p>
 <p>En estos casos podemos recurrir a una tercera y última familia de herramientas: Los <strong>métodos robustos.</strong></p>
 <p>En este tipo de métodos queremos utilizar procedimientos que no se vean afectados de forma excesiva por valores extremos, asimetrías fuertes o pequeñas desviaciones respecto a los supuestos clásicos. Cuando las pruebas no paramétricas no son suficientes y las transformaciones tampoco resuelven del todo el problema, podemos apoyarnos en herramientas como <strong>estimadores robustos</strong>, <strong>medidas basadas en rangos</strong>, <strong>remuestreo</strong>, <strong>bootstrap</strong> y <strong>pruebas por permutación</strong>, métodos que vamos a discutir a continuación <span class="citation" data-cites="huber1981robust">(<a href="referencias.html#ref-huber1981robust" role="doc-biblioref">Huber 1981</a>)</span>.</p>
-<section id="estimadores-robustos" class="level5" data-number="6.2.7.3.1">
-<h5 data-number="6.2.7.3.1" class="anchored" data-anchor-id="estimadores-robustos"><span class="header-section-number">6.2.7.3.1</span> Estimadores robustos</h5>
+<section id="estimadores-robustos" class="level5" data-number="7.2.7.3.1">
+<h5 data-number="7.2.7.3.1" class="anchored" data-anchor-id="estimadores-robustos"><span class="header-section-number">7.2.7.3.1</span> Estimadores robustos</h5>
 <p>Empecemos por la parte sencilla. En estadística descriptiva, una de las primeras formas de hacer un análisis más robusto es dejar de depender únicamente de la media y la desviación estándar, ya que ambas medidas son bastante sensibles a valores extremos, por ejemplo, si tenemos una variable como <code>charges</code>, donde algunos pacientes tienen cargos médicos extremadamente altos, la media puede quedar muy influenciada por esos pocos casos, mientras que, medidas como la mediana, el rango intercuartílico y la desviación absoluta mediana suelen ser más estables (las cuales ya discutimos al principio de este capítulo). Otra medida robusta bastante útil es la <strong>desviación absoluta mediana</strong>, o <em>MAD</em> por sus siglas en inglés, la cual se define como:</p>
 <p><span class="math display">\[
 MAD = \text{mediana}(| X_i - \tilde{X} |)
@@ -5111,8 +5116,8 @@ MAD = \text{mediana}(| X_i - \tilde{X} |)
 </div>
 <p>En una distribución muy asimétrica, como la de los cargos médicos, es normal que la media sea bastante mayor que la mediana, ya que unos cuantos valores muy altos empujan el promedio hacia arriba, razón por la que en estos casos la mediana puede representar mejor el valor típico de la variable.</p>
 </section>
-<section id="media-recortada" class="level5" data-number="6.2.7.3.2">
-<h5 data-number="6.2.7.3.2" class="anchored" data-anchor-id="media-recortada"><span class="header-section-number">6.2.7.3.2</span> Media recortada</h5>
+<section id="media-recortada" class="level5" data-number="7.2.7.3.2">
+<h5 data-number="7.2.7.3.2" class="anchored" data-anchor-id="media-recortada"><span class="header-section-number">7.2.7.3.2</span> Media recortada</h5>
 <p>Otra alternativa interesante es la media recortada, la cual consiste en calcular la media después de eliminar un porcentaje de los valores más extremos en ambos lados de la distribución, por ejemplo, una media recortada al 10% elimina el 10% de los valores más pequeños y el 10% de los valores más grandes antes de calcular el promedio. Matemáticamente, si ordenamos los datos como:</p>
 <p><span class="math display">\[
 X_{( 1 )} \leq X_{( 2 )} \leq \cdots \leq X_{( n )}
@@ -5144,8 +5149,8 @@ k = [ \alpha n ]
 </div>
 <p>La media recortada es útil porque conserva parte de la lógica de la media, pero reduce la influencia de los valores más extremos, y de hecho, en este ejemplo podemos darnos cuenta cómo es que los datos se van acercando cada vez más a la mediana, ya que, en cierto sentido, se encuentra en un punto intermedio entre la media tradicional y la mediana.</p>
 </section>
-<section id="winsorización" class="level5" data-number="6.2.7.3.3">
-<h5 data-number="6.2.7.3.3" class="anchored" data-anchor-id="winsorización"><span class="header-section-number">6.2.7.3.3</span> Winsorización</h5>
+<section id="winsorización" class="level5" data-number="7.2.7.3.3">
+<h5 data-number="7.2.7.3.3" class="anchored" data-anchor-id="winsorización"><span class="header-section-number">7.2.7.3.3</span> Winsorización</h5>
 <p>La siguiente estrategia es particularmente interesante, ya que la <strong>winsorización</strong> consiste en limitar los valores extremos en lugar de eliminarlos, es decir, en lugar de quitar los valores más bajos y más altos, los reemplazamos por ciertos percentiles, por ejemplo, si <em>winsorizamos</em> al <span class="math inline">\(5\%\)</span>, los valores por debajo del percentil 5 se reemplazan por el valor del percentil 5, y los valores por encima del percentil 95 se reemplazan por el valor del percentil 95. En R, podemos crear una función sencilla para hacerlo:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb294"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb294-1"><a href="#cb294-1" aria-hidden="true" tabindex="-1"></a>winsorizar <span class="ot">&lt;-</span> <span class="cf">function</span>(x, <span class="at">probs =</span> <span class="fu">c</span>(<span class="fl">0.05</span>, <span class="fl">0.95</span>)) {</span>
@@ -5175,8 +5180,8 @@ k = [ \alpha n ]
 </div>
 <p>A pesar de que este método puede ser útil cuando sabemos que los valores extremos son reales, debe usarse con cuidado, porque estamos modificando los datos originales. De hecho, si se aplica, siempre conviene reportarlo explícitamente y justificar por qué fue necesario.</p>
 </section>
-<section id="bootstrap" class="level5" data-number="6.2.7.3.4">
-<h5 data-number="6.2.7.3.4" class="anchored" data-anchor-id="bootstrap"><span class="header-section-number">6.2.7.3.4</span> Bootstrap</h5>
+<section id="bootstrap" class="level5" data-number="7.2.7.3.4">
+<h5 data-number="7.2.7.3.4" class="anchored" data-anchor-id="bootstrap"><span class="header-section-number">7.2.7.3.4</span> Bootstrap</h5>
 <p>La siguiente herramienta (y una de las más poderosas) cuando los supuestos teóricos no son claros es el <em>bootstrap</em>, método que se basa en estimar la incertidumbre de un estadístico mediante remuestreo, en lugar de depender completamente de fórmulas analíticas basadas en supuestos fuertes. Supongamos que tenemos una muestra:</p>
 <p><span class="math display">\[
 X_1, X_2, \dots, X_n
@@ -5261,8 +5266,8 @@ Q_{0.975}(\hat{\theta}^{*})
 </div>
 <p>Si el intervalo no contiene al cero, tendríamos evidencia de que la diferencia de medianas entre ambos grupos es estadísticamente relevante, y la ventaja es que esta conclusión no depende directamente de asumir normalidad en <code>charges</code>.</p>
 </section>
-<section id="pruebas-por-permutación" class="level5" data-number="6.2.7.3.5">
-<h5 data-number="6.2.7.3.5" class="anchored" data-anchor-id="pruebas-por-permutación"><span class="header-section-number">6.2.7.3.5</span> Pruebas por permutación</h5>
+<section id="pruebas-por-permutación" class="level5" data-number="7.2.7.3.5">
+<h5 data-number="7.2.7.3.5" class="anchored" data-anchor-id="pruebas-por-permutación"><span class="header-section-number">7.2.7.3.5</span> Pruebas por permutación</h5>
 <p>Las últimas alternativas robustas que vamos a discutir son las pruebas por permutación, las cuales son particularmente útiles cuando queremos evaluar si dos grupos difieren, pero no queremos depender demasiado de supuestos distribucionales.</p>
 <p>La idea tras este enfoque es que si la hipótesis nula fuera cierta, entonces las etiquetas de los grupos serían intercambiables, es decir, si realmente no hubiera diferencia entre fumadores y no fumadores, entonces podríamos mezclar las etiquetas <code>yes</code> y <code>no</code> sin modificar sistemáticamente la diferencia entre grupos.</p>
 <p>Por norma general, el procedimiento para este método suele ser:</p>
@@ -5353,13 +5358,13 @@ Q_{0.975}(\hat{\theta}^{*})
 </section>
 </section>
 </section>
-<section id="ab-testing-comparando-muestras" class="level2" data-number="6.3">
-<h2 data-number="6.3" class="anchored" data-anchor-id="ab-testing-comparando-muestras"><span class="header-section-number">6.3</span> A/B testing: Comparando muestras</h2>
+<section id="ab-testing-comparando-muestras" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="ab-testing-comparando-muestras"><span class="header-section-number">7.3</span> A/B testing: Comparando muestras</h2>
 <p>Ya que tenemos todas las bases de la estadística inferencial, vamos a discutir un tema más comúnmente aplicado en la práctica (y que me han preguntado en el 90% de las entrevistas que he tenido de análisis de datos): El <strong>A/B testing</strong>.</p>
 <p>Si bien el nombre puede sonar como algo muy propio del área de marketing (y sí, es muy usado en esa área), la idea estadística detrás de un <em>A/B testing</em> es muy básica en realidad, ya que queremos comparar dos poblaciones, o más específicamente, dos versiones de una misma experiencia, producto, proceso o estrategia, para saber si una de ellas genera mejores resultados que la otra, por ejemplo, pensemos en una empresa que quiere evaluar si cambiar el diseño de un botón incrementa la tasa de conversión de una página web; o si una nueva estrategia de precios aumenta el ingreso promedio por usuario; o si una nueva política de asignación de repartidores reduce el tiempo promedio de entrega. En todos estos casos, el problema de fondo es el mismo, ya que tenemos una versión actual, que representa el comportamiento base, y una nueva versión, que queremos evaluar contra esa referencia <span class="citation" data-cites="kohavi2020trustworthy">(<a href="referencias.html#ref-kohavi2020trustworthy" role="doc-biblioref">Kohavi, Tang, and Xu 2020</a>)</span>.</p>
 <p>A la versión actual normalmente la llamamos <strong>grupo control</strong>, mientras que a la nueva versión la llamamos <strong>grupo tratamiento</strong>, y el objetivo del <em>A/B testing</em> es determinar si la diferencia observada es suficientemente grande como para no atribuirla únicamente al azar. Esto es importante porque, como ya vimos previamente en las pruebas de hipótesis, siempre existe variabilidad muestral, por ejemplo, dos grupos pueden tener resultados diferentes incluso si en realidad pertenecen a la misma población o si el tratamiento no tiene ningún efecto real, por lo tanto, el <em>A/B testing</em> puede entenderse como una aplicación práctica de las pruebas de hipótesis que ya discutimos, pero llevada a preguntas de negocio más directas: ¿la nueva versión mejora la métrica que nos interesa?, ¿la mejora es estadísticamente significativa?, etc.</p>
-<section id="grupo-control-y-grupo-tratamiento" class="level3" data-number="6.3.1">
-<h3 data-number="6.3.1" class="anchored" data-anchor-id="grupo-control-y-grupo-tratamiento"><span class="header-section-number">6.3.1</span> Grupo control y grupo tratamiento</h3>
+<section id="grupo-control-y-grupo-tratamiento" class="level3" data-number="7.3.1">
+<h3 data-number="7.3.1" class="anchored" data-anchor-id="grupo-control-y-grupo-tratamiento"><span class="header-section-number">7.3.1</span> Grupo control y grupo tratamiento</h3>
 <p>En un <em>A/B testing</em>, partimos de una muestra de la población de interés, por ejemplo usuarios, clientes, órdenes, tiendas, repartidores, sesiones o cualquier otra unidad de análisis relevante para el problema. A cada unidad se le asigna una de dos posibles condiciones:</p>
 <p><span class="math display">\[
 G_i =
@@ -5428,8 +5433,8 @@ H_1 &amp;: \theta_T &lt; \theta_C
 \]</span></p>
 <p>Es decir, el tratamiento incrementó la conversión en 20% respecto al grupo control.</p>
 </section>
-<section id="métricas-comunes-en-negocio" class="level3" data-number="6.3.2">
-<h3 data-number="6.3.2" class="anchored" data-anchor-id="métricas-comunes-en-negocio"><span class="header-section-number">6.3.2</span> Métricas comunes en negocio</h3>
+<section id="métricas-comunes-en-negocio" class="level3" data-number="7.3.2">
+<h3 data-number="7.3.2" class="anchored" data-anchor-id="métricas-comunes-en-negocio"><span class="header-section-number">7.3.2</span> Métricas comunes en negocio</h3>
 <p>La métrica que elijamos para un <em>A/B testing</em> dependerá completamente del problema que queramos resolver, pero básicamente, podemos separarlas en dos principales grupos: Métricas de proporción y métricas numéricas continuas.</p>
 <p>Las métricas de proporción aparecen cuando cada observación tiene un resultado binario, por ejemplo, convirtió o no convirtió, hizo clic o no hizo clic, canceló o no canceló, regresó o no regresó, y en estos casos, la métrica se expresa como una proporción:</p>
 <p><span class="math display">\[
@@ -5522,8 +5527,8 @@ H_1 &amp;: \theta_T &lt; \theta_C
 <p>La diferencia entre ambos tipos de métricas es importante porque, cuando comparamos proporciones, normalmente trabajamos con pruebas basadas en la distribución normal aproximada para proporciones o con pruebas exactas en casos pequeños, pero, cuando comparamos medias, regresamos a la lógica de las pruebas <span class="math inline">\(t\)</span> que ya vimos previamente, especialmente la prueba <span class="math inline">\(t\)</span> para dos muestras independientes.</p>
 <p>En la práctica, es recomendable distinguir entre una <strong>métrica principal</strong> y métricas secundarias o de control, ya que la métrica principal es aquella sobre la cual tomaremos la decisión del experimento, por ejemplo, conversión, ingreso promedio o retención, mientras que las métricas secundarias ayudan a interpretar el resultado, pero no deberían utilizarse indiscriminadamente para declarar ganador a un tratamiento, además, pueden existir métricas de protección o <em>guardrail metrics</em>, las cuales son métricas que no necesariamente queremos optimizar, pero sí debemos vigilar para asegurarnos de que el tratamiento no cause efectos negativos, por ejemplo, un nuevo diseño podría aumentar la conversión, pero también incrementar cancelaciones, quejas o devoluciones. En ese caso, aunque la métrica principal mejore, el cambio podría no ser deseable.</p>
 </section>
-<section id="comparación-de-proporciones" class="level3" data-number="6.3.3">
-<h3 data-number="6.3.3" class="anchored" data-anchor-id="comparación-de-proporciones"><span class="header-section-number">6.3.3</span> Comparación de proporciones</h3>
+<section id="comparación-de-proporciones" class="level3" data-number="7.3.3">
+<h3 data-number="7.3.3" class="anchored" data-anchor-id="comparación-de-proporciones"><span class="header-section-number">7.3.3</span> Comparación de proporciones</h3>
 <p>Cuando la métrica de interés es binaria, el <em>A/B testing</em> se convierte en una comparación de proporciones, siendo que este caso es muy común en negocio, especialmente cuando analizamos tasas de conversión, clics, retención, abandono, cancelación o recompra, como ya lo mencionamos previamente.</p>
 <p>Supongamos que tenemos dos grupos:</p>
 <p><span class="math display">\[
@@ -5592,8 +5597,8 @@ Lift = \frac{\hat{p}_T - \hat{p}_C}{\hat{p}_C} \times 100
 \]</span></p>
 <p>El cual nos dice cuánto mejora o empeora el tratamiento en términos relativos respecto al grupo control. Esta métrica suele ser más fácil de comunicar, aunque siempre debe interpretarse junto con la diferencia absoluta, ya que una mejora relativa muy grande sobre una tasa base muy pequeña puede sonar impresionante, pero quizá no tenga un impacto real considerable, por ejemplo, pasar de 0.1% a 0.2% implica un <em>lift</em> del 100%, pero una diferencia absoluta de apenas 0.1 puntos porcentuales, razón por la que en <em>A/B testing</em> siempre conviene reportar ambas cosas: <strong>diferencia absoluta</strong> y <strong>diferencia relativa</strong>.</p>
 </section>
-<section id="comparación-de-medias" class="level3" data-number="6.3.4">
-<h3 data-number="6.3.4" class="anchored" data-anchor-id="comparación-de-medias"><span class="header-section-number">6.3.4</span> Comparación de medias</h3>
+<section id="comparación-de-medias" class="level3" data-number="7.3.4">
+<h3 data-number="7.3.4" class="anchored" data-anchor-id="comparación-de-medias"><span class="header-section-number">7.3.4</span> Comparación de medias</h3>
 <p>El segundo caso común ocurre cuando la métrica de interés es numérica y queremos comparar promedios entre el grupo control y el grupo tratamiento. Este escenario aparece cuando analizamos variables como ingreso promedio, ticket promedio, tiempo promedio de entrega, costo promedio, cantidad promedio de órdenes por usuario o duración promedio de sesión.</p>
 <p>Como ya vimos previamente en la sección de pruebas <span class="math inline">\(t\)</span>, cuando queremos comparar la media de dos poblaciones independientes podemos utilizar una prueba <span class="math inline">\(t\)</span> de dos muestras, por lo que, en <em>A/B testing</em>, esta lógica se aplica directamente cuando cada observación pertenece únicamente a uno de los dos grupos y queremos saber si el promedio observado en el tratamiento difiere del promedio observado en el control. Supongamos que tenemos:</p>
 <p><span class="math display">\[
@@ -5691,8 +5696,8 @@ IC = \hat{\Delta}_{\mu} \pm t_{1-\frac{\alpha}{2}, gl} SE
 <p>Cuando trabajamos con métricas monetarias, tiempos o cantidades acumuladas, debemos tener cuidado, ya que muchas de estas variables suelen ser asimétricas, tener colas pesadas o valores extremos (como ya vimos previamente, en tantos casos donde ocurre esto), por ejemplo, el ingreso por usuario normalmente no sigue una distribución normal, ya que unos pocos usuarios pueden generar ingresos mucho más altos que el resto, o también los cargos hospitalarios suelen tener facturas que se disparan en cuanto a costos, respecto a la media (al igual que en el ejercicio del tema previo). En ese caso, aplicar directamente una prueba <span class="math inline">\(t\)</span> podría no ser ideal si los supuestos se violan de forma fuerte.</p>
 <p>Como ya vimos previamente, en estos casos podemos considerar transformaciones, pruebas no paramétricas o métodos robustos, por ejemplo, podríamos transformar la variable con logaritmos si tiene asimetría positiva, utilizar una prueba de <em>Mann–Whitney</em> si queremos comparar distribuciones sin asumir normalidad, o recurrir a pruebas por <em>permutación</em> y <em>bootstrap</em> si queremos una aproximación más flexible, aunque claro, la idea no es repetir todo lo anterior, sino recordar que el <em>A/B testing</em> no es una prueba estadística única, sino un marco experimental donde elegimos la prueba adecuada según la métrica y el comportamiento de los datos. De hecho, es prácticamente aplicar en el negocio todo lo que ya vimos a lo largo de este capítulo.</p>
 </section>
-<section id="tamaño-del-efecto-y-relevancia-práctica" class="level3" data-number="6.3.5">
-<h3 data-number="6.3.5" class="anchored" data-anchor-id="tamaño-del-efecto-y-relevancia-práctica"><span class="header-section-number">6.3.5</span> Tamaño del efecto y relevancia práctica</h3>
+<section id="tamaño-del-efecto-y-relevancia-práctica" class="level3" data-number="7.3.5">
+<h3 data-number="7.3.5" class="anchored" data-anchor-id="tamaño-del-efecto-y-relevancia-práctica"><span class="header-section-number">7.3.5</span> Tamaño del efecto y relevancia práctica</h3>
 <p>Un error común en <em>A/B testing</em> es quedarse únicamente con el <em>p-value</em>, ya que como ya discutimos anteriormente, el <em>p-value</em> nos ayuda a evaluar qué tan compatible es la evidencia observada con la hipótesis nula, pero no nos dice por sí solo si la diferencia es grande, importante o rentable, razón por la que, además de la significancia estadística, debemos reportar el tamaño del efecto. Para diferencias simples, el efecto absoluto es:</p>
 <p><span class="math display">\[
 \Delta = \theta_T - \theta_C
@@ -5707,8 +5712,8 @@ d = \frac{\bar{Y}_T - \bar{Y}_C}{s_p}
 \]</span></p>
 <p>Donde <span class="math inline">\(s_p\)</span> es la desviación estándar combinada. Esta medida puede ser útil cuando queremos comparar efectos entre variables medidas en distintas escalas, aunque en negocio muchas veces será más interpretable reportar el efecto en unidades originales: pesos, minutos, órdenes, usuarios retenidos, conversiones adicionales, etc, por ejemplo, decir que un tratamiento reduce el tiempo promedio de entrega en 4.5 minutos suele ser más útil que decir que el tamaño del efecto fue de 0.32 desviaciones estándar. La estadística nos ayuda a validar si el efecto parece real, pero la decisión final debe considerar impacto, costo, riesgo y viabilidad operativa.</p>
 </section>
-<section id="tamaño-de-muestra-y-poder-estadístico" class="level3" data-number="6.3.6">
-<h3 data-number="6.3.6" class="anchored" data-anchor-id="tamaño-de-muestra-y-poder-estadístico"><span class="header-section-number">6.3.6</span> Tamaño de muestra y poder estadístico</h3>
+<section id="tamaño-de-muestra-y-poder-estadístico" class="level3" data-number="7.3.6">
+<h3 data-number="7.3.6" class="anchored" data-anchor-id="tamaño-de-muestra-y-poder-estadístico"><span class="header-section-number">7.3.6</span> Tamaño de muestra y poder estadístico</h3>
 <p>Antes de lanzar un <em>A/B testing</em>, también deberíamos preguntarnos cuántas observaciones necesitamos. Si el tamaño de muestra es demasiado pequeño, podríamos no detectar diferencias reales aunque existan. De hecho, esto se relaciona con el <strong>poder estadístico</strong>, que representa la probabilidad de rechazar correctamente la hipótesis nula cuando el tratamiento sí tiene un efecto, el cual se suele representar como:</p>
 <p><span class="math display">\[
 1 - \beta
@@ -6231,12 +6236,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./limpieza2.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Limpieza y manejo de datos: Principales problemas y soluciones</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Limpieza y manejo de datos: Principales problemas y soluciones</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./forecasts.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Pronósticos y estimaciones</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Pronósticos y estimaciones</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

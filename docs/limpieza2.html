@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>R para inteligencia de negocios - 5&nbsp; Limpieza y manejo de datos: Principales problemas y soluciones</title>
+<title>R para inteligencia de negocios - 6&nbsp; Limpieza y manejo de datos: Principales problemas y soluciones</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -154,7 +154,7 @@ div.csl-indent {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Limpieza y manejo de datos: Principales problemas y soluciones</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Limpieza y manejo de datos: Principales problemas y soluciones</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -194,32 +194,37 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./funcs.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Creando mis propias funciones</span></a>
+  <a href="./basics.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Primeros pasos en R</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./limpieza.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Extracción, entendimiento y exportación de nuestros datos</span></a>
+  <a href="./funcs.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Creando mis propias funciones</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./limpieza2.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Limpieza y manejo de datos: Principales problemas y soluciones</span></a>
+  <a href="./limpieza.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Extracción, entendimiento y exportación de nuestros datos</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./analisis_exploratorio.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Análisis exploratorio de datos</span></a>
+  <a href="./limpieza2.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Limpieza y manejo de datos: Principales problemas y soluciones</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./forecasts.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Pronósticos y estimaciones</span></a>
+  <a href="./analisis_exploratorio.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Análisis exploratorio de datos</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./dashboards.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Presentando mis datos: Dashboards (Shiny) y apps web</span></a>
+  <a href="./forecasts.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Pronósticos y estimaciones</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./dashboards.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Presentando mis datos: Dashboards (Shiny) y apps web</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -246,47 +251,47 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#datos-limpios-buen-análisis." id="toc-datos-limpios-buen-análisis." class="nav-link active" data-scroll-target="#datos-limpios-buen-análisis."><span class="toc-section-number">5.1</span>  Datos limpios = buen análisis.</a></li>
-  <li><a href="#tratamiento-de-valores-na-y-valores-null" id="toc-tratamiento-de-valores-na-y-valores-null" class="nav-link" data-scroll-target="#tratamiento-de-valores-na-y-valores-null"><span class="toc-section-number">5.2</span>  Tratamiento de valores <code>NA</code> y valores <code>NULL</code></a>
+  <li><a href="#datos-limpios-buen-análisis." id="toc-datos-limpios-buen-análisis." class="nav-link active" data-scroll-target="#datos-limpios-buen-análisis."><span class="toc-section-number">6.1</span>  Datos limpios = buen análisis.</a></li>
+  <li><a href="#tratamiento-de-valores-na-y-valores-null" id="toc-tratamiento-de-valores-na-y-valores-null" class="nav-link" data-scroll-target="#tratamiento-de-valores-na-y-valores-null"><span class="toc-section-number">6.2</span>  Tratamiento de valores <code>NA</code> y valores <code>NULL</code></a>
   <ul class="collapse">
-  <li><a href="#eliminación-del-problema." id="toc-eliminación-del-problema." class="nav-link" data-scroll-target="#eliminación-del-problema."><span class="toc-section-number">5.2.1</span>  Eliminación del problema.</a></li>
-  <li><a href="#reemplazando-el-problema-con-qué-valor-relleno-el-hueco" id="toc-reemplazando-el-problema-con-qué-valor-relleno-el-hueco" class="nav-link" data-scroll-target="#reemplazando-el-problema-con-qué-valor-relleno-el-hueco"><span class="toc-section-number">5.2.2</span>  Reemplazando el problema: ¿con qué valor relleno el hueco?</a></li>
+  <li><a href="#eliminación-del-problema." id="toc-eliminación-del-problema." class="nav-link" data-scroll-target="#eliminación-del-problema."><span class="toc-section-number">6.2.1</span>  Eliminación del problema.</a></li>
+  <li><a href="#reemplazando-el-problema-con-qué-valor-relleno-el-hueco" id="toc-reemplazando-el-problema-con-qué-valor-relleno-el-hueco" class="nav-link" data-scroll-target="#reemplazando-el-problema-con-qué-valor-relleno-el-hueco"><span class="toc-section-number">6.2.2</span>  Reemplazando el problema: ¿con qué valor relleno el hueco?</a></li>
   </ul></li>
-  <li><a href="#manejo-de-nan-e-inf" id="toc-manejo-de-nan-e-inf" class="nav-link" data-scroll-target="#manejo-de-nan-e-inf"><span class="toc-section-number">5.3</span>  Manejo de <code>NaN</code> e <code>Inf</code></a></li>
-  <li><a href="#manejo-de-fechas-y-horas" id="toc-manejo-de-fechas-y-horas" class="nav-link" data-scroll-target="#manejo-de-fechas-y-horas"><span class="toc-section-number">5.4</span>  Manejo de fechas y horas</a>
+  <li><a href="#manejo-de-nan-e-inf" id="toc-manejo-de-nan-e-inf" class="nav-link" data-scroll-target="#manejo-de-nan-e-inf"><span class="toc-section-number">6.3</span>  Manejo de <code>NaN</code> e <code>Inf</code></a></li>
+  <li><a href="#manejo-de-fechas-y-horas" id="toc-manejo-de-fechas-y-horas" class="nav-link" data-scroll-target="#manejo-de-fechas-y-horas"><span class="toc-section-number">6.4</span>  Manejo de fechas y horas</a>
   <ul class="collapse">
-  <li><a href="#operaciones-con-fechas." id="toc-operaciones-con-fechas." class="nav-link" data-scroll-target="#operaciones-con-fechas."><span class="toc-section-number">5.4.1</span>  Operaciones con fechas.</a></li>
-  <li><a href="#estructurando-series-de-tiempo" id="toc-estructurando-series-de-tiempo" class="nav-link" data-scroll-target="#estructurando-series-de-tiempo"><span class="toc-section-number">5.4.2</span>  Estructurando <em>series de tiempo</em></a></li>
+  <li><a href="#operaciones-con-fechas." id="toc-operaciones-con-fechas." class="nav-link" data-scroll-target="#operaciones-con-fechas."><span class="toc-section-number">6.4.1</span>  Operaciones con fechas.</a></li>
+  <li><a href="#estructurando-series-de-tiempo" id="toc-estructurando-series-de-tiempo" class="nav-link" data-scroll-target="#estructurando-series-de-tiempo"><span class="toc-section-number">6.4.2</span>  Estructurando <em>series de tiempo</em></a></li>
   </ul></li>
-  <li><a href="#manejo-de-duplicados" id="toc-manejo-de-duplicados" class="nav-link" data-scroll-target="#manejo-de-duplicados"><span class="toc-section-number">5.5</span>  Manejo de duplicados</a></li>
-  <li><a href="#técnicas-avanzadas-para-el-manejo-de-duplicados" id="toc-técnicas-avanzadas-para-el-manejo-de-duplicados" class="nav-link" data-scroll-target="#técnicas-avanzadas-para-el-manejo-de-duplicados"><span class="toc-section-number">5.6</span>  Técnicas avanzadas para el manejo de duplicados</a>
+  <li><a href="#manejo-de-duplicados" id="toc-manejo-de-duplicados" class="nav-link" data-scroll-target="#manejo-de-duplicados"><span class="toc-section-number">6.5</span>  Manejo de duplicados</a></li>
+  <li><a href="#técnicas-avanzadas-para-el-manejo-de-duplicados" id="toc-técnicas-avanzadas-para-el-manejo-de-duplicados" class="nav-link" data-scroll-target="#técnicas-avanzadas-para-el-manejo-de-duplicados"><span class="toc-section-number">6.6</span>  Técnicas avanzadas para el manejo de duplicados</a>
   <ul class="collapse">
-  <li><a href="#distancia-de-levenstein" id="toc-distancia-de-levenstein" class="nav-link" data-scroll-target="#distancia-de-levenstein"><span class="toc-section-number">5.6.1</span>  Distancia de Levenstein</a></li>
-  <li><a href="#algoritmo-de-jaro-winkler" id="toc-algoritmo-de-jaro-winkler" class="nav-link" data-scroll-target="#algoritmo-de-jaro-winkler"><span class="toc-section-number">5.6.2</span>  Algoritmo de Jaro-Winkler</a></li>
+  <li><a href="#distancia-de-levenstein" id="toc-distancia-de-levenstein" class="nav-link" data-scroll-target="#distancia-de-levenstein"><span class="toc-section-number">6.6.1</span>  Distancia de Levenstein</a></li>
+  <li><a href="#algoritmo-de-jaro-winkler" id="toc-algoritmo-de-jaro-winkler" class="nav-link" data-scroll-target="#algoritmo-de-jaro-winkler"><span class="toc-section-number">6.6.2</span>  Algoritmo de Jaro-Winkler</a></li>
   </ul></li>
-  <li><a href="#entendiendo-el-uso-de-los-filtros" id="toc-entendiendo-el-uso-de-los-filtros" class="nav-link" data-scroll-target="#entendiendo-el-uso-de-los-filtros"><span class="toc-section-number">5.7</span>  Entendiendo el uso de los filtros</a></li>
-  <li><a href="#decodificación-y-arreglo-de-cadenas" id="toc-decodificación-y-arreglo-de-cadenas" class="nav-link" data-scroll-target="#decodificación-y-arreglo-de-cadenas"><span class="toc-section-number">5.8</span>  Decodificación y arreglo de cadenas</a>
+  <li><a href="#entendiendo-el-uso-de-los-filtros" id="toc-entendiendo-el-uso-de-los-filtros" class="nav-link" data-scroll-target="#entendiendo-el-uso-de-los-filtros"><span class="toc-section-number">6.7</span>  Entendiendo el uso de los filtros</a></li>
+  <li><a href="#decodificación-y-arreglo-de-cadenas" id="toc-decodificación-y-arreglo-de-cadenas" class="nav-link" data-scroll-target="#decodificación-y-arreglo-de-cadenas"><span class="toc-section-number">6.8</span>  Decodificación y arreglo de cadenas</a>
   <ul class="collapse">
-  <li><a href="#estandarización-de-cadenas" id="toc-estandarización-de-cadenas" class="nav-link" data-scroll-target="#estandarización-de-cadenas"><span class="toc-section-number">5.8.1</span>  Estandarización de cadenas</a></li>
-  <li><a href="#sub-cadenas" id="toc-sub-cadenas" class="nav-link" data-scroll-target="#sub-cadenas"><span class="toc-section-number">5.8.2</span>  Sub-cadenas</a></li>
+  <li><a href="#estandarización-de-cadenas" id="toc-estandarización-de-cadenas" class="nav-link" data-scroll-target="#estandarización-de-cadenas"><span class="toc-section-number">6.8.1</span>  Estandarización de cadenas</a></li>
+  <li><a href="#sub-cadenas" id="toc-sub-cadenas" class="nav-link" data-scroll-target="#sub-cadenas"><span class="toc-section-number">6.8.2</span>  Sub-cadenas</a></li>
   </ul></li>
-  <li><a href="#una-vista-vertical-tratamiento-de-columnas" id="toc-una-vista-vertical-tratamiento-de-columnas" class="nav-link" data-scroll-target="#una-vista-vertical-tratamiento-de-columnas"><span class="toc-section-number">5.9</span>  Una vista vertical: Tratamiento de columnas</a>
+  <li><a href="#una-vista-vertical-tratamiento-de-columnas" id="toc-una-vista-vertical-tratamiento-de-columnas" class="nav-link" data-scroll-target="#una-vista-vertical-tratamiento-de-columnas"><span class="toc-section-number">6.9</span>  Una vista vertical: Tratamiento de columnas</a>
   <ul class="collapse">
-  <li><a href="#renombrando-columnas" id="toc-renombrando-columnas" class="nav-link" data-scroll-target="#renombrando-columnas"><span class="toc-section-number">5.9.1</span>  Renombrando columnas</a></li>
-  <li><a href="#el-orden-si-importa" id="toc-el-orden-si-importa" class="nav-link" data-scroll-target="#el-orden-si-importa"><span class="toc-section-number">5.9.2</span>  El orden si importa</a></li>
+  <li><a href="#renombrando-columnas" id="toc-renombrando-columnas" class="nav-link" data-scroll-target="#renombrando-columnas"><span class="toc-section-number">6.9.1</span>  Renombrando columnas</a></li>
+  <li><a href="#el-orden-si-importa" id="toc-el-orden-si-importa" class="nav-link" data-scroll-target="#el-orden-si-importa"><span class="toc-section-number">6.9.2</span>  El orden si importa</a></li>
   </ul></li>
-  <li><a href="#creando-y-modificando-columnas-llevando-mutate-a-sus-límites" id="toc-creando-y-modificando-columnas-llevando-mutate-a-sus-límites" class="nav-link" data-scroll-target="#creando-y-modificando-columnas-llevando-mutate-a-sus-límites"><span class="toc-section-number">5.10</span>  Creando (y modificando) columnas: Llevando <code>mutate()</code> a sus límites</a></li>
-  <li><a href="#agrupaciones" id="toc-agrupaciones" class="nav-link" data-scroll-target="#agrupaciones"><span class="toc-section-number">5.11</span>  Agrupaciones</a>
+  <li><a href="#creando-y-modificando-columnas-llevando-mutate-a-sus-límites" id="toc-creando-y-modificando-columnas-llevando-mutate-a-sus-límites" class="nav-link" data-scroll-target="#creando-y-modificando-columnas-llevando-mutate-a-sus-límites"><span class="toc-section-number">6.10</span>  Creando (y modificando) columnas: Llevando <code>mutate()</code> a sus límites</a></li>
+  <li><a href="#agrupaciones" id="toc-agrupaciones" class="nav-link" data-scroll-target="#agrupaciones"><span class="toc-section-number">6.11</span>  Agrupaciones</a>
   <ul class="collapse">
-  <li><a href="#otros-usos-de-los-agrupamientos" id="toc-otros-usos-de-los-agrupamientos" class="nav-link" data-scroll-target="#otros-usos-de-los-agrupamientos"><span class="toc-section-number">5.11.1</span>  Otros usos de los agrupamientos</a></li>
-  <li><a href="#no-olvides-desagrupar" id="toc-no-olvides-desagrupar" class="nav-link" data-scroll-target="#no-olvides-desagrupar"><span class="toc-section-number">5.11.2</span>  No olvides desagrupar</a></li>
-  <li><a href="#subagrupaciones" id="toc-subagrupaciones" class="nav-link" data-scroll-target="#subagrupaciones"><span class="toc-section-number">5.11.3</span>  Subagrupaciones</a></li>
+  <li><a href="#otros-usos-de-los-agrupamientos" id="toc-otros-usos-de-los-agrupamientos" class="nav-link" data-scroll-target="#otros-usos-de-los-agrupamientos"><span class="toc-section-number">6.11.1</span>  Otros usos de los agrupamientos</a></li>
+  <li><a href="#no-olvides-desagrupar" id="toc-no-olvides-desagrupar" class="nav-link" data-scroll-target="#no-olvides-desagrupar"><span class="toc-section-number">6.11.2</span>  No olvides desagrupar</a></li>
+  <li><a href="#subagrupaciones" id="toc-subagrupaciones" class="nav-link" data-scroll-target="#subagrupaciones"><span class="toc-section-number">6.11.3</span>  Subagrupaciones</a></li>
   </ul></li>
-  <li><a href="#tablas-pivote-convirtiendo-columnas-filas-a-filas-columnas" id="toc-tablas-pivote-convirtiendo-columnas-filas-a-filas-columnas" class="nav-link" data-scroll-target="#tablas-pivote-convirtiendo-columnas-filas-a-filas-columnas"><span class="toc-section-number">5.12</span>  Tablas pivote: Convirtiendo columnas (filas) a filas (columnas)</a></li>
-  <li><a href="#uniones-de-tablas" id="toc-uniones-de-tablas" class="nav-link" data-scroll-target="#uniones-de-tablas"><span class="toc-section-number">5.13</span>  Uniones de tablas</a>
+  <li><a href="#tablas-pivote-convirtiendo-columnas-filas-a-filas-columnas" id="toc-tablas-pivote-convirtiendo-columnas-filas-a-filas-columnas" class="nav-link" data-scroll-target="#tablas-pivote-convirtiendo-columnas-filas-a-filas-columnas"><span class="toc-section-number">6.12</span>  Tablas pivote: Convirtiendo columnas (filas) a filas (columnas)</a></li>
+  <li><a href="#uniones-de-tablas" id="toc-uniones-de-tablas" class="nav-link" data-scroll-target="#uniones-de-tablas"><span class="toc-section-number">6.13</span>  Uniones de tablas</a>
   <ul class="collapse">
-  <li><a href="#joins" id="toc-joins" class="nav-link" data-scroll-target="#joins"><span class="toc-section-number">5.13.1</span>  JOIN’s</a></li>
-  <li><a href="#uniones-verticales" id="toc-uniones-verticales" class="nav-link" data-scroll-target="#uniones-verticales"><span class="toc-section-number">5.13.2</span>  Uniones verticales</a></li>
+  <li><a href="#joins" id="toc-joins" class="nav-link" data-scroll-target="#joins"><span class="toc-section-number">6.13.1</span>  JOIN’s</a></li>
+  <li><a href="#uniones-verticales" id="toc-uniones-verticales" class="nav-link" data-scroll-target="#uniones-verticales"><span class="toc-section-number">6.13.2</span>  Uniones verticales</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -296,7 +301,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Limpieza y manejo de datos: Principales problemas y soluciones</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Limpieza y manejo de datos: Principales problemas y soluciones</span></h1>
 </div>
 
 
@@ -313,8 +318,8 @@ div.csl-indent {
 
 <p>El concepto de <em>limpieza de (bases de) datos</em> es en realidad muy ambiguo, ya que los métodos y pasos a seguir van a variar bastante considerando el objetivo final que tengamos, sin embargo, en este capítulos analizaremos ciertos conceptos y métodos clave que estarán (casi) siempre presentes en los métodos de limpieza y depuración de nuestros datos. En este punto ya estas familizarizado con el lenguaje base de R (estructuras, indexación, objetos, etc), por lo que para agilizar tu conocimiento nos ayudaremos de las librerías <code>tidyr</code>, <code>dplyr</code> y <code>lubridate</code>, las cuales fueron diseñadas específicamente para el manejo y/o arreglo de los datos con los que estemos trabajando.</p>
 <p>Dicho lo anterior, en este capítulo entenderemos el proceso para detectar y corregir/eliminar datos que nos puedan causar problemas en etapas más avanzadas de nuestro análisis. Cuando nos referimos a datos que nos <em>causen problemas</em> podemos considerar aquellas observaciones que están corruptas, es decir, que directamente son un error de captura, aquellas que simplemente sean datos anómalos pero verdaderos, información faltante o incluso columnas que tengan que ser retrabajadas completamente. Dependiendo de cual sea el caso puede que el método de limpieza varíe, por lo que se procurará analizar diferentes situaciones y cómo abordarlas dependiendo del objetivo que tengas, lo que permitirá que cuando te enfrentes a estos problemas en tu vida laboral hayas podido desarrollar una asertividad para superar con éxito estos retos.</p>
-<section id="datos-limpios-buen-análisis." class="level2" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="datos-limpios-buen-análisis."><span class="header-section-number">5.1</span> Datos limpios = buen análisis.</h2>
+<section id="datos-limpios-buen-análisis." class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="datos-limpios-buen-análisis."><span class="header-section-number">6.1</span> Datos limpios = buen análisis.</h2>
 <p>Los ejercicios con datasets de muestra como iris, mtcars, entre otros, nos permiten ir entendiendo ciertos análilis comunes, como la estadística descriptiva que podemos obtener de ellos o algunos pronósticos, pero el verdadero reto comienza con la información real de una empresa, ya que constantemente nos encontraremos con datos que requieren un árduo trabajo de limpieza, pero ¿por qué es tan necesario hacer esto? ¿no podríamos simplemente ignorar lo que no nos sirve e ir directo al análisis? Es cierto que habrá casos específicos en los que esto es posible debido a la naturaleza de los resultados que queremos obtener, sin embargo, en casi cualquier otra situación será necerasio el hacer un tratamiento previo a los datos con los que estemos trabajando, para muestra de ello veamos el siguiente ejemplo: Imagina que quieres obtener el promedio de un vector cualquiera, el cual tiene múltiples valores <code>NA</code>, como el siguiente:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>vector <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="cn">NA</span>,<span class="cn">NA</span>,<span class="cn">NA</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -335,11 +340,11 @@ div.csl-indent {
 <p>Lógicamente, el resultado es diferente ya que mientras el primer cálculo elimina los elementos <code>NA</code> y hace un promedio solamente entre los tres elementos restantes, en el segundo cálculo se hace un problemdio entre los seis elementos existentes, donde los valores <em>0</em> tenderán a acercar el valor del promedio cada vez más a este último. En este ejemplo ¿Cuál es la respuesta correcta? En realidad esto depende de la situación en específico y lo que signifique el valor <code>NA</code>, por ejemplo, si hablamos de una tabla que contenga registros de ingresos por pedidos, donde los valores <code>NA</code> representen casos de pedidos cancelados, en esta situación lo más conveniente será eliminar los valores <code>NA</code>, ya que en caso de convertirlos a 0 tendremos un promedio de ingresos por pedidos más cercano a 0. Pensemos en otro tipo de información, como una tabla de registros de deudas de tarjetas de crédito, donde los valores <code>NA</code> representen observaciones donde los usuarios de la tarjeta mantengan su deuda pagada, en tal caso será más conveniente convertir dichos valores a 0, ya que de esta forma podremos tener un promedio de deuda por cliente mucho más exacto.</p>
 <p>Como puedes ver, un cálculo tan simple como el promedio requiere un completo análisis de la situación y el contexto general, para poder determinar cuál será el valor <em>más correcto</em>, razón por la que la limpieza de datos dependerá enteramente del entendimiento del panorama en cuestión.</p>
 </section>
-<section id="tratamiento-de-valores-na-y-valores-null" class="level2" data-number="5.2">
-<h2 data-number="5.2" class="anchored" data-anchor-id="tratamiento-de-valores-na-y-valores-null"><span class="header-section-number">5.2</span> Tratamiento de valores <code>NA</code> y valores <code>NULL</code></h2>
+<section id="tratamiento-de-valores-na-y-valores-null" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="tratamiento-de-valores-na-y-valores-null"><span class="header-section-number">6.2</span> Tratamiento de valores <code>NA</code> y valores <code>NULL</code></h2>
 <p>Ahora que tenemos un entendimiento inicial de la importancia de manejar correctamente este tipo de valores es cuando podemos pasar a la parte técnica. Vamos a dividir la resolución de este problema en dos vertientes: Eliminación y reemplazo de los <code>NA</code>.</p>
-<section id="eliminación-del-problema." class="level3" data-number="5.2.1">
-<h3 data-number="5.2.1" class="anchored" data-anchor-id="eliminación-del-problema."><span class="header-section-number">5.2.1</span> Eliminación del problema.</h3>
+<section id="eliminación-del-problema." class="level3" data-number="6.2.1">
+<h3 data-number="6.2.1" class="anchored" data-anchor-id="eliminación-del-problema."><span class="header-section-number">6.2.1</span> Eliminación del problema.</h3>
 <p>Supongamos una tabla que muestre alturas de personas, así como su peso y edad, por ejemplo:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -441,8 +446,8 @@ Attaching package: 'dplyr'</code></pre>
 </div>
 <p>Aquí ya dependerá de preferencias personales, pero es innegable que la función <code>filter()</code> es mucho más amigable a la vista, además de ser compatible con los operadores de concatenación <code>|&gt;</code>.</p>
 </section>
-<section id="reemplazando-el-problema-con-qué-valor-relleno-el-hueco" class="level3" data-number="5.2.2">
-<h3 data-number="5.2.2" class="anchored" data-anchor-id="reemplazando-el-problema-con-qué-valor-relleno-el-hueco"><span class="header-section-number">5.2.2</span> Reemplazando el problema: ¿con qué valor relleno el hueco?</h3>
+<section id="reemplazando-el-problema-con-qué-valor-relleno-el-hueco" class="level3" data-number="6.2.2">
+<h3 data-number="6.2.2" class="anchored" data-anchor-id="reemplazando-el-problema-con-qué-valor-relleno-el-hueco"><span class="header-section-number">6.2.2</span> Reemplazando el problema: ¿con qué valor relleno el hueco?</h3>
 <p>Ciertamente no en todos los casos queremos eliminar los <code>NA</code> ya que el hecho de perder una fila entera puede ser bastante dañino cuando queramos realizar otros cálculos. Cuando en lugar de eliminar esa información decidimos reemplazarla con otros valores podemos optar por diferentes métodos, como la indexación para asignar valores 0, o bien utilizar la función <code>replace_na()</code> del paquete <code>tidyr</code>, la cual funciona de manera similar utilizando listas. Veamos ambos métodos:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Mediante indexación</span></span>
@@ -542,8 +547,8 @@ Attaching package: 'dplyr'</code></pre>
 <p>En este caso es una solución más viable, aunque no totalmente recomendable en tablas donde la información es muy variable, ya que el promedio será tendencioso, ni tampoco en tablas con series de tiempo, ya que considerar el promedio con valores demasiado viejos, suponiendo que exista una evolución a la alza o a la baja, generará promedios que tengan poco sentido a nivel general, en dichas situaciones siempre será más recomendable generar un pronóstico mediante un modelo de series de tiempo, tema que discutiremos en capítulos posteriores.</p>
 </section>
 </section>
-<section id="manejo-de-nan-e-inf" class="level2" data-number="5.3">
-<h2 data-number="5.3" class="anchored" data-anchor-id="manejo-de-nan-e-inf"><span class="header-section-number">5.3</span> Manejo de <code>NaN</code> e <code>Inf</code></h2>
+<section id="manejo-de-nan-e-inf" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="manejo-de-nan-e-inf"><span class="header-section-number">6.3</span> Manejo de <code>NaN</code> e <code>Inf</code></h2>
 <p>En ciertas ocasiones nos encontraremos con estos valores en nuestros datos, pero ¿qué significan? <code>NaN</code> es la abreviación de <em>Not a Number</em> y aparece en situaciones en las que un cálculo no está determinado en el campo de los números reales, como es el caso de <code>i</code> (la raíz de -1), como puedes ver a continuación:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrt</span>(<span class="sc">-</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -669,8 +674,8 @@ Attaching package: 'dplyr'</code></pre>
 <p>O utilizar <code>filter_at()</code>, función en la que si debemos establecer un rango de columnas en las que se va a aplicar dicho filtro, sin embargo, esta función requiere que tengamos claras las columnas existentes de nuestra tabla, por lo que se vuelve poco útil al escalar estos métodos a tablas mucho más grandes.</p>
 <p>Por supuesto, el uso de filtros para eliminar este tipo de valores no siempre será algo que necesitemos realizar. Si quisiéramos hacer un breve análisis del tipo de información que tenemos, es decir, valores erroneos o faltantes versus información correcta, necesariamente haríamos conteos de cada tipo de valor mediante evaluaciones de datos (ej. <code>is.na()</code>, <code>is.infinite()</code>). En el siguiente capítulo comenzaremos con el análisis exploratorio de datos, por lo que veremos con mayor profundidad las posibilidades en cuanto a análisis de datos de manera descriptiva.</p>
 </section>
-<section id="manejo-de-fechas-y-horas" class="level2" data-number="5.4">
-<h2 data-number="5.4" class="anchored" data-anchor-id="manejo-de-fechas-y-horas"><span class="header-section-number">5.4</span> Manejo de fechas y horas</h2>
+<section id="manejo-de-fechas-y-horas" class="level2" data-number="6.4">
+<h2 data-number="6.4" class="anchored" data-anchor-id="manejo-de-fechas-y-horas"><span class="header-section-number">6.4</span> Manejo de fechas y horas</h2>
 <p>Hasta ahora solo hemos rascado la superficie en tema de fechas, al ser un tema más extenso de lo que podría parecer. Usualmente, los análisis de datos en primera instancia suelen estar segmentados por periodos de tiempo (diarios, semanales, mensuales, etc) que permiten ver una evolución, además de poder utilizarlas para generar pronósticos y limitar nuestros datos, por lo que mantener un correcto formato en nuestras fechas se vuelve crucial si queremos tener un análisis de calidad. Debemos preguntarnos ¿Qué implica el tener un ‘correcto formato’? Hay que tomar esta frase con cierto cuidado, ya que no existe un formato que sea <em>el correcto</em>, simplemente tenemos diferentes formas de expresar una fecha, las cuales nos serán más o menos útiles dependiendo del contexto en el que nos encontremos, así como las transformaciones que necesitemos realizar. En la mayoría de los casos nos encontraremos con un formato de estilo <code>yyyy-mm-dd</code>, es decir, <em>año-mes-día</em>, el cual podemos expresar en R de la siguiente manera:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="fu">as.Date</span>(<span class="st">"2023-01-01"</span>, <span class="at">format =</span> <span class="st">"%Y-%m-%d"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -709,7 +714,7 @@ Attaching package: 'dplyr'</code></pre>
 </div>
 </div>
 <p>Lógicamente, al incluir elementos adicionales como horas y minutos que no se encuentran en la cadena original, se devolverá el valor mínimo referente a la hora del día (00:00:00).</p>
-<p>Sabiendo lo anterior, podemos decir con seguridad que no existe un formato específico de fechas que debamos utilizar, si no que nosotros vamos a adecuar el formato que necesitemos dependiendo de la fuente de nuestros datos y la forma en la que queramos expresarlo. La tabla <a href="#tbl-tipofechas">Table&nbsp;<span>5.1</span></a> nos muestra los formatos de marca de tiempo disponibles a utilizar, con los cuales podemos hacer cualquier combinación que se nos ocurra, por ejemplo, combinando números con texto, tal que:</p>
+<p>Sabiendo lo anterior, podemos decir con seguridad que no existe un formato específico de fechas que debamos utilizar, si no que nosotros vamos a adecuar el formato que necesitemos dependiendo de la fuente de nuestros datos y la forma en la que queramos expresarlo. La tabla <a href="#tbl-tipofechas">Table&nbsp;<span>6.1</span></a> nos muestra los formatos de marca de tiempo disponibles a utilizar, con los cuales podemos hacer cualquier combinación que se nos ocurra, por ejemplo, combinando números con texto, tal que:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb62"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="fu">strftime</span>(fecha,<span class="at">format =</span> <span class="st">"%Y-%m-%d, %A"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -720,7 +725,7 @@ Attaching package: 'dplyr'</code></pre>
 <div class="cell-output-display">
 <div id="tbl-tipofechas" class="anchored">
 <table class="table table-sm table-striped">
-<caption>Table&nbsp;5.1: Formatos de marcas de tiempo</caption>
+<caption>Table&nbsp;6.1: Formatos de marcas de tiempo</caption>
 <colgroup>
 <col style="width: 7%">
 <col style="width: 57%">
@@ -919,8 +924,8 @@ Attaching package: 'dplyr'</code></pre>
 <pre><code>[1] "2023-01-01 UTC" "2023-04-05 UTC" "2013-01-01 UTC" "2023-06-01 UTC"</code></pre>
 </div>
 </div>
-<section id="operaciones-con-fechas." class="level3" data-number="5.4.1">
-<h3 data-number="5.4.1" class="anchored" data-anchor-id="operaciones-con-fechas."><span class="header-section-number">5.4.1</span> Operaciones con fechas.</h3>
+<section id="operaciones-con-fechas." class="level3" data-number="6.4.1">
+<h3 data-number="6.4.1" class="anchored" data-anchor-id="operaciones-con-fechas."><span class="header-section-number">6.4.1</span> Operaciones con fechas.</h3>
 <p>Ya sabemos como funcionan las fechas a nivel estructura y, muy probablemente, las identificas como una simple cadena de caracteres altamente flexible. Al ser el siguiente paso lógico las operaciones que podemos realizar con las fechas, será necesario que comencemos a pensar en ellas como un número. Pensemos en la fecha de hoy, si intentamos convertir esa cadena a un número obtendremos el siguiente resultado:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb66"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a><span class="fu">as.numeric</span>(<span class="fu">Sys.Date</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1186,13 +1191,13 @@ Attaching package: 'lubridate'</code></pre>
 </div>
 <p>De esta forma simplificamos mucho del trabajo que nos podría causar el tener datos con diferentes formatos, al crear fechas/horas.</p>
 </section>
-<section id="estructurando-series-de-tiempo" class="level3" data-number="5.4.2">
-<h3 data-number="5.4.2" class="anchored" data-anchor-id="estructurando-series-de-tiempo"><span class="header-section-number">5.4.2</span> Estructurando <em>series de tiempo</em></h3>
+<section id="estructurando-series-de-tiempo" class="level3" data-number="6.4.2">
+<h3 data-number="6.4.2" class="anchored" data-anchor-id="estructurando-series-de-tiempo"><span class="header-section-number">6.4.2</span> Estructurando <em>series de tiempo</em></h3>
 <p>Más adelante daremos un vistazo más detallado a datos de series de tiempo, sus componentes, pronósticos, modelos y descomposición, pero ahora mismo explicaré brevemente cómo se crean a partir de fechas.</p>
 </section>
 </section>
-<section id="manejo-de-duplicados" class="level2" data-number="5.5">
-<h2 data-number="5.5" class="anchored" data-anchor-id="manejo-de-duplicados"><span class="header-section-number">5.5</span> Manejo de duplicados</h2>
+<section id="manejo-de-duplicados" class="level2" data-number="6.5">
+<h2 data-number="6.5" class="anchored" data-anchor-id="manejo-de-duplicados"><span class="header-section-number">6.5</span> Manejo de duplicados</h2>
 <p>Al igual que el tratamiento que se le dan a valores nulos o incorrectos, la eliminación/tratamiento de valores duplicados depende enteramente del contexto, no solo de los datos, si no también de los resultados que busquemos. Para ejemplificar esta idea, veamos la siguiente tabla hipotética que registra órdenes de compra en una tienda:</p>
 <table class="table">
 <thead>
@@ -1365,11 +1370,11 @@ Attaching package: 'lubridate'</code></pre>
 </div>
 <p>En secciones posteriores veremos cómo combinar estas funciones con agrupamientos de datos de forma más dinámica, además de poder escoger la observación repetida que se quiera eliminar (basándonos en otras condiciones), pero por el momento, el conocimiento adquirido a lo largo de esta sección será más que suficiente para el correcto pre-procesamiento de tus datos en una etapa inicial del análisis.</p>
 </section>
-<section id="técnicas-avanzadas-para-el-manejo-de-duplicados" class="level2" data-number="5.6">
-<h2 data-number="5.6" class="anchored" data-anchor-id="técnicas-avanzadas-para-el-manejo-de-duplicados"><span class="header-section-number">5.6</span> Técnicas avanzadas para el manejo de duplicados</h2>
+<section id="técnicas-avanzadas-para-el-manejo-de-duplicados" class="level2" data-number="6.6">
+<h2 data-number="6.6" class="anchored" data-anchor-id="técnicas-avanzadas-para-el-manejo-de-duplicados"><span class="header-section-number">6.6</span> Técnicas avanzadas para el manejo de duplicados</h2>
 <p>Infortunadamente, cuando buscamos valores duplicados en nuestros datos, no siempre encontraremos un <em>match</em> de forma directa, ya que al usar funciones como <code>distinct()</code> únicamente estaremos considerando aquellas cadenas que son exactamente iguales, siendo que en muchas ocasiones nos encontraremos con cadenas de texto que cuentan con variaciones mínimas pero, en esencia, siguen siendo registros duplicados, por ejemplo: Supongamos que estamos trabajando con una base de datos que registra placas de vehículos en una ciudad. Existe la posibilidad de que nos encontremos con casos en los que la misma placa fue registrada dos veces, sin embargo, puede que un registro sea <em>AAA-01</em>, mientras que el otro sea <em>AAA01</em>, refiriéndose ambos a la misma placa, pero con una pequeña variación que hará que nos sea imposible el poder descartar una de las observaciones mediante una función <code>distinct()</code>, como lo mencionamos anteriormente. ¿Qué podemos hacer en estos casos? Cuando buscamos coincidencias difusas existen algunos algoritmos que nos permiten comparar el nivel de similitud de las cadenas de texto, como la <em>distancia de Levenstein</em> o el algoritmo de <em>Jaro-Winkler</em>. Analicemos cada uno en las siguientes subsecciones.</p>
-<section id="distancia-de-levenstein" class="level3" data-number="5.6.1">
-<h3 data-number="5.6.1" class="anchored" data-anchor-id="distancia-de-levenstein"><span class="header-section-number">5.6.1</span> Distancia de Levenstein</h3>
+<section id="distancia-de-levenstein" class="level3" data-number="6.6.1">
+<h3 data-number="6.6.1" class="anchored" data-anchor-id="distancia-de-levenstein"><span class="header-section-number">6.6.1</span> Distancia de Levenstein</h3>
 <p>La idea tras este algorítmo es bastante sencilla: La Distancia de Levenstein mide la cantidad mínima de operaciones necesarias para transformar la cadena de texto <span class="math inline">\(X\)</span> en la cadena <span class="math inline">\(Y\)</span>, a partir de las siguientes operaciones básicas: <em>inserción</em>, <em>eliminación</em> y <em>sustitución</em>. Podemos definir a la distancia de Levenstein como:</p>
 <p><span class="math display">\[
 D(i, j) =
@@ -1501,8 +1506,8 @@ Ratio = 1 - \frac{\text{distancia Levenstein} }{\max\left(\text{longitud}(s_1), 
 </div>
 <p>Ahora que si tenemos un parámetro que vaya de 0 a 100 respecto a la similitud entre cadenas, podemos descartar como duplicados a todos ellos que tengan una similitud mayor a un cierto valor, como <em>90%</em>, <em>95%</em>, etc.</p>
 </section>
-<section id="algoritmo-de-jaro-winkler" class="level3" data-number="5.6.2">
-<h3 data-number="5.6.2" class="anchored" data-anchor-id="algoritmo-de-jaro-winkler"><span class="header-section-number">5.6.2</span> Algoritmo de Jaro-Winkler</h3>
+<section id="algoritmo-de-jaro-winkler" class="level3" data-number="6.6.2">
+<h3 data-number="6.6.2" class="anchored" data-anchor-id="algoritmo-de-jaro-winkler"><span class="header-section-number">6.6.2</span> Algoritmo de Jaro-Winkler</h3>
 <p>La idea detrás del algoritmo de Jaro-Winkler es igualmente intuitiva: a diferencia de la Distancia de Levenshtein, que se basa en operaciones de edición, la Distancia de Jaro mide la similitud entre dos cadenas considerando coincidencias y transposiciones. Posteriormente, la variante Winkler mejora esta métrica al dar mayor peso a los prefijos coincidentes al inicio de las cadenas, asumiendo que los errores suelen estar al final.</p>
 <p>Dado lo anterior, podemos definir la similitud de Jaro entre dos cadenas <span class="math inline">\(s_1\)</span> y <span class="math inline">\(s_2\)</span> como:</p>
 <p><span class="math display">\[
@@ -1618,8 +1623,8 @@ JW = J + (l*p* (1 - J))
 <p>Tampoco debemos quebrarnos la cabeza sobre qué tipo de algoritmo usar, esto ya dependerá de cada caso particular y de la sensibilidad que necesitemos para comparar las similitudes entre cadenas.</p>
 </section>
 </section>
-<section id="entendiendo-el-uso-de-los-filtros" class="level2" data-number="5.7">
-<h2 data-number="5.7" class="anchored" data-anchor-id="entendiendo-el-uso-de-los-filtros"><span class="header-section-number">5.7</span> Entendiendo el uso de los filtros</h2>
+<section id="entendiendo-el-uso-de-los-filtros" class="level2" data-number="6.7">
+<h2 data-number="6.7" class="anchored" data-anchor-id="entendiendo-el-uso-de-los-filtros"><span class="header-section-number">6.7</span> Entendiendo el uso de los filtros</h2>
 <p>Como sabemos, los filtros no son más que formas de segmentar y limitar nuestros datos a ciertos parámetros que necesitamos ver, como un rango de fechas/valores o una igualdad que deba cumplirse en una determinada columna (ej. Devolver únicamente valores iguales a <em>“VERDADERO”</em>), lo que en SQL es equivalente al uso de un <code>WHERE</code>. Los filtros no solo nos ayudan a limitar nuestros datos, también funcionan para aplicar ciertas reglas o cálculos a filas específicas, por ejemplo: Imagina que, de nuestra tabla de muestra <code>iris</code> quisiéramos reemplazar todos los valores de la columna <code>Sepal.Length</code> a 0, únicamente para la especie <em>setosa</em>, en tal caso aplicaríamos un filtro para la columna <code>Species</code>, de la siguiente manera:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb149"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb149-1"><a href="#cb149-1" aria-hidden="true" tabindex="-1"></a>iris<span class="sc">$</span>Sepal.Length[iris<span class="sc">$</span>Species <span class="sc">==</span> <span class="st">"setosa"</span>] <span class="ot">&lt;-</span> <span class="dv">0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1785,9 +1790,9 @@ North Carolina   13.0     337       45 16.1</code></pre>
 </div>
 <p>El uso del operador <code>!</code> para invertir la lógica de los resultados es recomendable en cadenas de caracteres, ya que para filtros de valores numéricos puede resultar confuso.</p>
 </section>
-<section id="decodificación-y-arreglo-de-cadenas" class="level2" data-number="5.8">
-<h2 data-number="5.8" class="anchored" data-anchor-id="decodificación-y-arreglo-de-cadenas"><span class="header-section-number">5.8</span> Decodificación y arreglo de cadenas</h2>
-<p>A diferencia de la sección sobre extracción de datos no estructurados (vease <a href="limpieza.html#sec-regex"><span>Section&nbsp;4.4.1</span></a>), donde analizamos formas de extraer datos concretos de cadenas de texto mediante expresiones regulares, esta sección verá el manejo de cadenas de texto desde una perspectiva más general, en la que no solo vamos a extraer datos de esta clase, si no que además vamos a homologarlos, transformarlos y eliminar ciertos caracteres que usualmente no nos serán útiles (como los conectores lógicos).</p>
+<section id="decodificación-y-arreglo-de-cadenas" class="level2" data-number="6.8">
+<h2 data-number="6.8" class="anchored" data-anchor-id="decodificación-y-arreglo-de-cadenas"><span class="header-section-number">6.8</span> Decodificación y arreglo de cadenas</h2>
+<p>A diferencia de la sección sobre extracción de datos no estructurados (vease <a href="limpieza.html#sec-regex"><span>Section&nbsp;5.4.1</span></a>), donde analizamos formas de extraer datos concretos de cadenas de texto mediante expresiones regulares, esta sección verá el manejo de cadenas de texto desde una perspectiva más general, en la que no solo vamos a extraer datos de esta clase, si no que además vamos a homologarlos, transformarlos y eliminar ciertos caracteres que usualmente no nos serán útiles (como los conectores lógicos).</p>
 <p>Comencemos esta sección con las siguientes cadenas de texto:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb167"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb167-1"><a href="#cb167-1" aria-hidden="true" tabindex="-1"></a>cadenas <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Hola, me llamo Eduardo y tengo 20 años"</span>,</span>
@@ -1837,8 +1842,8 @@ North Carolina   13.0     337       45 16.1</code></pre>
 </div>
 </div>
 <p>Esto es genial, ya que de una forma muy práctica resolvimos este problema, pero no es el único tema al que nos vamos a enfrentar cuando trabajemos con cadenas de caracteres.</p>
-<section id="estandarización-de-cadenas" class="level3" data-number="5.8.1">
-<h3 data-number="5.8.1" class="anchored" data-anchor-id="estandarización-de-cadenas"><span class="header-section-number">5.8.1</span> Estandarización de cadenas</h3>
+<section id="estandarización-de-cadenas" class="level3" data-number="6.8.1">
+<h3 data-number="6.8.1" class="anchored" data-anchor-id="estandarización-de-cadenas"><span class="header-section-number">6.8.1</span> Estandarización de cadenas</h3>
 <p>Retomemos la cadena anterior, supongamos que uno de sus elementos tiene las siguientes características en el nombre:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb172"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb172-1"><a href="#cb172-1" aria-hidden="true" tabindex="-1"></a>cadenas <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Hola, me llamo Eduardo y tengo 20 años"</span>,</span>
@@ -1879,8 +1884,8 @@ North Carolina   13.0     337       45 16.1</code></pre>
 </div>
 </div>
 </section>
-<section id="sub-cadenas" class="level3" data-number="5.8.2">
-<h3 data-number="5.8.2" class="anchored" data-anchor-id="sub-cadenas"><span class="header-section-number">5.8.2</span> Sub-cadenas</h3>
+<section id="sub-cadenas" class="level3" data-number="6.8.2">
+<h3 data-number="6.8.2" class="anchored" data-anchor-id="sub-cadenas"><span class="header-section-number">6.8.2</span> Sub-cadenas</h3>
 <p>Extraer elementos específicos no siempre será nuestro objetivo. En ciertos casos buscaremos extraer datos por posición o cantidad de elementos, por ejemplo, imaginemos que realizamos una encuesta para obtener algunos RFC’s de personas físicas. Sabemos que un RFC para persona física contiene trece caracteres, por lo que aquellos que tengan más de la cuenta posiblemente tendrán errores tipográficos. En este caso podemos buscar extraer únicamente los primeros trece caracteres de la cadena (el RFC), para asegurarnos de tener únicamente los primeros caracteres válidos, mediante la función <code>substr()</code>, tal que:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb179"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb179-1"><a href="#cb179-1" aria-hidden="true" tabindex="-1"></a><span class="co"># RFC's de ejemplo</span></span>
@@ -1913,11 +1918,11 @@ North Carolina   13.0     337       45 16.1</code></pre>
 </div>
 </section>
 </section>
-<section id="una-vista-vertical-tratamiento-de-columnas" class="level2" data-number="5.9">
-<h2 data-number="5.9" class="anchored" data-anchor-id="una-vista-vertical-tratamiento-de-columnas"><span class="header-section-number">5.9</span> Una vista vertical: Tratamiento de columnas</h2>
+<section id="una-vista-vertical-tratamiento-de-columnas" class="level2" data-number="6.9">
+<h2 data-number="6.9" class="anchored" data-anchor-id="una-vista-vertical-tratamiento-de-columnas"><span class="header-section-number">6.9</span> Una vista vertical: Tratamiento de columnas</h2>
 <p>El correcto tratamiento de una tabla no siempre se va a limitar a las observaciones en ella, en la mayoría de los casos comenzaremos nuestro análisis corrigiendo, moviendo y eliminando columnas, de tal forma que sea más sencillo visualizar e interpretar el resultado final. Aunque no lo parezca, el órden, el tipo e incluso el nombre de las columnas importa más de lo que crees.</p>
-<section id="renombrando-columnas" class="level3" data-number="5.9.1">
-<h3 data-number="5.9.1" class="anchored" data-anchor-id="renombrando-columnas"><span class="header-section-number">5.9.1</span> Renombrando columnas</h3>
+<section id="renombrando-columnas" class="level3" data-number="6.9.1">
+<h3 data-number="6.9.1" class="anchored" data-anchor-id="renombrando-columnas"><span class="header-section-number">6.9.1</span> Renombrando columnas</h3>
 <p>Comencemos con un arreglo sencillo: Modificar el nombre de las columnas tratadas. Usemos de ejemplo el siguiente data frame:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb183"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb183-1"><a href="#cb183-1" aria-hidden="true" tabindex="-1"></a>tabla_nombres <span class="ot">&lt;-</span> dplyr<span class="sc">::</span><span class="fu">tibble</span>(</span>
@@ -1984,8 +1989,8 @@ North Carolina   13.0     337       45 16.1</code></pre>
 </div>
 <p>El uso de un método o el otro dependerá de la cantidad de cambios que quieras hacer a los nombres de las columnas. Escribir los nombres únicamente separados mediante guiones bajos es más eficiente en el proceso de análisis (sobre todo al copiar y pegar nombres de columnas en otras partes de tu código), pero no es tan agradable visualmente en la presentación de datos, por lo que es un tema que debes tener en cuenta una vez termines todos los arreglos necesarios.</p>
 </section>
-<section id="el-orden-si-importa" class="level3" data-number="5.9.2">
-<h3 data-number="5.9.2" class="anchored" data-anchor-id="el-orden-si-importa"><span class="header-section-number">5.9.2</span> El orden si importa</h3>
+<section id="el-orden-si-importa" class="level3" data-number="6.9.2">
+<h3 data-number="6.9.2" class="anchored" data-anchor-id="el-orden-si-importa"><span class="header-section-number">6.9.2</span> El orden si importa</h3>
 <p>Ya tenemos los nombres de las columnas, ahora vamos a ordenarlas. Manualmente podemos usar la función <code>select()</code> de <code>dplyr</code>, por ejemplo:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb190"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb190-1"><a href="#cb190-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Guardando el formato limpio de nombres</span></span>
@@ -2141,8 +2146,8 @@ North Carolina   13.0     337       45 16.1</code></pre>
 <p>La función <code>one_of()</code> funciona como forma de eliminar columnas al utilizar un signo <code>-</code>, pero también puede ser usada sin este para llamar a las columnas mediante un vector, lo cual nos facilitará bastante el trabajo cuando estemos manejando tablas en programas ya establecidos (tema que veremos con detalle en capítulos posteriores).</p>
 </section>
 </section>
-<section id="creando-y-modificando-columnas-llevando-mutate-a-sus-límites" class="level2" data-number="5.10">
-<h2 data-number="5.10" class="anchored" data-anchor-id="creando-y-modificando-columnas-llevando-mutate-a-sus-límites"><span class="header-section-number">5.10</span> Creando (y modificando) columnas: Llevando <code>mutate()</code> a sus límites</h2>
+<section id="creando-y-modificando-columnas-llevando-mutate-a-sus-límites" class="level2" data-number="6.10">
+<h2 data-number="6.10" class="anchored" data-anchor-id="creando-y-modificando-columnas-llevando-mutate-a-sus-límites"><span class="header-section-number">6.10</span> Creando (y modificando) columnas: Llevando <code>mutate()</code> a sus límites</h2>
 <p>Hemos usado de forma recurrente esta función para múltiples cálculos, pero es importante que la veamos con mayor profundidad en esta sección, principalmente para entender (y solucionar sus limitantes).</p>
 <p>Empecemos por un repaso rápido de su uso general (para ir subiendo la complejidad de uso). El uso básico de <code>mutate()</code> radica en la creación de una nueva columna a partir de un cálculo o valor, por ejemplo:</p>
 <div class="cell">
@@ -2422,8 +2427,8 @@ Caused by error in `if (gasto &gt; 7500) ...`:
 <p>En este caso, al retornar una cadena de caracteres, es necesario usar la función <code>pmap_chr()</code>, al ser una función específica para retornar vectores de este estilo.</p>
 <p>La última pregunta que</p>
 </section>
-<section id="agrupaciones" class="level2" data-number="5.11">
-<h2 data-number="5.11" class="anchored" data-anchor-id="agrupaciones"><span class="header-section-number">5.11</span> Agrupaciones</h2>
+<section id="agrupaciones" class="level2" data-number="6.11">
+<h2 data-number="6.11" class="anchored" data-anchor-id="agrupaciones"><span class="header-section-number">6.11</span> Agrupaciones</h2>
 <p>Las agrupaciones son, probablemente, el manejo que más vas a utilizar durante tu vida laboral y/o académica. Para entender este tema comencemos con un ejemplo de uso: Un promedio. Supongamos una tabla con registro de ventas de dos países, es decir:</p>
 <table class="table">
 <thead>
@@ -2502,8 +2507,8 @@ Caused by error in `if (gasto &gt; 7500) ...`:
 </div>
 </div>
 <p>Aunque no es algo tan habitual, ya que lo más común a lo largo de nuestros análisis será basarnos en una columna (o poco más de una) para hacer el agrupamiento respectivo. Si bien estas situaciones no son tan frecuentes, cuando trabajemos con varias columnas para agrupar, podremos manejarlas como un vector mediante <code>group_by_at()</code>.</p>
-<section id="otros-usos-de-los-agrupamientos" class="level3" data-number="5.11.1">
-<h3 data-number="5.11.1" class="anchored" data-anchor-id="otros-usos-de-los-agrupamientos"><span class="header-section-number">5.11.1</span> Otros usos de los agrupamientos</h3>
+<section id="otros-usos-de-los-agrupamientos" class="level3" data-number="6.11.1">
+<h3 data-number="6.11.1" class="anchored" data-anchor-id="otros-usos-de-los-agrupamientos"><span class="header-section-number">6.11.1</span> Otros usos de los agrupamientos</h3>
 <p>La familia de funciones <code>group_by()</code> no solo nos será útil para resumir nuestras tablas. Prácticamente cualquier función de las que hemos trabajado hasta ahora, que pueda ser aplicada a un data frame, se puede trabajar con grupos. Regresemos a nuestro ejemplo anterior, en el que tenemos las ventas para dos países, y supongamos que queremos saber a qué porcentaje de la suma total equivale cada monto individual de una venta. Vamos a crear una columna adicional con esta información mediante una división sencilla:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb241"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb241-1"><a href="#cb241-1" aria-hidden="true" tabindex="-1"></a>ventas <span class="sc">|&gt;</span> </span>
@@ -2567,8 +2572,8 @@ Caused by error in `if (gasto &gt; 7500) ...`:
 </div>
 </div>
 </section>
-<section id="no-olvides-desagrupar" class="level3" data-number="5.11.2">
-<h3 data-number="5.11.2" class="anchored" data-anchor-id="no-olvides-desagrupar"><span class="header-section-number">5.11.2</span> No olvides desagrupar</h3>
+<section id="no-olvides-desagrupar" class="level3" data-number="6.11.2">
+<h3 data-number="6.11.2" class="anchored" data-anchor-id="no-olvides-desagrupar"><span class="header-section-number">6.11.2</span> No olvides desagrupar</h3>
 <p>Cuando trabajamos con este concepto, un error común que podemos llegar a cometer es no desagrupar nuestros datos. Regresemos al ejemplo anterior, donde filtramos nuestros datos a la última observación por cada grupo. Al visualizar el resultado en formato <code>tibble</code>, podemos notar que en la parte superior de la tabla aún nos muestra el mensaje <code># Groups:   Pais [2]</code>, indicativo de que la tabla aún se encuentra agrupada en esta columna (así como la cantidad de elementos únicos que tiene esa columna), por lo que si realizamos cualquier otra operación subsecuente a esta, se seguirá aplicando de forma individual en cada grupo. Para desagrupar nuestros datos podemos utilizar la función <code>ungroup()</code> de la siguiente manera:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb249"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb249-1"><a href="#cb249-1" aria-hidden="true" tabindex="-1"></a>ventas <span class="sc">|&gt;</span> </span>
@@ -2644,8 +2649,8 @@ Caused by error in `if (gasto &gt; 7500) ...`:
 </div>
 <p>Esto ya dependerá de nuestra ejercicio en particular y lo que se requiera en el momento.</p>
 </section>
-<section id="subagrupaciones" class="level3" data-number="5.11.3">
-<h3 data-number="5.11.3" class="anchored" data-anchor-id="subagrupaciones"><span class="header-section-number">5.11.3</span> Subagrupaciones</h3>
+<section id="subagrupaciones" class="level3" data-number="6.11.3">
+<h3 data-number="6.11.3" class="anchored" data-anchor-id="subagrupaciones"><span class="header-section-number">6.11.3</span> Subagrupaciones</h3>
 <p>La función <code>group_by()</code> no es la única forma en la que podemos agrupar datos, o mejor dicho, el nivel máximo de profundidad al que podemos llegar. En ciertas ocasiones, cuando tenemos tablas a las que queramos aplicarles funciones de forma individual a partir de un grupo, o acceder únicamente a los elementos de una sección, podemos hacer uso de la función <code>nest()</code> de la librería <code>tidyr</code> (la cual ya revisamos en el capítulo anterior, al trabajar con archivos JSON), que nos permitirá convertir ciertas columnas de nuestra tabla en sublistas, a las cuales se podrá acceder a partir de la columna (o columnas) de agrupación, por ejemplo, en la tabla de muestra <code>iris</code> existen tres especies diferentes que podemos usar como categorías, por lo que si agrupamos a partir de esta columna la función <code>nest()</code> nos devolverá un data frame con tres observaciones, siendo que cada observación contará con todos los elementos adicionales en una sublista, tal que:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb258"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb258-1"><a href="#cb258-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
@@ -2690,8 +2695,8 @@ Caused by error in `if (gasto &gt; 7500) ...`:
 </div>
 </section>
 </section>
-<section id="tablas-pivote-convirtiendo-columnas-filas-a-filas-columnas" class="level2" data-number="5.12">
-<h2 data-number="5.12" class="anchored" data-anchor-id="tablas-pivote-convirtiendo-columnas-filas-a-filas-columnas"><span class="header-section-number">5.12</span> Tablas pivote: Convirtiendo columnas (filas) a filas (columnas)</h2>
+<section id="tablas-pivote-convirtiendo-columnas-filas-a-filas-columnas" class="level2" data-number="6.12">
+<h2 data-number="6.12" class="anchored" data-anchor-id="tablas-pivote-convirtiendo-columnas-filas-a-filas-columnas"><span class="header-section-number">6.12</span> Tablas pivote: Convirtiendo columnas (filas) a filas (columnas)</h2>
 <p>En ciertas ocasiones nos encontraremos con tablas que no tienen el formato deseado para un arreglo específico que necesitemos hacer, por lo que debemos hacer transformaciones más profundas en los datos, cambiando su estructura general. Para explicar mejor esta idea veamos la siguiente tabla de muestra:</p>
 <table class="table">
 <thead>
@@ -2931,11 +2936,11 @@ Caused by error in `if (gasto &gt; 7500) ...`:
 </div>
 <p>En este caso eliminamos columnas en dos momentos diferentes, ya que el uso de la columna <code>row</code> sigue siendo necesario al momento de cambiar el formato de la tabla.</p>
 </section>
-<section id="uniones-de-tablas" class="level2" data-number="5.13">
-<h2 data-number="5.13" class="anchored" data-anchor-id="uniones-de-tablas"><span class="header-section-number">5.13</span> Uniones de tablas</h2>
+<section id="uniones-de-tablas" class="level2" data-number="6.13">
+<h2 data-number="6.13" class="anchored" data-anchor-id="uniones-de-tablas"><span class="header-section-number">6.13</span> Uniones de tablas</h2>
 <p>Las uniones de tablas son uno de los recursos que más vamos a utilizar, ya que en la gran mayoría de los casos los que trabajemos se encontrarán segmentados en diferentes tablas, tanto a nivel horizontal (columnas adicionales) como a nivel vertical (filas adicionales). En esta sección analizaremos ambos casos, diferentes tipos de uniones que podremos hacer y algunas recomendaciones personales basadas en problemas que he tenido que resolver al unir datos en diferentes circunstancias.</p>
-<section id="joins" class="level3" data-number="5.13.1">
-<h3 data-number="5.13.1" class="anchored" data-anchor-id="joins"><span class="header-section-number">5.13.1</span> JOIN’s</h3>
+<section id="joins" class="level3" data-number="6.13.1">
+<h3 data-number="6.13.1" class="anchored" data-anchor-id="joins"><span class="header-section-number">6.13.1</span> JOIN’s</h3>
 <p>De manera similar a como lo vimos en el capítulo de <strong>conocimientos previos</strong>, los JOIN’s en R funcionan con la misma lógica que en SQL, uniendo la información de tablas mediante una columna coincidente, pero con sutiles diferencias que los hacen menos (y más) problemáticos de trabajar, aunque esto dependerá del tipo de unión que hagamos.</p>
 <p>Si no leíste el capítulo referente a SQL, haré un breve repaso de las uniones existentes y su respectiva lógica a continuación.</p>
 <p>Como recordarás, en SQL tenemos diferentes tipos de JOIN’s basados en el tipo de resultado que esperemos, siendo:</p>
@@ -2948,12 +2953,12 @@ Caused by error in `if (gasto &gt; 7500) ...`:
 </ul>
 <p>Estos mismos tipos de uniones pueden ser aplicados en R de forma nativa, utilizando las funciones <code>merge()</code> y <code>merge.data.frame()</code>. A pesar de que <code>merge.data.frame()</code> funciona de manera adecuada cuando trabajamos directamente con data frames, la función <code>merge()</code> es más comunmente utilizada, ya que puede ser aplicada diferentes tipos de datos, como matrices o vectores, lo que la hace más versatil para situaciones más específicas.</p>
 <p>Supongamos las siguientes tablas pequeñas:</p>
-<div id="tbl-anonymous-683973" class="cell tbl-parent quarto-layout-panel anchored">
+<div id="tbl-anonymous-8731835" class="cell tbl-parent quarto-layout-panel anchored">
 <div class="panel-caption table-caption">
 <p>Tablas ejemplo para unión con JOIN’s</p>
 </div>
 <div class="quarto-layout-row quarto-layout-valign-top">
-<div id="tbl-anonymous-683973-1" class="quarto-layout-cell quarto-layout-cell-subref anchored" data-ref-parent="tbl-anonymous-683973" style="flex-basis: 50.0%;justify-content: center;">
+<div id="tbl-anonymous-8731835-1" class="quarto-layout-cell quarto-layout-cell-subref anchored" data-ref-parent="tbl-anonymous-8731835" style="flex-basis: 50.0%;justify-content: center;">
 <table class="table table-sm table-striped">
 <caption>Tabla 1</caption>
 <thead>
@@ -2986,7 +2991,7 @@ Caused by error in `if (gasto &gt; 7500) ...`:
 </tbody>
 </table>
 </div>
-<div id="tbl-anonymous-683973-2" class="quarto-layout-cell quarto-layout-cell-subref anchored" data-ref-parent="tbl-anonymous-683973" style="flex-basis: 50.0%;justify-content: center;">
+<div id="tbl-anonymous-8731835-2" class="quarto-layout-cell quarto-layout-cell-subref anchored" data-ref-parent="tbl-anonymous-8731835" style="flex-basis: 50.0%;justify-content: center;">
 <table class="table table-sm table-striped">
 <caption>Tabla 2</caption>
 <thead>
@@ -3097,8 +3102,8 @@ Caused by error in `if (gasto &gt; 7500) ...`:
 3        E       1      NA</code></pre>
 </div>
 </div>
-<section id="joins-con-dplyr" class="level4" data-number="5.13.1.1">
-<h4 data-number="5.13.1.1" class="anchored" data-anchor-id="joins-con-dplyr"><span class="header-section-number">5.13.1.1</span> JOIN’s con <code>dplyr</code></h4>
+<section id="joins-con-dplyr" class="level4" data-number="6.13.1.1">
+<h4 data-number="6.13.1.1" class="anchored" data-anchor-id="joins-con-dplyr"><span class="header-section-number">6.13.1.1</span> JOIN’s con <code>dplyr</code></h4>
 <p>Como pudiste notar en el punto anterior, de forma nativa no podemos crear un <code>ANTI JOIN</code>, para ello debemos hacer uso de un filtro que nos devuelva valores nulos en las coincidencias. El uso de las funciones nativas de R para crear uniones de tablas puede no ser tab intuitivo, por lo que podemos hacer uso de funciones provenientes de <code>dplyr</code> para cada tipo de unión específica, es decir:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb289"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb289-1"><a href="#cb289-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
@@ -3313,17 +3318,17 @@ Caused by error in `if (gasto &gt; 7500) ...`:
 <p>Ahora, puede que en este punto te estés preguntando ¿por qué no solo basarnos en un ID de columna, tal como lo hacemos en SQL? Esto en realidad sería el camino ideal para una unión de tablas, sin embargo, comunmente estas uniones basadas en ID’s se harán directamente en nuestra consulta de base de la base de datos (mediante SQL). Normalmente, las uniones de datos que hagamos en R serán de diferentes fuentes de datos, por lo que los errores de escritura en columnas que usemos para coincidencias serán algo común.</p>
 </section>
 </section>
-<section id="uniones-verticales" class="level3" data-number="5.13.2">
-<h3 data-number="5.13.2" class="anchored" data-anchor-id="uniones-verticales"><span class="header-section-number">5.13.2</span> Uniones verticales</h3>
+<section id="uniones-verticales" class="level3" data-number="6.13.2">
+<h3 data-number="6.13.2" class="anchored" data-anchor-id="uniones-verticales"><span class="header-section-number">6.13.2</span> Uniones verticales</h3>
 <p>Los JOIN’s no son la única manera en la que podemos unir datos de tablas diferentes. En la mayoría de los casos, las tablas con las que trabajemos ya estarán completas, pero habrá ocasiones en las que estas tablas solo sean un fragmento de una tabla más grande, por lo que tendremos que unir dichos datos en una forma vertical, es decir, basándonos en los nombres de las columnas y no en las filas coincidentes.</p>
 <p>Déjame contarte una pequeña anécdota personal que tuve hace años, en uno de mis primeros trabajos como analista de datos: En una empresa mexicana tenía que realizar un proceso mensual de recolección y homologación de datos utilizando excel, la cual se basaba en 1. Solicitar los datos de ventas a mes vencido, y 2. Unir esos datos a una tabla histórica con los meses anteriores. Como era de esperarse, el proceso antes de que yo entrara a ese puesto era bastante manual, por lo que tomaba cerca de dos días el poder terminar de homologar estos datos. Cuando descubrí que podía sumplificar este proceso mediante funciones como <code>rbind()</code> o <code>bind_rows()</code> de <code>dplyr</code>, reduje el tiempo de dicho proceso a menos de 20 minutos.</p>
 <p>Ahora, ¿cómo funcionan exactamente las uniones verticales? Supongamos que tenemos una tabla con las ventas de una empresa para el mes de mayo, y otra tabla separada con las ventas de junio:</p>
-<div id="tbl-anonymous-6650611" class="cell tbl-parent quarto-layout-panel anchored">
+<div id="tbl-anonymous-4321499" class="cell tbl-parent quarto-layout-panel anchored">
 <div class="panel-caption table-caption">
 <p>Tablas ejemplo para unión vertical</p>
 </div>
 <div class="quarto-layout-row quarto-layout-valign-top">
-<div id="tbl-anonymous-6650611-1" class="quarto-layout-cell quarto-layout-cell-subref anchored" data-ref-parent="tbl-anonymous-6650611" style="flex-basis: 50.0%;justify-content: center;">
+<div id="tbl-anonymous-4321499-1" class="quarto-layout-cell quarto-layout-cell-subref anchored" data-ref-parent="tbl-anonymous-4321499" style="flex-basis: 50.0%;justify-content: center;">
 <table class="table table-sm table-striped">
 <caption>Tabla 1</caption>
 <thead>
@@ -3352,7 +3357,7 @@ Caused by error in `if (gasto &gt; 7500) ...`:
 </tbody>
 </table>
 </div>
-<div id="tbl-anonymous-6650611-2" class="quarto-layout-cell quarto-layout-cell-subref anchored" data-ref-parent="tbl-anonymous-6650611" style="flex-basis: 50.0%;justify-content: center;">
+<div id="tbl-anonymous-4321499-2" class="quarto-layout-cell quarto-layout-cell-subref anchored" data-ref-parent="tbl-anonymous-4321499" style="flex-basis: 50.0%;justify-content: center;">
 <table class="table table-sm table-striped">
 <caption>Tabla 2</caption>
 <thead>
@@ -3459,8 +3464,8 @@ Caused by error in `if (gasto &gt; 7500) ...`:
 </div>
 </div>
 <p>En este caso lo que hicimos fue filtrar los nombres que coincidieran en ambas tablas. Al tener un nombre diferente para la columna <code>Costo</code>, esta se retorna en el filtro, mientras que al no tener otras columnas en la tabla inicial <code>tabla_1</code>, no se retorna valor alguno para <code>Columna_adicional</code> de la <code>tabla_2</code>.</p>
-<section id="forzando-uniones" class="level4" data-number="5.13.2.1">
-<h4 data-number="5.13.2.1" class="anchored" data-anchor-id="forzando-uniones"><span class="header-section-number">5.13.2.1</span> Forzando uniones</h4>
+<section id="forzando-uniones" class="level4" data-number="6.13.2.1">
+<h4 data-number="6.13.2.1" class="anchored" data-anchor-id="forzando-uniones"><span class="header-section-number">6.13.2.1</span> Forzando uniones</h4>
 <p>Hasta ahora hemos analizado brevemente el funcionamiento de las uniones verticales de datos, pero existen algunos inconvenientes con los que tarde o temprano nos toparemos al trabajarlas. Como lo mencioné anteriormente, este tipo de uniones se suelen usar en casos en los que tenemos información dispersa en múltiples archivos, lo que da pie a variaciones en los formatos las columnas. Supongamos que tenemos varias tablas en las que los trabajadores anotan diversos comentarios, por ejemplo:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb323"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb323-1"><a href="#cb323-1" aria-hidden="true" tabindex="-1"></a>comentarios_1 <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
@@ -3688,12 +3693,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./limpieza.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Extracción, entendimiento y exportación de nuestros datos</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Extracción, entendimiento y exportación de nuestros datos</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./analisis_exploratorio.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Análisis exploratorio de datos</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Análisis exploratorio de datos</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>R para inteligencia de negocios - 4&nbsp; Extracción, entendimiento y exportación de nuestros datos</title>
+<title>R para inteligencia de negocios - 5&nbsp; Extracción, entendimiento y exportación de nuestros datos</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -154,7 +154,7 @@ div.csl-indent {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Extracción, entendimiento y exportación de nuestros datos</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Extracción, entendimiento y exportación de nuestros datos</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -194,32 +194,37 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./funcs.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Creando mis propias funciones</span></a>
+  <a href="./basics.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Primeros pasos en R</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./limpieza.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Extracción, entendimiento y exportación de nuestros datos</span></a>
+  <a href="./funcs.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Creando mis propias funciones</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./limpieza2.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Limpieza y manejo de datos: Principales problemas y soluciones</span></a>
+  <a href="./limpieza.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Extracción, entendimiento y exportación de nuestros datos</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./analisis_exploratorio.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Análisis exploratorio de datos</span></a>
+  <a href="./limpieza2.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Limpieza y manejo de datos: Principales problemas y soluciones</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./forecasts.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Pronósticos y estimaciones</span></a>
+  <a href="./analisis_exploratorio.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Análisis exploratorio de datos</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./dashboards.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Presentando mis datos: Dashboards (Shiny) y apps web</span></a>
+  <a href="./forecasts.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Pronósticos y estimaciones</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./dashboards.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Presentando mis datos: Dashboards (Shiny) y apps web</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -246,42 +251,42 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#fuentes-locales-de-datos-estructurados-csv-excel-txt-rds" id="toc-fuentes-locales-de-datos-estructurados-csv-excel-txt-rds" class="nav-link active" data-scroll-target="#fuentes-locales-de-datos-estructurados-csv-excel-txt-rds"><span class="toc-section-number">4.1</span>  Fuentes locales de datos (estructurados): CSV, Excel, TXT, RDS</a>
+  <li><a href="#fuentes-locales-de-datos-estructurados-csv-excel-txt-rds" id="toc-fuentes-locales-de-datos-estructurados-csv-excel-txt-rds" class="nav-link active" data-scroll-target="#fuentes-locales-de-datos-estructurados-csv-excel-txt-rds"><span class="toc-section-number">5.1</span>  Fuentes locales de datos (estructurados): CSV, Excel, TXT, RDS</a>
   <ul class="collapse">
-  <li><a href="#archivos-excel" id="toc-archivos-excel" class="nav-link" data-scroll-target="#archivos-excel"><span class="toc-section-number">4.1.1</span>  Archivos Excel</a></li>
-  <li><a href="#archivos-csv" id="toc-archivos-csv" class="nav-link" data-scroll-target="#archivos-csv"><span class="toc-section-number">4.1.2</span>  Archivos CSV</a></li>
-  <li><a href="#archivos-txt" id="toc-archivos-txt" class="nav-link" data-scroll-target="#archivos-txt"><span class="toc-section-number">4.1.3</span>  Archivos TXT</a></li>
-  <li><a href="#archivos-rds" id="toc-archivos-rds" class="nav-link" data-scroll-target="#archivos-rds"><span class="toc-section-number">4.1.4</span>  Archivos RDS</a></li>
+  <li><a href="#archivos-excel" id="toc-archivos-excel" class="nav-link" data-scroll-target="#archivos-excel"><span class="toc-section-number">5.1.1</span>  Archivos Excel</a></li>
+  <li><a href="#archivos-csv" id="toc-archivos-csv" class="nav-link" data-scroll-target="#archivos-csv"><span class="toc-section-number">5.1.2</span>  Archivos CSV</a></li>
+  <li><a href="#archivos-txt" id="toc-archivos-txt" class="nav-link" data-scroll-target="#archivos-txt"><span class="toc-section-number">5.1.3</span>  Archivos TXT</a></li>
+  <li><a href="#archivos-rds" id="toc-archivos-rds" class="nav-link" data-scroll-target="#archivos-rds"><span class="toc-section-number">5.1.4</span>  Archivos RDS</a></li>
   </ul></li>
-  <li><a href="#datos-alojados-en-la-nube." id="toc-datos-alojados-en-la-nube." class="nav-link" data-scroll-target="#datos-alojados-en-la-nube."><span class="toc-section-number">4.2</span>  Datos alojados en la nube.</a>
+  <li><a href="#datos-alojados-en-la-nube." id="toc-datos-alojados-en-la-nube." class="nav-link" data-scroll-target="#datos-alojados-en-la-nube."><span class="toc-section-number">5.2</span>  Datos alojados en la nube.</a>
   <ul class="collapse">
-  <li><a href="#datos-de-google-sheets" id="toc-datos-de-google-sheets" class="nav-link" data-scroll-target="#datos-de-google-sheets"><span class="toc-section-number">4.2.1</span>  Datos de Google Sheets</a></li>
+  <li><a href="#datos-de-google-sheets" id="toc-datos-de-google-sheets" class="nav-link" data-scroll-target="#datos-de-google-sheets"><span class="toc-section-number">5.2.1</span>  Datos de Google Sheets</a></li>
   </ul></li>
-  <li><a href="#bases-de-datos-mysql-sql-server-etc." id="toc-bases-de-datos-mysql-sql-server-etc." class="nav-link" data-scroll-target="#bases-de-datos-mysql-sql-server-etc."><span class="toc-section-number">4.3</span>  Bases de datos: MySQL, SQL Server, etc.</a>
+  <li><a href="#bases-de-datos-mysql-sql-server-etc." id="toc-bases-de-datos-mysql-sql-server-etc." class="nav-link" data-scroll-target="#bases-de-datos-mysql-sql-server-etc."><span class="toc-section-number">5.3</span>  Bases de datos: MySQL, SQL Server, etc.</a>
   <ul class="collapse">
-  <li><a href="#consultando-datos-en-sql" id="toc-consultando-datos-en-sql" class="nav-link" data-scroll-target="#consultando-datos-en-sql"><span class="toc-section-number">4.3.1</span>  Consultando datos en SQL</a></li>
+  <li><a href="#consultando-datos-en-sql" id="toc-consultando-datos-en-sql" class="nav-link" data-scroll-target="#consultando-datos-en-sql"><span class="toc-section-number">5.3.1</span>  Consultando datos en SQL</a></li>
   </ul></li>
-  <li><a href="#extracción-de-datos-no-estructurados." id="toc-extracción-de-datos-no-estructurados." class="nav-link" data-scroll-target="#extracción-de-datos-no-estructurados."><span class="toc-section-number">4.4</span>  Extracción de datos no estructurados.</a>
+  <li><a href="#extracción-de-datos-no-estructurados." id="toc-extracción-de-datos-no-estructurados." class="nav-link" data-scroll-target="#extracción-de-datos-no-estructurados."><span class="toc-section-number">5.4</span>  Extracción de datos no estructurados.</a>
   <ul class="collapse">
-  <li><a href="#sec-regex" id="toc-sec-regex" class="nav-link" data-scroll-target="#sec-regex"><span class="toc-section-number">4.4.1</span>  Expresiones regulares para extraer datos.</a></li>
+  <li><a href="#sec-regex" id="toc-sec-regex" class="nav-link" data-scroll-target="#sec-regex"><span class="toc-section-number">5.4.1</span>  Expresiones regulares para extraer datos.</a></li>
   </ul></li>
-  <li><a href="#listas-sublistas-y-más-listas-archivos-json." id="toc-listas-sublistas-y-más-listas-archivos-json." class="nav-link" data-scroll-target="#listas-sublistas-y-más-listas-archivos-json."><span class="toc-section-number">4.5</span>  Listas, sublistas y más listas: Archivos JSON.</a>
+  <li><a href="#listas-sublistas-y-más-listas-archivos-json." id="toc-listas-sublistas-y-más-listas-archivos-json." class="nav-link" data-scroll-target="#listas-sublistas-y-más-listas-archivos-json."><span class="toc-section-number">5.5</span>  Listas, sublistas y más listas: Archivos JSON.</a>
   <ul class="collapse">
-  <li><a href="#extrayendo-información-de-archivos-json" id="toc-extrayendo-información-de-archivos-json" class="nav-link" data-scroll-target="#extrayendo-información-de-archivos-json"><span class="toc-section-number">4.5.1</span>  Extrayendo información de archivos JSON</a></li>
+  <li><a href="#extrayendo-información-de-archivos-json" id="toc-extrayendo-información-de-archivos-json" class="nav-link" data-scroll-target="#extrayendo-información-de-archivos-json"><span class="toc-section-number">5.5.1</span>  Extrayendo información de archivos JSON</a></li>
   </ul></li>
-  <li><a href="#datos-a-través-de-apis." id="toc-datos-a-través-de-apis." class="nav-link" data-scroll-target="#datos-a-través-de-apis."><span class="toc-section-number">4.6</span>  Datos a través de API’s.</a>
+  <li><a href="#datos-a-través-de-apis." id="toc-datos-a-través-de-apis." class="nav-link" data-scroll-target="#datos-a-través-de-apis."><span class="toc-section-number">5.6</span>  Datos a través de API’s.</a>
   <ul class="collapse">
-  <li><a href="#casos-de-uso." id="toc-casos-de-uso." class="nav-link" data-scroll-target="#casos-de-uso."><span class="toc-section-number">4.6.1</span>  Casos de uso.</a></li>
+  <li><a href="#casos-de-uso." id="toc-casos-de-uso." class="nav-link" data-scroll-target="#casos-de-uso."><span class="toc-section-number">5.6.1</span>  Casos de uso.</a></li>
   </ul></li>
-  <li><a href="#datos-geoespaciales" id="toc-datos-geoespaciales" class="nav-link" data-scroll-target="#datos-geoespaciales"><span class="toc-section-number">4.7</span>  Datos geoespaciales</a></li>
-  <li><a href="#proyecto-creación-de-un-data-pipeline-semi-automático." id="toc-proyecto-creación-de-un-data-pipeline-semi-automático." class="nav-link" data-scroll-target="#proyecto-creación-de-un-data-pipeline-semi-automático."><span class="toc-section-number">4.8</span>  Proyecto: Creación de un <em>data pipeline</em> semi automático.</a>
+  <li><a href="#datos-geoespaciales" id="toc-datos-geoespaciales" class="nav-link" data-scroll-target="#datos-geoespaciales"><span class="toc-section-number">5.7</span>  Datos geoespaciales</a></li>
+  <li><a href="#proyecto-creación-de-un-data-pipeline-semi-automático." id="toc-proyecto-creación-de-un-data-pipeline-semi-automático." class="nav-link" data-scroll-target="#proyecto-creación-de-un-data-pipeline-semi-automático."><span class="toc-section-number">5.8</span>  Proyecto: Creación de un <em>data pipeline</em> semi automático.</a>
   <ul class="collapse">
-  <li><a href="#qué-datos-vamos-a-extraer" id="toc-qué-datos-vamos-a-extraer" class="nav-link" data-scroll-target="#qué-datos-vamos-a-extraer"><span class="toc-section-number">4.8.1</span>  ¿Qué datos vamos a extraer?</a></li>
-  <li><a href="#la-lógica-en-nuestra-base-de-datos." id="toc-la-lógica-en-nuestra-base-de-datos." class="nav-link" data-scroll-target="#la-lógica-en-nuestra-base-de-datos."><span class="toc-section-number">4.8.2</span>  La lógica en nuestra base de datos.</a></li>
-  <li><a href="#extracción-desde-la-api." id="toc-extracción-desde-la-api." class="nav-link" data-scroll-target="#extracción-desde-la-api."><span class="toc-section-number">4.8.3</span>  Extracción desde la API.</a></li>
-  <li><a href="#evaluando-errores-en-nuestra-extracción." id="toc-evaluando-errores-en-nuestra-extracción." class="nav-link" data-scroll-target="#evaluando-errores-en-nuestra-extracción."><span class="toc-section-number">4.8.4</span>  Evaluando errores en nuestra extracción.</a></li>
-  <li><a href="#automatizando-el-proceso" id="toc-automatizando-el-proceso" class="nav-link" data-scroll-target="#automatizando-el-proceso"><span class="toc-section-number">4.8.5</span>  Automatizando el proceso</a></li>
-  <li><a href="#otras-opciones-de-automatización-en-la-nube" id="toc-otras-opciones-de-automatización-en-la-nube" class="nav-link" data-scroll-target="#otras-opciones-de-automatización-en-la-nube"><span class="toc-section-number">4.8.6</span>  Otras opciones de automatización en la nube</a></li>
+  <li><a href="#qué-datos-vamos-a-extraer" id="toc-qué-datos-vamos-a-extraer" class="nav-link" data-scroll-target="#qué-datos-vamos-a-extraer"><span class="toc-section-number">5.8.1</span>  ¿Qué datos vamos a extraer?</a></li>
+  <li><a href="#la-lógica-en-nuestra-base-de-datos." id="toc-la-lógica-en-nuestra-base-de-datos." class="nav-link" data-scroll-target="#la-lógica-en-nuestra-base-de-datos."><span class="toc-section-number">5.8.2</span>  La lógica en nuestra base de datos.</a></li>
+  <li><a href="#extracción-desde-la-api." id="toc-extracción-desde-la-api." class="nav-link" data-scroll-target="#extracción-desde-la-api."><span class="toc-section-number">5.8.3</span>  Extracción desde la API.</a></li>
+  <li><a href="#evaluando-errores-en-nuestra-extracción." id="toc-evaluando-errores-en-nuestra-extracción." class="nav-link" data-scroll-target="#evaluando-errores-en-nuestra-extracción."><span class="toc-section-number">5.8.4</span>  Evaluando errores en nuestra extracción.</a></li>
+  <li><a href="#automatizando-el-proceso" id="toc-automatizando-el-proceso" class="nav-link" data-scroll-target="#automatizando-el-proceso"><span class="toc-section-number">5.8.5</span>  Automatizando el proceso</a></li>
+  <li><a href="#otras-opciones-de-automatización-en-la-nube" id="toc-otras-opciones-de-automatización-en-la-nube" class="nav-link" data-scroll-target="#otras-opciones-de-automatización-en-la-nube"><span class="toc-section-number">5.8.6</span>  Otras opciones de automatización en la nube</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -291,7 +296,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="sec-extrac-datos" class="quarto-section-identifier d-none d-lg-block"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Extracción, entendimiento y exportación de nuestros datos</span></span></h1>
+<h1 class="title"><span id="sec-extrac-datos" class="quarto-section-identifier d-none d-lg-block"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Extracción, entendimiento y exportación de nuestros datos</span></span></h1>
 </div>
 
 
@@ -308,11 +313,11 @@ div.csl-indent {
 
 <p>Los dos primeros capítulos de este libro tenían como objetivo principal que te familizarizaras con el lenguaje R, conociendo su sintaxis, la estructura principal de las funciones y el uso correcto de ellas en diversos entornos/situaciones. Dado lo anterior, a partir de ahora vamos a ver usos más prácticos de la programación en este lenguaje, procurando en todo momento el tener un enfoque a la inteligencia de negocios. Como es de esperarse, los códigos que iremos trabajando a partir de ahora serán cada vez más complejos, pero no debes preocuparte por ello, ya que a pesar de que subiremos el nivel de dificultad también se procurará el explicar con sumo detalle cada paso a realizar, para que puedas comprender en paralelo cada sección a continuación.</p>
 <p>Este capítulo tendrá como objetivo el familiarizarnos con las fuentes de datos más comunes con las que nos vamos a topar el nuestra vida laboral, así como las formas en las que podremos leerlas y exportarlas. Vamos a analizar desde archivos simples hasta bases de datos tanto relacionales como no relacionales, entendiendo en todo momento su estructura y la manera más eficiente de extraer dichos datos. Una vez que hayamos comprendido las fuentes y distintos formatos de datos, podremos comenzar a limpiar nuestra información, utilizando ciertas técnicas que nos permitirán darle valor agregado a la información obtenida, sin embargo, la limpieza y manejo de datos la dejaremos para la siguiente sección, ya que es un tema sumamente extenso con diversas ramificaciones que es importante analizar con detalle.</p>
-<section id="fuentes-locales-de-datos-estructurados-csv-excel-txt-rds" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="fuentes-locales-de-datos-estructurados-csv-excel-txt-rds"><span class="header-section-number">4.1</span> Fuentes locales de datos (estructurados): CSV, Excel, TXT, RDS</h2>
+<section id="fuentes-locales-de-datos-estructurados-csv-excel-txt-rds" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="fuentes-locales-de-datos-estructurados-csv-excel-txt-rds"><span class="header-section-number">5.1</span> Fuentes locales de datos (estructurados): CSV, Excel, TXT, RDS</h2>
 <p>Generalmente nuestro primer acercamiento a la programación en R será mediante archivos locales con los que realizaremos ejercicios, generación de gráficos, etc. De hecho, en la gran mayoría de los casos, cuando realizamos proyectos personales lo haremos con archivos locales,ya que la información alojada en la nube casi siempre se encontrará en ámbitos empresariales, en sus propias bases de datos privadas, sin embargo, esto no significa que los archivos locales sean menos importantes o carezcan de valor. Por el contrario, estos archivos suelen ser la puerta de entrada a la programación en R y nos brindan la oportunidad de desarrollar habilidades fundamentales en la manipulación y análisis de datos. Al trabajar con archivos locales, tenemos el control total sobre la gestión de nuestros datos, lo que nos permite experimentar, aprender y perfeccionar nuestras técnicas de programación de manera independiente. Además, el uso de archivos locales nos brinda flexibilidad y portabilidad, ya que podemos trabajar en ellos en cualquier momento y lugar, sin depender de una conexión a Internet o de sistemas empresariales complejos. Esta versatilidad nos permite adquirir experiencia práctica y familiarizarnos con las diversas funciones y capacidades de R antes de enfrentarnos a proyectos más grandes y desafiantes.</p>
-<section id="archivos-excel" class="level3" data-number="4.1.1">
-<h3 data-number="4.1.1" class="anchored" data-anchor-id="archivos-excel"><span class="header-section-number">4.1.1</span> Archivos Excel</h3>
+<section id="archivos-excel" class="level3" data-number="5.1.1">
+<h3 data-number="5.1.1" class="anchored" data-anchor-id="archivos-excel"><span class="header-section-number">5.1.1</span> Archivos Excel</h3>
 <p>Comencemos con los tipos más comunes de archivos: Los documentos en formato excel. Como sabemos, un data frame en R es simplemente una estructura con columnas con diferentes tipos de valores, siendo este el formato estandar que se nos devolverá al leer un archivo excel, pero debemos tener en cuenta ciertos factores para leer correctamente estos datos. Supongamos una tabla de tamaño <em>2x20</em> con una columna llamada <em>ingresos</em> y otra llamada <em>gastos</em>, típicamente tendrá el siguiente aspecto:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -418,8 +423,8 @@ Attaching package: 'dplyr'</code></pre>
 </div>
 <p>Este primer acercamiento a las fechas en R a partir de un archivo excel es una mera recomendación, por lo que no voy a profundizar en este tema. Más adelante, cuando comencemos con análisis exploratorio de datos veremos todo lo relacionado a fechas, formatos y cálculos de intervalos de tiempo.</p>
 </section>
-<section id="archivos-csv" class="level3" data-number="4.1.2">
-<h3 data-number="4.1.2" class="anchored" data-anchor-id="archivos-csv"><span class="header-section-number">4.1.2</span> Archivos CSV</h3>
+<section id="archivos-csv" class="level3" data-number="5.1.2">
+<h3 data-number="5.1.2" class="anchored" data-anchor-id="archivos-csv"><span class="header-section-number">5.1.2</span> Archivos CSV</h3>
 <p>Este tipo de archivos son, simplemente, un documento que contiene un cierto número de observaciones (filas y columnas) únicamente separadas por comas, tal como su nombre lo indica: <em>“Comma-Separated Values”</em>. A diferencia de los archivos excel, estos son mucho más simples, teniendo únicamente las observaciones, siendo que no se pueden añadir fórmulas, gráficos ni otras características insignia de una hoja de cálculo tradicional. Lógicamente, un archivo csv tenderá a ser más ligero en tamaño y tiene una mayor capacidad de almacenaje de datos que un archivo excel, lo que lo vuelve mucho más útil cuando queremos exportar conjuntos de datos mucho más grandes.</p>
 <p>De forma nativa podemos leer estos archivos con la función <code>read.csv()</code> o <code>read.csv2()</code> para archivos separados por punto y coma en lugar de solo una coma. Más allá de las funciones nativas de R, podemos utilizar sus equivalentes de la librería <code>readr</code>: <code>read_csv()</code> y <code>read_csv2()</code>, las cuales son considerablemente más eficientes al momento de leer un archivo de este estilo. La lógica para leer archivos es la misma: Supongamos que tenemos un documento de este estilo guardado en nuestro proyecto, llamado <em>prueba.csv</em>, simplemente debemos leerlo y guardarlo como un objeto, por ejemplo:</p>
 <div class="cell">
@@ -446,8 +451,8 @@ Attaching package: 'dplyr'</code></pre>
 </div>
 <p>Notese que en este caso no fue un archivo local. Los archivos csv y tsv alojados en internet, ya sean repositorios o blogs, pueden ser leídos directamente utilizando el link del portal donde se encuentren alojados. Ten en cuenta que la lectura de archivos alojados en servidores web será un poco más lenta, lo que puede disminuir el rendimiento de tu flujo de trabajo.</p>
 </section>
-<section id="archivos-txt" class="level3" data-number="4.1.3">
-<h3 data-number="4.1.3" class="anchored" data-anchor-id="archivos-txt"><span class="header-section-number">4.1.3</span> Archivos TXT</h3>
+<section id="archivos-txt" class="level3" data-number="5.1.3">
+<h3 data-number="5.1.3" class="anchored" data-anchor-id="archivos-txt"><span class="header-section-number">5.1.3</span> Archivos TXT</h3>
 <p>Así como los archivos <em>csv</em>, los archivos <em>txt</em> son una forma simple y sin formato de almacenar información, lo que los hace altamente eficientes en cuanto a su lectura. A pesar de lo anterior, los archivos csv necesariamente tienen un delimitador (“,”, “;”, “tab”), mientras que un archivo <em>txt</em> es aún más simple, estos no requieren de un delimitador específico lo que los hace más flexibles en cuanto a almacenaje, pero también puede dificultar su correcta lectura en R, ya que debemos tener presente la forma específica en la que cada archivo separa sus observaciones. En ciertas ocasiones nos encontraemos con datos no estructurados, como un archivo <em>txt</em> que simplemente tiene cadenas de texto, ya sean párrafos, listas, etc, por lo que extraer información relevante puede convertirse en todo un reto, el cuál analizaremos más adelante con datos no estructurados, ahora solo nos centraremos en archivos de texto que tengan un delimitador y una estructura clara.</p>
 <p>Usemos el <a href="https://raw.githubusercontent.com/itsfoss/text-files/master/agatha_complete.txt">siguiente archivo de ejemplo</a> alojado en github llamado <em>agatha_complete.txt</em>, documento que tiene registro de algunos libros junto con su año de publicación. Si nosotros entramos desde el navegador para ver el documento podremos notar que cada observación es, básicamente, el nombre del libro y su año de publicación separados por un guión, además de que el archivo no tiene títulos. Podemos leerlo de la siguiente manera, considerando como delimitador el guión:</p>
 <div class="cell">
@@ -503,8 +508,8 @@ e.g.:
 </div>
 </div>
 </section>
-<section id="archivos-rds" class="level3" data-number="4.1.4">
-<h3 data-number="4.1.4" class="anchored" data-anchor-id="archivos-rds"><span class="header-section-number">4.1.4</span> Archivos RDS</h3>
+<section id="archivos-rds" class="level3" data-number="5.1.4">
+<h3 data-number="5.1.4" class="anchored" data-anchor-id="archivos-rds"><span class="header-section-number">5.1.4</span> Archivos RDS</h3>
 <p>Este tipo de archivos (<em>R Data Serialization</em>) son especialmente interesantes de analizar, ya que no son específicos para el guardado de tablas o <em>data frames</em>. La idea de estos archivos es simple: exportar los objetos guardados en la sesión de R convirtiendolos en secuencias de bytes y guardándolos en el disco de tu equipo, lo que hará que se puedan utilizar con una mayor versatilidad en futuros proyectos no relacionados entre si, o bien en el mismo proyecto en el que se guardó la información. Supongamos una sesión en la que queremos guardar estadística descriptiva que hemos calculado, algunos vectores y una tabla que tenemos cargada en nuestra sesión actual. Utilizar un archivo <em>csv</em>, <em>tsv</em> o <em>txt</em> sería complicado al tener diferentes tipos de objetos. Intentar realizar la tarea en excel puede ser algo más sencillo al poder almacenar la información en diferentes hojas o rangos, pero al ser un archivo con mayor formato el peso de este puede incrementar rápidamente, lo que haría que no sea muy escalable en un contexto en el que se añadan más objetos poco a poco. En estas situaciones lo más conveniente es crear un archivo RDS que únicamente guardará esta información serializándola (convirtiéndola en bytes) optimizando el espacio de manera más eficiente. Para realizar este proceso podemos hacer lo siguiente:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>objetos <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">estadisticos =</span> mtcars[<span class="dv">1</span>] <span class="sc">|&gt;</span> </span>
@@ -536,11 +541,11 @@ Datsun 710    22.8   4  108  93 3.85 2.320 18.61  1  1    4    1</code></pre>
 </div>
 </section>
 </section>
-<section id="datos-alojados-en-la-nube." class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="datos-alojados-en-la-nube."><span class="header-section-number">4.2</span> Datos alojados en la nube.</h2>
+<section id="datos-alojados-en-la-nube." class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="datos-alojados-en-la-nube."><span class="header-section-number">5.2</span> Datos alojados en la nube.</h2>
 <p>Anteriormente vimos un par de casos de datos que estaban alojados en internet, como archivos <em>csv</em> guardados en repositorios de github, sin embargo, estos archivos son de cierta forma estáticos, es necesario subirlos de nuevo para poder actualizar la información, lo que puede hacer que su actualización constante en un entorno laboral tenga poca eficiencia. Pensemos en, por ejemplo, un registro de ventas que se actualiza cada 2 a 5 minutos, ¿te imaginas tener que subir un archivo nuevo a github cada 5 minutos? sería una tarea casi imposible, por lo que tener alojados nuestros registros en la nube de forma que se actualicen en tiempo real es nuestra opción más óptima. Para lograr nuestro objetivo tenemos varias opciones a la mano: Google Sheets, MongoDB, SQL en entornos en la nube como Azure o AWS, etc. A pesar de tener más opciones a la mano, me voy a centrar en las mencionadas anteriormente, ya que son las que más usarás en tu vida profesional, especialmente bases de datos en MySQL y SQL Server.</p>
-<section id="datos-de-google-sheets" class="level3" data-number="4.2.1">
-<h3 data-number="4.2.1" class="anchored" data-anchor-id="datos-de-google-sheets"><span class="header-section-number">4.2.1</span> Datos de Google Sheets</h3>
+<section id="datos-de-google-sheets" class="level3" data-number="5.2.1">
+<h3 data-number="5.2.1" class="anchored" data-anchor-id="datos-de-google-sheets"><span class="header-section-number">5.2.1</span> Datos de Google Sheets</h3>
 <p>Las hojas de cálculo de Google Sheets son, en apariencia, muy similares a los archivos Excel, teniendo algunas diferencias en cuanto a las fórmulas que podemos aplicar, filtrado de datos, etc. Una ventaja notable en cuanto a estas hojas de cálculo es que pueden ser actualizadas en tiempo real de manera colaborativa, permitiendo el acceso a estos archivos a personas específicas u organizaciones, lo que permite mantener estos datos actualizados constantemente.</p>
 <p>Veamos un ejemplo de uso de estos archivos, utilizando el <a href="https://docs.google.com/spreadsheets/d/1s9fVB9TcgzpMuBWx29ycwaiefelSm8zQi8ICdF0zphc/edit#gid=0">siguiente documento de ejemplo</a>. Para leer el archivo haremos uso de la librería <code>googlesheets4</code> y la función <code>read_sheet()</code>. La función en cuestión nos pide el <em>id</em> de la hoja de cálculo, el cuál lo podemos obtener sencillamente del link de la misma, simplemente tomando toda la cadena de caracteres subsecuente a <code>spreadsheets/d/</code> en la dirección del archivo, siendo en este caso <code>1s9fVB9TcgzpMuBWx29ycwaiefelSm8zQi8ICdF0zphc</code>, y leemos el archivo en cuestión, tal que:</p>
 <div class="cell">
@@ -583,8 +588,8 @@ Datsun 710    22.8   4  108  93 3.85 2.320 18.61  1  1    4    1</code></pre>
 </figure>
 </div>
 <p>Procura tener seleccionada la casilla de la opción <em>“ver, editar y borrar todos tus archivos de Google Drive”</em>, una vez hecho esto damos click en <strong>Continuar</strong> y hemos terminado la autenticación. A partir de ahora podremos ejecutar códigos en sesiones no interactivas sin tener que preocuparnos por lo que ocurre en la consola.</p>
-<section id="tipos-de-valores-retornables" class="level4" data-number="4.2.1.1">
-<h4 data-number="4.2.1.1" class="anchored" data-anchor-id="tipos-de-valores-retornables"><span class="header-section-number">4.2.1.1</span> Tipos de valores retornables</h4>
+<section id="tipos-de-valores-retornables" class="level4" data-number="5.2.1.1">
+<h4 data-number="5.2.1.1" class="anchored" data-anchor-id="tipos-de-valores-retornables"><span class="header-section-number">5.2.1.1</span> Tipos de valores retornables</h4>
 <p>Al igual que con <code>readxl</code>, la librería <code>googlesheets4</code> nos permite establecer directamente el tipo de dato por columna mediante el argumento <code>col_types</code> de la función <code>read_sheet()</code>, lo que es especialmente útil ya que en ciertas ocasiones se nos devolverán algunas columnas como listas por defecto con las cuales no se puede trabajar directamente con transformaciones comunes de datos. En este caso, los formatos disponibles a establecer para cada columna son los siguientes:</p>
 <ul>
 <li><code>l</code> para valores booleanos.</li>
@@ -599,13 +604,13 @@ Datsun 710    22.8   4  108  93 3.85 2.320 18.61  1  1    4    1</code></pre>
 </section>
 </section>
 </section>
-<section id="bases-de-datos-mysql-sql-server-etc." class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="bases-de-datos-mysql-sql-server-etc."><span class="header-section-number">4.3</span> Bases de datos: MySQL, SQL Server, etc.</h2>
+<section id="bases-de-datos-mysql-sql-server-etc." class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="bases-de-datos-mysql-sql-server-etc."><span class="header-section-number">5.3</span> Bases de datos: MySQL, SQL Server, etc.</h2>
 <p>De manera estricta, tanto excel como google sheets pueden denominarse como una base de datos, ya que pueden ser utilizados para almacenar y gestionar información de manera sistemática y ordenada,incluso un cuaderno con notas estructuradas podría entrar en esta categoría, pero en esta sección nos enfocaremos únicamente en los <em>gestores de bases datos</em> diseñados específicamente para ello, ya que tienen una forma distinta en la que podemos obtener la información que necesitamos.</p>
 <p>Las hojas de cálculo son geniales, en eso todos estamos de acuerdo cuando comenzamos a analizar pequeños sets de datos, pero son muy poco eficientes cuando queremos llevar el análisis al siguiente nivel, teniendo más de cien o doscientas mil observaciones para una tabla. Cuando tenemos demasiada información y, además, esta se está actualizando constantemente, necesariamente debemos recurrir a lenguajes enfocados a bases de datos, como es el caso de SQL, el cual es capaz de manejar y almacenar información a gran escala. En esta sección vamos a analizar los principales gestores de bases de datos que podemos utilizar para obtener datos en tiempo real, así como algunos ejemplos de uso y formas para configurar estos gestores en la nube. Es importante conocer estas bases de datos del lado de un script en R, pero también es crucial saber cómo se configuran en entornos en la nube, lo que nos permitirá entender de mejor manera como funcionan, pero vamos por partes, antes de comenzar a configurar entornos en AWS o Azure vamos a ver un poco del lenguaje, así como formas de integrarlo en R.</p>
 <p>Considera que este libro tiene como eje central el lenguaje R, por lo que los códigos que analicemos en SQL serán consultas básicas/intermedias (al menos por ahora).</p>
-<section id="consultando-datos-en-sql" class="level3" data-number="4.3.1">
-<h3 data-number="4.3.1" class="anchored" data-anchor-id="consultando-datos-en-sql"><span class="header-section-number">4.3.1</span> Consultando datos en SQL</h3>
+<section id="consultando-datos-en-sql" class="level3" data-number="5.3.1">
+<h3 data-number="5.3.1" class="anchored" data-anchor-id="consultando-datos-en-sql"><span class="header-section-number">5.3.1</span> Consultando datos en SQL</h3>
 <p>En esta sección analizaremos algunas consultas y su integración a un script en R. Se que ya estas ansioso por saber cómo integrar bases de datos con tus códigos, pero comencemos con algo esencial: Conectarnos a la base. Usualmente, cuando entras como analista de datos en una compañía, la empresa te proporcionará un usuario y contraseña para acceder al servidor en cuestión, además de otros parámetros como el <em>host</em><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, el <em>port</em><a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> y el nombre de la base de datos. Estos parámetros serán los que utilizaremos para conectarnos a la base de datos utilizando un <em>software de administración de bases datos</em><a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> como Workbench, DBeaver, DbVisualizer, etc (recomendación personal: <strong>Azure Data Studio</strong> para guardar scripts de consultas y <strong>phpMyAdmin</strong> para realizar cambios en tiempo real) o, en este caso específico, mediante una conexión directa con la librería <code>DBI</code> en nuestro script de R. La conexión a nuestra base de datos en realidad es muy sencilla, simplemente debemos establecer los parámetros anteriormente nombrados en la función <code>dbConnect</code>, tal que:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Parámetros</span></span>
@@ -691,12 +696,12 @@ Datsun 710    22.8   4  108  93 3.85 2.320 18.61  1  1    4    1</code></pre>
 <p>En este ejemplo no es tan obvio, pero en un ambiente de producción de una empresa los datos se actualizarán todos los días, a veces incluso a todas horas y mínutos, por lo que el poder acceder a esa información de forma actualizada sin tener que estar escribiendo archivos CSV, Excel, etc, agilizará de manera considerable el trabajo posterior que realicemos. En capítulos posteriores analizaremos la integración de bases de datos con dashboards/aplicaciones web, así como sus ventajas y desventajas en ambientes con grandes volúmenes de datos.</p>
 </section>
 </section>
-<section id="extracción-de-datos-no-estructurados." class="level2" data-number="4.4">
-<h2 data-number="4.4" class="anchored" data-anchor-id="extracción-de-datos-no-estructurados."><span class="header-section-number">4.4</span> Extracción de datos no estructurados.</h2>
+<section id="extracción-de-datos-no-estructurados." class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="extracción-de-datos-no-estructurados."><span class="header-section-number">5.4</span> Extracción de datos no estructurados.</h2>
 <p>La extracción de datos hasta ahora era un tema muy sencillo, ya que nuestra única tarea fue simplemente utilizar una función común para leer una tabla ya estructurada de un archivo simple, pero ¿y si no fuera el caso? En diversas ocasiones nos vamos a encontrar con archivos que tendrán información en bruto, como pdf’s con facturas, archivos de texto sin un órden claro en la información, e incluso datos provenientes de páginas web (Amazon, Facebook, Twitter, Youtube, etc), de los cuales tendremos que extraer la información identificando específicamente lo que necesitamos de cada documento, encontrando patrones y generando como resultado final la tabla a utilizar con los datos estructurados.</p>
 <p>Como puedes darte cuenta, los datos no estructurados son prácticamente información que se encuentra dispersa en algún sitio o archivo (o múltiples archivos), por lo que para su correcta extracción haremos uso de dos conceptos: <em>Web Scrapping</em> y <em>expresiones regulares</em>, ambos para obtener y ordenar información de manera sistemática, tal que sea útil para poder trabajarla más adelante.</p>
-<section id="sec-regex" class="level3" data-number="4.4.1">
-<h3 data-number="4.4.1" class="anchored" data-anchor-id="sec-regex"><span class="header-section-number">4.4.1</span> Expresiones regulares para extraer datos.</h3>
+<section id="sec-regex" class="level3" data-number="5.4.1">
+<h3 data-number="5.4.1" class="anchored" data-anchor-id="sec-regex"><span class="header-section-number">5.4.1</span> Expresiones regulares para extraer datos.</h3>
 <p>Las expresiones regulares no son más que secuencias de caracteres utilizadas para buscar patrones dentro de documentos, correos, cadenas de caracteres, etc. Una expresión regular está compuesta tanto por caracteres literales como por metacaracteres, que son caracteres con un significado especial dentro de la expresión regular. Estos metacaracteres permiten especificar reglas y condiciones para buscar patrones específicos en el texto. Un caracter literal no es más que una secuencia de letras o números que se van a buscar específicamente dentro del documento o expresión a analizar, sin embargo, en ciertas ocasiones no sabremos con exactitud que elemento estamos buscando, pero si su estructura general, por lo que nos apoyaremos de los metacaracteres para esto, ya que con ellos podremos especificar una regla o patrón más ambiguo con el que extraeremos los datos necesarios.</p>
 <p>Este es indudablemente uno de los temas más complicados de todo el libro, por lo que se procurará dar énfasis en los ejemplos de uso para su mejor entendimiento, además de que se retomará este tema más adelante, mezclando expresiones regulares con métodos de automatización de tareas.</p>
 <p>Encontrar patrones mediante expresiones regulares se basa en tres operaciones básicas: Unión, intersección, concatenación y cerradura de Kleene, funcionando de la misma manera que en la teoría de conjuntos, la cual veremos con mayor detalle cuando trabajemos con uniones de tablas en capítulos posteriores. Veamos cada concepto a nivel general:</p>
@@ -753,8 +758,8 @@ Datsun 710    22.8   4  108  93 3.85 2.320 18.61  1  1    4    1</code></pre>
 </ul>
 <p>Estos últimos operadores funcionan para complementar una búsqueda o extracción de patrones.</p>
 <p>Las operaciones usadas anteriormente son solamente una vista general de la estructura de una expresión regular. A continuación vamos a ver de manera detallada cada tipo de elemento que podemos utilizar por cada tipo de operación, es decir, los elementos que podemos usar (y su funcionamiento) para cuantificar, agrupar y alternar caracteres en la búsqueda de patrones.</p>
-<section id="búsqueda-omisión-de-caractéres" class="level4" data-number="4.4.1.1">
-<h4 data-number="4.4.1.1" class="anchored" data-anchor-id="búsqueda-omisión-de-caractéres"><span class="header-section-number">4.4.1.1</span> Búsqueda (omisión) de caractéres</h4>
+<section id="búsqueda-omisión-de-caractéres" class="level4" data-number="5.4.1.1">
+<h4 data-number="5.4.1.1" class="anchored" data-anchor-id="búsqueda-omisión-de-caractéres"><span class="header-section-number">5.4.1.1</span> Búsqueda (omisión) de caractéres</h4>
 <p>Cuando queremos buscar un caracter en específico, independientemente de que este sea númerico, alfanumérico, caracter especial, espacio, etc, vamos a utilizar un doble signo de diagonal invertido <code>\\</code> para representar una expresión de búsqueda de este elemento. El uso del signo <code>\</code> tiene como objetivo que el caracter subsecuente tenga un significado específico (o deje de tenerlo), teniendo los siguientes caracteres utilizables para encontrar elementos de manera directa:</p>
 <ul>
 <li><code>\\d</code> Para encontrar dígitos del 0 a 9 dentro de las cadenas de caracteres.</li>
@@ -796,8 +801,8 @@ Datsun 710    22.8   4  108  93 3.85 2.320 18.61  1  1    4    1</code></pre>
 <li><code>.</code> Para retornar todos los elementos de una cadena, sean del tipo que sean (excepto una nueva línea de texto).</li>
 </ul>
 </section>
-<section id="algunos-casos-de-uso." class="level4" data-number="4.4.1.2">
-<h4 data-number="4.4.1.2" class="anchored" data-anchor-id="algunos-casos-de-uso."><span class="header-section-number">4.4.1.2</span> Algunos casos de uso.</h4>
+<section id="algunos-casos-de-uso." class="level4" data-number="5.4.1.2">
+<h4 data-number="5.4.1.2" class="anchored" data-anchor-id="algunos-casos-de-uso."><span class="header-section-number">5.4.1.2</span> Algunos casos de uso.</h4>
 <p>Es innegable que las reglas de búsqueda de las expresiones regulares son a simple vista poco amigables, en realidad no se espera que alguien las conozca todas de memoria, lo que si se necesita es saber cómo combinarlas en ciertas situaciones para extraer patrones más o menos específicos, situación que vamos a explorar en esta sección, con ejemplos que irán de lo simple a lo más complejo, con el objetivo de que tú como usuario comprendas la lógica detrás y puedas combinar estas reglas a tu antojo sin mayores complicaciones.</p>
 <p>Pensemos en una situación sencilla: Tenemos un vector que cuenta con múltiples elementos, por ejemplo:</p>
 <div class="cell">
@@ -897,8 +902,8 @@ cadena + @ + cadena + .com
 </section>
 </section>
 </section>
-<section id="listas-sublistas-y-más-listas-archivos-json." class="level2" data-number="4.5">
-<h2 data-number="4.5" class="anchored" data-anchor-id="listas-sublistas-y-más-listas-archivos-json."><span class="header-section-number">4.5</span> Listas, sublistas y más listas: Archivos JSON.</h2>
+<section id="listas-sublistas-y-más-listas-archivos-json." class="level2" data-number="5.5">
+<h2 data-number="5.5" class="anchored" data-anchor-id="listas-sublistas-y-más-listas-archivos-json."><span class="header-section-number">5.5</span> Listas, sublistas y más listas: Archivos JSON.</h2>
 <p>Inevitablemente en algún momento de tu trayectoria como analísta o científico de datos te encontrarás con los famosos archivos JSON (JavaScript Object Notation), los cuales son una forma de almacenar datos de manera más eficiente que una tabla relacional (aunque esto no aplica en todos los casos). Consideremos el siguiente ejemplo de una estructura JSON:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb59"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a>{</span>
@@ -928,8 +933,8 @@ cadena + @ + cadena + .com
 </div>
 <p>Pero ¿qué pasa cuando tenemos más observaciones y estas no incluyen algún elemento que otras si? Por ejemplo, supongamos que una segunda observación no tiene la sublista “Elementos”, en ese caso si los datos estuviesen estructurados en una tabla de dos dimensiones nos encontraríamos con un elemento <code>NA</code> en esos casos (o <code>NULL</code> si estamos dentro de una base SQL) el cuál en cierta medida sigue generando espacio de almacenamiento y, en escalas más amplias, puede reducir la velocidad de lectura de una tabla. En el caso de un archivo JSON esto no ocurre, ya que al tratarse de elementos separados entre si simplemente no se incluyen los elementos faltantes de la estructura, lo que permite una mayor eficiencia en la lectura y escritura de ellos.</p>
 <p>Las estructuras de este estilo son sumamente útiles cuando trabajamos con elementos que pueden tener (o no) múltiples atributos, por ejemplo, los datos fiscales de una persona y su descripción, los productos de una tienda o los expedientes de ciertas empresas, sin embargo, el mismo formato de la estructura propicia que la extracción de la información para convertirla a otros formatos (procesos ETL) sea más complicada. En la siguiente sección analizaremos algunos métodos de extracción, un poco de lógica detrás de ello y alternativas a ciertos casos.</p>
-<section id="extrayendo-información-de-archivos-json" class="level3" data-number="4.5.1">
-<h3 data-number="4.5.1" class="anchored" data-anchor-id="extrayendo-información-de-archivos-json"><span class="header-section-number">4.5.1</span> Extrayendo información de archivos JSON</h3>
+<section id="extrayendo-información-de-archivos-json" class="level3" data-number="5.5.1">
+<h3 data-number="5.5.1" class="anchored" data-anchor-id="extrayendo-información-de-archivos-json"><span class="header-section-number">5.5.1</span> Extrayendo información de archivos JSON</h3>
 <p>Existen múltiples formas de leer/extraer información en este formato, y la complejidad de esta tarea dependerá del formato que vayamos a requerir como resultado (un data frame, una lista, un vector, etc). Para esta sección utilizaremos el archivo <code>ejemplo-001.json</code> del repositorio de github del libro disponible en el siguiente enlace: <em>https://github.com/Jorge-hercas/r-para-inteligencia-de-negocios</em>.</p>
 <p>Para una extracción simple en forma de lista (formato estandar del archivo) podemos hacer uso de la función <code>read_json()</code> de la librería <code>jsonlite</code>, por ejemplo:</p>
 <div class="cell">
@@ -1038,8 +1043,8 @@ cadena + @ + cadena + .com
 <p>Es sumamente importante tener en consideración este tipo de situaciones cuando trabajamos con archivos JSON, ya que los diferentes formatos y la compleijdad de transformación puede generar resultados erroneos al momento de intentar hacer estadística con ellos.</p>
 </section>
 </section>
-<section id="datos-a-través-de-apis." class="level2" data-number="4.6">
-<h2 data-number="4.6" class="anchored" data-anchor-id="datos-a-través-de-apis."><span class="header-section-number">4.6</span> Datos a través de API’s.</h2>
+<section id="datos-a-través-de-apis." class="level2" data-number="5.6">
+<h2 data-number="5.6" class="anchored" data-anchor-id="datos-a-través-de-apis."><span class="header-section-number">5.6</span> Datos a través de API’s.</h2>
 <p>Existen múltiples portales y/o aplicaciones que tienen disponibles sus datos en internet para uso libre, lo que es genial, pero cuando queremos información masiva o datos que se actualicen de forma regular con cada consulta, descargar los archivos excel o csv enlazados se convierte en una tarea molesta y dificil de escalar. Otro problema sobre la mesa son los diferentes lenguajes de programación utilizados para cada portal, lo que hace que una integración a dicho portal sería bastante complicada debido a las diferentes lógicas existentes. Una solución a los problemas anteriores es el uso de las llamadas API’s, siglas referentes al concepto “Interfaz de programación de aplicaciones”.</p>
 <p>Las API’s funcionan de forma simple: Un <em>“cliente”</em> (término con el que denominamos al código o aplicación con la que extraeremos los datos) hace una solicitud al <em>“servidor”</em>, el cual será donde esté alojada la base de datos que contiene la información requerida. Una vez hecha la solicitud se devolverá una respuesta basada en los parámetros establecidos, la cual (casi) siempre estará en un formato JSON, aplicando tanto para los datos obtenidos como también para los mensajes de error en caso de introducir parámetros incorrectos. Un ejemplo de ello sería la aplicación de la bolsa de valores, programa que funciona como el cliente que hará una solicitud al servidor en cuestión, devolviendo los valores más actualizados de los stocks importantes en formato JSON, para después procesar esa información y darle un formato más agradable a la vista.</p>
 <p>Ahora, ¿qué información necesitamos para poder hacer uso de una API? Cada sitio tendrá sus respectivas especificaciones/parámetros, pero en general se basarán en los siguientes:</p>
@@ -1051,11 +1056,11 @@ cadena + @ + cadena + .com
 <li><strong>Body</strong>: Cuerpo de la consulta, generalmente escrito en formato JSON. Casi siempre se utilizará únicamente en operaciones de envío de datos, como <strong>POST</strong> o <strong>PATCH</strong>.</li>
 </ul>
 <p>Claro que, únicamente entendiendo los parámetros mediante su descripción, será dificil que podamos comprender la sintaxis correcta de una consulta a través de una API (en R), por lo que a continuación vamos a trabajar algunos ejemplos prácticos para que te familiarices con este tema de forma más sencilla.</p>
-<section id="casos-de-uso." class="level3" data-number="4.6.1">
-<h3 data-number="4.6.1" class="anchored" data-anchor-id="casos-de-uso."><span class="header-section-number">4.6.1</span> Casos de uso.</h3>
+<section id="casos-de-uso." class="level3" data-number="5.6.1">
+<h3 data-number="5.6.1" class="anchored" data-anchor-id="casos-de-uso."><span class="header-section-number">5.6.1</span> Casos de uso.</h3>
 <p>A continuación vamos a analizar algunos casos uso de API’s para consultas de datos en la nube, siendo algunas de ellas meramente de prueba y otras más de uso práctico para extracción de datos reales (que posiblemente usarás a lo largo de tu carrera profesional).</p>
-<section id="apis-de-prueba." class="level4" data-number="4.6.1.1">
-<h4 data-number="4.6.1.1" class="anchored" data-anchor-id="apis-de-prueba."><span class="header-section-number">4.6.1.1</span> API’s de prueba.</h4>
+<section id="apis-de-prueba." class="level4" data-number="5.6.1.1">
+<h4 data-number="5.6.1.1" class="anchored" data-anchor-id="apis-de-prueba."><span class="header-section-number">5.6.1.1</span> API’s de prueba.</h4>
 <p>Comencemos con un ejemplo sencillo y probablemente el más conocido: La API de Pokemon (documentación disponible en el <a href="https://pokeapi.co">siguiente link</a>). La documentación de el sitio nos menciona que, para consultar información de algún Pokemon en específico, debemos utiizar como prefijo la liga <code>https://pokeapi.co/api/v2/</code> y los parámetros (o <em>endpoint</em>) a utilizar serán un indicador del tipo de dato que querramos extraer, ya sea el tipo de pokemon, sus habilidades, formas, etc, seguido del id o nombre de la especie en cuestión, cada parámetro separado por una barra diagnonal, por lo que la dirección completa para consulta tendrá la siguiente estructura: <code>https://pokeapi.co/api/v2/pokemon/nombre</code>. Para hacer una consulta de datos necesitaremos usar el método <code>GET()</code>, por lo que nos apoyaremos de la librería <code>httr</code> que cuenta con esta función, además de la función <code>content()</code> para extrear únicamente la respuesta JSON y no los encabezados, teniendo como resultado:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb72"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(httr)</span>
@@ -1226,8 +1231,8 @@ $url
 </div>
 <p>De esta forma podemos dinamizar las consultas que hagamos de datos.</p>
 </section>
-<section id="trabajando-la-api-de-firestore." class="level4" data-number="4.6.1.2">
-<h4 data-number="4.6.1.2" class="anchored" data-anchor-id="trabajando-la-api-de-firestore."><span class="header-section-number">4.6.1.2</span> Trabajando la API de firestore.</h4>
+<section id="trabajando-la-api-de-firestore." class="level4" data-number="5.6.1.2">
+<h4 data-number="5.6.1.2" class="anchored" data-anchor-id="trabajando-la-api-de-firestore."><span class="header-section-number">5.6.1.2</span> Trabajando la API de firestore.</h4>
 <p>Subamos un poco más el nivel con una API más interesante: La API de firestore, una base de datos no relacional de google en la nube, del servicio <em>firebase</em>. Hasta ahora hemos revisado ejemplos que ya tienen cargada información que rara vez cambia de formato, pero en este caso vamos a revisar la extracción de información de proyectos que, casi siempre, serán creados por nosotros o por la organización en la que estemos trabajando, donde la estructura de la información puede cambiar o incrementar su volumen con mayor frecuencia, por lo que necesitaremos mayor flexibilidad en las consultas que hagamos (tema que discutiremos a continuación), y aquí es donde entra firestore. Al ser una base no relacional con un formato de tipo JSON en su estructura, tiene una mayor flexibilidad en cuanto a su escalabilidad. Imagina que trabajas en una empresa de marketing que realiza campañas cada semana, las cuales cambian constantemente su público objetivo, el producto, etc, por lo que crean formularios que tienen ciertas generalidades que se mantienen a lo largo del tiempo (como nombre, apellido, teléfono o correo), pero también preguntas más específicas referentes a cada campaña en particular. Si toda esta información se guardara en una misma tabla se tendrían que estar creando columnas nuevas constantemente para las nuevas campañas, mientras que las columnas viejas comenzarían a quedarse en blanco para los nuevos registros, lo que aún consumiría recursos. En situaciones como estas es mayormente recomendable utilizar una base de datos no relacional como firestore, ya que al ser de formato JSON nos ayuda a optimizar el espacio de almacenamiento, aunque con la desventaja de ser más complicada de trabajar, pero iremos a eso poco a poco.</p>
 <p>Como en cualquier base de datos SQL, para hacer una conexión a firebase (firestore) necesitaremos autenticación por usuario, contraseña y, al ser proyecto privado, una <em>API KEY</em>. La <a href="https://cloud.google.com/firestore/docs/reference/rest">documentación de firestore</a> nos dice que para poder acceder a los datos que necesitamos primero debemos registrarnos mediante una solicitud <code>POST</code>, para después iniciar sesión con la misma cuenta de registro (mediante una solicitud del mismo tipo). La solicitud de registro nos pide usar como prefijo la dirección <em>https://identitytoolkit.googleapis.com</em>, seguido de nuestra API KEY (que podemos encontrar en la sección <em>configuraciones del proyecto</em> o <em>project settings</em> en el portal de firebase), teniendo como cuerpo de la solicitud nuestro correo y contraseña, además de indicar en el encabezado que el tipo de contenido es de formato JSON, es decir, <code>"Content-Type" = "application/json"</code>, por tanto, nuestra solicitud en formato HTTP tendrá el siguiente aspecto:</p>
 <div class="cell">
@@ -1318,8 +1323,8 @@ $url
 <span id="cb89-10"><a href="#cb89-10" aria-hidden="true" tabindex="-1"></a><span class="fu">leer_firestore</span>(ruta, token_acceso)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>De esta forma podemos acceder de una manera sencilla a una base de datos (firestore) en firebase. Puedes leer un una discusión al respecto de este tema en <a href="https://gabrielcp.medium.com/introduction-to-working-with-firestore-in-r-99443489b01b">el siguiente enlace</a> <span class="citation" data-cites="cabrera_introduction_2022">(<a href="referencias.html#ref-cabrera_introduction_2022" role="doc-biblioref">Cabrera 2022</a>)</span>.</p>
-<section id="escalabilidad-al-consultar-datos." class="level5" data-number="4.6.1.2.1">
-<h5 data-number="4.6.1.2.1" class="anchored" data-anchor-id="escalabilidad-al-consultar-datos."><span class="header-section-number">4.6.1.2.1</span> Escalabilidad al consultar datos.</h5>
+<section id="escalabilidad-al-consultar-datos." class="level5" data-number="5.6.1.2.1">
+<h5 data-number="5.6.1.2.1" class="anchored" data-anchor-id="escalabilidad-al-consultar-datos."><span class="header-section-number">5.6.1.2.1</span> Escalabilidad al consultar datos.</h5>
 <p>Firestore es una excelente opción cuando queremos alojar información de manera más eficiente, en situaciones donde se espera que existan muchos campos vacíos, además de ser más flexible en cuanto a su estructura general, sin embargo, esta flexibilidad implica también ciertos problemas cuando hacemos extracciones de datos. Por default, al nosotros hacer una consulta, la respuesta limita los resultados a un máximo de 300 observaciones (las cuales podemos establecer agregando el sufijo <code>?pageSize=300</code> a la ruta de acceso) más un token de acceso a las siguientes 300 observaciones. El hecho de que tengamos que hacer otra consulta por cada 300 filas hace que un proceso de ETL con bases de datos grandes se vuelva más complicado. Supongamos que queremos hacer una extracción de datos teniendo este problema, al nosotros hacer la consulta se nos devolverán las filas y el token a la siguiente página, como ya lo mencioné hace un momento. Obviamente, en algún momento dejará de aparecer un token a la siguiente página, por lo que podríamos establecer una estructura de control de tipo <code>while</code> basada en este elemento para automatizar la recolección de datos, por ejemplo:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb90"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb90-1"><a href="#cb90-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Token</span></span>
@@ -1376,8 +1381,8 @@ $url
 </section>
 </section>
 </section>
-<section id="datos-geoespaciales" class="level2" data-number="4.7">
-<h2 data-number="4.7" class="anchored" data-anchor-id="datos-geoespaciales"><span class="header-section-number">4.7</span> Datos geoespaciales</h2>
+<section id="datos-geoespaciales" class="level2" data-number="5.7">
+<h2 data-number="5.7" class="anchored" data-anchor-id="datos-geoespaciales"><span class="header-section-number">5.7</span> Datos geoespaciales</h2>
 <p>No voy a negar que este es mi tipo de datos favorito, porque cuando trabajo con visualizaciones estos son por mucho los más interesantes, además de ser bastante flexibles respecto a ciertos análisis que veremos en capítulos posteriores.</p>
 <p>Generalmente, los archivos geoespaciales son un cojunto de archivos (valga la redundancia) que devuelven un <em>data frame</em> con una columna adicional que contiene múltiples polígonos (dibujados a partir de coordenadas), con los que podemos establecer relaciones espaciales entre observaciones que, en una tabla tradicional, normalmente aparecerían como registros independientes.</p>
 <p>Ahora bien, normalmente, cuando descargamos estos archivos de repositorios en internet (como en <a href="https://hub.arcgis.com/datasets/esri::world-countries-generalized/about">el sitio de Arcgis</a>), estos vienen en un formato llamado <em>shapefile</em>, el cual puede resultar un poco confuso al inicio porque, a diferencia de un archivo CSV o Excel, no suele venir representado por un único documento y, de hecho, un shapefile está compuesto por varios archivos auxiliares que trabajan en conjunto para almacenar la geometría, los atributos y la referencia espacial de los datos, razón por la que cuando descargues una capa geográfica no debes mover únicamente el archivo con extensión <code>.shp</code>, ya que este por sí solo no contiene toda la información necesaria para reconstruir correctamente el objeto espacial en R.</p>
@@ -1418,8 +1423,8 @@ $url
 <p>Como seguramente lo habrás notado, la función <code>read_sf()</code> solamente llamó al archivo <code>.shp</code>, sin embargo, esto no significa que puedas borrar el resto de archivos, ya que como te lo expliqué antes, cada uno de estos archivos representa un diferente atributo del <em>shapefile</em>, por lo que si hace falta uno, al intentar leer el <code>.shp</code>, la función nos devolverá un error.</p>
 <p>Por cierto, estos datos van a ser reutilizados en el capítulo final del libro, ya que tienen mucho potencial para ciertos programas que estaremos creando.</p>
 </section>
-<section id="proyecto-creación-de-un-data-pipeline-semi-automático." class="level2" data-number="4.8">
-<h2 data-number="4.8" class="anchored" data-anchor-id="proyecto-creación-de-un-data-pipeline-semi-automático."><span class="header-section-number">4.8</span> Proyecto: Creación de un <em>data pipeline</em> semi automático.</h2>
+<section id="proyecto-creación-de-un-data-pipeline-semi-automático." class="level2" data-number="5.8">
+<h2 data-number="5.8" class="anchored" data-anchor-id="proyecto-creación-de-un-data-pipeline-semi-automático."><span class="header-section-number">5.8</span> Proyecto: Creación de un <em>data pipeline</em> semi automático.</h2>
 <p>¿Qué mejor manera de cerrar este capítulo que concentrando todo lo aprendido en un <em>data pipeline</em>?, es decir, un proceso de extracción y envío de datos de una fuente a otra (por ahora no abordaremos transformaciones específicas de la fuente de datos).</p>
 <p>En esta sección final vamos a crear un proceso que almacene datos trabajados desde la API de OpenWeather (documentación disponible en <a href="https://openweathermap.org/api">el siguiente enlace</a>), los catalogue mediante ciertas reglas que vamos a aplicar y, con ello, vamos a crear una base de datos relacional mediante MySQL, además de que vamos a semi automatizar este proceso. Como extra, vamos a utilizar la API de gmail para enviar correos de alerta en los que notificaremos a un usuario (nosotros en este caso) que el proceso ha terminado con éxito (o fallado, sea cual sea el caso) cada vez que el código sea ejecutado.</p>
 <p>Para plantear correctamente este problema, debemos comenzar por entenderlo en su nivel más básico, por lo que haremos un diagrama sencillo para mostrar el flujo de trabajo a seguir (figura 5.3).</p>
@@ -1437,20 +1442,20 @@ $url
 <li>Creación de un proyecto en Google Cloud para establecer una conexión con la API de gmail.</li>
 </ul>
 <p>Comencemos por establecer estos requisitos previos para poder comenzar el <em>data pipeline</em>:</p>
-<section id="qué-datos-vamos-a-extraer" class="level3" data-number="4.8.1">
-<h3 data-number="4.8.1" class="anchored" data-anchor-id="qué-datos-vamos-a-extraer"><span class="header-section-number">4.8.1</span> ¿Qué datos vamos a extraer?</h3>
+<section id="qué-datos-vamos-a-extraer" class="level3" data-number="5.8.1">
+<h3 data-number="5.8.1" class="anchored" data-anchor-id="qué-datos-vamos-a-extraer"><span class="header-section-number">5.8.1</span> ¿Qué datos vamos a extraer?</h3>
 <p>Para este proyecto vamos a utilizar información histórica de clima (temperatura, presión del aire, humedad, velocidad del viento y descripción del cielo), pronósticos de clima (temperatura, presión del aire, humedad, velocidad del viento y descripción del cielo) y componentes actuales del aire (C0, NO, NO2, O3, SO2 y NH3), datos limitados a Nueva York, Ciudad de México y Tokyo (estas ciudades fueron elegidas de forma aleatoria, pero tú puedes escoger otras ciudades/coordenadas para tu versión de este proyecto).</p>
 </section>
-<section id="la-lógica-en-nuestra-base-de-datos." class="level3" data-number="4.8.2">
-<h3 data-number="4.8.2" class="anchored" data-anchor-id="la-lógica-en-nuestra-base-de-datos."><span class="header-section-number">4.8.2</span> La lógica en nuestra base de datos.</h3>
+<section id="la-lógica-en-nuestra-base-de-datos." class="level3" data-number="5.8.2">
+<h3 data-number="5.8.2" class="anchored" data-anchor-id="la-lógica-en-nuestra-base-de-datos."><span class="header-section-number">5.8.2</span> La lógica en nuestra base de datos.</h3>
 <p>Vamos a iniciar el proceso de definición lógica de las tablas que formarán parte de nuestra base de datos, procurando establecer una forma eficiente de almacenar los datos que necesitamos, pero ¿a qué nos referimos con “eficiencia” en este caso? Introducir toda la información tal como la obtenemos de la API en una sola tabla sería lo más sencillo, ya que la inserción de datos se haría de forma directa en SQL, pero terminaríamos con una tabla más pesada (en cuanto a bites de información) que, por ende, en el largo plazo se volvería lenta al realizar una consulta de información. Para disminuir este problema podemos simplemente transformar valores más pesados, como lo son las cadenas de caracteres, a números enteros que representen el ID (número identificador) de otra tabla, por ejemplo, en lugar de añadir una columna con la descripción de las nubes, podemos establecer una columna que solo tenga un ID y crear una tabla de referencia más pequeña con los ID’s y su descripción, siendo que de esta manera al realizar una consulta podremos eficientar la velocidad de la tabla principal y relacionar ambas para obtener su descripción en la parte final de esta operación. Del lado de la tabla de referencia podemos decir que el ID será una llave primaria, mientras que del lado de la tabla principal se le conocerá como una llave foránea. Una ventaja de realizar la inserción de datos de esta manera es que si en la tabla principal se añade un ID que no se encuentre en la tabla índice la operación nos devolverá un mensaje de error, por lo que podremos tener un mejor seguimiento de la información que estamos subiendo y evitamos tener valores que no tengan sentido.</p>
-<p>Antes de crear nuestra base datos en MySQL veamos a nivel teórico las relaciones entre tablas. Comencemos por la parte más sencilla: El tipo de clima. La documentación de la API de OpenWeather nos dice que tenemos nueve tipos de climas, lo que se puede observar en la tabla <a href="#tbl-climas">Table&nbsp;<span>4.1</span></a>, por lo que podemos establecer una columna en la tabla principal llamada <code>tipo_clima_id</code> la cuál será nuestra llave foránea, mientras que en la tabla de referencia la llave primaria simplemente será <code>id</code>, identificando dicha tabla con el nombre <code>tipo_climas</code>, forma sencilla en la que tendremos claras la relaciones entre ambas. La siguiente tabla de referencia que vamos a crear será la de regiones, donde vamos a establecer una relación jerarquica igual a:</p>
+<p>Antes de crear nuestra base datos en MySQL veamos a nivel teórico las relaciones entre tablas. Comencemos por la parte más sencilla: El tipo de clima. La documentación de la API de OpenWeather nos dice que tenemos nueve tipos de climas, lo que se puede observar en la tabla <a href="#tbl-climas">Table&nbsp;<span>5.1</span></a>, por lo que podemos establecer una columna en la tabla principal llamada <code>tipo_clima_id</code> la cuál será nuestra llave foránea, mientras que en la tabla de referencia la llave primaria simplemente será <code>id</code>, identificando dicha tabla con el nombre <code>tipo_climas</code>, forma sencilla en la que tendremos claras la relaciones entre ambas. La siguiente tabla de referencia que vamos a crear será la de regiones, donde vamos a establecer una relación jerarquica igual a:</p>
 <p><span class="math display">\[
 Pais \ \ -&gt; \ \ Estado  \ \ -&gt; \ \ Ciudad
 \]</span></p>
 <div id="tbl-climas" class="anchored">
 <table class="table">
-<caption>Table&nbsp;4.1: Descripciones de climas</caption>
+<caption>Table&nbsp;5.1: Descripciones de climas</caption>
 <thead>
 <tr class="header">
 <th>Descripción</th>
@@ -1634,8 +1639,8 @@ Pais \ \ -&gt; \ \ Estado  \ \ -&gt; \ \ Ciudad
 </div>
 <p>Esta de más decir que los códigos vistos hasta este punto del proyecto solo deberán ser ejecutados una sola vez.</p>
 </section>
-<section id="extracción-desde-la-api." class="level3" data-number="4.8.3">
-<h3 data-number="4.8.3" class="anchored" data-anchor-id="extracción-desde-la-api."><span class="header-section-number">4.8.3</span> Extracción desde la API.</h3>
+<section id="extracción-desde-la-api." class="level3" data-number="5.8.3">
+<h3 data-number="5.8.3" class="anchored" data-anchor-id="extracción-desde-la-api."><span class="header-section-number">5.8.3</span> Extracción desde la API.</h3>
 <p>El siguiente paso lógico será obtener la información de climas con la API de OpenWeather. La <a href="https://openweathermap.org/api">documentación de su sitio</a> nos dice que, dependiendo de la consulta a requerir, el prefijo de la consulta deberá ser:</p>
 <ul>
 <li><strong>https://api.openweathermap.org/data/2.5/weather?</strong> para datos históricos y actuales.</li>
@@ -1994,8 +1999,8 @@ $list
 </div>
 <p>Finalmente, vamos a introducir los ciclos de cada extracción. Al ser procesos separados tendremos la libertad de poder escribirlos en el orden que nosotros queramos.</p>
 </section>
-<section id="evaluando-errores-en-nuestra-extracción." class="level3" data-number="4.8.4">
-<h3 data-number="4.8.4" class="anchored" data-anchor-id="evaluando-errores-en-nuestra-extracción."><span class="header-section-number">4.8.4</span> Evaluando errores en nuestra extracción.</h3>
+<section id="evaluando-errores-en-nuestra-extracción." class="level3" data-number="5.8.4">
+<h3 data-number="5.8.4" class="anchored" data-anchor-id="evaluando-errores-en-nuestra-extracción."><span class="header-section-number">5.8.4</span> Evaluando errores en nuestra extracción.</h3>
 <p>Prácticamente en la recta final de este ejercicio, el último paso para asegurarnos de mantener una integridad de los datos a mediano y largo plazo, será evaluar posibles errores mediante estructuras <code>tryCatch</code>, las cuales estableceremos en puntos clave de nuestro código. Como recordarás en el diagrama que hicimos al principio de este proyecto, en caso de tener un error en nuestro código se nos notificará vía email, sin embargo, si englobáramos todo el proceso en una estructura <code>tryCatch</code> sería más complicado encontrar el punto donde el proceso falla, razón por la que estableceremos más de una evaluación en cada sección. Comencemos por establecer la estructura para la tabla climas_historico, la cual usaremos de ejemplo:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb119"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb119-1"><a href="#cb119-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (ciudades <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(region)){</span>
@@ -2042,8 +2047,8 @@ $list
 <span id="cb119-42"><a href="#cb119-42" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Nota que imprimimos un mensaje de error y, posterior a esto, usamos la función <code>stop()</code> para detener el resto del proceso, ya que sería innecesario ejecutar los demás códigos si el código se rompe en algún punto previo, además del hecho de que si el siguiente paso con una evaluación <code>TryCatch</code> encuentra un error en consecuencia del anterior, terminaríamos con dos mensajes de error devueltos, lo que volvería bastante confuso a este proceso.</p>
-<section id="enviando-una-notificación-mediante-gmail" class="level4" data-number="4.8.4.1">
-<h4 data-number="4.8.4.1" class="anchored" data-anchor-id="enviando-una-notificación-mediante-gmail"><span class="header-section-number">4.8.4.1</span> Enviando una notificación mediante GMAIL</h4>
+<section id="enviando-una-notificación-mediante-gmail" class="level4" data-number="5.8.4.1">
+<h4 data-number="5.8.4.1" class="anchored" data-anchor-id="enviando-una-notificación-mediante-gmail"><span class="header-section-number">5.8.4.1</span> Enviando una notificación mediante GMAIL</h4>
 <p>Ya tenemos el mensaje que queremos enviar, ahora vamos a configurar nuestro script para que podamos conectar nuestro correo a el y poder activar alertas por correo. Para este paso tendremos que hacer algunas configuraciones previas que veremos a continuación paso a paso:</p>
 <p>En primer lugar, vamos a dirigirnos al sitio web de <a href="https://cloud.google.com/?hl=es_419">Google Cloud</a>, a la sección de <strong>Consola</strong>, para después crear un proyecto nuevo, al cual podremos nombrar como queramos (recomendable utilizar un nombre relacionado a este script, para identificarlo con mayor facilidad).</p>
 <div class="quarto-layout-panel">
@@ -2224,12 +2229,12 @@ Warning
 <p>Como nota debo añadir que, la primera vez que nosotros ejecutamos el código de envío de correo mediante esta librería, se nos pedirá una autenticación adicional en la página de Gmail, por lo que es recomendable realizar un envío de correo por separado y aceptar la autenticación, al ser un paso de una sola vez.</p>
 </section>
 </section>
-<section id="automatizando-el-proceso" class="level3" data-number="4.8.5">
-<h3 data-number="4.8.5" class="anchored" data-anchor-id="automatizando-el-proceso"><span class="header-section-number">4.8.5</span> Automatizando el proceso</h3>
+<section id="automatizando-el-proceso" class="level3" data-number="5.8.5">
+<h3 data-number="5.8.5" class="anchored" data-anchor-id="automatizando-el-proceso"><span class="header-section-number">5.8.5</span> Automatizando el proceso</h3>
 <p>La implementación de este proceso simplifica en casi su totalidad la actualización de tablas en la base de datos que creamos, pero aún existe un pequeño inconveniente. El código aún debe ser ejecutado por nosotros en el momento en el que queramos hacer la extracción, por lo que esa parte sigue siendo manual. Para terminar de (semi) automatizar nuestra proceso de ETL nos vamos a apoyar de dos librerías: <code>taskscheduleR</code> y <code>cronR</code>. En tu caso utilizarás solamente una, dependiendo de cual sea tu sistema operativo (<code>taskscheduleR</code> para Windows y <code>cronR</code> para MACOS o Linux).</p>
 <p>Sin importar cual sea tu SO, el primer paso para esta parte será guardar el script creado dentro del proyecto, esto para simplificar la ruta de acceso al documento <code>.R</code>.</p>
-<section id="versión-del-proceso-en-windows." class="level4" data-number="4.8.5.1">
-<h4 data-number="4.8.5.1" class="anchored" data-anchor-id="versión-del-proceso-en-windows."><span class="header-section-number">4.8.5.1</span> Versión del proceso en Windows.</h4>
+<section id="versión-del-proceso-en-windows." class="level4" data-number="5.8.5.1">
+<h4 data-number="5.8.5.1" class="anchored" data-anchor-id="versión-del-proceso-en-windows."><span class="header-section-number">5.8.5.1</span> Versión del proceso en Windows.</h4>
 <p>Ya que tenemos nuestro archivo guardado con, por ejemplo, el nombre <code>ETL.R</code>, vamos a llamar a la función <code>taskscheduler_create</code> de la misma librería, en la que indicaremos cada cuando se va a ejecutar el código. Veámoslo a continuación:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb123"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb123-1"><a href="#cb123-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(taskscheduleR)</span>
@@ -2246,8 +2251,8 @@ Warning
 </div>
 <p>Y listo, el proceso se ejecutará en el horario indicado de forma diaria, sin necesidad de intervenir nosotros o ejecutar algún otro comando.</p>
 </section>
-<section id="versión-del-proceso-en-macos." class="level4" data-number="4.8.5.2">
-<h4 data-number="4.8.5.2" class="anchored" data-anchor-id="versión-del-proceso-en-macos."><span class="header-section-number">4.8.5.2</span> Versión del proceso en MacOS.</h4>
+<section id="versión-del-proceso-en-macos." class="level4" data-number="5.8.5.2">
+<h4 data-number="5.8.5.2" class="anchored" data-anchor-id="versión-del-proceso-en-macos."><span class="header-section-number">5.8.5.2</span> Versión del proceso en MacOS.</h4>
 <p>Esta versión del proceso es casi igual a la que tenemos en Windows en cuanto a la lógica de uso. Asignaremos nuestro documento mediante la función <code>cron_rscript</code>, para después establecer la tarea a realizar de forma periódica con <code>cron_add</code>. El script completo será:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb124"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb124-1"><a href="#cb124-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(cronR)</span>
@@ -2263,11 +2268,11 @@ Warning
 <p>De esta manera terminanos con éxito un pipeline para la extracción de datos, automatizado para ejecutarse de forma recurrente en tu ordenador de forma local. Debemos hacer una aclaración respecto a este proceso, si bien no tenemos que ejecutar nada de nuestro lado para que funcione de forma periódica, aún sigue trabajando de forma local, por lo que solo funcionará en caso de que nuestro ordenador se encuentre encendido (y la instancia de MySQL siga activa). En próximos capítulos veremos como integrar estos procesos a la nube (AWS, Azure), desde crear una base de datos hasta utilizar nuestros scripts de R, ya que estos procesos serán aún más importantes en tu vida profesional, al tener que trabajar constantemente con datos provenientes de un servidor externo.</p>
 </section>
 </section>
-<section id="otras-opciones-de-automatización-en-la-nube" class="level3" data-number="4.8.6">
-<h3 data-number="4.8.6" class="anchored" data-anchor-id="otras-opciones-de-automatización-en-la-nube"><span class="header-section-number">4.8.6</span> Otras opciones de automatización en la nube</h3>
+<section id="otras-opciones-de-automatización-en-la-nube" class="level3" data-number="5.8.6">
+<h3 data-number="5.8.6" class="anchored" data-anchor-id="otras-opciones-de-automatización-en-la-nube"><span class="header-section-number">5.8.6</span> Otras opciones de automatización en la nube</h3>
 <p>El hecho de que nuestro proceso se encuentre automatizado en una computadora local implica que ésta debe estar encendida cuando en el momento de ejecución, lo que se vuelve un poco problemático cuando establecemos procesos que se ejecutan, por ejemplo, en horarios nocturnos. Para evitar el tener que preocuparnos de que nuestro equipo se encuentre encendido en cierto horario de forma periódica, y en general, dejar de preocuparnos por dicho proceso (a menos de que lo modifiquemos o le demos mantenimiento) es montar nuestros códigos en la nube. Tenemos diversas opciones para automatizar nuestros códigos en la nube, como contenedores en Docker montados en AWS, GCP o Azure, instancias en EC2 (igualmente dentro de AWS), etc. Las opciones basadas en montar contenedores suelen ser un poco más complicadas de crear, ya que requieren que tengamos conocimientos en Docker y, en algunos casos, en Ubuntu/Linux, por lo que no las tomaremos en cuenta por ahora. A mi consideración personal, las dos formas más sencillas de automatizar estos procesos en la nube son mediante un notebook en Microsoft Fabric o mediante Github Actions. Veamos ambas opciones a continuación.</p>
-<section id="microsoft-fabric" class="level4" data-number="4.8.6.1">
-<h4 data-number="4.8.6.1" class="anchored" data-anchor-id="microsoft-fabric"><span class="header-section-number">4.8.6.1</span> Microsoft Fabric</h4>
+<section id="microsoft-fabric" class="level4" data-number="5.8.6.1">
+<h4 data-number="5.8.6.1" class="anchored" data-anchor-id="microsoft-fabric"><span class="header-section-number">5.8.6.1</span> Microsoft Fabric</h4>
 <p>Microsoft Fabric no es más que una plataforma que tiene como finalidad el unificar servicios como Power BI, Data Factory, One Lake, entre otros más. Una ventaja de esta plataforma es que nos permite crear scripts en R, Python y Spark mediante notebooks, por lo que no tenemos que complicarnos la vida emulando sesiones de RStudio con contenedores en la nube, y solo tendremos que preocuparnos por escribir el código que necesitamos para nuestro proyecto.</p>
 <p>En el caso particular de este proyecto, para poder automatizar nuestro proceso, simplemente debemos crear un espacio de trabajo con capacidad de Microsoft Fabric en el <a href="https://app.powerbi.com/">administrador de Power BI Service</a>, tal que:</p>
 <div class="quarto-figure quarto-figure-center">
@@ -2318,11 +2323,11 @@ Warning
 <span id="cb125-3"><a href="#cb125-3" aria-hidden="true" tabindex="-1"></a><span class="fu">gm_auth_configure</span>(<span class="at">path =</span> <span class="st">"/lakehouse/default/Files/archivo_json_desc.json"</span>)</span>
 <span id="cb125-4"><a href="#cb125-4" aria-hidden="true" tabindex="-1"></a><span class="fu">gm_auth</span>(<span class="at">email =</span> T, <span class="at">cache =</span> <span class="st">".secret"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Podremos ver todos los archivos que guardemos en la ruta de la imagen <a href="#fig-lakehouse">Figure&nbsp;<span>4.1</span></a>.</p>
+<p>Podremos ver todos los archivos que guardemos en la ruta de la imagen <a href="#fig-lakehouse">Figure&nbsp;<span>5.1</span></a>.</p>
 <div id="fig-lakehouse" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="imagenes/ruta elementos.png" class="img-fluid figure-img" width="300"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;4.1: Archivos en un lakehouse</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;5.1: Archivos en un lakehouse</figcaption><p></p>
 </figure>
 </div>
 <p>Como último paso, una vez que tengamos todo el código en nuestro notebook, será automatizar su ejecución mediante las siguientes opciones:</p>
@@ -2349,8 +2354,8 @@ Warning
 <p>Simplemente estableciendo la frecuencia de ejecución y la zona horaria.</p>
 <div style="page-break-after: always;"></div>
 </section>
-<section id="github-actions" class="level4" data-number="4.8.6.2">
-<h4 data-number="4.8.6.2" class="anchored" data-anchor-id="github-actions"><span class="header-section-number">4.8.6.2</span> Github actions</h4>
+<section id="github-actions" class="level4" data-number="5.8.6.2">
+<h4 data-number="5.8.6.2" class="anchored" data-anchor-id="github-actions"><span class="header-section-number">5.8.6.2</span> Github actions</h4>
 <p>Automatizar tareas mediante Github actions es bastante sencillo y, como un plus adicional, si son tareas que no consumen demasiados recursos, entonces es una opción completamente gratuita, ya que no tiene un límite de uso para repositorios públicos, mientras que para repositorios privados tenemos 2,000 minutos gratuitos de ejecución al mes (al momento en el que escribo este texto, espero que no haya cambiado eso cuando este libro esté publicado). Un aspecto particuarmente interesante de esta herramienta, es que podemos ejecutar los procesos que hagamos en servidores de Linux, Windows o MacOS, dependiendo de lo que necesitemos para cada caso.</p>
 <p>Ahora bien, ¿cuál es el proceso para poder automatizar estas tareas? En realidad es bastante simple, ya que basta con definir un workflow, el cual no es más que un archivo de configuración escrito en formato <strong>YAML</strong>. Dicho archivo debe ubicarse en el repositorio, dentro del directorio <code>.github/workflows/</code>, y en él se especifican tres elementos fundamentales: - <strong>El evento disparador</strong>: define cuándo se ejecutará la automatización, por ejemplo, al hacer un push a una rama específica, al abrir un pull request, o de forma programada mediante una expresión <em>cron</em>.</p>
 <ul>
@@ -2598,12 +2603,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./funcs.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Creando mis propias funciones</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Creando mis propias funciones</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./limpieza2.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Limpieza y manejo de datos: Principales problemas y soluciones</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Limpieza y manejo de datos: Principales problemas y soluciones</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

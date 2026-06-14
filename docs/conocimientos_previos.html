@@ -112,7 +112,7 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./funcs.html" rel="next">
+<link href="./basics.html" rel="next">
 <link href="./intro.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -193,32 +193,37 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./funcs.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Creando mis propias funciones</span></a>
+  <a href="./basics.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Primeros pasos en R</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./limpieza.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Extracción, entendimiento y exportación de nuestros datos</span></a>
+  <a href="./funcs.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Creando mis propias funciones</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./limpieza2.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Limpieza y manejo de datos: Principales problemas y soluciones</span></a>
+  <a href="./limpieza.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Extracción, entendimiento y exportación de nuestros datos</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./analisis_exploratorio.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Análisis exploratorio de datos</span></a>
+  <a href="./limpieza2.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Limpieza y manejo de datos: Principales problemas y soluciones</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./forecasts.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Pronósticos y estimaciones</span></a>
+  <a href="./analisis_exploratorio.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Análisis exploratorio de datos</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./dashboards.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Presentando mis datos: Dashboards (Shiny) y apps web</span></a>
+  <a href="./forecasts.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Pronósticos y estimaciones</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./dashboards.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Presentando mis datos: Dashboards (Shiny) y apps web</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -325,8 +330,8 @@ Nota
 <p>A pesar de que los esquemas separan en cierta medida los datos, los ambientes de prueba suelen estar almacenados en una base de datos adicional a la del ambiente de producción, esto debido a que las tablas pertenecientes a diferentes esquemas aun pueden relacionarse, por lo que no es recomendable crear esquemas de prueba, ya que existe el riesgo de afectar información importante.</p>
 </div>
 </div>
-<p>Como es lógico, el siguiente nivel en nuestra base de datos serán las tablas. Una tabla es una estructura sencilla que nos permitirá almacenar datos mediante columnas y filas, siendo estos clasificados por tipo de dato (ej. <em>varchar</em>, <em>decimal</em>, <em>date</em>, etc). Al ser una base de datos <strong>relacional</strong>, podemos establecer relaciones entre tablas a partir de llaves primarias y llaves foráneas, es decir, los ID’s de una tabla. Cuando hablamos de llaves primarias nos referimos al ID de cada observación perteneciente a una tabla, mientras que cuando hablamos de llaves foráneas nos referimos a un ID en una tabla que hace referencia al ID primario de otra, por ejemplo: Supongamos que tenemos una tabla llamada <code>usuarios</code> con nombres de usuario que incluye una columna llamada <code>tipo_usuario_id</code> con ID’s 1 o 2, referentes a otra tabla llamada <code>tipo_usuarios</code> en la que el ID 1 equivale a usuario maestro y el ID 2 a usuario general, en tal caso la columna <code>tipo_usuario_id</code> de la primer tabla será una llave foránea, ya que hace referencia a los datos de otra tabla, mientras que la columna <code>id</code> de la tabla <code>tipo_usuarios</code> será la llave primaria. Gráficamente se puede ver esta relación en el diagrama <a href="dashboards.html#fig-relacion">Figure&nbsp;<span>8.13</span></a>.</p>
-<div id="fig-relacion" class="quarto-figure quarto-figure-center anchored">
+<p>Como es lógico, el siguiente nivel en nuestra base de datos serán las tablas. Una tabla es una estructura sencilla que nos permitirá almacenar datos mediante columnas y filas, siendo estos clasificados por tipo de dato (ej. <em>varchar</em>, <em>decimal</em>, <em>date</em>, etc). Al ser una base de datos <strong>relacional</strong>, podemos establecer relaciones entre tablas a partir de llaves primarias y llaves foráneas, es decir, los ID’s de una tabla. Cuando hablamos de llaves primarias nos referimos al ID de cada observación perteneciente a una tabla, mientras que cuando hablamos de llaves foráneas nos referimos a un ID en una tabla que hace referencia al ID primario de otra, por ejemplo: Supongamos que tenemos una tabla llamada <code>usuarios</code> con nombres de usuario que incluye una columna llamada <code>tipo_usuario_id</code> con ID’s 1 o 2, referentes a otra tabla llamada <code>tipo_usuarios</code> en la que el ID 1 equivale a usuario maestro y el ID 2 a usuario general, en tal caso la columna <code>tipo_usuario_id</code> de la primer tabla será una llave foránea, ya que hace referencia a los datos de otra tabla, mientras que la columna <code>id</code> de la tabla <code>tipo_usuarios</code> será la llave primaria. Gráficamente se puede ver esta relación en el diagrama <a href="#fig-relacion-sql">Figure&nbsp;<span>2.1</span></a>.</p>
+<div id="fig-relacion-sql" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><embed src="imagenes/diagrama llaves.pdf" class="img-fluid" width="380"></p>
 <p></p><figcaption class="figure-caption">Figure&nbsp;2.1: Diagrama de tipos de llaves</figcaption><p></p>
@@ -1337,10 +1342,10 @@ GROUP BY Cliente</code></pre>
 <h4 data-number="2.5.3.2" class="anchored" data-anchor-id="filtros-en-una-agrupación"><span class="header-section-number">2.5.3.2</span> Filtros en una agrupación</h4>
 <p>Como es lógico, podemos filtrar datos que se encuentren agrupados a partir de columnas ya existentes en nuestros datos, por ejemplo: Utilizando la tabla <code>ventas</code> que analizamos hace un momento, podemos hacer un agrupamiento por clientes para obtener el total comprado por cada una, aplicando un filtro sencillo para ver el resultado del cliente 1, tal que:</p>
 <div class="cell">
-<pre class="rm cell-code"><code>SELECT Cliente, SUM(Precio) as Total
-FROM ventas
-WHERE Cliente = "Cliente_1"
-GROUP BY Cliente</code></pre>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>SELECT Cliente, <span class="fu">SUM</span>(Precio) as Total</span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>FROM ventas</span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>WHERE Cliente <span class="ot">=</span> <span class="st">"Cliente_1"</span></span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>GROUP BY Cliente</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Resultando en:</p>
 <table class="table">
@@ -1359,10 +1364,10 @@ GROUP BY Cliente</code></pre>
 </table>
 <p>Pero ¿y si quisiéramos filtrar la función de agregación en lugar del cliente? En ciertas ocasiones nos interesará saber qué usuarios (o valores de agrupación) cumplen con un cierto valor, por lo que filtraremos a partir de un cálculo realizado, sin embargo, el uso de la sentencia <code>WHERE</code> no puede ser aplicado en estos casos, ya que no estaríamos tomando directamente un valor ya existente de la tabla que estemos agrupando, por lo que se nos devolvería un error en caso de intentar usarlo. Para obtener los valores que cumplan esta condición, simplemente debemos usar la sentencia <code>HAVING</code>, por ejemplo, para filtrar sumas mayores o iguales 40:</p>
 <div class="cell">
-<pre class="rm cell-code"><code>SELECT Cliente, SUM(Precio) as Total
-FROM ventas
-GROUP BY Cliente
-HAVING SUM(Precio) &gt;= 40</code></pre>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>SELECT Cliente, <span class="fu">SUM</span>(Precio) as Total</span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>FROM ventas</span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>GROUP BY Cliente</span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>HAVING <span class="fu">SUM</span>(Precio) <span class="sc">&gt;=</span> <span class="dv">40</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Resultando en:</p>
 <table class="table">
@@ -1386,12 +1391,12 @@ HAVING SUM(Precio) &gt;= 40</code></pre>
 <p>Lógicamente, al filtrar filas que se crearon después de la agrupación, debemos establecer la sentencia <code>HAVING</code> después de <code>GROUP BY</code>.</p>
 <p>Siguiendo la lógica anterior, podemos evitar el uso de <code>HAVING</code> y simplemente filtrar nuestra consulta convirtiéndola en una subconsulta, por ejemplo:</p>
 <div class="cell">
-<pre class="rm cell-code"><code>SELECT * FROM (
-  SELECT Cliente, SUM(Precio) as Total
-  FROM ventas
-  GROUP BY Cliente
-) a
-WHERE a.Total &gt;= 40</code></pre>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>SELECT <span class="sc">*</span> <span class="fu">FROM</span> (</span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>  SELECT Cliente, <span class="fu">SUM</span>(Precio) as Total</span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>  FROM ventas</span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>  GROUP BY Cliente</span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>) a</span>
+<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a>WHERE a.Total <span class="sc">&gt;=</span> <span class="dv">40</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Lo que nos devolvería el mismo valor, pero un problema con esta forma de filtrado es el hecho de que se tiene que volver a leer la consulta creada originalmente para aplicarle un filtro, lo que en tablas muy grandes puede alentar el proceso de carga de la consulta, razón por la que el uso de <code>HAVING</code> es más recomendable en situaciones de este estilo.</p>
 </section>
@@ -1401,60 +1406,60 @@ WHERE a.Total &gt;= 40</code></pre>
 <h2 data-number="2.6" class="anchored" data-anchor-id="simplificando-consultas-con-with-expresiones-comunes-de-tablas"><span class="header-section-number">2.6</span> Simplificando consultas con WITH: Expresiones comunes de tablas</h2>
 <p>A pesar de que el lenguaje SQL es bastante sencillo e intuitivo para extraer nuestros datos, no siempre vamos a querer reescribir consultas, sobre todo cuando estas implican una cantidad considerable de uniones de tablas que puedan volver el proceso algo engorroso y complicado de leer por otros usuarios. Una forma en la que podemos evitarnos mucha cantidad de <em>querys</em> complejos de leer es mediante la separación por pasos con <code>WITH</code>, convirtiendo cada sección individual en una CTE<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, lo cual nos permitirá crear consultas más complejas, las que podrán ser reutilizadas para crear diferentes vistas únicamente llamándolas mediante un nombre identificador que nosotros asignemos. La idea es sencilla: Supongamos que tenemos una tabla de registros de usuarios en una plataforma llamada <code>logs_users</code>, en la cual cada fila equivale a un <em>log</em> de un usuario, por lo que cada usuario puede tener múltiples observaciones, siendo la primera observación cuando este último ingresó por primera vez a la plataforma, y la última correspondiente a su última visita (valga la redundancia), incluyendo además en cada fila el tiempo de conexión correspondiente a cada <em>log</em>. Supongamos ahora que tenemos otra tabla que únicamente contiene el <em>id</em> de los usuarios registrados y su nombre, llamada <code>user_info</code>, por lo que a partir de esas dos tablas queremos generar un reporte del último inicio de sesión de cada usuario, junto con el tiempo que estuvieron en línea, si aplica. Lógicamente, al querer saber la información de todos los usuarios registrados, tendremos que usar como tabla principal a <code>user_info</code>, ya que <code>logs_users</code> solo contiene información de aquellos usuarios que ya iniciaron sesión en alguna ocasión, y al usar la otra tabla entonces sabremos quienes de ellos aún no han usado la plataforma, lo que nos puede servir en un análisis a futuro. Ahora, regresando a la consulta, para calcular el tiempo que estuvieron los usuarios en su última sesión, podemos hacer uso de una función de ventana:</p>
 <div class="cell">
-<pre class="rm cell-code"><code>SELECT *
-FROM (
-  SELECT id, tiempo_sesion, fecha_sesion,
-       ROW_NUMBER() OVER (PARTITION BY id 
-                          ORDER BY fecha_sesion DESC) AS ult_fila
-  FROM logs_users
-) A
-WHERE A.ult_fila = 1</code></pre>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>SELECT <span class="sc">*</span></span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="fu">FROM</span> (</span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>  SELECT id, tiempo_sesion, fecha_sesion,</span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>       <span class="fu">ROW_NUMBER</span>() <span class="fu">OVER</span> (PARTITION BY id </span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a>                          ORDER BY fecha_sesion DESC) AS ult_fila</span>
+<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a>  FROM logs_users</span>
+<span id="cb34-7"><a href="#cb34-7" aria-hidden="true" tabindex="-1"></a>) A</span>
+<span id="cb34-8"><a href="#cb34-8" aria-hidden="true" tabindex="-1"></a>WHERE A.ult_fila <span class="ot">=</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Finalmente, para unir ambas tablas podemos hacer uso de un <em>subquery</em>, es decir:</p>
 <div class="cell">
-<pre class="rm cell-code"><code>SELECT uf.id, uf.user_name, ult_ses.tiempo_sesion, ult_ses.fecha_sesion
-FROM user_info uf
-LEFT JOIN (
-  SELECT *
-  FROM (
-    SELECT user_id, tiempo_sesion, fecha_sesion,
-         ROW_NUMBER() OVER (PARTITION BY user_id 
-                            ORDER BY fecha_sesion DESC) AS ult_fila
-    FROM logs_users
-  ) A
-  WHERE A.ult_fila = 1
-) ult_ses ON ult_ses.user_id = uf.id</code></pre>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>SELECT uf.id, uf.user_name, ult_ses.tiempo_sesion, ult_ses.fecha_sesion</span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>FROM user_info uf</span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>LEFT <span class="fu">JOIN</span> (</span>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a>  SELECT <span class="sc">*</span></span>
+<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">FROM</span> (</span>
+<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a>    SELECT user_id, tiempo_sesion, fecha_sesion,</span>
+<span id="cb35-7"><a href="#cb35-7" aria-hidden="true" tabindex="-1"></a>         <span class="fu">ROW_NUMBER</span>() <span class="fu">OVER</span> (PARTITION BY user_id </span>
+<span id="cb35-8"><a href="#cb35-8" aria-hidden="true" tabindex="-1"></a>                            ORDER BY fecha_sesion DESC) AS ult_fila</span>
+<span id="cb35-9"><a href="#cb35-9" aria-hidden="true" tabindex="-1"></a>    FROM logs_users</span>
+<span id="cb35-10"><a href="#cb35-10" aria-hidden="true" tabindex="-1"></a>  ) A</span>
+<span id="cb35-11"><a href="#cb35-11" aria-hidden="true" tabindex="-1"></a>  WHERE <span class="at">A.ult_fila =</span> <span class="dv">1</span></span>
+<span id="cb35-12"><a href="#cb35-12" aria-hidden="true" tabindex="-1"></a>) ult_ses ON ult_ses.user_id <span class="ot">=</span> uf.id</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Hasta este punto el query puede parece lógico, sin embargo, este tipo de consultas pueden volverse complicadas y difíciles de manejar conforme vayamos aumentando la cantidad de uniones de tablas y columnas a utilizar. Para evitar que estas consultas se vuelvan complejas de leer, podemos hacer uso de las expresiones comunes de tablas para dividir los cálculos de cada vista en pasos separados. Comencemos por el query referente al cálculo del tiempo de sesión de los usuarios:</p>
 <div class="cell">
-<pre class="rm cell-code"><code>WITH logs_info_base AS (
-  SELECT user_id, tiempo_sesion, fecha_sesion,
-       ROW_NUMBER() OVER (PARTITION BY user_id 
-                          ORDER BY fecha_sesion DESC) AS ult_fila
-  FROM logs_users
-)
-SELECT *
-FROM logs_info_base
-WHERE ult_fila = 1</code></pre>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>WITH logs_info_base <span class="fu">AS</span> (</span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>  SELECT user_id, tiempo_sesion, fecha_sesion,</span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>       <span class="fu">ROW_NUMBER</span>() <span class="fu">OVER</span> (PARTITION BY user_id </span>
+<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a>                          ORDER BY fecha_sesion DESC) AS ult_fila</span>
+<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a>  FROM logs_users</span>
+<span id="cb36-6"><a href="#cb36-6" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb36-7"><a href="#cb36-7" aria-hidden="true" tabindex="-1"></a>SELECT <span class="sc">*</span></span>
+<span id="cb36-8"><a href="#cb36-8" aria-hidden="true" tabindex="-1"></a>FROM logs_info_base</span>
+<span id="cb36-9"><a href="#cb36-9" aria-hidden="true" tabindex="-1"></a>WHERE ult_fila <span class="ot">=</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Donde simplemente englobamos el cálculo del último inicio de sesión en un paso anterior y le asignamos el nombre <code>logs_info</code>, para poder llamarlo después. Como siguiente paso, vamos a hacer el <em>JOIN</em> con la tabla principal:</p>
 <div class="cell">
-<pre class="rm cell-code"><code>WITH logs_info_base AS (
-  SELECT user_id, tiempo_sesion, fecha_sesion,
-         ROW_NUMBER() OVER (PARTITION BY user_id 
-                            ORDER BY fecha_sesion DESC) AS ult_fila
-  FROM logs_users
-),
-logs_info AS (
-  SELECT * 
-  FROM logs_info_base 
-  WHERE ult_fila = 1
-)
-SELECT uf.id, uf.user_name,
-       logs_info.tiempo_sesion,
-       logs_info.fecha_sesion
-FROM user_info uf
-LEFT JOIN logs_info ON logs_info.user_id = uf.id;</code></pre>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>WITH logs_info_base <span class="fu">AS</span> (</span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>  SELECT user_id, tiempo_sesion, fecha_sesion,</span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>         <span class="fu">ROW_NUMBER</span>() <span class="fu">OVER</span> (PARTITION BY user_id </span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a>                            ORDER BY fecha_sesion DESC) AS ult_fila</span>
+<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a>  FROM logs_users</span>
+<span id="cb37-6"><a href="#cb37-6" aria-hidden="true" tabindex="-1"></a>),</span>
+<span id="cb37-7"><a href="#cb37-7" aria-hidden="true" tabindex="-1"></a>logs_info <span class="fu">AS</span> (</span>
+<span id="cb37-8"><a href="#cb37-8" aria-hidden="true" tabindex="-1"></a>  SELECT <span class="sc">*</span> </span>
+<span id="cb37-9"><a href="#cb37-9" aria-hidden="true" tabindex="-1"></a>  FROM logs_info_base </span>
+<span id="cb37-10"><a href="#cb37-10" aria-hidden="true" tabindex="-1"></a>  WHERE <span class="at">ult_fila =</span> <span class="dv">1</span></span>
+<span id="cb37-11"><a href="#cb37-11" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb37-12"><a href="#cb37-12" aria-hidden="true" tabindex="-1"></a>SELECT uf.id, uf.user_name,</span>
+<span id="cb37-13"><a href="#cb37-13" aria-hidden="true" tabindex="-1"></a>       logs_info.tiempo_sesion,</span>
+<span id="cb37-14"><a href="#cb37-14" aria-hidden="true" tabindex="-1"></a>       logs_info.fecha_sesion</span>
+<span id="cb37-15"><a href="#cb37-15" aria-hidden="true" tabindex="-1"></a>FROM user_info uf</span>
+<span id="cb37-16"><a href="#cb37-16" aria-hidden="true" tabindex="-1"></a>LEFT JOIN logs_info ON logs_info.user_id <span class="ot">=</span> uf.id;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Como puedes ver, en este query usamos dos CTE’s encadenadas, lo que implica que la segunda necesariamente depende de la creación de la primera para poder ejecutar la sentencia completa.</p>
 <p>En este caso, usamos nombres similares para reflejar la secuencia lógica del proceso: primero generamos una tabla base con un número de fila por usuario (<code>logs_info_base</code>) y luego filtramos para obtener solo la fila más reciente de cada usuario (<code>logs_info</code>). Aunque aquí mantenemos nombres parecidos por claridad, en tus propios ejercicios puedes usar los nombres que te resulten más cómodos o descriptivos. Lo importante es que cada CTE tenga un nombre único, para evitar ambigüedades y errores en la consulta.</p>
@@ -1623,8 +1628,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./funcs.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Creando mis propias funciones</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./basics.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Primeros pasos en R</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

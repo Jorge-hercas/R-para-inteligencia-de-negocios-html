@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>R para inteligencia de negocios - 8&nbsp; Presentando mis datos: Dashboards (Shiny) y apps web</title>
+<title>R para inteligencia de negocios - 9&nbsp; Presentando mis datos: Dashboards (Shiny) y apps web</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -154,7 +154,7 @@ div.csl-indent {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Presentando mis datos: Dashboards (Shiny) y apps web</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Presentando mis datos: Dashboards (Shiny) y apps web</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -194,32 +194,37 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./funcs.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Creando mis propias funciones</span></a>
+  <a href="./basics.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Primeros pasos en R</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./limpieza.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Extracción, entendimiento y exportación de nuestros datos</span></a>
+  <a href="./funcs.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Creando mis propias funciones</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./limpieza2.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Limpieza y manejo de datos: Principales problemas y soluciones</span></a>
+  <a href="./limpieza.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Extracción, entendimiento y exportación de nuestros datos</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./analisis_exploratorio.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Análisis exploratorio de datos</span></a>
+  <a href="./limpieza2.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Limpieza y manejo de datos: Principales problemas y soluciones</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./forecasts.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Pronósticos y estimaciones</span></a>
+  <a href="./analisis_exploratorio.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Análisis exploratorio de datos</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./dashboards.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Presentando mis datos: Dashboards (Shiny) y apps web</span></a>
+  <a href="./forecasts.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Pronósticos y estimaciones</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./dashboards.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Presentando mis datos: Dashboards (Shiny) y apps web</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -246,19 +251,19 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#shiny" id="toc-shiny" class="nav-link active" data-scroll-target="#shiny"><span class="toc-section-number">8.1</span>  Shiny</a>
+  <li><a href="#shiny" id="toc-shiny" class="nav-link active" data-scroll-target="#shiny"><span class="toc-section-number">9.1</span>  Shiny</a>
   <ul class="collapse">
-  <li><a href="#cómo-funciona-una-shiny-app" id="toc-cómo-funciona-una-shiny-app" class="nav-link" data-scroll-target="#cómo-funciona-una-shiny-app"><span class="toc-section-number">8.1.1</span>  ¿Cómo funciona una <em>Shiny app</em>?</a></li>
-  <li><a href="#comenzando-a-construir-mi-primer-programa" id="toc-comenzando-a-construir-mi-primer-programa" class="nav-link" data-scroll-target="#comenzando-a-construir-mi-primer-programa"><span class="toc-section-number">8.1.2</span>  Comenzando a construir mi primer programa</a></li>
-  <li><a href="#ui" id="toc-ui" class="nav-link" data-scroll-target="#ui"><span class="toc-section-number">8.1.3</span>  UI</a></li>
-  <li><a href="#server" id="toc-server" class="nav-link" data-scroll-target="#server"><span class="toc-section-number">8.1.4</span>  Server</a></li>
-  <li><a href="#interfaz-dinámica" id="toc-interfaz-dinámica" class="nav-link" data-scroll-target="#interfaz-dinámica"><span class="toc-section-number">8.1.5</span>  Interfaz dinámica</a></li>
-  <li><a href="#subidas-y-bajadas-de-archivos" id="toc-subidas-y-bajadas-de-archivos" class="nav-link" data-scroll-target="#subidas-y-bajadas-de-archivos"><span class="toc-section-number">8.1.6</span>  Subidas y bajadas de archivos</a></li>
-  <li><a href="#customización-de-interfaces-con-html-y-css" id="toc-customización-de-interfaces-con-html-y-css" class="nav-link" data-scroll-target="#customización-de-interfaces-con-html-y-css"><span class="toc-section-number">8.1.7</span>  Customización de interfaces con HTML y CSS</a></li>
-  <li><a href="#dashboards-con-shiny" id="toc-dashboards-con-shiny" class="nav-link" data-scroll-target="#dashboards-con-shiny"><span class="toc-section-number">8.1.8</span>  Dashboards con Shiny</a></li>
-  <li><a href="#shiny-para-semi-automatizar-tareas" id="toc-shiny-para-semi-automatizar-tareas" class="nav-link" data-scroll-target="#shiny-para-semi-automatizar-tareas"><span class="toc-section-number">8.1.9</span>  Shiny para (semi) automatizar tareas</a></li>
-  <li><a href="#buenas-prácticas-para-estructurar-una-aplicación" id="toc-buenas-prácticas-para-estructurar-una-aplicación" class="nav-link" data-scroll-target="#buenas-prácticas-para-estructurar-una-aplicación"><span class="toc-section-number">8.1.10</span>  Buenas prácticas para estructurar una aplicación</a></li>
-  <li><a href="#culminando-con-dos-proyectos" id="toc-culminando-con-dos-proyectos" class="nav-link" data-scroll-target="#culminando-con-dos-proyectos"><span class="toc-section-number">8.1.11</span>  Culminando con dos proyectos</a></li>
+  <li><a href="#cómo-funciona-una-shiny-app" id="toc-cómo-funciona-una-shiny-app" class="nav-link" data-scroll-target="#cómo-funciona-una-shiny-app"><span class="toc-section-number">9.1.1</span>  ¿Cómo funciona una <em>Shiny app</em>?</a></li>
+  <li><a href="#comenzando-a-construir-mi-primer-programa" id="toc-comenzando-a-construir-mi-primer-programa" class="nav-link" data-scroll-target="#comenzando-a-construir-mi-primer-programa"><span class="toc-section-number">9.1.2</span>  Comenzando a construir mi primer programa</a></li>
+  <li><a href="#ui" id="toc-ui" class="nav-link" data-scroll-target="#ui"><span class="toc-section-number">9.1.3</span>  UI</a></li>
+  <li><a href="#server" id="toc-server" class="nav-link" data-scroll-target="#server"><span class="toc-section-number">9.1.4</span>  Server</a></li>
+  <li><a href="#interfaz-dinámica" id="toc-interfaz-dinámica" class="nav-link" data-scroll-target="#interfaz-dinámica"><span class="toc-section-number">9.1.5</span>  Interfaz dinámica</a></li>
+  <li><a href="#subidas-y-bajadas-de-archivos" id="toc-subidas-y-bajadas-de-archivos" class="nav-link" data-scroll-target="#subidas-y-bajadas-de-archivos"><span class="toc-section-number">9.1.6</span>  Subidas y bajadas de archivos</a></li>
+  <li><a href="#customización-de-interfaces-con-html-y-css" id="toc-customización-de-interfaces-con-html-y-css" class="nav-link" data-scroll-target="#customización-de-interfaces-con-html-y-css"><span class="toc-section-number">9.1.7</span>  Customización de interfaces con HTML y CSS</a></li>
+  <li><a href="#dashboards-con-shiny" id="toc-dashboards-con-shiny" class="nav-link" data-scroll-target="#dashboards-con-shiny"><span class="toc-section-number">9.1.8</span>  Dashboards con Shiny</a></li>
+  <li><a href="#shiny-para-semi-automatizar-tareas" id="toc-shiny-para-semi-automatizar-tareas" class="nav-link" data-scroll-target="#shiny-para-semi-automatizar-tareas"><span class="toc-section-number">9.1.9</span>  Shiny para (semi) automatizar tareas</a></li>
+  <li><a href="#buenas-prácticas-para-estructurar-una-aplicación" id="toc-buenas-prácticas-para-estructurar-una-aplicación" class="nav-link" data-scroll-target="#buenas-prácticas-para-estructurar-una-aplicación"><span class="toc-section-number">9.1.10</span>  Buenas prácticas para estructurar una aplicación</a></li>
+  <li><a href="#culminando-con-dos-proyectos" id="toc-culminando-con-dos-proyectos" class="nav-link" data-scroll-target="#culminando-con-dos-proyectos"><span class="toc-section-number">9.1.11</span>  Culminando con dos proyectos</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -268,7 +273,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Presentando mis datos: Dashboards (Shiny) y apps web</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Presentando mis datos: Dashboards (Shiny) y apps web</span></h1>
 </div>
 
 
@@ -294,17 +299,17 @@ div.csl-indent {
 <li>Comprender cómo estructurar aplicaciones creadas con shiny, desde la organización de sus archivos hasta la construcción de interfaces, servidores, módulos, filtros, gráficos y tablas interactivas. Este libro no tiene como objetivo revisar únicamente ejemplos básicos, por lo que buscaremos entender cómo convertir nuestros códigos de R en aplicaciones funcionales, reutilizables y relativamente complejas.</li>
 </ol>
 <p>Sin más que añadir a la presentación del capítulo final, ¡comencemos con ello!</p>
-<section id="shiny" class="level2" data-number="8.1">
-<h2 data-number="8.1" class="anchored" data-anchor-id="shiny"><span class="header-section-number">8.1</span> Shiny</h2>
+<section id="shiny" class="level2" data-number="9.1">
+<h2 data-number="9.1" class="anchored" data-anchor-id="shiny"><span class="header-section-number">9.1</span> Shiny</h2>
 <p>El método por excelencia para crear dashboards diréctamente en R es a través de la librería <code>shiny</code>, la cual nos brindará las herramientas no solo para crear el tablero que necesitemos, sino también para customizarlo, añadirle todas las funcionalidades que podamos imaginar, combinarlo con múltiples librerías e incluso con otros lenguajes de programación, como JavaScript.</p>
 <p>Propiamente, la librería <code>shiny</code> no se enfoca únicamente en la creación de un dashboard, en realizad se utiliza para crear <strong>aplicaciones web</strong>. Una aplicación web no es más que un programa que, a partir de ciertos parámetros establecidos por el usuario, le devuelve un resultado en específico. Es importante que sepamos diferenciar a las aplicaciones web de dashboards como los creados en Power BI. Mientras que en este último solo podremos crear informes basados en datos y, como mucho, exportar los datos en crudo a un archivo excel, una aplicación web es más maleable y versatil. Con <code>shiny</code> no solo podemos crear dashbaords, también podremos crear procesos de automatización, vistas de modelos estadísticos, e inclusive creación en tiempo real de reportes en, por ejemplo, formatos PDF, excel, etc. El límite de uso para una aplicación web solo será el que te permita tu imaginación.</p>
-<section id="cómo-funciona-una-shiny-app" class="level3" data-number="8.1.1">
-<h3 data-number="8.1.1" class="anchored" data-anchor-id="cómo-funciona-una-shiny-app"><span class="header-section-number">8.1.1</span> ¿Cómo funciona una <em>Shiny app</em>?</h3>
+<section id="cómo-funciona-una-shiny-app" class="level3" data-number="9.1.1">
+<h3 data-number="9.1.1" class="anchored" data-anchor-id="cómo-funciona-una-shiny-app"><span class="header-section-number">9.1.1</span> ¿Cómo funciona una <em>Shiny app</em>?</h3>
 <p>Una <em>Shiny app</em> se basa en <strong>inputs</strong> (información de entrada) y <strong>outputs</strong> (resultados), lo que dicho de otra manera, implica que a partir de los parámetros de entrada que el usuario introduzca (input), el programa va a generar los cálculos pertinentes en el <em>backend</em><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> para devolver un resultado (output), el cual puede ser de cualquier tipo, como una cadena de texto, un número, un gráfico, una tabla o una simple notificación <span class="citation" data-cites="R-shiny">(<a href="referencias.html#ref-R-shiny" role="doc-biblioref"><em>Shiny: Web Application Framework for r</em>, n.d.</a>)</span>. Gráficamente:</p>
 <div id="fig-relacion" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><embed src="imagenes/inputoutput.pdf" class="img-fluid" width="440"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;8.1: Lógica de una shiny app</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;9.1: Lógica de una shiny app</figcaption><p></p>
 </figure>
 </div>
 <p>La app que construyamos siempre va a incluir estos tres elementos:</p>
@@ -315,8 +320,8 @@ div.csl-indent {
 </ol>
 <p>A pesar de que estos elementos pueden ir en el mismo archivo o en archivos separados, siempre serán lo mínimo necesario para poder crear una aplicación web. Más adelante veremos elementos adicionales, cómo los módulos, llamado a códigos específicos, etc, pero por el momento nos centraremos en estos tres pilares fundamentales.</p>
 </section>
-<section id="comenzando-a-construir-mi-primer-programa" class="level3" data-number="8.1.2">
-<h3 data-number="8.1.2" class="anchored" data-anchor-id="comenzando-a-construir-mi-primer-programa"><span class="header-section-number">8.1.2</span> Comenzando a construir mi primer programa</h3>
+<section id="comenzando-a-construir-mi-primer-programa" class="level3" data-number="9.1.2">
+<h3 data-number="9.1.2" class="anchored" data-anchor-id="comenzando-a-construir-mi-primer-programa"><span class="header-section-number">9.1.2</span> Comenzando a construir mi primer programa</h3>
 <p>Generalmente, el orden lógico para construir nuestro programa será:</p>
 <p><span class="math display">\[
 Global \rightarrow UI \rightarrow Server
@@ -333,8 +338,8 @@ Global \rightarrow UI \rightarrow Server
 <p>Para después pasar a diseñar la interfaz de usuario.</p>
 <p>En ciertos casos tendremos que crear una carpeta adicional dentro del directorio del projecto, denominada <strong>www</strong>. Esta carpeta tendrá como objetivo el guardar elementos adicionales que después vamos a referenciar en la app, como pueden ser imágenes, logotipos, código HTML/CSS, etc. Más adelante veremos algunos ejemplos de uso de esta carpeta.</p>
 </section>
-<section id="ui" class="level3" data-number="8.1.3">
-<h3 data-number="8.1.3" class="anchored" data-anchor-id="ui"><span class="header-section-number">8.1.3</span> UI</h3>
+<section id="ui" class="level3" data-number="9.1.3">
+<h3 data-number="9.1.3" class="anchored" data-anchor-id="ui"><span class="header-section-number">9.1.3</span> UI</h3>
 <p>Una interfaz de usuario típicamente estará contenida dentro de una función <code>fluidPage()</code>, la cual no es más que un contenedor basado en HTML. De hecho, si nosotros ejecutamos de forma separada la función, podremos notar que el resultado es código en HTML:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(shiny)</span>
@@ -442,8 +447,8 @@ Global \rightarrow UI \rightarrow Server
 </div>
 <p>Algo más complicado de interpretar para alguien que no tenga mucha experiencia con la creación de páginas web.</p>
 <p>Regresemos a la pantalla que estamos creando.</p>
-<section id="inputs" class="level4" data-number="8.1.3.1">
-<h4 data-number="8.1.3.1" class="anchored" data-anchor-id="inputs"><span class="header-section-number">8.1.3.1</span> Inputs</h4>
+<section id="inputs" class="level4" data-number="9.1.3.1">
+<h4 data-number="9.1.3.1" class="anchored" data-anchor-id="inputs"><span class="header-section-number">9.1.3.1</span> Inputs</h4>
 <p>Una vez establecido el diseño de nuestra app, podemos comenzar a introducir los elementos con los que el usuario va a interactuar, como lo son selectores y botones. Estos inputs serán una forma de interactuar dinámicamente con las funciones del servidor. Los principales <em>inputs</em> que vamos a utilizar serán:</p>
 <ul>
 <li><code>selectInput()</code>: Para seleccionar un elemento de una lista desplegable.</li>
@@ -469,8 +474,8 @@ Global \rightarrow UI \rightarrow Server
 <p>En este caso, para nosotros poder llamar a este input en el lado del servidor, lo haremos mediante el código <code>input$mis_opciones</code>. Necesariamente debemos hacer uso de <code>input$</code> para seleccionar el objeto en cuestión, ya que de esta forma el programa identifica que se trata de un input dinámico y no de un objeto preestablecido en la sesión.</p>
 <p>Los <em>inputs</em> (dependiendo del caso) devuelven las respuestas seleccionadas como un vector, por lo que si hay una selección múltiple en alguno de ellos, lógicamente podremos acceder a cada uno de sus elementos mediante indexación, por ejemplo, <code>input$mis_opciones[1]</code>. Más adelante veremos las implicaciones de vectores múltiples del lado del servidor y cómo trabajarlos correctamente.</p>
 </section>
-<section id="outputs" class="level4" data-number="8.1.3.2">
-<h4 data-number="8.1.3.2" class="anchored" data-anchor-id="outputs"><span class="header-section-number">8.1.3.2</span> Outputs</h4>
+<section id="outputs" class="level4" data-number="9.1.3.2">
+<h4 data-number="9.1.3.2" class="anchored" data-anchor-id="outputs"><span class="header-section-number">9.1.3.2</span> Outputs</h4>
 <p>Así como los inputs son solo una cara de la moneda, siendo <em>aquello que el usuario introduce como parámetro(s)</em>, podemos definir a los <em>outputs</em> como aquellos elementos que serán retornados a partir de la información establecida, siendo resultados dinámicos con los que podremos interactuar en mayor o menor medida, dependiendo del tipo de elemento devuelto. Dicho en otras palabras, un <em>output</em> no es mas que el objeto resultante de todo el procesamiento de información realizada en el <em>backend</em>, a partir de los parámetros que se hayan introducido. Típicamente, los <em>outputs</em> en aplicaciones web suelen ser: cadenas de texto, gráficos, mapas y elementos interactivos (<em>outputs</em> de los que podemos obtener más información), y estarán en función de lo que queramos mostrar en nuestro programa.</p>
 <p>Estos objetos resultantes son mucho más sencillos de entender dentro del <code>UI</code> que sus contrapartes (<em>inputs</em>), ya que suelen estar basados únicamente en tres parámetros: <em>OutputID</em> (identificador único del elemento resultante que queremos mostrar), <em>width</em> (anchura del elemento) y <em>height</em> (altura del elemento). Veamos un ejemplo:</p>
 <div class="cell">
@@ -492,8 +497,8 @@ Global \rightarrow UI \rightarrow Server
 <p>Del código mostrado anteriormente, podemos darnos cuenta de que cada elemento, ya sean <em>inputs</em> o <em>outputs</em>, tiene un identificador único, con el que podremos interactuar con esos elementos en particular, pero ¿cómo exactamente logramos que las entradas y salidas de nuestro programa se conecten entre si? Aquí es donde entra en juego el corazón de nuestro programa: <strong>El servidor</strong> o <strong>server</strong>.</p>
 </section>
 </section>
-<section id="server" class="level3" data-number="8.1.4">
-<h3 data-number="8.1.4" class="anchored" data-anchor-id="server"><span class="header-section-number">8.1.4</span> Server</h3>
+<section id="server" class="level3" data-number="9.1.4">
+<h3 data-number="9.1.4" class="anchored" data-anchor-id="server"><span class="header-section-number">9.1.4</span> Server</h3>
 <p>Hasta ahora, hemos visto rápidamente cómo funciona una interfaz en shiny, así como el manejo que podemos hacer para customizar la aplicación que el usuario final va a ver en su computadora, pero esta sección nos ayudará a entender cómo funciona la magía en nuestra programa, es decir, la forma en la que haremos que los parámetros establecidos nos den un resultado específico. Al principio será un tema bastante sencillo, pero poco a poco se irá complicando, por lo que procuraré ser lo más simple posible en las explicaciones de la lógica utilizada en esta parte.</p>
 <p>Primero, comencemos por entender el servidor en si. Un código o <em>script</em> en R no es interactivo en si, ya que necesitamos establecer objetos y valores para obtener resultados, ¿cómo podemos hacerlo dinámico? Simplemente convirtiendo ese <em>script</em> en una función, donde los objetos y valores sean parámetros de ella. El servidor de una aplicación web no es más que una función con dos parámetros: <em>input</em> y <em>output</em>, principalmente. Habrá aplicaciones en las que establezcamos un tercer parámetro: <em>session</em>, el cual veremos con detalle más adelante, cuando profundicemos en la reactividad del servidor.</p>
 <p>Típicamente, el servidor se verá de la siguiente manera:</p>
@@ -502,8 +507,8 @@ Global \rightarrow UI \rightarrow Server
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  </span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<section id="conectando-la-interfaz-reactividad" class="level4" data-number="8.1.4.1">
-<h4 data-number="8.1.4.1" class="anchored" data-anchor-id="conectando-la-interfaz-reactividad"><span class="header-section-number">8.1.4.1</span> Conectando la interfaz: Reactividad</h4>
+<section id="conectando-la-interfaz-reactividad" class="level4" data-number="9.1.4.1">
+<h4 data-number="9.1.4.1" class="anchored" data-anchor-id="conectando-la-interfaz-reactividad"><span class="header-section-number">9.1.4.1</span> Conectando la interfaz: Reactividad</h4>
 <p>Como recordarás, anteriormente te mencioné que la forma en la que nosotros podremos acceder a un elemento de un <em>input</em> o un <em>output</em> será mediante su ID, al cual llamaremos con un signo <code>$</code>. Regresemos al ejemplo anterior, es decir:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">fluidPage</span>(</span>
@@ -534,8 +539,8 @@ Global \rightarrow UI \rightarrow Server
 <p>Nótese que, además del uso del paréntesis, también utilicé corchetes dentro de la función <code>renderPlot()</code>, ya que eso me permitirá una mayor flexibilidad al momento de escribir códigos más complejos cuando quiera renderizar otro tipo objeto.</p>
 <p>En de la función <code>renderPlot()</code> es donde vamos a hacer uso de funciones menos dinámicas para generar el gráfico, siendo en este caso <code>plot()</code>. Todas las librerías de gráficos, mapas y objetos interactivos que esten habilitadas para trabajar con aplicaciones web siempre tendrán una función con el prefijo <code>render</code>, la cual será aquella que estableceremos en el servidor para generar el objeto que necesitemos. Ahora, las funciones de estilo <code>render</code> son elementos <em>reactivos</em>, es decir, aquellos que cambian su valor dependiendo de los elementos de entrada (<em>inputs</em>), como lo mencioné anteriormente.</p>
 </section>
-<section id="intermedio-un-ejemplo-práctico" class="level4" data-number="8.1.4.2">
-<h4 data-number="8.1.4.2" class="anchored" data-anchor-id="intermedio-un-ejemplo-práctico"><span class="header-section-number">8.1.4.2</span> <em>Intermedio</em>: Un ejemplo práctico</h4>
+<section id="intermedio-un-ejemplo-práctico" class="level4" data-number="9.1.4.2">
+<h4 data-number="9.1.4.2" class="anchored" data-anchor-id="intermedio-un-ejemplo-práctico"><span class="header-section-number">9.1.4.2</span> <em>Intermedio</em>: Un ejemplo práctico</h4>
 <p>Ahora que tenemos un conocimiento más general del funcionamiento de una aplicación web, vamos a hacer una breve pausa con las explicaciones, para poner en práctica lo aprendido hasta ahora con un ejemplo real. Utilicemos el <a href="https://github.com/Jorge-hercas/r-para-inteligencia-de-negocios/blob/main/CSV/english_education.csv">el siguiente set de datos</a>, proveniente de la <em>Oficina para estadísticas nacionales de UK</em>, el cual tiene como objetivo el medir los niveles educativos de diferentes ciudades y pueblos de UK. Comencemos por visualizar los datos en cuestión:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>uk_data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"https://raw.githubusercontent.com/Jorge-hercas/</span></span>
@@ -694,8 +699,8 @@ Global \rightarrow UI \rightarrow Server
 </figure>
 </div>
 </section>
-<section id="objetos-reactive" class="level4" data-number="8.1.4.3">
-<h4 data-number="8.1.4.3" class="anchored" data-anchor-id="objetos-reactive"><span class="header-section-number">8.1.4.3</span> Objetos <code>reactive()</code></h4>
+<section id="objetos-reactive" class="level4" data-number="9.1.4.3">
+<h4 data-number="9.1.4.3" class="anchored" data-anchor-id="objetos-reactive"><span class="header-section-number">9.1.4.3</span> Objetos <code>reactive()</code></h4>
 <p>Los objetos <code>reactive()</code> son una forma en la que nosotros convertiremos nuestros datos a una función dinámica, la cual usaremos después para generar nuestros <em>outputs</em>. Este tipo de elementos son convenientes cuando queremos ramificar una cierta operación en múltiples elementos de salida, por ejemplo: Supongamos que queremos generar dos gráficos diferentes que estarán ligados al mismo filtro. Podríamos directamente generar el código en cada uno de los objetos <code>render</code>, escribiendo en cada caso el filtro que necesitamos, sin embargo, si queremos escalar este programa, añadiendo cada vez más y más elementos de salida, individualizar esta operación a cada caso hará que nuestro programa se vuelva muy lento. Una forma más eficiente de ejecutar estas operaciones será partiendo de un objeto <code>reactive()</code> que ya filtre nuestros datos, para después únicamente llamarlo en cada <code>render</code>. Gráficamente:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -851,8 +856,8 @@ Global \rightarrow UI \rightarrow Server
 </div>
 <p>Donde el objeto resultante de esa evaluación se encuentra hasta el final de la función.</p>
 </section>
-<section id="eventos-reactivos" class="level4" data-number="8.1.4.4">
-<h4 data-number="8.1.4.4" class="anchored" data-anchor-id="eventos-reactivos"><span class="header-section-number">8.1.4.4</span> Eventos reactivos</h4>
+<section id="eventos-reactivos" class="level4" data-number="9.1.4.4">
+<h4 data-number="9.1.4.4" class="anchored" data-anchor-id="eventos-reactivos"><span class="header-section-number">9.1.4.4</span> Eventos reactivos</h4>
 <p>Cuando seleccionamos ciertas opciones, no siempre queremos que estas se ejecuten de inmediato. Piensa en una aplicación que tiene tres, cinco o hasta más <em>inputs</em> con los que generar un gráfico o elemento cualquiera. Seleccionar todos los parámetros nos va a llevar un tiempo, por lo que para un usuario que esté usando el programa, será bastante incómodo tener que ver múltiples renderizaciones del objeto mientras termina de seleccionar todos los parámetros, por lo que en esa situación lo más óptimo sería utilizar un boton de acción que utilizaremos como <strong>evento</strong>, para que el objeto de salida sea ejecutado únicamente cuando ocurra dicho evento (el botón sea precionado). Una vez más, regresemos a la aplicación que hemos creado hasta ahora, supongamos que queremos renderizar ambos gráficos hasta que presionemos un botón, tal que:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">actionButton</span>(<span class="at">inputId =</span> <span class="st">"graficar"</span>, <span class="at">label =</span> <span class="st">"Generar gráficos"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -952,8 +957,8 @@ Global \rightarrow UI \rightarrow Server
 </div>
 <p>De esta forma, no importa que ya hayamos ejecutado el evento, para cada nueva renderización del gráfico tendremos que volver a accionarlo.</p>
 </section>
-<section id="la-sesion" class="level4" data-number="8.1.4.5">
-<h4 data-number="8.1.4.5" class="anchored" data-anchor-id="la-sesion"><span class="header-section-number">8.1.4.5</span> La sesion</h4>
+<section id="la-sesion" class="level4" data-number="9.1.4.5">
+<h4 data-number="9.1.4.5" class="anchored" data-anchor-id="la-sesion"><span class="header-section-number">9.1.4.5</span> La sesion</h4>
 <p>A la función que creamos para el servidor de nuestra aplicación también podemos añadirle un tercer argumento: <code>session</code>, siendo el código:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>server <span class="ot">=</span> <span class="cf">function</span>(input, output, session){</span>
@@ -1084,8 +1089,8 @@ Global \rightarrow UI \rightarrow Server
 <span id="cb42-84"><a href="#cb42-84" aria-hidden="true" tabindex="-1"></a><span class="fu">shinyApp</span>(<span class="at">ui =</span> frontend, <span class="at">server =</span> backend, <span class="at">enableBookmarking =</span> <span class="st">"url"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="invalidando-la-reactividad" class="level4" data-number="8.1.4.6">
-<h4 data-number="8.1.4.6" class="anchored" data-anchor-id="invalidando-la-reactividad"><span class="header-section-number">8.1.4.6</span> Invalidando la reactividad</h4>
+<section id="invalidando-la-reactividad" class="level4" data-number="9.1.4.6">
+<h4 data-number="9.1.4.6" class="anchored" data-anchor-id="invalidando-la-reactividad"><span class="header-section-number">9.1.4.6</span> Invalidando la reactividad</h4>
 <p>No en todas las situaciones en las que queramos ejecutar un evento vamos a necesitar que esta acción ocurra invariablemente (o que ocurra de la misma forma), ya que podemos tener ciertos <em>inputs</em> con valores incompatibles, o sin los valores necesarios para ejecutar de la forma correcta el <em>output</em> requerido. Regresemos al ejemplo que hemos venido trabajando hasta ahora, donde tenemos el <em>input</em> <code>selectInput()</code>:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="fu">selectInput</span>(<span class="st">"ciudad"</span>, <span class="st">"Tipo de ciudad"</span>, <span class="at">choices =</span> <span class="fu">unique</span>(uk_data<span class="sc">$</span>size_flag))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1247,8 +1252,8 @@ Cuidado
 <p>Una notificación mucho más clara e interactiva para el usuario final. Por supuesto, el uso de de estas notificaciones no es más que un aditamento en una estructura de control para invalidar la renderización de un elemento, siendo que existen muchas otras librerías que nos pueden ayudar a cumplir este mismo propósito, como es el caso de <code>shinyalert</code>, <code>shinytoastr</code>, <code>shinyvalidate</code>, <code>awn</code>, entre otros recursos.</p>
 </section>
 </section>
-<section id="interfaz-dinámica" class="level3" data-number="8.1.5">
-<h3 data-number="8.1.5" class="anchored" data-anchor-id="interfaz-dinámica"><span class="header-section-number">8.1.5</span> Interfaz dinámica</h3>
+<section id="interfaz-dinámica" class="level3" data-number="9.1.5">
+<h3 data-number="9.1.5" class="anchored" data-anchor-id="interfaz-dinámica"><span class="header-section-number">9.1.5</span> Interfaz dinámica</h3>
 <p>Los objetos reactivos que pueden ser ejecutados del lado del servidor no solo se limitan a gráficos, textos, tablas o mapas simples. De igual forma, podemos renderizar interfaces completas de forma dinámica, basándonos en otros <em>inputs</em>. En la app trabajada hasta ahora, de manera estática establecimos que cada gráfico se mantenga en una columna por separado, ¿qué tal si hacemos de esto una opción para el usuario final? De tal forma que ahora, basados en una selección, podamos establecer la forma en la que visualizaremos ambos gráficos. Comencemos por reemplazar ambas columnas contenedoras de los gráficos por un <em>output</em>, así como añadir una selección inicial que nos permita establecer la orientación en la que veremos los elementos:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a>frontend <span class="ot">&lt;-</span> <span class="fu">fluidPage</span>(</span>
@@ -1302,13 +1307,13 @@ Cuidado
 <div id="fig-ver" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="imagenes/vistaver.png" class="img-fluid figure-img" width="220"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;8.2: UI dinámica</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;9.2: UI dinámica</figcaption><p></p>
 </figure>
 </div>
 <p>Nótese que, en el caso donde tenemos dos columnas, las englobamos en una función <code>tagList()</code>, ya que el objeto <em>output</em> resultante debe ser uno, por lo que al tener dos columnas, de no introducirlas dentro de <code>tagList()</code>, se nos devolvería un error.</p>
 <p>Así como los roles de trabajo en Power BI, podemos utilizar las interfaces dinámicas para generar páneles que solo se muestren a ciertos usuarios, tema que analizaremos con detalle más adelante, cuando veamos la seguridad en aplicaciones web.</p>
-<section id="inputs-en-el-servidor" class="level4" data-number="8.1.5.1">
-<h4 data-number="8.1.5.1" class="anchored" data-anchor-id="inputs-en-el-servidor"><span class="header-section-number">8.1.5.1</span> Inputs en el servidor</h4>
+<section id="inputs-en-el-servidor" class="level4" data-number="9.1.5.1">
+<h4 data-number="9.1.5.1" class="anchored" data-anchor-id="inputs-en-el-servidor"><span class="header-section-number">9.1.5.1</span> Inputs en el servidor</h4>
 <p>Anteriormente ya vimos como actualizar valores de un <em>input</em> en el servidor mediante la sesión, pero también tenemos la opción de crear <em>inputs</em> temporales que se generen en el servidor, como es el caso de algunas notificaciones emergentes. Retomemos las notificaciones de la librería <code>shinypop</code>, por ejemplo: <code>nx_confirm()</code>. Esta notificación se interpreta como un selector de dos elementos, por lo que la podemos aplicar como un <em>input</em> temporal que solo es generado bajo una situación específica. Supongamos que en la aplicación trabajada hasta ahora queremos mandar una alerta cada que se seleccione un cierto valor, siendo que, en caso de confirmar la notificación se generen los gráficos correspondientes, es decir:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb55"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="fu">observeEvent</span>(input<span class="sc">$</span>graficar,{</span>
@@ -1340,11 +1345,11 @@ Cuidado
 <p>En este caso, al nosotros dar click en el botón para generar el gráfico, se nos devolverá una alerta de confirmación en forma de un <em>input</em> temporal, por lo que para poder generar los gráficos correspondientes, dado el evento <code>input$confirmacion</code>, simplemente tendremos que establecer las renderizaciones de objetos dentro este mismo.</p>
 </section>
 </section>
-<section id="subidas-y-bajadas-de-archivos" class="level3" data-number="8.1.6">
-<h3 data-number="8.1.6" class="anchored" data-anchor-id="subidas-y-bajadas-de-archivos"><span class="header-section-number">8.1.6</span> Subidas y bajadas de archivos</h3>
+<section id="subidas-y-bajadas-de-archivos" class="level3" data-number="9.1.6">
+<h3 data-number="9.1.6" class="anchored" data-anchor-id="subidas-y-bajadas-de-archivos"><span class="header-section-number">9.1.6</span> Subidas y bajadas de archivos</h3>
 <p>Los <em>inputs</em> y <em>outputs</em> no necesariamente deben limitarse a cadenas de texto, números o fechas simples, estos también pueden ser un archivo completo, desde archivos <em>.xlsx</em>, <em>.csv</em>, hasta documentos <em>.pdf</em>, entre muchos otros formatos. Del lado del <em>input</em>, el poder cargar un archivo en una shiny app nos permite una mucho mayor flexibilidad para crear ciertos análisis, aunque eso también implica que debemos ser cuidadosos respecto al tipo de archivos que permitiremos que el usuario suba, ya que no en todos los casos van a funcionar de la manera más óptima. Del lado del <em>output</em> la cosa se vuelve más sencilla, ya que la descarga de documentos estará más controlada, con el código que establezcamos para generar el documento, lo que nos permitirá minimizar errores en este lado del proceso.</p>
-<section id="file-inputs" class="level4" data-number="8.1.6.1">
-<h4 data-number="8.1.6.1" class="anchored" data-anchor-id="file-inputs"><span class="header-section-number">8.1.6.1</span> File <em>inputs</em></h4>
+<section id="file-inputs" class="level4" data-number="9.1.6.1">
+<h4 data-number="9.1.6.1" class="anchored" data-anchor-id="file-inputs"><span class="header-section-number">9.1.6.1</span> File <em>inputs</em></h4>
 <p>Subir un documento a una shiny app es bastante sencillo, ya que solo necesitaremos aplicar una función <code>fileInput()</code>, por ejemplo:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb56"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="fu">fileInput</span>(<span class="at">inputId =</span> <span class="st">"archivo_a_subir"</span>, </span>
@@ -1477,8 +1482,8 @@ Tip
 </div>
 <p>El número máximo estará expresado en bytes, por lo que para subir un documento de, por ejemplo, treinta megabytes, será necesario establecer treinta millones de bytes, ya sea que lo hagamos con el número directo o simplificándolo con una multiplicación <code>30*1000^2</code>.</p>
 </section>
-<section id="descargas" class="level4" data-number="8.1.6.2">
-<h4 data-number="8.1.6.2" class="anchored" data-anchor-id="descargas"><span class="header-section-number">8.1.6.2</span> Descargas</h4>
+<section id="descargas" class="level4" data-number="9.1.6.2">
+<h4 data-number="9.1.6.2" class="anchored" data-anchor-id="descargas"><span class="header-section-number">9.1.6.2</span> Descargas</h4>
 <p>La descarga de archivos en apps shiny no es más que una forma dinámica de obtenerlos, mediante una función <code>downloadHandler()</code> llamada por un <em>input</em> <code>downloadButton()</code> o <code>downloadLink()</code>, con la que ejecutaremos funciones más sencillas de exportación, como pueden ser <code>write.csv()</code>, <code>writexl::write_xlsx()</code>, e incluso algunas basadas en formatos mucho más especializados, como lo son <code>ggplot2::ggsave()</code> o <code>openxlsx::saveWorkbook()</code>. Esta sección es especialmente interesante, ya que la descarga de archivos es considerablemente más sencilla que la subida de estos, además de que tenemos un control mucho mayor del resultado, por lo que podremos customizarlo de tal forma que sea muy agradable para el usuario final.</p>
 <p>Comencemos con un ejemplo básico: Exportar los datos visualizados de nuestra app en una tabla resumida. Para este ejemplo utilizaremos el set de datos <code>cheeses.csv</code>, <a href="https://github.com/Jorge-hercas/r-para-inteligencia-de-negocios/tree/main/CSV">disponible en el repositorio oficial del libro,</a> siendo:</p>
 <div class="cell">
@@ -1579,8 +1584,8 @@ Tip
 <span id="cb68-35"><a href="#cb68-35" aria-hidden="true" tabindex="-1"></a>  }</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="dinamizando-reportes" class="level4" data-number="8.1.6.3">
-<h4 data-number="8.1.6.3" class="anchored" data-anchor-id="dinamizando-reportes"><span class="header-section-number">8.1.6.3</span> Dinamizando reportes</h4>
+<section id="dinamizando-reportes" class="level4" data-number="9.1.6.3">
+<h4 data-number="9.1.6.3" class="anchored" data-anchor-id="dinamizando-reportes"><span class="header-section-number">9.1.6.3</span> Dinamizando reportes</h4>
 <p>La descarga de archivos es genial, si, pero este no es ni de cerca el límite en los documentos descargables que podemos generar. Con la suficiente creatividad podemos generar un reporte completo en, por ejemplo, un archivo de excel, que ya se encuentre graficado y customizado para el usuario final.</p>
 <p>En esta sección crearemos desde cero un reporte, utilizando las librerías <code>openxlsx2</code> y <code>mschart</code>, las cuales nos permitirán hacer la respectiva customización y generación de gráficos. Vamos a trabajar con el set de datos <code>walmart</code> (que incluye datos generales sobre ventas por zona, margenes, impuestos, etc), <a href="https://github.com/Jorge-hercas/r-para-inteligencia-de-negocios/tree/main/CSV">disponible en el repositorio oficial del libro,</a> siendo:</p>
 <div class="cell">
@@ -1977,7 +1982,7 @@ Tip
 </div>
 </div>
 </div>
-<p></p><figcaption class="figure-caption">Figure&nbsp;8.3: Gráficos generados en un reporte dinámico</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;9.3: Gráficos generados en un reporte dinámico</figcaption><p></p>
 </figure>
 </div>
 <p>Al estar ligado este documento a objetos reactivos, el resultado dependerá enteramente de los filtros y opciones que tengamos activas en nuestra app, lo que lo vuelve un reporte más dinámico.</p>
@@ -1985,11 +1990,11 @@ Tip
 <p>Por supuesto, esta solo es una introducción a los reportes que podemos generar utilizando shiny apps, siendo que podemos customizarlos aún más, generar formatos condicionales, añadir fórmulas, etc, ejemplos que no tocaremos ahora.</p>
 </section>
 </section>
-<section id="customización-de-interfaces-con-html-y-css" class="level3" data-number="8.1.7">
-<h3 data-number="8.1.7" class="anchored" data-anchor-id="customización-de-interfaces-con-html-y-css"><span class="header-section-number">8.1.7</span> Customización de interfaces con HTML y CSS</h3>
+<section id="customización-de-interfaces-con-html-y-css" class="level3" data-number="9.1.7">
+<h3 data-number="9.1.7" class="anchored" data-anchor-id="customización-de-interfaces-con-html-y-css"><span class="header-section-number">9.1.7</span> Customización de interfaces con HTML y CSS</h3>
 <p>En este punto ya tenemos bastante claro que una shiny app no es más que una forma de expresar código HTML, CSS y JavaScript mediante funciones de R, lo que hace lógico que podamos implementar elementos diréctamente escritos en estos lenguajes para poder customizar de manera más profunda nuestras apps. En esta sección nos enfocaremos meramente en HTML y CSS, ya que el uso de JavaScript en los programas que realicemos estará más relacionado a aspectos de funcionamiento de los widgets (sesión, interactividad y eventos).</p>
-<section id="html" class="level4" data-number="8.1.7.1">
-<h4 data-number="8.1.7.1" class="anchored" data-anchor-id="html"><span class="header-section-number">8.1.7.1</span> HTML</h4>
+<section id="html" class="level4" data-number="9.1.7.1">
+<h4 data-number="9.1.7.1" class="anchored" data-anchor-id="html"><span class="header-section-number">9.1.7.1</span> HTML</h4>
 <p>Como ya vimos con anterioridad, las funciones dedicadas a la interfaz, como <code>fluidPage()</code>, son una forma de llamar contenedores de elementos, por ejemplo:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb81"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb81-1"><a href="#cb81-1" aria-hidden="true" tabindex="-1"></a><span class="fu">fluidPage</span>(</span>
@@ -2082,8 +2087,8 @@ Tip
 </ul>
 <p>Adicionalmente, también existen tags enfocados a la creación de elementos de tipo tabla, sin embargo, es poco probable que los utilicemos en shiny apps, ya que usualmente crearemos estos elementos a partir de recursos adicionales, como <code>kable()</code> de la librería <code>knitr</code> o <code>reactable()</code> de la librería con el mismo nombre.</p>
 </section>
-<section id="css" class="level4" data-number="8.1.7.2">
-<h4 data-number="8.1.7.2" class="anchored" data-anchor-id="css"><span class="header-section-number">8.1.7.2</span> CSS</h4>
+<section id="css" class="level4" data-number="9.1.7.2">
+<h4 data-number="9.1.7.2" class="anchored" data-anchor-id="css"><span class="header-section-number">9.1.7.2</span> CSS</h4>
 <p>Ya que tenemos la estructura simple de una app mediante el uso de HTML (usando tags o funciones predefinidas, como es el caso de <code>fluidPage()</code>, <code>column()</code>, etc), podemos comenzar a darle un estilo más agradable para el usuario final, utilizando código en lenguaje CSS (Cascading Style Sheets). Mediante CSS podemos modificar aspectos tales como el espaciado, tamaño de los márgenes, color y tamaño del texto (independientemente de que se trate de títulos o texto de párrafos), color del fondo de pantalla, entre muchos otros parámetros. Ahora, ¿cómo aplicamos el código CSS en una shiny app? Tenemos tres formas de hacer esto:</p>
 <ol type="1">
 <li><p>Aplicándolo directamente en cada contenedor y elemento, por ejemplo:</p>
@@ -2156,8 +2161,8 @@ Tip
 <span id="cb92-4"><a href="#cb92-4" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="temas-predefinidos" class="level4" data-number="8.1.7.3">
-<h4 data-number="8.1.7.3" class="anchored" data-anchor-id="temas-predefinidos"><span class="header-section-number">8.1.7.3</span> Temas predefinidos</h4>
+<section id="temas-predefinidos" class="level4" data-number="9.1.7.3">
+<h4 data-number="9.1.7.3" class="anchored" data-anchor-id="temas-predefinidos"><span class="header-section-number">9.1.7.3</span> Temas predefinidos</h4>
 <p>La versatilidad que tenemos para poder aplicar código HTML/CSS en nuestras apps es grandioza, ya que nos permite tener un control total de la apariencia que queremos que adopten, siendo únicamente limitados por nuestra creatividad, sin embargo, cuando queremos evitarnos todo el trabajo que esto conlleva, podemos hacer uso de algunos temas ya predefinidos para realizar la customización de manera rápida. Podemos acceder a estos estilos mediante algunas librerías, como <code>shinythemes</code>, <code>bslib</code>, <code>semantic.page</code>, <code>shinyWidgets</code>, entre otras. Tomemos como ejemplo el programa que creamos con anterioridad para descargar reportes en excel y vamos a añadirle un tema predefinido de <code>shinythemes</code>, siendo en este caso el tema <code>simplex</code> (véanse una lista detallada con todos los temas disponibles en <a href="https://rstudio.github.io/shinythemes/">el siguiente link</a>), haciendo uso de una sola línea de código:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb93"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb93-1"><a href="#cb93-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(shinythemes)</span>
@@ -2308,7 +2313,7 @@ Tip
 </div>
 </div>
 </div>
-<p></p><figcaption class="figure-caption">Figure&nbsp;8.4: Interfaz actualizada con <code>bslib</code></figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;9.4: Interfaz actualizada con <code>bslib</code></figcaption><p></p>
 </figure>
 </div>
 <p>Una interfaz mucho más minimalista y agradable a la vista (aunque claro, eso dependerá del gusto de cada persona). Como podrás darte cuenta, el código de esta interfaz es muy similar al código original, prácticamente cambiando las funciones a llamar para cada contenedor por aquellas provenientes de <code>bslib</code>, pero manteniendo prácticamente igual la estructura de nuestra aplicación.</p>
@@ -2325,8 +2330,8 @@ Tip
 </ul>
 <p>Existen otras librerías dedicadas a este aspecto, pero en la gran mayoría de los casos las librerías mencionadas anteriormente serán más que suficiente. Más adelante analizaremos librerías enfocadas a la creación de dashboards, como <code>bs4Dash</code>, <code>shinydashboard</code>, <code>argonDash</code>, entre otras.</p>
 </section>
-<section id="plantillas-html-templates" class="level4" data-number="8.1.7.4">
-<h4 data-number="8.1.7.4" class="anchored" data-anchor-id="plantillas-html-templates"><span class="header-section-number">8.1.7.4</span> Plantillas (HTML templates)</h4>
+<section id="plantillas-html-templates" class="level4" data-number="9.1.7.4">
+<h4 data-number="9.1.7.4" class="anchored" data-anchor-id="plantillas-html-templates"><span class="header-section-number">9.1.7.4</span> Plantillas (HTML templates)</h4>
 <p>Probablemente en más de una ocasión te has encontrado con un sitio web y has pensado algo como <em>“wow, este sitio tiene un diseño increíble, quisiera adaptarlo a un proyecto mío”</em>. Bueno, esto es posible en shiny apps. Así como podemos llamar código CSS en la sección <code>head()</code> de una app, podemos referenciar una plantilla completa e introducir elementos (<em>inputs</em> y <em>outputs</em>) diréctamente en un archivo de código HTML, ¿Cómo hacemos esto? Esto es un proceso bastante sencillo: Generalmente, cuando descargamos una plantilla HTML de internet, esta viene con múltiples archivos conectados entre si (códigos javaScript, customización CSS, imágenes, etc). Para adaptar la plantilla a nuestro proyecto, todos los archivos referentes a este <em>template</em> serán guardados con la misma estructura con la que los descargamos dentro de la carpeta <strong>www</strong>, que ya hemos mencionado con anterioridad. Una vez guardados, nos vamos a centrar en uno en particular llamado <code>index.html</code>, el cual contiene la estructura de la plantilla descargada, por lo que será el que vamos a referenciar en nuestra app. Suponiendo que ya tenemos el proyecto en la carpeta <strong>www</strong>, el código de nuestra app se verá de la siguiente manera:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb97"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb97-1"><a href="#cb97-1" aria-hidden="true" tabindex="-1"></a><span class="fu">shinyApp</span>(</span>
@@ -2422,7 +2427,7 @@ Tip
 </div>
 </div>
 </div>
-<p></p><figcaption class="figure-caption">Figure&nbsp;8.5: Aplicación realizada con una HTML Template</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;9.5: Aplicación realizada con una HTML Template</figcaption><p></p>
 </figure>
 </div>
 <div class="callout-warning callout callout-style-default callout-captioned">
@@ -2440,8 +2445,8 @@ Cuidado
 </div>
 </section>
 </section>
-<section id="dashboards-con-shiny" class="level3" data-number="8.1.8">
-<h3 data-number="8.1.8" class="anchored" data-anchor-id="dashboards-con-shiny"><span class="header-section-number">8.1.8</span> Dashboards con Shiny</h3>
+<section id="dashboards-con-shiny" class="level3" data-number="9.1.8">
+<h3 data-number="9.1.8" class="anchored" data-anchor-id="dashboards-con-shiny"><span class="header-section-number">9.1.8</span> Dashboards con Shiny</h3>
 <p>Por supuesto, una de las mejores formas de presentar nuestros datos será dentro de un dashboard (tablero), ya que podremos condensar mucha información en varios páneles, de una forma entendible para el usuario final, pero ¿cómo lo podemos hacer en shiny? De manera estricta <strong>no</strong> necesitamos librerías adicionales para crear una visualización más al estilo de un dashboard, ya que en realidad lo hemos aplicado en los ejemplos que estuvimos trabajado anteriormente, al ser programas que dan un monitoreo y visualización sencilla de interpretar a ciertos datos, para que el usuario final pueda sacar cálculos y conclusiones de manera rápida (así como exportar la información), sin embargo, estos ejemplos han sido basdante básicos en cuanto a la interfaz usada, por lo que el objetivo de esta sección será el de entender cómo funcionan las librerías que están enteramente enfocadas a la creación de dashboards, cómo podemos adaptarlas a nuestros proyectos y, lógicamente, optimizarlas para su escalabilidad.</p>
 <p>Para la creación de dashboards más especializados, las librerías más populares actualmente son <code>shinydashboard</code>, <code>shinydashboardPlus</code>, <code>argonDash</code> (en conjunto con <code>argonR</code>), <code>tablerDash</code>, <code>bs4Dash</code>, entre otras, paquetes que funcionan de manera muy similar, por lo que los siguientes ejemplos y desarrollos serán realizados con <code>bs4Dash</code>, haciendo uso del mismo set de datos <code>walmart_data</code>, que trabajamos en secciones anteriores.</p>
 <p>Sí, los dashboards tienen como objetivo el centralizar los datos de un área del negocio o proyecto mediante resúmenes (gráficos, tablas, valores), concentrando una cierta cantidad de métricas en una sola vista. Sin embargo, eso no implica que debamos meter todos estos elementos en la misma página, ya que eso solo volvería confuso al tablero que estemos creando. Lo más óptimo siempre será dividir las vistas por tópicos. Además, existen distintos tipos de dashboards —estratégicos, tácticos y operativos— según el nivel de análisis y el público al que están dirigidos, aunque este tema no se abordará a fondo aquí. Por ejemplo: en un dashboard que esté destinado a mostrar los flujos de efectivo de una empresa, podemos dividir el tablero en: 1. Ingresos, 2. Costos y 3. Márgenes de ingresos, lo que evitará que el usuario que haga uso del dashboard se sature y se confunda con los números mostrados. Considerando el set de datos <code>walmart_data</code>, comencemos por crear una interfaz que estará dividida en dos ventanas: 1. Ingresos generales y 2. Márgenes. En este caso, para crear la interfaz, utilizaremos la función <code>dashboardPage()</code>:</p>
@@ -2544,11 +2549,11 @@ Cuidado
 </figure>
 </div>
 <p>Elemento que se encontrará oculto por default. Esconder estos elementos permite que, durante la presentación de este dashboard, el contenido central no se preste a distracciones innecesarias, lo que lo hará más eficiente respecto a las métricas que se quieran abordar en un cierto momento.</p>
-<section id="gráficos-tablas-y-mapas-basados-en-javascript" class="level4" data-number="8.1.8.1">
-<h4 data-number="8.1.8.1" class="anchored" data-anchor-id="gráficos-tablas-y-mapas-basados-en-javascript"><span class="header-section-number">8.1.8.1</span> Gráficos, tablas y mapas basados en JavaScript</h4>
+<section id="gráficos-tablas-y-mapas-basados-en-javascript" class="level4" data-number="9.1.8.1">
+<h4 data-number="9.1.8.1" class="anchored" data-anchor-id="gráficos-tablas-y-mapas-basados-en-javascript"><span class="header-section-number">9.1.8.1</span> Gráficos, tablas y mapas basados en JavaScript</h4>
 <p>Ya que terminamos con los elementos generales del dashboard, vamos a continuar con la implementación del cuerpo, es decir, gráficos y tablas, pero en esta ocasión vamos a añadirle un toque extra. El uso de gráficos basados en la librería <code>ggplot2</code> es genial, ya que podemos customizarlos de forma casi ilimitada, sin embargo, aún siguen siendo imágenes estáticas, por lo que obtener información en tiempo real de ellos se vuelve complicado, por ejemplo: En un gráfico donde no todas las barras se encuentren etiquetadas con el valor del eje <em>y</em>, será sumamente complicado inferir estos valores de forma exacta. Para poder obtener información adicional, así como realizar ciertas acciones dentro del mismo gráfico o tabla (sin utilizar <em>inputs</em>), podemos hacer uso de librerías basadas en código JavaScript, las cuales contienen <em>Html Widgets</em>, como se les denomina a este tipo de elementos visuales. En esa sección nos limitaremos al uso de tres librerías específicas para generar estos elementos interactivos: <code>echarts4r</code><a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> <span class="citation" data-cites="R-echarts4r">(<a href="referencias.html#ref-R-echarts4r" role="doc-biblioref"><em>Echarts4r: Create Interactive Graphs with ECharts</em>, n.d.</a>)</span> para gráficos, <code>reactable</code><a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> para las tablas y <code>mapboxer</code><a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> <span class="citation" data-cites="R-mapboxer">(<a href="referencias.html#ref-R-mapboxer" role="doc-biblioref"><em>Mapboxer: An r Interface to Mapbox GL JS</em>, n.d.</a>)</span> para mapas.</p>
-<section id="gráficos" class="level5" data-number="8.1.8.1.1">
-<h5 data-number="8.1.8.1.1" class="anchored" data-anchor-id="gráficos"><span class="header-section-number">8.1.8.1.1</span> Gráficos</h5>
+<section id="gráficos" class="level5" data-number="9.1.8.1.1">
+<h5 data-number="9.1.8.1.1" class="anchored" data-anchor-id="gráficos"><span class="header-section-number">9.1.8.1.1</span> Gráficos</h5>
 <p>Retomemos los gráficos del ejemplo anterior. Comencemos por el gráfico de series de tiempo que se encontraba en la parte superior de nuestra app, es decir:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -2668,11 +2673,11 @@ Cuidado
 <span id="cb112-9"><a href="#cb112-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">e_legend</span>(<span class="at">orient =</span> <span class="st">"vertical"</span>,</span>
 <span id="cb112-10"><a href="#cb112-10" aria-hidden="true" tabindex="-1"></a>           <span class="at">right =</span> <span class="dv">0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Resultando en el gráfico <a href="#fig-pieecharts">Figure&nbsp;<span>8.6</span></a>.</p>
+<p>Resultando en el gráfico <a href="#fig-pieecharts">Figure&nbsp;<span>9.6</span></a>.</p>
 <div id="fig-pieecharts" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="imagenes/pieecharts.png" class="img-fluid figure-img" width="400"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;8.6: Gráfico de segmentación mediante <code>echarts4r</code></figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;9.6: Gráfico de segmentación mediante <code>echarts4r</code></figcaption><p></p>
 </figure>
 </div>
 <p>Como puedes darte cuenta, en este caso no tenemos ejes <strong>x</strong> y <strong>y</strong> propiamente definidos, por lo que para añadir correctamente el <em>tooltip</em> es necesario utilizar el parámetro <code>item</code> en lugar de <code>axis</code> en la función <code>e_tooltip()</code>. Como única adición, se cambió la orientación y zona de la vista de la leyenda, para que concuerde con la versión gráfica que creamos con <code>ggplot2</code>.</p>
@@ -2804,8 +2809,8 @@ Cuidado
 </div>
 <p>Afectando todos los elementos gráficos que se encuentren ligados a ese mismo filtro. De esta forma podemos generar una vista mucho más agradable al usuario final, ya que ahora puede interactuar con los elementos del gráfico y recibir una respuesta del servidor, de una forma similar a lo que hacen otros visualizadores (PBI, Tableau, etc), teniendo además la ventaja de que podemos acceder a esta información mediante reactivos, lo que nos permite tener un manejo más profundo de nuestro programa.</p>
 </section>
-<section id="mapas" class="level5" data-number="8.1.8.1.2">
-<h5 data-number="8.1.8.1.2" class="anchored" data-anchor-id="mapas"><span class="header-section-number">8.1.8.1.2</span> Mapas</h5>
+<section id="mapas" class="level5" data-number="9.1.8.1.2">
+<h5 data-number="9.1.8.1.2" class="anchored" data-anchor-id="mapas"><span class="header-section-number">9.1.8.1.2</span> Mapas</h5>
 <p>Ya que reemplazamos los gráficos estáticos con los gráficos interactivos (y sacamos provecho de ellos), podemos comenzar a explorar otro tipo de elementos, como lo son los mapas y las tablas.</p>
 <p>Empecemos por la creación de un mapa mediante la librería <code>mapboxer</code>. Esta librería se conecta a la API de <em>mapbox</em>, por lo que para llamar a un mapa genérico bastará con la función <code>mapboxer()</code>:</p>
 <div class="cell">
@@ -2998,16 +3003,16 @@ Geodetic CRS:  WGS 84
 <span id="cb135-7"><a href="#cb135-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill_opacity =</span> <span class="fl">0.5</span></span>
 <span id="cb135-8"><a href="#cb135-8" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Resultando en el gráfico <a href="#fig-mapfill">Figure&nbsp;<span>8.12</span></a>.</p>
+<p>Resultando en el gráfico <a href="#fig-mapfill">Figure&nbsp;<span>9.7</span></a>.</p>
 <div id="fig-mapfill" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="imagenes/mapboxerfill.png" class="img-fluid figure-img" data-align="center" width="350"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;8.7: Mapa de geometría con <code>mapboxer</code></figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;9.7: Mapa de geometría con <code>mapboxer</code></figcaption><p></p>
 </figure>
 </div>
 </section>
-<section id="tablas" class="level5" data-number="8.1.8.1.3">
-<h5 data-number="8.1.8.1.3" class="anchored" data-anchor-id="tablas"><span class="header-section-number">8.1.8.1.3</span> Tablas</h5>
+<section id="tablas" class="level5" data-number="9.1.8.1.3">
+<h5 data-number="9.1.8.1.3" class="anchored" data-anchor-id="tablas"><span class="header-section-number">9.1.8.1.3</span> Tablas</h5>
 <p>Como último <em>widget</em> a analizar, vamos a trabajar con algunas tablas interactivas mediante la librería <code>reactable</code>. Su uso es bastante sencillo, ya que solo tenemos que llamar a la función <code>reactable()</code> y usar como argumento un data frame. Usemos como ejemplo los datos <code>walmart_data</code> que hemos venido trabajando hasta ahora, y vamos a crear una tabla resumen de las ventas por zona:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb136"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb136-1"><a href="#cb136-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reactable)</span>
@@ -3032,7 +3037,7 @@ Geodetic CRS:  WGS 84
 <div id="fig-reactable" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="imagenes/reactableexample.png" class="img-fluid figure-img" data-align="center" width="350"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;8.8: Tabla interactiva con <code>reactable</code></figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;9.8: Tabla interactiva con <code>reactable</code></figcaption><p></p>
 </figure>
 </div>
 <p>Nótese que, para una mejor presentación de los datos, arreglamos el formato de la columna numérica, lo que lo hará más sencillo de leer para el usuario final.</p>
@@ -3103,17 +3108,17 @@ Geodetic CRS:  WGS 84
 </div>
 <p>De esta forma, podemos mantener una conexión bidireccional en el tablero generado, de tal forma que si quisiéramos filtrar a partir de un elemento visual a los demás, entonces podremos hacerlo de una forma muy agradable visualmente.</p>
 </section>
-<section id="una-pequeña-reflexión" class="level5" data-number="8.1.8.1.4">
-<h5 data-number="8.1.8.1.4" class="anchored" data-anchor-id="una-pequeña-reflexión"><span class="header-section-number">8.1.8.1.4</span> Una pequeña reflexión</h5>
+<section id="una-pequeña-reflexión" class="level5" data-number="9.1.8.1.4">
+<h5 data-number="9.1.8.1.4" class="anchored" data-anchor-id="una-pequeña-reflexión"><span class="header-section-number">9.1.8.1.4</span> Una pequeña reflexión</h5>
 <p>Estos tres ejemplos que analizamos son solamente tres librerías de cientos existentes con el mismo propósito, el de generar visualizaciones interactivas a partir de código JavaScript. Estos ejemplos únicamente tienen como propósito el mostrarte un funcionamiento general de los <em>HTML Widgets</em>, pero ¿por qué usarlos en lugar de simplemente imágenes estáticas que sean actualizadas mediante <em>inputs</em>? Realmente no es un requisito indispensable el usar este tipo de elementos en el tablero que estemos desarrollando, sin embargo, es preferible hacerlo en ciertos casos ya que la experiencia hacia el usuario final será mucho más agradable y le facilitará su uso. Cuando creamos un dashboard mediante <strong>shiny</strong>, debemos estar concientes en todo momento de que la información que vamos a presentar siempre debe ser <strong>concisa y fácil de entender para el usuario al que va a ir dirigida</strong>. Para nosotros como los desarrolladores del tablero, será sencillo el interpretar los datos que estamos expresando en este mismo, ¿Pero lo será para un usuario no técnico? Esa es la pregunta que siempre debemos tener en cuenta, ya que de esta forma nos será más sencillo el buscar soluciones visuales o interactivas que le permitan al usuario final el poder aprovechar la información del tablero de una mejor manera. Personalmente, me he encontrado en múltiples situaciones en las que hice un dashboard increíble, con prácticamente todas las métricas que mi compañero de trabajo necesitaba en ese momento, pero al presentárselo, su primer comentario se resumía en <em>“¿Puedo exportar esto a Excel?”</em>, ya que el dashboard era demasiado técnico, o no tenía el nivel de manipulación que mis colaboradores buscaban. Generalmente, cuando una persona no técnica utiliza un programa que cuenta con múltiples gráficos y mapas, casi siempre su primer acción será el dar click en algún punto del mapa, una barra de un gráfico o la columna de una tabla, esperando que algo pase con el resto de elementos del tablero, por lo que utilizar <em>HTML Widgets</em> nos será de gran utilidad, al poder satisfacer este tipo de situaciones, mejorando así la experiencia de uso.</p>
 <p>Esta pequeña reflexión no es para que te desanimes respecto a la creación de tus tableros, si no para que entiendas y siempre tengas presente la razón por la que los hacemos, y como podemos crear un programa que sea de verdadera utilidad para la persona a la que va dirigido, sin que esta última piense en utilizar otra opción porque se le complicó utilizar el programa, lo que lo convertiría en un desarrollo sin ningún valor agregado.</p>
 </section>
 </section>
-<section id="seguridad-en-mis-dashboards" class="level4" data-number="8.1.8.2">
-<h4 data-number="8.1.8.2" class="anchored" data-anchor-id="seguridad-en-mis-dashboards"><span class="header-section-number">8.1.8.2</span> Seguridad en mis dashboards</h4>
+<section id="seguridad-en-mis-dashboards" class="level4" data-number="9.1.8.2">
+<h4 data-number="9.1.8.2" class="anchored" data-anchor-id="seguridad-en-mis-dashboards"><span class="header-section-number">9.1.8.2</span> Seguridad en mis dashboards</h4>
 <p>Este tema en particular es de vital importancia para los desarrollos que harás en el futuro. Probablemente tus primeros dashboards y/o programas serán elaborados con datos públicos o datos de muestra, ya que serán proyectos personales para tu portafolio, pero cuando trabajes en un dashboard para una empresa, por obvias razones deberás mantener la seguridad de este mismo como tu prioridad, de tal forma que puedas asegurarte que solamente las personas autorizadas tengan acceso a la información en este. Obviamente, no queremos que la información privada de una empresa u organización este expuesta al público o sea filtrada. En <em>shiny</em> tenemos algunas opciones para brindarle seguridad a nuestros tableros, siendo que en el presente libro nos vamos a enfocar en las <em>Capas de Contraseña</em>.</p>
-<section id="capas-de-contraseñas" class="level5" data-number="8.1.8.2.1">
-<h5 data-number="8.1.8.2.1" class="anchored" data-anchor-id="capas-de-contraseñas"><span class="header-section-number">8.1.8.2.1</span> Capas de contraseñas</h5>
+<section id="capas-de-contraseñas" class="level5" data-number="9.1.8.2.1">
+<h5 data-number="9.1.8.2.1" class="anchored" data-anchor-id="capas-de-contraseñas"><span class="header-section-number">9.1.8.2.1</span> Capas de contraseñas</h5>
 <p>Comencemos por la opción más sencilla, siendo que actualmente ya existen librerías dedicadas a este aspecto, como lo es <code>shinymanager</code> <span class="citation" data-cites="R-shinymanager">(<a href="referencias.html#ref-R-shinymanager" role="doc-biblioref"><em>Shinymanager: Authentication Management for Shiny Applications</em>, n.d.</a>)</span>. Una capa de contraseñas no es más que un panel inicial que te solicita un usuario y una contraseña, tal como lo harías en cualquier página de uso cotidiano, como Facebook, Twitter, etc. Lo que hará esta capa de contraseñas es <em>poner en pausa</em> la renderización de todos los elementos de nuestro dashboard, y finalizar este proceso hasta que hayamos ingresado las claves correspondientes, dicho de otra manera, nuestro dashboard no va a iniciar ningún elemento hasta que se verifique que un usuario autorizado haya ingresado.</p>
 <p>Supongamos la siguiente aplicación:</p>
 <div class="cell">
@@ -3202,10 +3207,10 @@ Geodetic CRS:  WGS 84
 <span id="cb144-31"><a href="#cb144-31" aria-hidden="true" tabindex="-1"></a>  }</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Por lo tanto, cuando iniciemos la aplicación, en primera instancia tendremos la siguiente vista:</p>
-<div id="fig-mapfill" class="quarto-figure quarto-figure-center anchored">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imagenes/password.png" class="img-fluid figure-img" data-align="center" width="390"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;8.9: Capa de contraseñas</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Capa de contraseñas</figcaption><p></p>
 </figure>
 </div>
 <p>Vista que podemos customizar de múltiples maneras, por ejemplo, utilizando temas de <code>shinythemes</code> mediante el argumento <code>secure_app(theme = "...")</code>, o estableciendo una imagen como fondo de pantalla mediante código CSS, por ejemplo:</p>
@@ -3228,10 +3233,10 @@ Geodetic CRS:  WGS 84
 <span id="cb145-16"><a href="#cb145-16" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Resultando en:</p>
-<div id="fig-mapfill" class="quarto-figure quarto-figure-center anchored">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imagenes/fondopantalla.png" class="img-fluid figure-img" data-align="center" width="390"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;8.10: Capa de contraseñas</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Capa de contraseñas</figcaption><p></p>
 </figure>
 </div>
 <p>E incluso agregar un logotigo:</p>
@@ -3261,10 +3266,10 @@ Geodetic CRS:  WGS 84
 <span id="cb146-23"><a href="#cb146-23" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Lo que nos dará:</p>
-<div id="fig-mapfill" class="quarto-figure quarto-figure-center anchored">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imagenes/logotipocontra.png" class="img-fluid figure-img" data-align="center" width="390"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;8.11: Capa de contraseñas</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Capa de contraseñas</figcaption><p></p>
 </figure>
 </div>
 <p>Vamos a sacarle un poco más de provecho al uso de esta capa de contraseñas, ya que con ello podemos crear un perfil de usuario. Tomemos como ejemplo una interfaz creada con <code>bs4Dash</code>:</p>
@@ -3351,16 +3356,16 @@ Geodetic CRS:  WGS 84
 <span id="cb150-10"><a href="#cb150-10" aria-hidden="true" tabindex="-1"></a>  })</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Lo que resultará en una interfaz dinámica que devolverá el perfil del usuario loggeado:</p>
-<div id="fig-mapfill" class="quarto-figure quarto-figure-center anchored">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imagenes/mike.png" class="img-fluid figure-img" data-align="center" width="390"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;8.12: Capa de contraseñas</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Capa de contraseñas</figcaption><p></p>
 </figure>
 </div>
 <p>De esta forma podemos ir jugando con la seguridad de nuestros tableros, sacándole provecho visualmente. Claro que, el cargar el nombre de usuario en la interfaz realmente no es algo a lo que le podamos sacar provecho por si solo, pero si nos puede ser de utilidad a nivel <em>backend</em> para, por ejemplo, llevar registros de accesos al programa, o generar niveles de acceso a secciones de nuestro dashboard. Vamos a desarrollar estas dos ideas en la siguiente sección.</p>
 </section>
-<section id="control-de-accesos-mediante-bases-de-datos" class="level5" data-number="8.1.8.2.2">
-<h5 data-number="8.1.8.2.2" class="anchored" data-anchor-id="control-de-accesos-mediante-bases-de-datos"><span class="header-section-number">8.1.8.2.2</span> Control de accesos mediante bases de datos</h5>
+<section id="control-de-accesos-mediante-bases-de-datos" class="level5" data-number="9.1.8.2.2">
+<h5 data-number="9.1.8.2.2" class="anchored" data-anchor-id="control-de-accesos-mediante-bases-de-datos"><span class="header-section-number">9.1.8.2.2</span> Control de accesos mediante bases de datos</h5>
 <p>Una forma de tener un mayor control respecto a los accesos que brindamos a nuestro dashboard es mediante un registro constante de los usuarios que acceden a este programa, pero ¿Cómo podemos obtener y guardar dicha información para poder explotarla después? Esto puede ser tan sencillo como enviar el registro de un acceso a una base de datos SQL, esto a partir de un evento en el servidor del dashboard. Comencemos por crear en la base de datos las tablas que contendrán la información de los usuarios y el registro de cada uno de ellos:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb151"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb151-1"><a href="#cb151-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Tabla de usuarios</span></span>
@@ -3454,8 +3459,8 @@ Geodetic CRS:  WGS 84
 </tbody>
 </table>
 </section>
-<section id="niveles-de-acceso" class="level5" data-number="8.1.8.2.3">
-<h5 data-number="8.1.8.2.3" class="anchored" data-anchor-id="niveles-de-acceso"><span class="header-section-number">8.1.8.2.3</span> Niveles de acceso</h5>
+<section id="niveles-de-acceso" class="level5" data-number="9.1.8.2.3">
+<h5 data-number="9.1.8.2.3" class="anchored" data-anchor-id="niveles-de-acceso"><span class="header-section-number">9.1.8.2.3</span> Niveles de acceso</h5>
 <p>Cuando comiences a crear tus primeros tableros te darás cuenta de que en un mismo equipo no todas las personas pueden (o deben) tener acceso a la información, por ejemplo, si desarrollaramos un dashboard de ventas, probablemente solo nos interese mostrar el ingreso generado por cuentas a los agentes de ventas que accedan a este tablero, mientras que información financiera más sensible solo podrá ser visualizada por el gerente de ventas o su superior, tal como ocurre en tableros creados en Power BI, cuando asignamos roles de usuario. Por supuesto, no existe una librería o función que nos permita hacer esto directamente, por lo que, con lo que ya hemos armado hasta ahora, podemos plantear una solución bastante sencilla a este problema. Tomemos como ejemplo la interfaz de <code>bs4Dash</code> que utilizamos en el caso anterior, con la que generamos un perfil dinámico:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb156"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb156-1"><a href="#cb156-1" aria-hidden="true" tabindex="-1"></a>ui <span class="ot">&lt;-</span></span>
@@ -3577,8 +3582,8 @@ Geodetic CRS:  WGS 84
 </section>
 </section>
 </section>
-<section id="shiny-para-semi-automatizar-tareas" class="level3" data-number="8.1.9">
-<h3 data-number="8.1.9" class="anchored" data-anchor-id="shiny-para-semi-automatizar-tareas"><span class="header-section-number">8.1.9</span> Shiny para (semi) automatizar tareas</h3>
+<section id="shiny-para-semi-automatizar-tareas" class="level3" data-number="9.1.9">
+<h3 data-number="9.1.9" class="anchored" data-anchor-id="shiny-para-semi-automatizar-tareas"><span class="header-section-number">9.1.9</span> Shiny para (semi) automatizar tareas</h3>
 <p>Algo interesante de las <em>Shiny Apps</em> es el hecho de que no son específicamente dashboards, son <strong>aplicaciones web</strong>, lo que significa que la cantidad de cosas que podemos crear con ellas es ilimitada, estando únicamente sujetos a nuestra imaginación. Precisamente, en esta sección discutiremos como podemos implementar la lógica detrás de la semi automatización de procesos, así como ajustarla a cada caso particular.</p>
 <p>Usualmente, solemos escribir códigos que siguen una cierta secuencia, por ejemplo, para generar un gráfico sencillo:</p>
 <div class="cell">
@@ -3845,8 +3850,8 @@ Geodetic CRS:  WGS 84
 </div>
 <p>Existen muchas otras dependencias basadas en JavaScript que podemos usar para apoyarnos visualmente al momento de ejecutar procesos en shiny apps, como pueden ser <code>shinyalert</code>, <code>shinytoastr</code>, entre otras más, dependiendo de cuál sea nuestro interés en particular (e inclusive el tema que estemos usando en nuestra app).</p>
 </section>
-<section id="buenas-prácticas-para-estructurar-una-aplicación" class="level3" data-number="8.1.10">
-<h3 data-number="8.1.10" class="anchored" data-anchor-id="buenas-prácticas-para-estructurar-una-aplicación"><span class="header-section-number">8.1.10</span> Buenas prácticas para estructurar una aplicación</h3>
+<section id="buenas-prácticas-para-estructurar-una-aplicación" class="level3" data-number="9.1.10">
+<h3 data-number="9.1.10" class="anchored" data-anchor-id="buenas-prácticas-para-estructurar-una-aplicación"><span class="header-section-number">9.1.10</span> Buenas prácticas para estructurar una aplicación</h3>
 <p>Ahora que ya conocemos como crear aplicaciones con Shiny y todo lo que podemos hacer con ellas, vamos a terminar este capítulo aprendiendo las mejores prácticas para poder estructurar nuestras aplicaciones, haciéndolas escalables y sencillas de leer.</p>
 <p>Algo común cuando comenzamos a crear nuestras primeras apps es que solemos mantener el código completo en un mismo archivo (casi siempre llamado <code>app.R</code>). Esto está bien cuando se trata de programas pequeños o prototipos simples. Sin embargo, a medida que nuestras aplicaciones crecen en complejidad (incorporando múltiples módulos, funciones, y elementos de <em>UI</em>) mantener todo el código en un solo archivo se vuelve inviable. Encontrar y modificar un componente entre cientos o miles de líneas de código se convierte en una tarea titánica y propensa a errores.</p>
 <p>Como primera buena práctica, se recomienda dividir nuestro código en tres archivos principales:</p>
@@ -3894,8 +3899,8 @@ Geodetic CRS:  WGS 84
 </div>
 <p>Volviéndose bastante sencillo de leer para otros usuarios, ya que ahora podemos identificar en qué archivo se encuentran cosas más específicas, como funciones, pipelines, e inclusive secciones del <code>UI</code>.</p>
 <p>La contenerización de archivos en una shiny app no solo se limita a los aspectos que vimos anteriormente, si no también a secciones específicas de la app en si, como ventanas o páginas de la misma, cosa que podemos hacer separándola en <strong>módulos</strong>, tema que veremos a continuación.</p>
-<section id="módulos" class="level4" data-number="8.1.10.1">
-<h4 data-number="8.1.10.1" class="anchored" data-anchor-id="módulos"><span class="header-section-number">8.1.10.1</span> Módulos</h4>
+<section id="módulos" class="level4" data-number="9.1.10.1">
+<h4 data-number="9.1.10.1" class="anchored" data-anchor-id="módulos"><span class="header-section-number">9.1.10.1</span> Módulos</h4>
 <p>En una shiny app, los módulos permiten organizar el código en componentes reutilizables y escalables, lo que es ideal cuando la app empieza a crecer en complejidad y componentes. Básicamente, un módulo encapsula una parte de la interfaz y su lógica del servidor, para que puedas reutilizarla varias veces o mantener el código ordenado. El uso de módulos en shiny es especialmente útil cuando trabajamos colaboratibamente en un proyecto a gran escala, ya que cada usuario estará enfocado en desarrollar el código de su propio módulo, sin preocuparse por afectar la funcionalidad de los demás.</p>
 <p>La estructura de los módulos es bastante sencilla, ya que simplemente vamos a englobar los componentes en dos funciones referentes al <code>UI</code> y el <code>Server</code>:</p>
 <ul>
@@ -4025,8 +4030,8 @@ Geodetic CRS:  WGS 84
 <span id="cb187-9"><a href="#cb187-9" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">"modulos/Modulo_panel_funciones.R"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="otras-funcionalidades-de-los-módulos" class="level4" data-number="8.1.10.2">
-<h4 data-number="8.1.10.2" class="anchored" data-anchor-id="otras-funcionalidades-de-los-módulos"><span class="header-section-number">8.1.10.2</span> Otras funcionalidades de los módulos</h4>
+<section id="otras-funcionalidades-de-los-módulos" class="level4" data-number="9.1.10.2">
+<h4 data-number="9.1.10.2" class="anchored" data-anchor-id="otras-funcionalidades-de-los-módulos"><span class="header-section-number">9.1.10.2</span> Otras funcionalidades de los módulos</h4>
 <p>Ya que trabajamos con la estructura general de los módulos, ahora vamos a exprimir sus capacidades un poco más. A pesar de que estos son independientes entre si, es posible que nos encontremos en situaciones en las que necesitemos exportar un cierto valor o <code>input</code> de un módulo a otro. El aislamiento entre estos objetos impide que utilicemos directamente el <code>input$id_objeto</code> de otro módulo, ya que esto rompería el funcionamiento de los módulos, por lo que la forma correcta de acceder a estos objetos es a través del uso de objetos reactivos. En lugar de acceder directamente al <code>input</code>, podemos hacer que un módulo devuelva un objeto <code>reactive()</code> o una <code>reactiveValues()</code> que luego se pasa como argumento a otro módulo, siendo este ya un objeto independiente. Veamos un ejemplo sencillo de esto, considerando la aplicación anterior con la que estuvimos trabajando: Imaginemos que ahora queremos crear un reporte adicional en otra sección de nuestra app, a partir de los parámetros del primer módulo, por lo que podemos hacer una modificación a este último para que exporte los valores reactivos en una lista:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb188"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb188-1"><a href="#cb188-1" aria-hidden="true" tabindex="-1"></a>mod_reporte_server <span class="ot">&lt;-</span> <span class="cf">function</span>(id, reportes, conexion){</span>
@@ -4121,17 +4126,17 @@ Geodetic CRS:  WGS 84
 <p>Y así, tan sencillamente (aunque no tan intuitivo a nivel código) podemos trabajar con módulos en shiny de casi todas las maneras imaginables. Esta estructura modular no solo nos permite organizar mejor nuestras aplicaciones, sino también construir componentes reutilizables, escalables y más fáciles de mantener. A medida que nuestras apps crecen en complejidad, dominar los módulos se vuelve una herramienta esencial para escribir código más limpio, robusto y flexible.</p>
 </section>
 </section>
-<section id="culminando-con-dos-proyectos" class="level3" data-number="8.1.11">
-<h3 data-number="8.1.11" class="anchored" data-anchor-id="culminando-con-dos-proyectos"><span class="header-section-number">8.1.11</span> Culminando con dos proyectos</h3>
+<section id="culminando-con-dos-proyectos" class="level3" data-number="9.1.11">
+<h3 data-number="9.1.11" class="anchored" data-anchor-id="culminando-con-dos-proyectos"><span class="header-section-number">9.1.11</span> Culminando con dos proyectos</h3>
 <p>Finalmente, después de toda esta travesía que pasamos para poder entender cómo funcionan nuestros datos, como extraerlos, manipularlos, arreglarlos y hacer estadística y análisis con ellos, vamos a darle un cierre a este libro aplicando <strong>todo</strong> (o casi todo) lo que hemos aprendido en dos proyectos finales: <em>Una aplicación para visualizar datos del clima</em> y <em>un dashboard de ventas interactivo</em>, cada uno de ellos con un propósito diferente que iremos viendo poco a poco.</p>
 <p>Estos proyectos no son solo ejercicios prácticos: son oportunidades reales para consolidar conocimientos, tomar decisiones de diseño, y pensar en la experiencia del usuario final. Pondremos en práctica estructuras reactivas, uso de módulos, visualizaciones dinámicas, limpieza de datos y algunas técnicas avanzadas que ya has visto, ahora en un contexto más completo y realista.</p>
 <p>Además, estas aplicaciones están pensadas no solo como ejercicios académicos, sino como soluciones que podrían funcionar en escenarios del mundo real. Son el cierre perfecto para esta etapa de tu formación, antes de seguir profundizando en nuevas herramientas y desafíos.</p>
-<section id="visualizador-de-datos-climáticos" class="level4" data-number="8.1.11.1">
-<h4 data-number="8.1.11.1" class="anchored" data-anchor-id="visualizador-de-datos-climáticos"><span class="header-section-number">8.1.11.1</span> Visualizador de datos climáticos</h4>
+<section id="visualizador-de-datos-climáticos" class="level4" data-number="9.1.11.1">
+<h4 data-number="9.1.11.1" class="anchored" data-anchor-id="visualizador-de-datos-climáticos"><span class="header-section-number">9.1.11.1</span> Visualizador de datos climáticos</h4>
 <p>Nuestro primer proyecto final consistirá en una aplicación web diseñada para mostrar los datos climáticos actuales en cualquier parte del mundo, además de ofrecer pronósticos para los días siguientes. Este proyecto es especialmente interesante porque no solo trabajaremos con datos en tiempo real, sino que también vamos a extraerlos directamente mediante la API de OpenWeather, integrando así una fuente externa dinámica en nuestra aplicación.</p>
 <p>Como recordarás, en el proyecto final del capítulo 5 nos enfocamos en crear un <em>pipeline</em> para enviar datos desde la API de <code>Open Weather</code> hacia una base de datos relacional, y en ese mismo capítulo hicimos uso de la librería <code>OweatherR</code>, desarrollada específicamente para facilitar ese flujo de trabajo. En este nuevo proyecto, volveremos a utilizar esa librería para simplificar el código de nuestra aplicación. Sin embargo, también explicaremos cada una de las funciones de la librería <code>OweatherR</code> de forma individual, con el objetivo de comprender mejor su estructura interna y tener un mayor control sobre lo que <em>se ejecuta detrás</em>.</p>
-<section id="archivo-global" class="level5" data-number="8.1.11.1.1">
-<h5 data-number="8.1.11.1.1" class="anchored" data-anchor-id="archivo-global"><span class="header-section-number">8.1.11.1.1</span> Archivo Global</h5>
+<section id="archivo-global" class="level5" data-number="9.1.11.1.1">
+<h5 data-number="9.1.11.1.1" class="anchored" data-anchor-id="archivo-global"><span class="header-section-number">9.1.11.1.1</span> Archivo Global</h5>
 <p>Comencemos por el primer paso lógico, como en cualquier shiny app: Cargar todas las librerías necesarias en un archivo <code>Global.R</code>:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb193"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb193-1"><a href="#cb193-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(shiny)</span>
@@ -4163,13 +4168,13 @@ Geodetic CRS:  WGS 84
 <span id="cb195-3"><a href="#cb195-3" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="archivo-ui" class="level5" data-number="8.1.11.1.2">
-<h5 data-number="8.1.11.1.2" class="anchored" data-anchor-id="archivo-ui"><span class="header-section-number">8.1.11.1.2</span> Archivo UI</h5>
+<section id="archivo-ui" class="level5" data-number="9.1.11.1.2">
+<h5 data-number="9.1.11.1.2" class="anchored" data-anchor-id="archivo-ui"><span class="header-section-number">9.1.11.1.2</span> Archivo UI</h5>
 <p>Siguiendo con la interfaz de nuestra app (en el archivo <code>ui.R</code>), antes de comenzar con el código, una buena práctica siempre será el plasmar en un diagrama o un visual sencillo el como queremos que luzca nuestro programa, para después escribir el código en base a ello, siendo en este caso el siguiente:</p>
-<div id="fig-relacion" class="quarto-figure quarto-figure-center anchored">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><embed src="imagenes/diagrama app clima.pdf" class="img-fluid" width="540"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;8.13: Diagrama general de la app</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Diagrama general de la app</figcaption><p></p>
 </figure>
 </div>
 <p>Básicamente, vamos a dividir la interfaz en dos secciones: una más pequeña, que ocupará aproximadamente un cuarto de la pantalla y estará destinada a los <em>inputs</em> y widgets secundarios; y otra más amplia, que ocupará los tres cuartos restantes y contendrá un mapa interactivo. Este mapa nos permitirá visualizar con precisión el punto exacto del que estamos obteniendo la información climática.</p>
@@ -4286,8 +4291,8 @@ Geodetic CRS:  WGS 84
 </div>
 <p>Nótese que añadimos algunos espaciados de página (<em>breaks</em>) mediante las funciones <code>hr()</code> y <code>div(style = "height: 100px;")</code>, simplemente para dar un mejor aspecto a nuestro programa.</p>
 </section>
-<section id="archivo-server" class="level5" data-number="8.1.11.1.3">
-<h5 data-number="8.1.11.1.3" class="anchored" data-anchor-id="archivo-server"><span class="header-section-number">8.1.11.1.3</span> Archivo Server</h5>
+<section id="archivo-server" class="level5" data-number="9.1.11.1.3">
+<h5 data-number="9.1.11.1.3" class="anchored" data-anchor-id="archivo-server"><span class="header-section-number">9.1.11.1.3</span> Archivo Server</h5>
 <p>Entrando de lleno en la lógica de nuestro programa, comencemos por plantear las funciones respectivas del lado del servidor. Como primer paso, vamos a generar los visuales para el globo terraqueo y el mapa plano, ya que en el estado inicial de la aplicación les daremos una vista genérica:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb205"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb205-1"><a href="#cb205-1" aria-hidden="true" tabindex="-1"></a>output<span class="sc">$</span>globo <span class="ot">&lt;-</span> <span class="fu">render_globe</span>({</span>
@@ -4698,8 +4703,8 @@ Geodetic CRS:  WGS 84
 <p>Como regalo adicional, podrás encontrar el proyecto completo en <a href="https://github.com/Jorge-hercas/clima-hoy">el siguiente enlace</a>, junto con una versión online de la app.</p>
 </section>
 </section>
-<section id="dashboard-de-ventas" class="level4" data-number="8.1.11.2">
-<h4 data-number="8.1.11.2" class="anchored" data-anchor-id="dashboard-de-ventas"><span class="header-section-number">8.1.11.2</span> Dashboard de ventas</h4>
+<section id="dashboard-de-ventas" class="level4" data-number="9.1.11.2">
+<h4 data-number="9.1.11.2" class="anchored" data-anchor-id="dashboard-de-ventas"><span class="header-section-number">9.1.11.2</span> Dashboard de ventas</h4>
 <p>Como siguiente y último proyecto de este libro, vamos a crear un dashboard de ventas estratégico, es decir, un dashboard enfocado en hacer un análisis de alto nivel para el largo plazo. Este tipo de tablero está dirigido principalmente a tomadores de decisiones y busca brindar una visión general del rendimiento comercial, identificando tendencias, oportunidades y posibles riesgos que puedan influir en la estrategia de negocio. Además del análisis histórico, incluiremos una sección de pronóstico para proyectar el comportamiento futuro de las ventas y así facilitar una mejor planificación a mediano y largo plazo, analizando estacionalidad, tendencia, etc. Para este proyecto en particular vamos a usar el archivo ventas_proyecto_final <span class="citation" data-cites="kyanyoga_sales_data">(<a href="referencias.html#ref-kyanyoga_sales_data" role="doc-biblioref">Kyanyoga n.d.</a>)</span>, disponible en <a href="https://github.com/Jorge-hercas/r-para-inteligencia-de-negocios/blob/main/CSV/ventas_proyecto_final.csv">el repositorio oficial del libro</a>. Este archivo contiene datos de ventas simulados, lo que nos permitirá practicar con métricas clave como ingresos totales, crecimiento mensual, participación por categoría, y otras métricas adicionales que iremos construyendo a lo largo del desarrollo del proyecto.</p>
 <p>Como primer paso lógico, antes de comenzar a construir el dashboard, vamos a leer los datos para entender qué información tenemos y qué alcance podemos tener con este set de datos:</p>
 <div class="cell">
@@ -4923,8 +4928,8 @@ Sales dashboard
         └── logos</code></pre>
 </div>
 </div>
-<section id="la-interfaz" class="level5" data-number="8.1.11.2.1">
-<h5 data-number="8.1.11.2.1" class="anchored" data-anchor-id="la-interfaz"><span class="header-section-number">8.1.11.2.1</span> La interfaz</h5>
+<section id="la-interfaz" class="level5" data-number="9.1.11.2.1">
+<h5 data-number="9.1.11.2.1" class="anchored" data-anchor-id="la-interfaz"><span class="header-section-number">9.1.11.2.1</span> La interfaz</h5>
 <p>Comencemos por el archivo <code>global.R</code>, en el cuál únicamente cargaremos librerías y llamaremos a los demás archivos relacionados:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb226"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb226-1"><a href="#cb226-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(shiny)</span>
@@ -5228,8 +5233,8 @@ Sales dashboard
 <span id="cb232-9"><a href="#cb232-9" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="el-server" class="level5" data-number="8.1.11.2.2">
-<h5 data-number="8.1.11.2.2" class="anchored" data-anchor-id="el-server"><span class="header-section-number">8.1.11.2.2</span> El Server</h5>
+<section id="el-server" class="level5" data-number="9.1.11.2.2">
+<h5 data-number="9.1.11.2.2" class="anchored" data-anchor-id="el-server"><span class="header-section-number">9.1.11.2.2</span> El Server</h5>
 <p>Veamos ahora la parte interesante: El archivo <code>server.R</code>. Comencemos con una customización condicional sencilla, ya que <code>dashboardPage()</code> nos permite utilizar un modo obscuro, sin embargo, los gráficos y tablas no están ligadas por default a este modo, por lo que tendremos que modificar manualmente las paletas de colores. Para identificar el modo actual de nuestro dashboard, únicamente necesitamos llamar a <code>input$dark_mode</code>, por lo tanto, para una paleta de colores acorde, dependiendo del estado:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb233"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb233-1"><a href="#cb233-1" aria-hidden="true" tabindex="-1"></a>es_dark <span class="ot">&lt;-</span> <span class="fu">reactive</span>({ <span class="fu">isTRUE</span>(input<span class="sc">$</span>dark_mode) })</span>
@@ -5689,7 +5694,7 @@ Sales dashboard
 <span id="cb245-36"><a href="#cb245-36" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Como puedes ver, la función de JavaScript únicamente nos ayuda a customizar el <em>tooltip</em>, para que nos diga el valor en un formato de moneda y el país/ciudad en cuestión.</p>
-<p>Con esto, terminamos la primera página de nuestro dashboard, la cual tendrá el siguiente aspecto (<a href="#fig-dashboardfinal">Figure&nbsp;<span>8.15</span></a>).</p>
+<p>Con esto, terminamos la primera página de nuestro dashboard, la cual tendrá el siguiente aspecto (<a href="#fig-dashboardfinal">Figure&nbsp;<span>9.9</span></a>).</p>
 <div id="fig-dashboardfinal" class="quarto-layout-panel">
 <figure class="figure">
 <div class="quarto-layout-row quarto-layout-valign-top">
@@ -5710,7 +5715,7 @@ Sales dashboard
 </div>
 </div>
 </div>
-<p></p><figcaption class="figure-caption">Figure&nbsp;8.14: Página principal del dashboard de ventas</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;9.9: Página principal del dashboard de ventas</figcaption><p></p>
 </figure>
 </div>
 <p>Continuemos ahora con la sección referente al pronóstico. Como mencioné previamente, por ahora vamos a obviar las pruebas de validación previas al modelo <code>prophet</code> para simplificar esta parte, ya que, de hecho, en el punto en el que decidimos llevar un pronóstico a un ambiente de producción, como lo es un dashboard en la nube, es porque todas las validaciones previas ya fueron llevadas a cabo. Ahora bien, comencemos por establecer el modelo en un objeto reactivo, llamando a los datos filtrados:</p>
@@ -6061,28 +6066,30 @@ Sales dashboard
 </div>
 <p>Originalmente planeaba utilizar <code>openxlsx2</code> para este ejercicio, pero me encontré con algunos problemas al generar el archivo excel, por lo que regresé a la versión original para evitarme dolores de cabeza.</p>
 <p>A pesar de ser un código extenso, realmente es bastante sencillo, ya que únicamente definimos argumentos para customizar las celdas, agregar un encabezado y fijarlo. Nuestra página referente al pronóstico tendrá el siguiente aspecto:</p>
-<div id="fig-dashboardfinal" class="quarto-layout-panel">
-<figure class="figure">
+<div class="quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 50.0%;justify-content: center;">
-<div id="fig-normaldash" class="quarto-figure quarto-figure-center anchored">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="imagenes/forecastdia.png" class="img-fluid figure-img" data-ref-parent="fig-dashboardfinal"></p>
-<p></p><figcaption class="figure-caption">(a) Original</figcaption><p></p>
+<p><img src="imagenes/forecastdia.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Original</figcaption><p></p>
 </figure>
 </div>
 </div>
-<div class="quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 50.0%;justify-content: center;">
-<div id="fig-nochedash" class="quarto-figure quarto-figure-center anchored">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="imagenes/forecastnoche.png" class="img-fluid figure-img" data-ref-parent="fig-dashboardfinal"></p>
-<p></p><figcaption class="figure-caption">(b) Modo noche</figcaption><p></p>
+<p><img src="imagenes/forecastnoche.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Modo noche</figcaption><p></p>
 </figure>
 </div>
 </div>
 </div>
-<p></p><figcaption class="figure-caption">Figure&nbsp;8.15: Pronóstico del dashboard de ventas</figcaption><p></p>
-</figure>
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p>Pronóstico del dashboard de ventas</p>
+</div>
+</div>
 </div>
 <p>Estamos a un paso de terminar este dashboard, pero aún nos falta un pequeño detalle: La seguridad. Supongamos por ejemplo que tenemos estos usuarios:</p>
 <div class="cell">
@@ -6325,7 +6332,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./forecasts.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Pronósticos y estimaciones</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Pronósticos y estimaciones</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

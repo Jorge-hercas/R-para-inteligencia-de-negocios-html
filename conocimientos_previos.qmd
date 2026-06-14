@@ -56,9 +56,9 @@ CREATE SCHEMA mi_esquema;
 A pesar de que los esquemas separan en cierta medida los datos, los ambientes de prueba suelen estar almacenados en una base de datos adicional a la del ambiente de producción, esto debido a que las tablas pertenecientes a diferentes esquemas aun pueden relacionarse, por lo que no es recomendable crear esquemas de prueba, ya que existe el riesgo de afectar información importante.
 :::
 
-Como es lógico, el siguiente nivel en nuestra base de datos serán las tablas. Una tabla es una estructura sencilla que nos permitirá almacenar datos mediante columnas y filas, siendo estos clasificados por tipo de dato (ej. *varchar*, *decimal*, *date*, etc). Al ser una base de datos **relacional**, podemos establecer relaciones entre tablas a partir de llaves primarias y llaves foráneas, es decir, los ID's de una tabla. Cuando hablamos de llaves primarias nos referimos al ID de cada observación perteneciente a una tabla, mientras que cuando hablamos de llaves foráneas nos referimos a un ID en una tabla que hace referencia al ID primario de otra, por ejemplo: Supongamos que tenemos una tabla llamada `usuarios` con nombres de usuario que incluye una columna llamada `tipo_usuario_id` con ID's 1 o 2, referentes a otra tabla llamada `tipo_usuarios` en la que el ID 1 equivale a usuario maestro y el ID 2 a usuario general, en tal caso la columna `tipo_usuario_id` de la primer tabla será una llave foránea, ya que hace referencia a los datos de otra tabla, mientras que la columna `id` de la tabla `tipo_usuarios` será la llave primaria. Gráficamente se puede ver esta relación en el diagrama @fig-relacion.
+Como es lógico, el siguiente nivel en nuestra base de datos serán las tablas. Una tabla es una estructura sencilla que nos permitirá almacenar datos mediante columnas y filas, siendo estos clasificados por tipo de dato (ej. *varchar*, *decimal*, *date*, etc). Al ser una base de datos **relacional**, podemos establecer relaciones entre tablas a partir de llaves primarias y llaves foráneas, es decir, los ID's de una tabla. Cuando hablamos de llaves primarias nos referimos al ID de cada observación perteneciente a una tabla, mientras que cuando hablamos de llaves foráneas nos referimos a un ID en una tabla que hace referencia al ID primario de otra, por ejemplo: Supongamos que tenemos una tabla llamada `usuarios` con nombres de usuario que incluye una columna llamada `tipo_usuario_id` con ID's 1 o 2, referentes a otra tabla llamada `tipo_usuarios` en la que el ID 1 equivale a usuario maestro y el ID 2 a usuario general, en tal caso la columna `tipo_usuario_id` de la primer tabla será una llave foránea, ya que hace referencia a los datos de otra tabla, mientras que la columna `id` de la tabla `tipo_usuarios` será la llave primaria. Gráficamente se puede ver esta relación en el diagrama @fig-relacion-sql.
 
-![Diagrama de tipos de llaves](imagenes/diagrama%20llaves.pdf){#fig-relacion fig-align="center" width="380"}
+![Diagrama de tipos de llaves](imagenes/diagrama%20llaves.pdf){#fig-relacion-sql fig-align="center" width="380"}
 
 Para crear una tabla debemos tener en cuenta los tipos de columnas que vamos a crear, así como las relaciones que van a existir en dicha tabla respecto a otras ya existentes (o no). Los tipos de columnas disponibles más comunes son:
 
@@ -643,7 +643,7 @@ Esta consulta considera la observación más reciente al reordenar las fechas po
 
 Como es lógico, podemos filtrar datos que se encuentren agrupados a partir de columnas ya existentes en nuestros datos, por ejemplo: Utilizando la tabla `ventas` que analizamos hace un momento, podemos hacer un agrupamiento por clientes para obtener el total comprado por cada una, aplicando un filtro sencillo para ver el resultado del cliente 1, tal que:
 
-```{rm, eval=FALSE}
+```{r, eval=FALSE}
 SELECT Cliente, SUM(Precio) as Total
 FROM ventas
 WHERE Cliente = "Cliente_1"
@@ -658,7 +658,7 @@ Resultando en:
 
 Pero ¿y si quisiéramos filtrar la función de agregación en lugar del cliente? En ciertas ocasiones nos interesará saber qué usuarios (o valores de agrupación) cumplen con un cierto valor, por lo que filtraremos a partir de un cálculo realizado, sin embargo, el uso de la sentencia `WHERE` no puede ser aplicado en estos casos, ya que no estaríamos tomando directamente un valor ya existente de la tabla que estemos agrupando, por lo que se nos devolvería un error en caso de intentar usarlo. Para obtener los valores que cumplan esta condición, simplemente debemos usar la sentencia `HAVING`, por ejemplo, para filtrar sumas mayores o iguales 40:
 
-```{rm, eval=FALSE}
+```{r, eval=FALSE}
 SELECT Cliente, SUM(Precio) as Total
 FROM ventas
 GROUP BY Cliente
@@ -676,7 +676,7 @@ Lógicamente, al filtrar filas que se crearon después de la agrupación, debemo
 
 Siguiendo la lógica anterior, podemos evitar el uso de `HAVING` y simplemente filtrar nuestra consulta convirtiéndola en una subconsulta, por ejemplo:
 
-```{rm, eval=FALSE}
+```{r, eval=FALSE}
 SELECT * FROM (
   SELECT Cliente, SUM(Precio) as Total
   FROM ventas
@@ -693,7 +693,7 @@ A pesar de que el lenguaje SQL es bastante sencillo e intuitivo para extraer nue
 
 [^conocimientos_previos-1]: Siglas para "Common Table Expression" (expresiones comunes de tablas en español).
 
-```{rm, eval=FALSE}
+```{r, eval=FALSE}
 SELECT *
 FROM (
   SELECT id, tiempo_sesion, fecha_sesion,
@@ -706,7 +706,7 @@ WHERE A.ult_fila = 1
 
 Finalmente, para unir ambas tablas podemos hacer uso de un *subquery*, es decir:
 
-```{rm, eval=FALSE}
+```{r, eval=FALSE}
 SELECT uf.id, uf.user_name, ult_ses.tiempo_sesion, ult_ses.fecha_sesion
 FROM user_info uf
 LEFT JOIN (
@@ -723,7 +723,7 @@ LEFT JOIN (
 
 Hasta este punto el query puede parece lógico, sin embargo, este tipo de consultas pueden volverse complicadas y difíciles de manejar conforme vayamos aumentando la cantidad de uniones de tablas y columnas a utilizar. Para evitar que estas consultas se vuelvan complejas de leer, podemos hacer uso de las expresiones comunes de tablas para dividir los cálculos de cada vista en pasos separados. Comencemos por el query referente al cálculo del tiempo de sesión de los usuarios:
 
-```{rm, eval=FALSE}
+```{r, eval=FALSE}
 WITH logs_info_base AS (
   SELECT user_id, tiempo_sesion, fecha_sesion,
        ROW_NUMBER() OVER (PARTITION BY user_id 
@@ -737,7 +737,7 @@ WHERE ult_fila = 1
 
 Donde simplemente englobamos el cálculo del último inicio de sesión en un paso anterior y le asignamos el nombre `logs_info`, para poder llamarlo después. Como siguiente paso, vamos a hacer el *JOIN* con la tabla principal:
 
-```{rm, eval=FALSE}
+```{r, eval=FALSE}
 WITH logs_info_base AS (
   SELECT user_id, tiempo_sesion, fecha_sesion,
          ROW_NUMBER() OVER (PARTITION BY user_id 
